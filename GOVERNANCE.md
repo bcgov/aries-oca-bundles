@@ -1,19 +1,20 @@
-## Governance
+## BC Government Aries OCA Bundle Registry Governance Document
 
-This OCA Bundle registry is managed by the [BC Government Digital Trust Group].
+### Purpose
+This Governance Document outlines how the OCA Bundle Registry is managed and governed. It defines the Roles and Processes needed to publish OCA bundles that are used by Hyperledger Aries Agents. These OCA bundles contain instructions to correctly process and display digital credentials.
+
 The contents of the registry is maintained in the [registry repository] and
 managed through a pull request submission, review and approval process. The
 details of how pull requests are managed is outlined in this Governance section
 of the registry.
-
+ 
 [BC Government Digital Trust Group]: https://digital.gov.bc.ca/digital-trust/
-[registry repository]: https://github.com/bcgov/aries-oca-bundles
+[Registry Repository]: https://github.com/bcgov/aries-oca-bundles
 
 ### Roles
 
 - The **[BC Government Digital Trust Group]** is the governing authority over this
-repository. It approves and merges (or not) pull requests that
-result in changes to the registry and the repository.
+repository. This group consists of a team of individuals within the Digital Credentials Services of the BC Government Ministry of Citizen's Services. This list is managed in the [MAINTAINERS](./MAINTAINERS.md) file. 
 
 - **Editors** are individuals delegated by the [BC Government Digital Trust Group] to process issues and pull requests
 according to the rules defined in the [Pull Request
