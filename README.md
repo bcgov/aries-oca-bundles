@@ -68,7 +68,7 @@ for the Aries for OCA:
     * branding.json: (optional) The JSON file containing the source content for
       the OCA for Aries Branding overlay.
 
-The pull request will be reviewed according to the [lightweight governance](Goverance.md)
+The pull request will be reviewed according to the [lightweight governance](GOVERNANCE.md)
 process and merged (or not) into the repository.
 
 ### README File Content
