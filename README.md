@@ -2,7 +2,7 @@
 
 This GitHub repository is for hosting published Overlays Capture Architecture
 (OCA) Bundles to be used by Hyperledger Aries agents (issuers, holders and
-verifiers). The repository includes a [lightweight governance](Goverance.md)
+verifiers). The repository includes a [lightweight governance](GOVERNANCE.md)
 process for ensuring those contributing to the repository are the "authority"
 over the OCA Bundle they are submitting/updating, and that what they are
 submitting is, in fact, an OCA Bundle for a published AnonCreds Schema and/or
