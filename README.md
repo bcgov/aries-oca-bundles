@@ -73,28 +73,29 @@ process and merged (or not) into the repository.
 
 ### README File Content
 
-The README.md file for the OCA Bundle may include some informational data about
-the verifiable credential, typical in a README.md.
+The README.md file for the OCA Bundle **MUST** include some informational data about
+the verifiable credential. The README.md file is optional if a REDIRECT.md file exists
+in the folder.
 
-The title (first line with `#`) MUST be the name of the credential type.
+The title (first line with `#`) **MUST** be the name of the credential type.
 
-Below the title MUST be a brief description of the credential type. The first
+Below the title **MUST** be a brief description of the credential type. The first
 paragraph of this description MAY be extracted and used for discovery of the
 OCA Bundle.
 
-The file MUST have an `Authorization` section, with the following content:
+The file **MUST** have an `Authorization` section, with the following content:
 
 ``` text
 
 ## Authorization
 
-Publishing Organization: <The name of the organization publishing the OCA Bundle>
-Primary Contact Email Address: <A contact email address for the publishing organization>
-OCA Source Data Location: <URL pointing to the OCA Source Data for the OCA Bundle>
-Verifiable Credential Instance: <Metadata about the verifiable credential, typically "Dev", "Test" or "Production">
-Verifiable Data Registry: <A link to the object to which the OCA Source Data applies>
+* Publishing Organization: <The name of the organization publishing the OCA Bundle>
+* Primary Contact Email Address: <A contact email address for the publishing organization>
+* OCA Source Data Location: <URL pointing to the OCA Source Data for the OCA Bundle>
+* Verifiable Credential Instance: <Metadata about the verifiable credential, typically "Dev", "Test" or "Production">
+* Verifiable Data Registry: <A link to the object to which the OCA Source Data applies>
 
-The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
+The following are the GitHub IDs and email addresses of those authorized to make substantive updates to the OCA Bundle.
 
 | OCA Bundle Contributors | GitHub ID | Email Address |
 | ----------------------- | --------- | ------------- |
@@ -136,7 +137,8 @@ When used, the Authorization table from that file applies to this OCA Bundle.
 
 The format of the REDIRECT.md MUST be the following:
 
-```
+``` bash
+
 DID: <DID>
 ID: <Id>
 
@@ -153,16 +155,16 @@ ID: <Id>
 
 ## Authorization
 
-Publishing Organization: <Publishing Organization>
-Primary Contact Email Address: <Contact at Publishing Organization>
-Verifiable Credential Instance: <Instance or verifiable credential, usual Development, Test or Production>
-Verifiable Data Registry: <URL of related Schema or CredDef object on the VDR>
+* Publishing Organization: <Publishing Organization>
+* Primary Contact Email Address: <Contact at Publishing Organization>
+* Verifiable Credential Instance: <Instance or verifiable credential, usual Development, Test or Production>
+* Verifiable Data Registry: <URL of related Schema or CredDef object on the VDR>
 
 ```
 
 Most of the values to be completed match those in the [README.md document](#contents-of-the-readmemd-file).
 
-The \<DID> and \<Id> MUST be the DID and Schema or CredDef ID for an
+The \<DID> and \<Id> **MUST** be the DID and Schema or CredDef ID for an
 OCABundle that exists in the [registry repository].
 
 The creator of the pull request creating the `REDIRECT.md` file must be
@@ -179,14 +181,14 @@ main branch of the `OCABundles` folder in this repository, e.g. `https://raw.git
 
 On receipt of an AnonCreds Credential Definition ID, the Aries agent **SHOULD** do the following, using the Issuer's DID as the \<DID> and the given CredDefId as the \Id:
 
+* Look for the file `<URL>/<issuer DID>/<Id>/OCABundle.json`.
+* If found, use it as the OCA Bundle for the verifiable credential -- processing complete.
 * Look for the file `<URL>/<DID>/<Id>/REDIRECT.md`
 * If found, extract the \<DID> and \<Id> from the file (as described in the [Redirect File](#redirect-file) section) and continue to the next step using the new extracted data elements. If not found, continue with \<CredDefId> as \<Id> in the next step.
-* Look for the file `<URL>/<issuer DID>/<Id>/OCABundle.json`.
-* If found, use it as the OCA Bundle for the verifiable credential.
 
-If no OCA Bundle is found, the agent **SHOULD** repeat the process with the Schema Publisher's DID as the \<DID> and the SchemaId as the \Id.
+If no OCA Bundle or REDIRECT.md file is found, the agent **SHOULD** repeat the process with the Schema Publisher's DID as the \<DID> and the SchemaId as the \<Id>.
 
-If no OCA Bundle is found,the agent continues without an OCA Bundle.
+If there is still no OCA Bundle found, the agent continues without an OCA Bundle.
 
 ### Processing Notes
 
@@ -200,8 +202,5 @@ other Verifiable Data Registries, the DID and Id formats will vary.
 
 ## Creating the OCA Bundle JSON
 
-The instructions for creating an OCA Bundle can be found in the [OCA for Aries
-RFC 0755]. The source files for the OCA Bundle **MAY** be stored in the same folder
-as the OCA Bundle in this repository.
-
-[OCA for Aries RFC 0755]: https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#oca-issuer-tools
+See the instructions for creating an OCA Bundle JSON file from Excel and JSON source
+in the file [OCABundleCreation.md](OCABundleCreation.md) in the root of this repository.
