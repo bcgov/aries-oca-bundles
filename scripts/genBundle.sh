@@ -4,6 +4,7 @@
 EXCEL=""
 JSONFiles=""
 OCABUNDLE=OCABundle.json
+TMPOCABUNDLE=${OCABUNDLE}.tmp
 
 # Usage info
 show_help() {
@@ -89,11 +90,12 @@ CAPTUREBASEITEM=$(grep -m 1 '"capture_base": "' ${OCABUNDLE} )
 
 # For each JSON File (if any)
 for file in ${JSONFiles}; do
+    BCKFILE=$(basename ${file}).bck
     # Replace the existing "capture_base" JSON item with one from the Excel OCA output
-    sed "s#.*capture_base.:.*#${CAPTUREBASEITEM}#" ${file} >${file}.bck
+    sed "s#.*capture_base.:.*#${CAPTUREBASEITEM}#" ${file} >${BCKFILE}
     # Add the overlay to the generated OCA Bundle and out to a temp file
-    ${JQ} ".[].overlays += $(cat ${file}.bck)" ${OCABUNDLE} > ${OCABUNDLE}.tmp
-    rm ${file}.bck
+    ${JQ} ".[].overlays += $(cat ${BCKFILE})" ${OCABUNDLE} > ${TMPOCABUNDLE}
+    rm ${BCKFILE}
     # Move the tmp file to be the new(est) OCA Bundle file
-    mv ${OCABUNDLE}.tmp ${OCABUNDLE}
+    mv ${TMPOCABUNDLE} ${OCABUNDLE}
 done
