@@ -29,30 +29,6 @@
       {
         "attribute_categories": [],
         "attribute_labels": {
-          "expiry_date": "Date d'expiration",
-          "student_first_name": "Prénom de l'étudiant",
-          "student_last_name": "Nom de famille de l'étudiant"
-        },
-        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "category_labels": {},
-        "digest": "EReQYo9CylCu2Fgzr1jnarBYWef-8i76yegkBBUQz1Mo",
-        "language": "fr-CA",
-        "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "expiry_date": "La date d'expiration de la carte d'étudiant.",
-          "student_first_name": "Le prénom du titulaire de la carte d'étudiant",
-          "student_last_name": "Le nom (de famille) du titulaire de la carte d'étudiant."
-        },
-        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "digest": "ERjttCynO4IH3FpsmYeRasLHcib10WO03drhS-yaFs70",
-        "language": "fr-CA",
-        "type": "spec/overlays/information/1.0"
-      },
-      {
-        "attribute_categories": [],
-        "attribute_labels": {
           "expiry_date": "ID Expiry Date",
           "student_first_name": "Student First Name",
           "student_last_name": "Student Last Name"
@@ -75,6 +51,30 @@
         "type": "spec/overlays/information/1.0"
       },
       {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "expiry_date": "Date d'expiration",
+          "student_first_name": "Prénom de l'étudiant",
+          "student_last_name": "Nom de famille de l'étudiant"
+        },
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "category_labels": {},
+        "digest": "EReQYo9CylCu2Fgzr1jnarBYWef-8i76yegkBBUQz1Mo",
+        "language": "fr-CA",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "expiry_date": "La date d'expiration de la carte d'étudiant.",
+          "student_first_name": "Le prénom du titulaire de la carte d'étudiant",
+          "student_last_name": "Le nom (de famille) du titulaire de la carte d'étudiant."
+        },
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "digest": "ERjttCynO4IH3FpsmYeRasLHcib10WO03drhS-yaFs70",
+        "language": "fr-CA",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
         "attribute_formats": {
           "expiry_date": "YYYYMMDD"
         },
@@ -92,19 +92,6 @@
       },
       {
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "credential_help_text": "Il s'agit d'un exemple de simple carte d'étudiant qui pourrait être émise par une université ou un collège canadien.",
-        "credential_support_url": "mailto:DItrust@gov.bc.ca",
-        "description": "Un exemple de carte étudiante qui pourrait être émise par une université ou un collège canadien",
-        "digest": "EKUrCoSycSKJwpNmn5qKRrWtoCvTbEZEaIf_zANcFuqE",
-        "issuer": "Best BC College",
-        "issuer_description": "Best BC College",
-        "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
-        "language": "fr-CA",
-        "name": "Carte d'étudiant",
-        "type": "spec/overlays/meta/1.0"
-      },
-      {
-        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "credential_help_text": "This is an example of a simple student card that might be issued by a Canadian University or College.",
         "credential_support_url": "mailto:DItrust@gov.bc.ca",
         "description": "An example Student Card that might be issued from a Canadian University or College",
@@ -114,6 +101,19 @@
         "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
         "language": "en-CA",
         "name": "Student Card",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "credential_help_text": "Il s'agit d'un exemple de simple carte d'étudiant qui pourrait être émise par une université ou un collège canadien.",
+        "credential_support_url": "mailto:DItrust@gov.bc.ca",
+        "description": "Un exemple de carte étudiante qui pourrait être émise par une université ou un collège canadien",
+        "digest": "EKUrCoSycSKJwpNmn5qKRrWtoCvTbEZEaIf_zANcFuqE",
+        "issuer": "Best BC College",
+        "issuer_description": "Best BC College",
+        "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
+        "language": "fr-CA",
+        "name": "Carte d'étudiant",
         "type": "spec/overlays/meta/1.0"
       },
       {
