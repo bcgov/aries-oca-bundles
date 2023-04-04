@@ -36,11 +36,10 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-          path: './OCAExplorer'
       - name: Install dependencies
-        run: yarn install --immutable
+        run: cd './OCAExplorer' && yarn install --immutable
       - name: Build
-        run: yarn build
+        run: cd './OCAExplorer' && yarn build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
