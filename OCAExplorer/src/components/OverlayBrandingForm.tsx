@@ -1,4 +1,6 @@
 import {
+  Autocomplete,
+  AutocompleteRenderInputParams,
   FormControl,
   InputLabel,
   MenuItem,
@@ -118,51 +120,53 @@ function OverlayBrandingForm({
         margin="dense"
         size="small"
       />
-      <FormControl fullWidth margin="dense" size="small">
-        <InputLabel id="primary-attribute">Primary Attribute</InputLabel>
-        <Select
-          labelId="primary-attribute"
-          label="Primary Attribute"
+      <FormControl fullWidth>
+        <Autocomplete
+          id="primary-attribute"
+          options={Object.entries(overlay?.captureBase?.attributes || {}).map(
+            ([key]) => key
+          )}
           value={branding?.primaryAttribute ?? ""}
-          onChange={(e) => {
+          onChange={(e, value) => {
             dispatch &&
               dispatch({
                 type: ActionType.PRIMARY_ATTRIBUTE,
-                payload: { primaryAttribute: e.target.value },
+                payload: { primaryAttribute: value },
               });
           }}
-        >
-          {Object.entries(overlay?.captureBase?.attributes || {}).map(
-            ([key]) => (
-              <MenuItem key={key} value={key}>
-                {key}
-              </MenuItem>
-            )
+          renderInput={(params: AutocompleteRenderInputParams) => (
+            <TextField
+              {...params}
+              label="Primary Attribute"
+              margin="dense"
+              size="small"
+            />
           )}
-        </Select>
+        />
       </FormControl>
-      <FormControl fullWidth margin="dense" size="small">
-        <InputLabel id="secondary-attribute">Secondary Attribute</InputLabel>
-        <Select
-          labelId="secondary-attribute"
-          label="Secondary Attribute"
+      <FormControl fullWidth>
+        <Autocomplete
+          id="secondary-attribute"
+          options={Object.entries(overlay?.captureBase?.attributes || {}).map(
+            ([key]) => key
+          )}
           value={branding?.secondaryAttribute ?? ""}
-          onChange={(e) => {
+          onChange={(e, value) => {
             dispatch &&
               dispatch({
                 type: ActionType.SECONDARY_ATTRIBUTE,
-                payload: { secondaryAttribute: e.target.value },
+                payload: { secondaryAttribute: value },
               });
           }}
-        >
-          {Object.entries(overlay?.captureBase?.attributes || {}).map(
-            ([key]) => (
-              <MenuItem key={key} value={key}>
-                {key}
-              </MenuItem>
-            )
+          renderInput={(params: AutocompleteRenderInputParams) => (
+            <TextField
+              {...params}
+              label="Secondary Attribute"
+              margin="dense"
+              size="small"
+            />
           )}
-        </Select>
+        />
       </FormControl>
     </div>
   );
