@@ -1,0 +1,11 @@
+[
+    {
+        "type": "aries/overlays/branding/1.0",
+        "capture_base": "",
+        "digest": "",
+        "logo": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/Ep31SvFAetugFPe5CGzJxt/Ep31SvFAetugFPe5CGzJxt%3A2%3AAttestation_num%C3%A9rique_didentit%C3%A9_gouvernemental_(EXP)%3A1.0/logo-quebec.png",
+        "background_image": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/Ep31SvFAetugFPe5CGzJxt/Ep31SvFAetugFPe5CGzJxt%3A2%3AAttestation_num%C3%A9rique_didentit%C3%A9_gouvernemental_(EXP)%3A1.0/carte-anig-demo.png",
+        "primary_background_color": "#F9F9F9",
+        "secondary_background_color": "#095797"
+    }
+]
