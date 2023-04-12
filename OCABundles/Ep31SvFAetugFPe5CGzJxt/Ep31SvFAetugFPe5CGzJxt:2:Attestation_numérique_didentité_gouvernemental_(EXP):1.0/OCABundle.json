@@ -2,18 +2,25 @@
     {
         "capture_base": {
             "type": "spec/capture_base/1.0",
-            "classification": "GICS:45102010",
+            "classification": "",
             "attributes": {
                 "Nom": "Text",
                 "Prénom": "Text",
-                "Date de naissance": "Date",
+                "Date de naissance": "DateTime",
                 "Nom du parent 1": "Text",
                 "Nom du parent 2": "Text",
-                "Date d'émission": "Date",
-                "Date d'expiration": "Date",
+                "Date d'émission": "DateTime",
+                "Date d'expiration": "DateTime",
                 "Niveau d'identification": "Text",
                 "Photo": "Binary"
-            }
+            },
+            "flagged_attributes": [
+                "Date de naissance",
+                "Nom du parent 1",
+                "Nom du parent 2",
+                "Niveau d'identification",
+                "Photo"
+            ]
         },
         "overlays": [
             {
@@ -98,7 +105,11 @@
                 "type": "spec/overlays/standard/1.0",
                 "capture_base": "",
                 "digest": "",
-                "attribute_standards": {}
+                "attribute_standards": {
+                    "Date de naissance": "urn:iso:std:iso:1989",
+                    "Date d'émission": "urn:iso:std:iso:1989",
+                    "Date d'expiration": "urn:iso:std:iso:1989"
+                }
             },
             {
                 "type": "spec/overlays/meta/1.0",
