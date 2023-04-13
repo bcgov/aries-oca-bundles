@@ -8,10 +8,7 @@
       },
       "classification": "",
       "digest": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-      "flagged_attributes": [
-        "student_last_name",
-        "student_first_name"
-      ],
+      "flagged_attributes": ["student_last_name", "student_first_name"],
       "type": "spec/capture_base/1.0"
     },
     "overlays": [
@@ -92,19 +89,6 @@
       },
       {
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "credential_help_text": "This is an example of a simple student card that might be issued by a Canadian University or College.",
-        "credential_support_url": "mailto:DItrust@gov.bc.ca",
-        "description": "An example Student Card that might be issued from a Canadian University or College",
-        "digest": "EbdmDPPdtf2j8flF9d9t_VwdKE10guqvtVEXt6ZXlhCs",
-        "issuer": "Best BC College",
-        "issuer_description": "Best BC College",
-        "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
-        "language": "en-CA",
-        "name": "Student Card",
-        "type": "spec/overlays/meta/1.0"
-      },
-      {
-        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "credential_help_text": "Il s'agit d'un exemple de simple carte d'étudiant qui pourrait être émise par une université ou un collège canadien.",
         "credential_support_url": "mailto:DItrust@gov.bc.ca",
         "description": "Un exemple de carte étudiante qui pourrait être émise par une université ou un collège canadien",
@@ -117,9 +101,22 @@
         "type": "spec/overlays/meta/1.0"
       },
       {
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "credential_help_text": "This is an example of a simple student card that might be issued by a Canadian University or College.",
+        "credential_support_url": "mailto:DItrust@gov.bc.ca",
+        "description": "An example Student Card that might be issued from a Canadian University or College",
+        "digest": "EbdmDPPdtf2j8flF9d9t_VwdKE10guqvtVEXt6ZXlhCs",
+        "issuer": "Best BC College",
+        "issuer_description": "Best BC College",
+        "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
+        "language": "en-CA",
+        "name": "Student Card",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
         "logo": "https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-logo.png",
-        "background_image_slice": "https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-background-image-slice.png",
-        "background_image": "https://raw.githubusercontent.com/swcurran/aries-rfcs/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-background-image.jpg",
+        "background_image_slice": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image-slice.png",
+        "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image.jpg",
         "primary_background_color": "#32674e",
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",

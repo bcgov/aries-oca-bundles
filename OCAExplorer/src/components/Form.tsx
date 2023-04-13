@@ -17,6 +17,9 @@ const urlMap = new Map(
       "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9%3A2%3APerson%3A1.0/OCABundle.json",
     "XUxBrVSALWHLeycAUhrNr9:2:Member Card:1.5.1":
       "https://raw.githubusercontent.com/petridishdev/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9%3A2%3AMember%20Card%3A1.5.1/OCABundle.json",
+    "Ep31SvFAetugFPe5CGzJxt:2:Attestation_numérique_didentité_gouvernemental_(EXP):1.0":
+      "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/Ep31SvFAetugFPe5CGzJxt/Ep31SvFAetugFPe5CGzJxt%3A2%3AAttestation_numérique_didentité_gouvernemental_(EXP)%3A1.0/OCABundle.json",
+    "YXCtXE4YhVjULgj5hrk4ML:2:unverified_person:0.1.0": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/YXCtXE4YhVjULgj5hrk4ML/YXCtXE4YhVjULgj5hrk4ML%3A2%3Aunverified_person%3A0.1.0/OCABundle.json"
   })
 );
 
