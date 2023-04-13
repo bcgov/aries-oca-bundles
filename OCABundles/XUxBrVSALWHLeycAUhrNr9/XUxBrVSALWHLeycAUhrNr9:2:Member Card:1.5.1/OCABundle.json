@@ -1,0 +1,91 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "Given Name": "Text",
+        "Member Status": "Text",
+        "Member Status Code": "Text",
+        "PPID": "Text",
+        "Surname": "Text"
+      },
+      "classification": "",
+      "digest": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+      "flagged_attributes": [
+        "PPID",
+        "Member Status Code",
+        "Surname",
+        "Given Name",
+        "Member Status"
+      ],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "Given Name": "utf-8",
+          "Member Status": "utf-8",
+          "Member Status Code": "utf-8",
+          "PPID": "utf-8",
+          "Surname": "utf-8"
+        },
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "default_character_encoding": "utf-8",
+        "digest": "EWJRSUncNhs1SJykpPQWqSK_wvPX8zWzyHwEN70PzXws",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "Given Name": "Given Name",
+          "Member Status": "Member Status",
+          "Member Status Code": "Member Status Code",
+          "PPID": "PPID",
+          "Surname": "Surname"
+        },
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "category_labels": {},
+        "digest": "EmA40v_3bURuHxGl82yzmMTxMyym8-efTSp0TKBjF4Z0",
+        "language": "en-CA",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "Given Name": "Member's given name",
+          "Member Status": "Member's status",
+          "Member Status Code": "Member's status code",
+          "PPID": "Member's PPID",
+          "Surname": "Member's surname"
+        },
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "digest": "EHjSTlcaB1DvDTi-0k35DtU-NUZsWNp47C5IimE3iMbs",
+        "language": "en-CA",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "credential_help_text": "Example credential help text.",
+        "credential_support_url": "https://www.lawsociety.bc.ca/",
+        "description": "A schema used for membership in LSBC",
+        "digest": "E0ThJbuiiYxGiPXV1SFn1yVpc48WIL7opx74ODk7tdPM",
+        "issuer": "Law Society of BC",
+        "issuer_description": "Law Society of BC",
+        "issuer_url": "https://www.lawsociety.bc.ca/",
+        "language": "en-CA",
+        "name": "LSBC Member Credential",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "digest": "",
+        "logo": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/lsbc-logo.png",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/lsbc-background-image.jpg",
+        "primary_background_color": "#00698c",
+        "secondary_background_color": "#1a2930",
+        "primary_attribute": "",
+        "secondary_attribute": "",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]
