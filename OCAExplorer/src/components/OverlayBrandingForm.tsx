@@ -1,12 +1,11 @@
 import {
   Autocomplete,
   AutocompleteRenderInputParams,
+  Button,
   FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
   TextField,
 } from "@mui/material";
+import { Download } from "@mui/icons-material";
 import { MuiColorInput } from "mui-color-input";
 import { useEffect } from "react";
 import {
@@ -15,6 +14,8 @@ import {
   useBrandingDispatch,
 } from "../contexts/Branding";
 import OverlayBundle from "../types/overlay/OverlayBundle";
+import { saveAs } from "file-saver";
+import BrandingOverlayDataFactory from "../services/OverlayBrandingDataFactory";
 
 function OverlayBrandingForm({
   overlay,
@@ -167,6 +168,33 @@ function OverlayBrandingForm({
             />
           )}
         />
+      </FormControl>
+      <FormControl margin="dense" size="small">
+        <Button
+          disabled={!branding}
+          variant="contained"
+          startIcon={<Download />}
+          onClick={() => {
+            if (!branding) {
+              return;
+            }
+            const blob = new Blob(
+              [
+                JSON.stringify(
+                  BrandingOverlayDataFactory.getBrandingOverlayData(branding),
+                  null,
+                  2
+                ),
+              ],
+              {
+                type: "text/plain;charset=utf-8",
+              }
+            );
+            saveAs(blob, "branding.json");
+          }}
+        >
+          Download
+        </Button>
       </FormControl>
     </div>
   );

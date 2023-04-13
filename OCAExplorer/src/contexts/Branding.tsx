@@ -18,7 +18,10 @@ export enum ActionType {
   EXPIRY_DATE_ATTRIBUTE = "expiryDateAttribute",
 }
 
-interface BrandingState {
+export interface BrandingState {
+  captureBase?: string;
+  type?: string;
+  digest?: string;
   logo: string;
   backgroundImage: string;
   backgroundImageSlice: string;
@@ -31,6 +34,9 @@ interface BrandingState {
 }
 
 const initialState: BrandingState = {
+  captureBase: "",
+  type: "",
+  digest: "",
   logo: "",
   backgroundImage: "",
   backgroundImageSlice: "",
