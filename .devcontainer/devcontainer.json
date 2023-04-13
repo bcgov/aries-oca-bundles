@@ -18,6 +18,13 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "bash scripts/buildDevcontainer.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode"
+			]
+		}
+	},
 	// Make sure to export ~/bin after the container is ready: export PATH=$PATH:~/bin
 
 	// Configure tool-specific properties.

@@ -1,14 +1,14 @@
 [
-    {
-        "logo": "https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-logo.png",
-        "background_image_slice": "https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-background-image-slice.png",
-        "background_image": "https://raw.githubusercontent.com/swcurran/aries-rfcs/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-background-image.jpg",
-        "primary_background_color": "#32674e",
-        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
-        "expiry_date_attribute": "expiry_date",
-        "primary_attribute": "student_last_name",
-        "secondary_attribute": "student_first_name",
-        "type": "aries/overlays/branding/1.0"
-    }
+  {
+    "logo": "https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-logo.png",
+    "background_image_slice": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image-slice.png",
+    "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image.jpg",
+    "primary_background_color": "#32674e",
+    "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+    "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
+    "expiry_date_attribute": "expiry_date",
+    "primary_attribute": "student_last_name",
+    "secondary_attribute": "student_first_name",
+    "type": "aries/overlays/branding/1.0"
+  }
 ]
