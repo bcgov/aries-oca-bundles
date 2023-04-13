@@ -25,7 +25,7 @@ function computedStyles() {
       backgroundColor:
         (branding?.backgroundImage
           ? "rgba(0, 0, 0, 0)"
-          : branding?.secondaryBackgroundColor) ?? "rgba(0, 0, 0, 0.24)",
+          : branding?.secondaryBackgroundColor) || "rgba(0, 0, 0, 0.24)",
     },
     logoContainer: {
       top: -0.5 * logoHeight,
@@ -40,7 +40,7 @@ function computedStyles() {
     },
     textContainer: {
       color: textColorForBackground(
-        branding?.primaryBackgroundColor ?? "#000000"
+        branding?.primaryBackgroundColor || "#000000"
       ),
       flexShrink: 1,
     },
