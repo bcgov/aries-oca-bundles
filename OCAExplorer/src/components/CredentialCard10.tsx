@@ -15,7 +15,7 @@ function computedStyles() {
   return {
     container: {
       backgroundColor:
-        branding?.primaryBackgroundColor ?? "rgba(0, 0, 0, 0.24)",
+        branding?.primaryBackgroundColor || "rgba(0, 0, 0, 0.24)",
       borderRadius: borderRadius,
     },
     cardContainer: {
@@ -23,10 +23,10 @@ function computedStyles() {
       minHeight: 0.33 * width,
     },
     primaryBodyContainer: {
-      flexGrow: 1,
+      flexShrink: 1,
       padding,
-      marginLeft: -1 * logoHeight + padding,
       margin: -1,
+      marginLeft: -1 * logoHeight + padding,
     },
     secondaryBodyContainer: {
       width: logoHeight,
@@ -35,7 +35,7 @@ function computedStyles() {
       backgroundColor:
         (branding?.backgroundImageSlice
           ? "rgba(0, 0, 0, 0)"
-          : branding?.secondaryBackgroundColor) ?? "rgba(0, 0, 0, 0.24)",
+          : branding?.secondaryBackgroundColor) || "rgba(0, 0, 0, 0.24)",
     },
     logoContainer: {
       top: padding,
@@ -58,7 +58,7 @@ function computedStyles() {
     },
     textContainer: {
       color: textColorForBackground(
-        branding?.primaryBackgroundColor ?? "#000000"
+        branding?.primaryBackgroundColor || "#000000"
       ),
       flexShrink: 1,
     },
@@ -90,7 +90,7 @@ function IssuerName({
   styles?: any;
 }) {
   return (
-    <View style={{ flexDirection: "row" }}>
+    <View>
       <Text
         style={[
           styles.label,
@@ -102,6 +102,7 @@ function IssuerName({
             flexWrap: "wrap",
           },
         ]}
+        numberOfLines={1}
       >
         {overlay?.metadata?.issuer?.[language ?? "en"]}
       </Text>
@@ -120,22 +121,21 @@ function CredentialName({
 }) {
   return (
     <View>
-      <View style={{ flexDirection: "row" }}>
-        <Text
-          style={[
-            styles.normal,
-            styles.textContainer,
-            {
-              fontWeight: "bold",
-              lineHeight: 24,
-              flex: 1,
-              flexWrap: "wrap",
-            },
-          ]}
-        >
-          {overlay?.metadata?.name[language ?? "en"]}
-        </Text>
-      </View>
+      <Text
+        style={[
+          styles.normal,
+          styles.textContainer,
+          {
+            fontWeight: "bold",
+            lineHeight: 24,
+            flex: 1,
+            flexWrap: "wrap",
+          },
+        ]}
+        numberOfLines={1}
+      >
+        {overlay?.metadata?.name[language ?? "en"]}
+      </Text>
     </View>
   );
 }

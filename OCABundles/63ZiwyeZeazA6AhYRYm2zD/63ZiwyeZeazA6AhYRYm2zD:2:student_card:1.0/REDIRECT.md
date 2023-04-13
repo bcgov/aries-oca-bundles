@@ -5,7 +5,7 @@ ID: XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0
 
 ## Description
 
-The test version of the Best BC College Student ID Card Schema OCA Bundle that is used in the BC Showcase demo site.
+This is the test version of the Best BC College Student ID Card Schema OCA Bundle that is used in the BC Showcase demo site.
 
 ## Authorization
 

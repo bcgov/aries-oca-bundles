@@ -13,6 +13,10 @@ const urlMap = new Map(
   Object.entries({
     "XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0":
       "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9%3A2%3Astudent_card%3A1.0/OCABundle.json",
+    "XUxBrVSALWHLeycAUhrNr9:2:Person:1.0":
+      "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9%3A2%3APerson%3A1.0/OCABundle.json",
+    "XUxBrVSALWHLeycAUhrNr9:2:Member Card:1.5.1":
+      "https://raw.githubusercontent.com/petridishdev/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9%3A2%3AMember%20Card%3A1.5.1/OCABundle.json",
   })
 );
 
