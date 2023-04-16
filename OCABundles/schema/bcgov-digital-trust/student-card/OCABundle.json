@@ -114,7 +114,7 @@
         "type": "spec/overlays/meta/1.0"
       },
       {
-        "logo": "https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-logo.png",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-logo.png",
         "background_image_slice": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image-slice.png",
         "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image.jpg",
         "primary_background_color": "#32674e",

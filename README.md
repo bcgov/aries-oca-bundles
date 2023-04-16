@@ -18,187 +18,171 @@ converting OCA Source to the Bundle to make it easier for contributors.
 Currently, the repository assumes that the OCA Bundles are for [Hyperledger
 AnonCreds Verifiable Credentials](https://hyperledger.org/use/anoncreds). We
 expect that other formats, such as W3C Verifiable Credentials Data Model
-Standard JSON-LD credentials will also be eventually supported.
+Standard JSON-LD credentials will eventually also be supported.
 
 ## Locations of OCA Bundles
 
 OCA Bundles in this repository are found in the [OCABundles](./OCABundles/)
-folder in this repository. That folder has a subfolder for each DID that
-in the repository, and within each DID folder, a subfolder for each ID of
-either a Schema object or a Credential Definition (CredDef) object. Within
-the ID subfolder is found the OCA Bundle files, as documented below.
+folder in this repository. The folder structure within `OCABundles` is as follows
+with OCABundle JSON files in the `<Credential>` and `<Schema>` folders.
 
-Where the Issuer is also the Schema Publisher, the issuing organization may use
-the ID of the Schema or Object to identify the OCA Bundle for the issued
-verifiable credentials. If the Issuer is not the publisher of the Schema, it
-should use the ID of the Credential Definition for the subfolder holding the OCA
-Bundle files.
-
-If an issuer publishes multiple versions of a Schema or CredDef (and hence,
-multiple IDs) that use the same OCA Bundle, a "redirect" mechanism is available
-to eliminate the need to keep multiple copies of the same OCA Bundle in the
-registry.
+```
+OCABundles
+ ┣ credentials
+ ┃ ┣ <Issuer>
+ ┃ ┃ ┣ <Credential>
+ ┃ ┃ ┗ <Credential>
+ ┃ ┣ <Issuer>
+ ┃ ┃ ┣ <Credential>
+ ┃ ┃ ┗ <Credential>
+ ┗ schema
+ ┃ ┣ <Publisher>
+ ┃ ┃ ┣ <Schema>
+ ┃ ┃ ┗ <Schema>
+ ┃ ┗ <Publisher>
+ ┃ ┃ ┣ <Schema>
+ ┃ ┃ ┗ <Schema>
+ ```
 
 ## Contributing an OCA Bundle
 
 To contribute an OCA Bundle, create a pull request that adds the necessary files
 for the Aries for OCA:
 
-* In the OCABundles folder, create a folder using the DID of the Schema
-  Publisher or the CredDef publisher.
-* In that folder, create a folder named for the ID of the Schema or for the
-  CredDef.
-* In that folder, add the following files, as appropriate:
-    * REDIRECT.md: a markdown file containing a link to another folder within the
-      repository that contains another OCABundle. This can be used, for example,
-      to manage a Dev, Test and Prod versions of the same credential that shares
-      the identical OCA Bundle. The format of the file must contain the
-      information outlined below in the section [Redirect File Content](#redirect-file-content) section of this document.
-    * README.md: a readme file, containing the information outlined
+* In the OCABundles `schema` or `credentials` folder, if needed, create a new
+`<Issuer>` or `<Publisher>`. Those folders are for organizing the credentials
+and the folder naming is up to the submitter.
+* Within that folder, create another folder named for the schema or credential
+  definition being added.
+* Within that folder, add the following files, as appropriate:
+    * README.md: **MUST** be present and **MUST** contain the information outlined
       below in the [README File Content](#readme-file-content) section of this document.
-    * OCABundle.json: the published OCA Bundle for the Schema or CredDef.
-      Required if there is no "redirect.md" file in the folder. See the section
-      on [Agent Processing](#agent-processing) in this repository for how an
-      Aries Agent finds the correct OCA Bundle JSON file to use.
-    * testdata.csv: (optional) A CSV file containing one or more sample data
-      records. Typically, either a CSV or a JSON test data file is added.
-    * testdata.json: (optional) A JSON file containing one or more sample data
-      records. Typically, either a CSV or a JSON test data file is added.
-    * \<OCASourceExcel>.xlsx: (optional) The Excel OCA Source file for the OCA Bundle.
-    * branding.json: (optional) The JSON file containing the source content for
+    * OCABundle.json: **MUST** be present and **MUST** contain the OCA Bundle
+      for the schema or credential definition.
+    * \<OCASourceExcel>.xlsx: (optional) An Excel OCA Source file for the OCA Bundle.
+    * branding.json: (optional) A JSON file containing the source content for
       the OCA for Aries Branding overlay.
+    * testdata.csv: (optional) A CSV file containing one or more sample data
+      records.
+    * Other files: (optional) Other files related to the OCA Bundle, such as the
+    images used in the branding.json file.
 
 The pull request will be reviewed according to the [lightweight governance](GOVERNANCE.md)
 process and merged (or not) into the repository.
 
 ### README File Content
 
-The README.md file for the OCA Bundle **MUST** include some informational data about
-the verifiable credential. The README.md file is optional if a REDIRECT.md file exists
-in the folder.
+The README.md file for the OCA Bundle **MUST** be present and **MUST** include
+begin with the information shown and described below. The formatting requirements
+are in place because the file is processed by a script that generates a list
+of all of the identifiers (`schemaId`s and `credDefId`s) and the OCA Bundles
+to which they are associated with.
 
-The title (first line with `#`) **MUST** be the name of the credential type.
+```text
+# <TITLE>
 
-Below the title **MUST** be a brief description of the credential type. The first
-paragraph of this description MAY be extracted and used for discovery of the
-OCA Bundle.
+<DESCRIPTION>
 
-The file **MUST** have an `Authorization` section, with the following content:
+- Publishing Organization: <ORGANIZATION>
+- Primary Contact Email Address: <CONTACT EMAIL ADDRESS>
 
-``` text
+## Identifiers
 
-## Authorization
-
-* Publishing Organization: <The name of the organization publishing the OCA Bundle>
-* Primary Contact Email Address: <A contact email address for the publishing organization>
-* OCA Source Data Location: <URL pointing to the OCA Source Data for the OCA Bundle>
-* Verifiable Credential Instance: <Metadata about the verifiable credential, typically "Dev", "Test" or "Production">
-* Verifiable Data Registry: <A link to the object to which the OCA Source Data applies>
-
-The following are the GitHub IDs and email addresses of those authorized to make substantive updates to the OCA Bundle.
-
-| OCA Bundle Contributors | GitHub ID | Email Address |
-| ----------------------- | --------- | ------------- |
-|                         |           |               |
-
-
-```
-
-#### Authorization Section Content
-
-The initial entries are to ensure that the organization publishing the OCA
-Bundle is known, and there is a primary contact for the information. This is
-used when initially accepting a contributed OCA Bundle to verify (in the human
-sense) that the publisher is known and there is a person or group to contact in
-the organization when necessary.
-
-If the OCA Source files are **NOT** found in the folder with the OCABundle.JSON,
-the `OCA Source Data Location` entry is required and MUST contain a link to
-where the source files can be found.
-
-The `Verifiable Credential Instance` is optional metadata to help in managing
-the multiple references to the same OCA Bundle.
-
-The `Verifiable Data Registry` is not required if the related to the OCA Bundle
-is uniquely resolvable using the \<DID> and \<Id> in the path to this folder. It
-is required for OCA Bundles used with unqualified Hyperledger Indy DIDs so that
-the VDR for the object is uniquely identified.
-
-The table is used to ensure that updates to an OCA Bundle come from contributors
-"authorized" by the publishing organization. If it is more convenient, the table
-may be replaced with a line that links to another OCA Bundle Folder README, as
-follows.
-
-`The Authorization table for this OCA Bundle are in [this file](../../<DID>/<ID>/README.md).`
-
-When used, the Authorization table from that file applies to this OCA Bundle.
-
-### Redirect File Content
-
-The format of the REDIRECT.md MUST be the following:
-
-``` bash
-
-DID: <DID>
-ID: <Id>
-
-# <Title of the credential type>
-
-## Description
-
-<Description of the credential type, used for discovery>.
-
-## Redirection
-
-DID: <DID>
-ID: <Id>
+| Identifier                                 | Location  | URL         |
+| ------------------------------------------ | --------- | ----------- |
+| <SCHEMA ID or CRED DEF ID>                 | <LEDGER>  | <URL>       |
 
 ## Authorization
 
-* Publishing Organization: <Publishing Organization>
-* Primary Contact Email Address: <Contact at Publishing Organization>
-* Verifiable Credential Instance: <Instance or verifiable credential, usual Development, Test or Production>
-* Verifiable Data Registry: <URL of related Schema or CredDef object on the VDR>
+The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
+
+| OCA Bundle Contributors | GitHub ID   | Email Address            |
+| ----------------------- | ----------- | ------------------------ |
+| <NAME>                  | <GITHUB ID> | <EMAIL ADDRESS>          |
 
 ```
 
-Most of the values to be completed match those in the [README.md document](#contents-of-the-readmemd-file).
+Everything not in `<>`s must be exactly as specified above (with one
+exception--see below). Everything in `<>`s **MUST** be populated as described
+below.
 
-The \<DID> and \<Id> **MUST** be the DID and Schema or CredDef ID for an
-OCABundle that exists in the [registry repository].
+The two markdown tables **MAY** have multiple lines. Multiple lines in the
+`Identifiers` table indicates that the same OCA Bundle is used for each of the
+objects identified in the first column. Multiple lines in the `Authorization`
+table is recommended so that multiple members of the submitters team may update
+the OCA Bundle.
 
-The creator of the pull request creating the `REDIRECT.md` file must be
-authorized per the `README.md` file in the target folder, or there
-MUST be a`README.md` file along with the `REDIRECT.md` populated
-as [described above](#contents-of-the-readmemd-file).
+- `<TITLE>` **MUST** be the name of the credential type. No other line in the
+  file can have a single `#` prefix.
+- `<DESCRIPTION>` is extracted for display by tools for processing this
+repository (such as the [OCA Explorer]) and should describe the type of
+credential to which the OCA Bundle applies.
+- `<ORGANIZATION>` is extracted for display by tools for processing this
+repository (such as the [OCA Explorer]) and is the name of the organization
+that submitted the OCA Bundle.
+- `<CONTACT EMAIL ADDRESS>` is an email address for the primary contact
+for the OCA Bundle. The address may for a person, or better, a group
+contact withing the `<ORGANIZATION>`.
+- `<SCHEMA ID or CRED DEF ID>` are identifiers for objects to which the
+OCA Bundles applies. There can be multiple lines in the table, each with
+a different identifier.
+- `<LEDGER>` is optional. It identifies the ledger on which the object
+identified by the object resides. It should be in the form
+<network>[:<instance>] as defined in the [did-indy specification for
+`namespace`](https://hyperledger.github.io/indy-did-method/#indy-did-method-identifiers)
+-- e.g., `candy:dev` or `sovrin`. The value is useful when the `<SCHEMA ID or
+CRED DEF ID>` is unqualified (such as with legacy Indy identifiers) such that
+the precise location of the object is not known.
+- `<URL>` is optional and is a plain (non-Markdown) link to a ledger browser
+  instance of the object, such as to a transaction on
+  [https://indyscan.io](https://indyscan.io) or
+  [https://candyscan.idlab.org/](https://candyscan.idlab.org/)
+- `<NAME>' is the name of a person authorized to update the OCA Bundle and
+related data. There may be multiple rows in the markdown table to name multiple
+people.
+- `<GITHUB ID>` is the GitHub ID of the named person.
+- `<EMAIL ADDRESS>` is the email address of the named person
+
+[OCA Explorer]: https://bcgov.github.io/aries-oca-bundles/
+
+The `<CONTACT EMAIL ADDRESS>` and the Authorization table are to ensure that
+once the OCA Bundle is submitted, there are contacts available to answer
+questions about, and to submit updates to, the OCA Bundle.
+
+The contents of the `Authorization` section (following the `## Authorization` line) may be replaced 
+with the following to avoid repeating the same contents in every OCA Bundle `README.md` file:
+
+`The Authorization table for this OCA Bundle is in [this file](<path-to-another-OCABundle-folder/README.md).`
 
 ## Agent Processing
 
 The following are the steps for processing the OCA Bundle by an Aries Holder or Verifier.
 
-An Aries holder (wallet) or verifier agent **MUST** be pre-configured with the URL (\<URL> in the following) for accessing raw files in the
-main branch of the `OCABundles` folder in this repository, e.g. `https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles`.
+An Aries holder (wallet) or verifier agent **MUST** be pre-configured with the
+URL (\<URL> in the following) for accessing raw files in the main branch of the
+`OCABundles` folder in this repository, e.g.
+`https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main`.
 
-On receipt of an AnonCreds Credential Definition ID, the Aries agent **SHOULD** do the following, using the Issuer's DID as the \<DID> and the given CredDefId as the \Id:
+On receipt of an AnonCreds Credential Definition ID (credDefid), the Aries agent **SHOULD** do the following:
 
-* Look for the file `<URL>/<issuer DID>/<Id>/OCABundle.json`.
-* If found, use it as the OCA Bundle for the verifiable credential -- processing complete.
-* Look for the file `<URL>/<DID>/<Id>/REDIRECT.md`
-* If found, extract the \<DID> and \<Id> from the file (as described in the [Redirect File](#redirect-file) section) and continue to the next step using the new extracted data elements. If not found, continue with \<CredDefId> as \<Id> in the next step.
+- Load the JSON file `<URL>/ocabundles.json`.
+  - This may be done at Aries wallet/agent initialization time and the contents
+    cached. The wallet/agent may reload the file from time to time to get
+    updates to the contents.
+- Scan the list of identifiers for the credDefId in the loaded JSON data structure.
+  - If found, use the corresponding `path` item value to load the OCA Bundle for the credential at (`<URL>/<path>`).
+- Scan the list of identifiers for the schemaId referenced in the Credential Definition in the loaded JSON data structure.
+  - If found, use the corresponding `path` item value to load the OCA Bundle for the credential at (`<URL>/<path>`).
+- If not found, proceed without an OCA Bundle for the credential.
 
-If no OCA Bundle or REDIRECT.md file is found, the agent **SHOULD** repeat the process with the Schema Publisher's DID as the \<DID> and the SchemaId as the \<Id>.
-
-If there is still no OCA Bundle found, the agent continues without an OCA Bundle.
+The wallet/agent may want to cache a loaded OCA Bundle.
 
 ### Processing Notes
 
 * A given Aries agent **MAY** want to pre-load OCA Bundles for Schemas or
-Credential Definitions all of the \<DID>/\<Id>s in this repository, or a list of
-those the agent is expected to work with. From time-to-time, such agents may
-want to reload the Bundles in case they have been updated in the repository.
-* An Aries agent **SHOULD NOT** assume the \<DID> and \<Id> formats will be in
-"Legacy Indy" format. As `did:indy` use expands, and AnonCreds is used with
-other Verifiable Data Registries, the DID and Id formats will vary.
+Credential Definitions all of the identifiers in the `ocabundles.json` file.
+From time-to-time, such agents may want to reload the Bundles in case they have
+been updated in the repository.
 
 ## Creating the OCA Bundle JSON
 

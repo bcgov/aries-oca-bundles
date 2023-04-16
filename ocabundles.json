@@ -1,0 +1,13 @@
+{
+"63ZiwyeZeazA6AhYRYm2zD:2:Member Card:1.5.1": { "path": "OCABundles/schema/bcgov-digital-trust/member-card/OCABundle.json" },
+"Trx3R1frdEzbn34Sp1jyX:2:Member Card:1.5.1": { "path": "OCABundles/schema/bcgov-digital-trust/member-card/OCABundle.json" },
+"XUxBrVSALWHLeycAUhrNr9:2:Member Card:1.5.1": { "path": "OCABundles/schema/bcgov-digital-trust/member-card/OCABundle.json" },
+"63ZiwyeZeazA6AhYRYm2zD:2:Person:1.0": { "path": "OCABundles/schema/bcgov-digital-trust/showcase-lawyer-person/OCABundle.json" },
+"Trx3R1frdEzbn34Sp1jyX:2:Person:1.0": { "path": "OCABundles/schema/bcgov-digital-trust/showcase-lawyer-person/OCABundle.json" },
+"XUxBrVSALWHLeycAUhrNr9:2:Person:1.0": { "path": "OCABundles/schema/bcgov-digital-trust/showcase-lawyer-person/OCABundle.json" },
+"63ZiwyeZeazA6AhYRYm2zD:2:student_card:1.0": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json" },
+"Trx3R1frdEzbn34Sp1jyX:2:student_card:1.0": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json" },
+"XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json" },
+"YXCtXE4YhVjULgj5hrk4ML:2:unverified_person:0.1.0": { "path": "OCABundles/schema/bcgov-digital-trust/unverified-person/OCABundle.json" },
+"Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0": { "path": "OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/OCABundle.json" },
+}

@@ -122,7 +122,7 @@ required) is to put the images in the same folder as the OCA Source Excel and
 branding.json files, and to use the GitHub "raw" URL to reference the data, such
 as:
 
-`https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/XUxBrVSALWHLeycAUhrNr9/XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0/best-bc-logo.png`
+`https://raw.githubusercontent.com/swcurran/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-logo.png`
 
 If the images are small such that the don't break the tooling, you can inline the images using the format `data:image/png;base64,<base64 data>`. However
 be warned that the OCA Source to OCA Bundle tooling provided here will break if the images are too large.
@@ -164,4 +164,5 @@ Currently the `-x <excel file>` is required, and you can supply zero or more
 JSON files to be added to the OCA Bundle produced from processing the Excel
 file.
 
-The OCA source files do not have to be in the current folder.
+The OCA source files do not have to be in the current folder and can
+be maintained wherever is best for your use case.
