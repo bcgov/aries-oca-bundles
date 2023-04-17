@@ -1,4 +1,4 @@
-# Unverified PersonCredential
+# Unverified Person Credential
 
 A verifiable credential schema for an "unverified" person, used in various BC Wallet demos where an unofficial Person credential is useful.
 
