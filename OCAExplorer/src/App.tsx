@@ -7,7 +7,8 @@ import OverlayBundle from "./types/overlay/OverlayBundle";
 function App() {
   const [overlay, setOverlay] = useState<OverlayBundle | undefined>(undefined);
 
-  const handleOverlay = useCallback((overlay: OverlayBundle) => {
+  const handleOverlay = useCallback((overlay: OverlayBundle | undefined) => {
+    // TODO: Should validate the overlay here before setting it.
     setOverlay(overlay);
   }, []);
 
