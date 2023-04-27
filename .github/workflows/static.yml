@@ -24,6 +24,7 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    if: github.repository == 'bcgov/aries-oca-bundles'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -36,7 +37,7 @@ jobs:
         with:
           node-version: 18
           cache: yarn
-          cache-dependency-path: './OCAExplorer'
+          cache-dependency-path: "./OCAExplorer"
       - name: Install dependencies
         run: cd './OCAExplorer' && yarn install --immutable
       - name: Build
@@ -47,7 +48,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './OCAExplorer/dist'
+          path: "./OCAExplorer/dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
