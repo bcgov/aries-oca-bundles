@@ -5,7 +5,7 @@ import {
   FormControl,
   TextField,
 } from "@mui/material";
-import { Download } from "@mui/icons-material";
+import { SaveAlt } from "@mui/icons-material";
 import { MuiColorInput } from "mui-color-input";
 import { useEffect } from "react";
 import {
@@ -173,7 +173,7 @@ function OverlayBrandingForm({
         <Button
           disabled={!branding}
           variant="contained"
-          startIcon={<Download />}
+          startIcon={<SaveAlt />}
           onClick={() => {
             if (!branding) {
               return;
@@ -193,7 +193,7 @@ function OverlayBrandingForm({
             saveAs(blob, "branding.json");
           }}
         >
-          Download
+          Dowload Branding Overlay
         </Button>
       </FormControl>
     </div>
