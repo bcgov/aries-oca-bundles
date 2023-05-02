@@ -193,7 +193,7 @@ function OverlayBrandingForm({
             saveAs(blob, "branding.json");
           }}
         >
-          Dowload Branding Overlay
+          Download Branding Overlay
         </Button>
       </FormControl>
     </div>
