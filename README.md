@@ -20,6 +20,44 @@ AnonCreds Verifiable Credentials](https://hyperledger.org/use/anoncreds). We
 expect that other formats, such as W3C Verifiable Credentials Data Model
 Standard JSON-LD credentials will eventually also be supported.
 
+## Previewing And Designing OCA Bundles
+
+When it comes to creating an OCA Bundle previewing the branding can be
+done with the [OCA
+Explorer](https://bcgov.github.io/aries-oca-bundles/)
+
+### What is OCA Explorer
+
+Overlays Capture Architecture (OCA) allows issuers to control the look
+of a credentials in a users wallet. In addition, OCA makes supporting
+multiple languages such as French and English easy.
+
+### Using OCA Explorer
+
+To design and preview an OCA Bundle, head over to the [OCA
+Explorer](https://bcgov.github.io/aries-oca-bundles/) and select an
+and either choose from an existing bundle in the repository or upload
+a new one.
+
+![Select OCA Bundle](./docs/assets/upload_OCA_bundle.PNG)
+
+To view a preview of the selected or uploaded OCA Bundle, simply
+select it and the preview will appear, allowing you to choose from a
+variety of available languages using radio buttons.
+
+The remaining fields are derived from the
+`aries/overlays/branding/1.0` schema, which can be customized
+according to your preferences. You can easily fill in these fields and
+download the branding overlay by clicking on the `DOWNLOAD BRANDING
+OVERLAY` button.
+
+Take a look at the screenshot below for an idea of what the branding
+customization interface looks like:
+
+![Customizing OCA Branding](./docs/assets/OCA_bundle_preview.PNG)
+
+Don't hesitate to experiment and create an OCA Bundle that best suits your needs!
+
 ## Locations of OCA Bundles
 
 OCA Bundles in this repository are found in the [OCABundles](./OCABundles/)
