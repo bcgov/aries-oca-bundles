@@ -43,20 +43,22 @@ a new one.
 
 To view a preview of the selected or uploaded OCA Bundle, simply
 select it and the preview will appear, allowing you to choose from a
-variety of available languages using radio buttons.
+variety of available languages using radio buttons based on the
+[multilingual overlay](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#oca-specification-overlays).
 
-The remaining fields are derived from the
-`aries/overlays/branding/1.0` schema, which can be customized
-according to your preferences. You can easily fill in these fields and
-download the branding overlay by clicking on the `DOWNLOAD BRANDING
-OVERLAY` button.
+The remaining fields are derived from the [branding
+overlay](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#aries-specific-branding-overlay),
+which can be customized according to your preferences. You can easily
+fill in these fields and download the branding overlay by clicking on
+the `DOWNLOAD BRANDING OVERLAY` button.
 
 Take a look at the screenshot below for an idea of what the branding
 customization interface looks like:
 
 ![Customizing OCA Branding](./docs/assets/OCA_bundle_preview.PNG)
 
-Don't hesitate to experiment and create an OCA Bundle that best suits your needs!
+Don't hesitate to experiment and create an OCA Bundle that best suits
+your needs!
 
 ## Locations of OCA Bundles
 
