@@ -8,10 +8,10 @@ import {
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { useCallback, useEffect, useState } from "react";
 import { BrandingProvider } from "../contexts/Branding";
-import OverlayBundle from "../types/overlay/OverlayBundle";
 import CredentialCard from "./CredentialCard";
 import CredentialDetail from "./CredentialDetail";
 import OverlayBrandingForm from "./OverlayBrandingForm";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
 function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
   const [language, setLanguage] = useState<string>("");

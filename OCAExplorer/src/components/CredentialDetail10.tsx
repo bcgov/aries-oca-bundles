@@ -1,7 +1,7 @@
-import OverlayBundle from "../types/overlay/OverlayBundle";
 import { View, Image, ImageBackground, Text } from "react-native";
-import { textColorForBackground } from "../utils/color";
 import { useBranding } from "../contexts/Branding";
+import { textColorForBackground } from "@aries-bifold/oca/build/utils/color";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
 const width = 360;
 const paddingHorizontal = 24;

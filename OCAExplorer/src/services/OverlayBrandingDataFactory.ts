@@ -1,5 +1,5 @@
+import { IBrandingOverlayData } from "@aries-bifold/oca/build/interfaces/data";
 import { BrandingState } from "../contexts/Branding";
-import { IBrandingOverlayData } from "../interfaces/overlay/BrandingOverlayData.interface";
 
 class BrandingOverlayDataFactory {
   public static getBrandingOverlayData(
