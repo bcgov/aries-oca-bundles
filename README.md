@@ -35,18 +35,18 @@ multiple languages such as French and English easy.
 ### Using OCA Explorer
 
 To design and preview an OCA Bundle, head over to the [OCA
-Explorer](https://bcgov.github.io/aries-oca-bundles/) and select an
-and either choose from an existing bundle in the repository or upload
-a new one.
+Explorer](https://bcgov.github.io/aries-oca-bundles/) and either
+select an existing bundle in the repository or upload one of your own.
 
 ![Select OCA Bundle](./docs/assets/upload_OCA_bundle.PNG)
 
-To view a preview of the selected or uploaded OCA Bundle, simply
-select it and the preview will appear, allowing you to choose from a
-variety of available languages using radio buttons based on the
-[multilingual overlay](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#oca-specification-overlays).
+Once you have selected or uploaded an OCA Bundle, a preview will
+display. If configured in the bundler there may be the option to
+choose from a variety of available languages using radio buttons based
+on the [multilingual
+overlay](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#oca-specification-overlays).
 
-The remaining fields are derived from the [branding
+The remaining fields displayed are derived from the [branding
 overlay](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#aries-specific-branding-overlay),
 which can be customized according to your preferences. You can easily
 fill in these fields and download the branding overlay by clicking on
