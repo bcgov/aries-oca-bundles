@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import { useCallback, useState } from "react";
 import Form from "./components/Form";
 import OverlayForm from "./components/OverlayForm";
-import OverlayBundle from "./types/overlay/OverlayBundle";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
 function App() {
   const [overlay, setOverlay] = useState<OverlayBundle | undefined>(undefined);

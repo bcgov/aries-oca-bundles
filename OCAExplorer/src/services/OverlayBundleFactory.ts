@@ -1,5 +1,5 @@
-import OverlayBundle from "../types/overlay/OverlayBundle";
-import { IOverlayBundleData } from "../interfaces/overlay/OverlayBundleData.interface";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
+import { IOverlayBundleData } from "@aries-bifold/oca/build/interfaces/data";
 
 class OverlayBundleFactory {
   public static async fetchOverlayBundle(

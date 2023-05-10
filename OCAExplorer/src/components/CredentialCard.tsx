@@ -1,4 +1,4 @@
-import OverlayBundle from "../types/overlay/OverlayBundle";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
 import CredentialCard10 from "./CredentialCard10";
 
 function CredentialCard({

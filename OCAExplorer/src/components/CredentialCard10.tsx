@@ -1,8 +1,8 @@
-import { Text, View, Image, ImageBackground, FlatList } from "react-native";
-import OverlayBundle from "../types/overlay/OverlayBundle";
-import { textColorForBackground } from "../utils/color";
+import { Text, View, Image, ImageBackground } from "react-native";
 import startCase from "lodash.startcase";
 import { useBranding } from "../contexts/Branding";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
+import { textColorForBackground } from "@aries-bifold/oca/build/utils/color";
 
 const width = 360;
 const borderRadius = 10;

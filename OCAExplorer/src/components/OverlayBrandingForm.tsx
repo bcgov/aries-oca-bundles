@@ -13,9 +13,9 @@ import {
   useBranding,
   useBrandingDispatch,
 } from "../contexts/Branding";
-import OverlayBundle from "../types/overlay/OverlayBundle";
 import { saveAs } from "file-saver";
 import BrandingOverlayDataFactory from "../services/OverlayBrandingDataFactory";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
 function OverlayBrandingForm({
   overlay,

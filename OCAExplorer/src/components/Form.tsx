@@ -9,9 +9,9 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import OverlayBundle from "../types/overlay/OverlayBundle";
 import OverlayBundleFactory from "../services/OverlayBundleFactory";
 import { Clear, UploadFile } from "@mui/icons-material";
+import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
 const BUNDLE_LIST_URL =
   "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main";
