@@ -1,7 +1,9 @@
-import { View, Image, ImageBackground, Text } from "react-native";
+import { View, Image, ImageBackground, Text, FlatList } from "react-native";
 import { useBranding } from "../contexts/Branding";
 import { textColorForBackground } from "@aries-bifold/oca/build/utils/color";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
+import { IOverlayBundleAttribute } from "@aries-bifold/oca/build/interfaces/overlay";
+import startCase from "lodash.startcase";
 
 const width = 360;
 const paddingHorizontal = 24;
@@ -40,7 +42,7 @@ function computedStyles() {
     },
     textContainer: {
       color: textColorForBackground(
-        branding?.primaryBackgroundColor || "#000000"
+        branding?.primaryBackgroundColor || "#313132"
       ),
       flexShrink: 1,
     },
@@ -59,6 +61,14 @@ function computedStyles() {
     normal: {
       fontSize: 18,
       fontWeight: "normal",
+    },
+    listText: {
+      color: "#313132",
+    },
+    listBorder: {
+      borderColor: "#F2F2F2",
+      borderBottomWidth: 2,
+      paddingTop: 12,
     },
   };
 }
@@ -180,15 +190,66 @@ function Detail({
   styles?: any;
 }) {
   return (
-    <View style={styles.container}>
-      <DetailSecondaryBody styles={styles} />
-      <DetailLogo overlay={overlay} language={language} styles={styles} />
-      <DetailPrimaryBody
-        overlay={overlay}
-        language={language}
-        styles={styles}
-      />
+    <View>
+      <View style={styles.container}>
+        <DetailSecondaryBody styles={styles} />
+        <DetailLogo overlay={overlay} language={language} styles={styles} />
+        <DetailPrimaryBody
+          overlay={overlay}
+          language={language}
+          styles={styles}
+        />
+      </View>
+      <View>
+        <DetailList overlay={overlay} language={language} styles={styles} />
+      </View>
     </View>
+  );
+}
+
+function DetailList({
+  overlay,
+  language,
+  styles,
+}: {
+  overlay?: OverlayBundle | undefined;
+  language?: string;
+  styles?: any;
+}) {
+  return (
+    <FlatList
+      data={
+        overlay?.attributes.filter((attribute) =>
+          overlay.captureBase.flaggedAttributes.includes(attribute.name)
+        ) ?? []
+      }
+      renderItem={({ item: attribute }: { item: IOverlayBundleAttribute }) => {
+        const label =
+          overlay?.displayAttribute(attribute.name)?.label?.[
+            language ?? "en"
+          ] ?? startCase(attribute.name);
+        return (
+          <View
+            style={{
+              paddingHorizontal,
+              paddingTop: paddingVertical,
+            }}
+          >
+            <Text
+              style={[styles.normal, styles.listText, { fontWeight: "bold" }]}
+            >
+              {label}
+            </Text>
+            <Text
+              style={[styles.normal, styles.listText, { paddingVertical: 4 }]}
+            >
+              {"•".repeat(10)}
+            </Text>
+            <View style={styles.listBorder} />
+          </View>
+        );
+      }}
+    />
   );
 }
 
@@ -202,7 +263,7 @@ function CredentialDetail10({
   const styles = computedStyles();
 
   return (
-    <View style={[styles.container, { width }]}>
+    <View style={{ width }}>
       <Detail overlay={overlay} language={language} styles={styles} />
     </View>
   );

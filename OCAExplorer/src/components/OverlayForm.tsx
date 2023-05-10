@@ -30,6 +30,27 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
   return (
     <BrandingProvider>
       <Grid>
+        <Grid>
+          <FormControl fullWidth margin="dense">
+            <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
+            <RadioGroup
+              aria-labelledby="overlay-bundle-language-label"
+              name="language"
+              onChange={handleChange}
+              value={language}
+              row
+            >
+              {overlay.languages.map((language) => (
+                <FormControlLabel
+                  key={language}
+                  value={language}
+                  control={<Radio />}
+                  label={language}
+                />
+              ))}
+            </RadioGroup>
+          </FormControl>
+        </Grid>
         <Grid
           container
           gap={4}
@@ -53,27 +74,6 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
           >
             <CredentialDetail overlay={overlay} language={language} />
           </Grid>
-        </Grid>
-        <Grid>
-          <FormControl fullWidth margin="dense">
-            <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
-            <RadioGroup
-              aria-labelledby="overlay-bundle-language-label"
-              name="language"
-              onChange={handleChange}
-              value={language}
-              row
-            >
-              {overlay.languages.map((language) => (
-                <FormControlLabel
-                  key={language}
-                  value={language}
-                  control={<Radio />}
-                  label={language}
-                />
-              ))}
-            </RadioGroup>
-          </FormControl>
         </Grid>
         <Grid>
           <OverlayBrandingForm overlay={overlay} language={language} />

@@ -58,7 +58,7 @@ function computedStyles() {
     },
     textContainer: {
       color: textColorForBackground(
-        branding?.primaryBackgroundColor || "#000000"
+        branding?.primaryBackgroundColor || "#313132"
       ),
       flexShrink: 1,
     },
