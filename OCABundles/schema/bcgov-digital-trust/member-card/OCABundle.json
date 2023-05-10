@@ -76,8 +76,7 @@
       },
       {
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-        "digest": "",
-        "logo": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/lsbc-logo.png",
+        "logo": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/lsbc-logo.jpg",
         "background_image_slice": "",
         "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/lsbc-background-image.jpg",
         "primary_background_color": "#00698c",
