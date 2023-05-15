@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "install:dev": "yarn prepare:dev && yarn install",
+    "prepare:dev": "cd ${PWD}/../aries-bifold && git checkout feature/oca-package && cd ${PWD}/packages/oca && yarn install && yarn build",
     "dev": "vite",
     "build": "tsc && vite build --base=./",
     "preview": "vite preview"
