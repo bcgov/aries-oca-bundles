@@ -1,9 +1,13 @@
 import {
+  Card,
+  CardContent,
   FormControl,
   FormControlLabel,
   FormLabel,
   Radio,
   RadioGroup,
+  Tooltip,
+  Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { useCallback, useEffect, useState } from "react";
@@ -12,6 +16,8 @@ import CredentialCard from "./CredentialCard";
 import CredentialDetail from "./CredentialDetail";
 import OverlayBrandingForm from "./OverlayBrandingForm";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
+
+import InfoIcon from "@mui/icons-material/Info";
 
 function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
   const [language, setLanguage] = useState<string>("");
@@ -30,26 +36,66 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
   return (
     <BrandingProvider>
       <Grid>
+        {overlay.languages.length > 1 && (
+          <Grid>
+            <FormControl fullWidth margin="dense">
+              <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
+              <RadioGroup
+                aria-labelledby="overlay-bundle-language-label"
+                name="language"
+                onChange={handleChange}
+                value={language}
+                row
+              >
+                {overlay.languages.map((language) => (
+                  <FormControlLabel
+                    key={language}
+                    value={language}
+                    control={<Radio />}
+                    label={language}
+                  />
+                ))}
+              </RadioGroup>
+            </FormControl>
+          </Grid>
+        )}
         <Grid>
-          <FormControl fullWidth margin="dense">
-            <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
-            <RadioGroup
-              aria-labelledby="overlay-bundle-language-label"
-              name="language"
-              onChange={handleChange}
-              value={language}
-              row
-            >
-              {overlay.languages.map((language) => (
-                <FormControlLabel
-                  key={language}
-                  value={language}
-                  control={<Radio />}
-                  label={language}
-                />
-              ))}
-            </RadioGroup>
-          </FormControl>
+          <Card>
+            <CardContent>
+              <Typography variant="overline">
+                {overlay.metadata.name[language]}&nbsp;
+                {overlay.metadata?.credentialHelpText && (
+                  <Tooltip
+                    title={
+                      overlay.metadata?.credentialHelpText?.[language] ?? ""
+                    }
+                  >
+                    <InfoIcon fontSize="small" style={{ marginBottom: 2 }} />
+                  </Tooltip>
+                )}
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                {overlay.metadata.description[language]}
+              </Typography>
+              {overlay.metadata?.issuer && (
+                <Typography variant="body2" color="text.secondary">
+                  {overlay.metadata?.issuer?.[language]}&nbsp;
+                  {overlay.metadata?.issuerDescription && (
+                    <Tooltip
+                      title={
+                        overlay.metadata?.issuerDescription?.[language] ?? ""
+                      }
+                    >
+                      <InfoIcon
+                        fontSize="inherit"
+                        style={{ marginBottom: 2 }}
+                      />
+                    </Tooltip>
+                  )}
+                </Typography>
+              )}
+            </CardContent>
+          </Card>
         </Grid>
         <Grid
           container
