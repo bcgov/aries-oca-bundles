@@ -173,6 +173,7 @@ function OverlayBrandingForm({
         <Button
           disabled={!branding}
           variant="contained"
+          component="label"
           startIcon={<SaveAlt />}
           onClick={() => {
             if (!branding) {
