@@ -225,9 +225,8 @@ function DetailList({
       }
       renderItem={({ item: attribute }: { item: IOverlayBundleAttribute }) => {
         const label =
-          overlay?.displayAttribute(attribute.name)?.label?.[
-            language ?? "en"
-          ] ?? startCase(attribute.name);
+          overlay?.getAttribute(attribute.name)?.label?.[language ?? "en"] ??
+          startCase(attribute.name);
         return (
           <View
             style={{

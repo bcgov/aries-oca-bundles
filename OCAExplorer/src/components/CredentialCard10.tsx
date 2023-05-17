@@ -185,7 +185,7 @@ function Attribute({
   styles?: any;
 }) {
   const label =
-    overlay?.displayAttribute(attribute)?.label?.[language ?? "en"] ??
+    overlay?.getAttribute(attribute)?.label?.[language ?? "en"] ??
     startCase(attribute);
 
   return (

@@ -5,18 +5,27 @@ import OverlayForm from "./components/OverlayForm";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
 function App() {
-  const [overlay, setOverlay] = useState<OverlayBundle | undefined>(undefined);
+  const [overlay, setOverlay] = useState<{
+    bundle: OverlayBundle | undefined;
+    data: Record<string, string>;
+  }>({ bundle: undefined, data: {} });
 
-  const handleOverlay = useCallback((overlay: OverlayBundle | undefined) => {
-    // TODO: Should validate the overlay here before setting it.
-    setOverlay(overlay);
-  }, []);
+  const handleOverlay = useCallback(
+    (overlay: {
+      bundle: OverlayBundle | undefined;
+      data: Record<string, string>;
+    }) => {
+      // TODO: Should validate the overlay here before setting it.
+      setOverlay(overlay);
+    },
+    []
+  );
 
   return (
     <div className="App">
       <Container>
         <Form onOverlay={handleOverlay} />
-        {overlay && <OverlayForm overlay={overlay} />}
+        {overlay?.bundle && <OverlayForm overlay={overlay.bundle} />}
       </Container>
     </div>
   );
