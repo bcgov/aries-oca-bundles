@@ -8,6 +8,7 @@ export default function Header() {
         <img src="assets/images/BCID_H_rgb_rev.svg" alt="Go to the Government of British Columbia website" style={{
           width: '100%',
           height: '100%',
+          maxHeight: "48px",
           flex: 1
         }}
         />
@@ -17,7 +18,7 @@ export default function Header() {
 
     return (
       <header>
-        <AppBar position="static" sx={{ alignItems: 'flex-start', height: "100px", flex:1 , justifyContent: 'left' }}>{displayDesktop()}</AppBar>
+        <AppBar position="static" sx={{ alignItems: 'flex-start', height: "64px", flex:1 , justifyContent: 'left' }}>{displayDesktop()}</AppBar>
       </header>
     );
 }
