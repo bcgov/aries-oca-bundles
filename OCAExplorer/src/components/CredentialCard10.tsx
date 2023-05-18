@@ -177,10 +177,24 @@ function Attribute({
         label={attribute.label ?? startCase(attribute.name)}
         styles={styles}
       ></AttributeLabel>
-      <AttributeValue
-        value={attribute.value || "•".repeat(10)}
-        styles={styles}
-      />
+      {attribute.characterEncoding === "base64" &&
+      attribute.format?.includes("image") ? (
+        <Image
+          source={{
+            uri: attribute.value,
+            height: logoHeight,
+            width: logoHeight,
+          }}
+          style={{
+            marginTop: 4,
+          }}
+        />
+      ) : (
+        <AttributeValue
+          value={attribute.value || "•".repeat(10)}
+          styles={styles}
+        />
+      )}
     </View>
   );
 }
