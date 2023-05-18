@@ -8,8 +8,8 @@ over the OCA Bundle they are submitting/updating, and that what they are
 submitting is, in fact, an OCA Bundle for a published AnonCreds Schema and/or
 Credential Definition.
 
-The OCA Bundles should follow the rules for [OCA for Aries]() OCA Bundles,
-including the [OCA for Aries Style Guide](). Each OCA Bundle must be accompanied
+The OCA Bundles should follow the rules for [OCA for Aries](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries) OCA Bundles,
+including the [OCA for Aries Style Guide](https://github.com/swcurran/aries-rfcs/tree/966b3e83870178d66a85db194a21739f0f807bef/features/0756-oca-for-aries-style-guide). Each OCA Bundle must be accompanied
 by some metadata about the credential, such as on what ledger the credential
 schema and definition (CredDef) reside, and may be accompanied by the full OCA
 Source data--Excel and JSON files.  We have some tools in the repo for
