@@ -1,5 +1,4 @@
-import { Container, Typography, Link } from "@mui/material";
-import { useCallback, useState } from "react";
+import { Typography, Link } from "@mui/material";
 import Joyride, {STATUS} from 'react-joyride';
 import { Theme } from '@mui/material/styles';
 
@@ -24,12 +23,12 @@ const demoStates = {
       )
     },
     {
-      target: '#overlay-bundle-id-label',
+      target: '#overlay-bundle-id',
       position: "center",
       disableBeacon: true,
       content: (
 	<div>
-	  <Typography variant="h3">Selecting an OCA Bundle?</Typography>
+	  <Typography variant="h3">Selecting an OCA Bundle</Typography>
 	  <Typography variant="h5">
 	    Here you can select a Pre-existing OCA Bundle
 	  </Typography>
@@ -40,7 +39,7 @@ const demoStates = {
       target: '#upload-oca-bundle-button',
       content: (
 	<div>
-	  <Typography variant="h3">Uploading a new OCA Bundle?</Typography>
+	  <Typography variant="h3">Uploading a new OCA Bundle</Typography>
 	  <Typography variant="h5">
 	    If you would like to upload your own OCA Bundle click here
 	  </Typography>
@@ -84,7 +83,7 @@ const demoStates = {
       ),
     },
     {
-      target: '#overlay-bundle-branding-form',
+      target: '#overlay-bundle-branding-form-fields',
       content: (
 	<div>
 	  <Typography variant="h3">Customizing Branding</Typography>
@@ -109,7 +108,6 @@ const demoStates = {
 
 export type DemoState = "NotRunning" | "RunningIntro" | "RunningBranding" | "RunningAll"
 
-// export const [runDemo ,setRunDemo] = useState<DemoState>("RunningIntro")
 export function Demo({runDemo, theme, resetFunc }: {runDemo: DemoState, theme: Theme, resetFunc: () => void }) {
   const handleJoyrideCallback = (data: any) => {
     const { status, type } = data;

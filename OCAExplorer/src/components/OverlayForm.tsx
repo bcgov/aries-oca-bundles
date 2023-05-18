@@ -37,12 +37,11 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
     <BrandingProvider>
       <Grid>
         {overlay.languages.length > 1 && (
-          <Grid>
+          <Grid id="overlay-bundle-language-select">
             <FormControl fullWidth margin="dense">
-              <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
+              <FormLabel >Language</FormLabel>
               <RadioGroup
                 aria-labelledby="overlay-bundle-language-label"
-                id="overlay-bundle-language-select"
                 name="language"
                 onChange={handleChange}
                 value={language}
