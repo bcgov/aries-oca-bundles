@@ -59,7 +59,9 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: "./OCAExplorer/dist"
+          path: |
+            "./OCAExplorer/dist"
+            "./OCAExplorer/assets"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
