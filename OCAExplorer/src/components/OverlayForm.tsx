@@ -129,7 +129,11 @@ function OverlayForm({
             justifyContent="center"
             alignItems="flex-start"
           >
-            <CredentialDetail overlay={overlay} language={language} />
+            <CredentialDetail
+              overlay={overlay}
+              record={record}
+              language={language}
+            />
           </Grid>
         </Grid>
         <Grid>
