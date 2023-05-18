@@ -133,7 +133,7 @@ export function Demo({runDemo, theme, resetFunc }: {runDemo: DemoState, theme: T
 	   steps={steps}
 	   styles={{
              options: {
-               arrowColor: theme.palette.primary.main,
+               arrowColor: "#fff",
                backgroundColor: "#fff",
                primaryColor: theme.palette.primary.dark,
                textColor: theme.palette.primary.main,
