@@ -3,20 +3,34 @@ import { useCallback, useState } from "react";
 import Form from "./components/Form";
 import OverlayForm from "./components/OverlayForm";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
+import {
+  CredentialExchangeRecord,
+  CredentialPreviewAttribute,
+  CredentialState,
+} from "@aries-framework/core";
 
 function App() {
-  const [overlay, setOverlay] = useState<{
-    bundle: OverlayBundle | undefined;
-    data: Record<string, string>;
-  }>({ bundle: undefined, data: {} });
+  const [overlayData, setOverlayData] = useState<{
+    overlay: OverlayBundle | undefined;
+    record: CredentialExchangeRecord | undefined;
+  }>({ overlay: undefined, record: undefined });
 
-  const handleOverlay = useCallback(
-    (overlay: {
-      bundle: OverlayBundle | undefined;
+  const handleOverlayData = useCallback(
+    (overlayData: {
+      overlay: OverlayBundle | undefined;
       data: Record<string, string>;
     }) => {
+      const record = new CredentialExchangeRecord({
+        threadId: "123",
+        protocolVersion: "1.0",
+        state: CredentialState.OfferReceived,
+        credentialAttributes: Object.entries(overlayData.data).map(
+          ([name, value]) => new CredentialPreviewAttribute({ name, value })
+        ),
+      });
+
       // TODO: Should validate the overlay here before setting it.
-      setOverlay(overlay);
+      setOverlayData({ ...overlayData, record });
     },
     []
   );
@@ -24,8 +38,13 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <Form onOverlay={handleOverlay} />
-        {overlay?.bundle && <OverlayForm overlay={overlay.bundle} />}
+        <Form onOverlayData={handleOverlayData} />
+        {overlayData?.overlay && (
+          <OverlayForm
+            overlay={overlayData.overlay}
+            record={overlayData.record}
+          />
+        )}
       </Container>
     </div>
   );

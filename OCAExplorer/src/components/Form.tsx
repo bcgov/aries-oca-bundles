@@ -18,10 +18,10 @@ const BUNDLE_LIST_URL =
 const BUNDLE_LIST_PATH = "/ocabundleslist.json";
 
 function Form({
-  onOverlay,
+  onOverlayData,
 }: {
-  onOverlay: (overlay: {
-    bundle: OverlayBundle | undefined;
+  onOverlayData: (overlayData: {
+    overlay: OverlayBundle | undefined;
     data: Record<string, string>;
   }) => void;
 }) {
@@ -54,8 +54,8 @@ function Form({
       OverlayBundleFactory.fetchOverlayBundle(option.id, option.url),
       OverlayBundleFactory.fetchOverlayBundleData(option.url),
     ])
-      .then(([bundle, data]) => {
-        onOverlay({ bundle, data });
+      .then(([overlay, data]) => {
+        onOverlayData({ overlay, data });
       })
       .catch((err) => {
         console.error(err);
@@ -77,11 +77,11 @@ function Form({
         const data = JSON.parse(text);
         setOption(undefined);
         setFile(file);
-        const bundle = OverlayBundleFactory.createOverlayBundle(
+        const overlay = OverlayBundleFactory.createOverlayBundle(
           file.name,
           Array.isArray(data) ? data[0] : data
         );
-        onOverlay({ bundle, data: {} });
+        onOverlayData({ overlay, data: {} });
       }
     };
     reader.onerror = (e) => {
@@ -92,7 +92,7 @@ function Form({
 
   const handleUnsetFileChange = useCallback(() => {
     setFile(undefined);
-    onOverlay({ bundle: undefined, data: {} });
+    onOverlayData({ overlay: undefined, data: {} });
   }, []);
 
   return (
