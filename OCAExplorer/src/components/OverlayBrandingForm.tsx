@@ -45,7 +45,7 @@ function OverlayBrandingForm({
   }, [overlay]);
 
   return (
-    <div>
+    <div id="overlay-bundle-branding-form">
       <TextField
         fullWidth
         id="logo"
@@ -171,6 +171,7 @@ function OverlayBrandingForm({
       </FormControl>
       <FormControl margin="dense" size="small">
         <Button
+          id="overlay-branding-download-branding-overlay"
           disabled={!branding}
           variant="contained"
           component="label"

@@ -139,6 +139,7 @@ function Form({
             component="label"
             size="large"
             startIcon={<UploadFile />}
+            id="upload-oca-bundle-button"
           >
             Upload OCA Bundle
             <input

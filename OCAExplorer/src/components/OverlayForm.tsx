@@ -42,6 +42,7 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
               <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
               <RadioGroup
                 aria-labelledby="overlay-bundle-language-label"
+                id="overlay-bundle-language-select"
                 name="language"
                 onChange={handleChange}
                 value={language}
@@ -110,7 +111,9 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
             justifyContent="center"
             alignItems="flex-start"
           >
-            <CredentialCard overlay={overlay} language={language} />
+            <div id="overlay-bundle-credential-card">
+              <CredentialCard overlay={overlay} language={language} />
+            </div>
           </Grid>
           <Grid
             md
@@ -118,7 +121,9 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
             justifyContent="center"
             alignItems="flex-start"
           >
-            <CredentialDetail overlay={overlay} language={language} />
+            <div id="overlay-bundle-credential-details">
+              <CredentialDetail overlay={overlay} language={language} />
+            </div>
           </Grid>
         </Grid>
         <Grid>
