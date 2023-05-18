@@ -213,12 +213,10 @@ function CardSecondaryBody({
 }
 
 function CardLogo({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle;
-  language?: string;
+  credential?: LocalizedCredential;
   styles?: any;
 }) {
   const branding = useBranding();
@@ -246,11 +244,7 @@ function CardLogo({
             },
           ]}
         >
-          {(
-            overlay?.metadata?.issuer?.[language ?? "en"] ??
-            overlay?.metadata?.name?.[language || "en"] ??
-            "C"
-          )
+          {(credential.issuer ?? credential.name ?? "C")
             ?.charAt(0)
             .toUpperCase()}
         </Text>
@@ -260,39 +254,17 @@ function CardLogo({
 }
 
 function CardPrimaryBody({
-  overlay,
   credential,
-  language,
+  primaryAttribute,
+  secondaryAttribute,
   styles,
 }: {
-  overlay?: OverlayBundle;
   credential?: LocalizedCredential;
-  language?: string;
+  primaryAttribute?: DisplayAttribute;
+  secondaryAttribute?: DisplayAttribute;
   styles?: any;
 }) {
-  const branding = useBranding();
-
   const displayAttributes = [];
-  let primaryAttribute = credential?.primaryAttribute;
-  let secondaryAttribute = credential?.secondaryAttribute;
-
-  if (branding?.primaryAttribute) {
-    primaryAttribute = getOverlayAttribute(
-      branding.primaryAttribute,
-      overlay,
-      credential,
-      language
-    );
-  }
-  if (branding?.secondaryAttribute) {
-    secondaryAttribute = getOverlayAttribute(
-      branding.secondaryAttribute,
-      overlay,
-      credential,
-      language
-    );
-  }
-
   if (primaryAttribute) {
     displayAttributes.push(primaryAttribute);
   }
@@ -330,15 +302,36 @@ function Card({
   language?: string;
   styles?: any;
 }) {
+  const branding = useBranding();
+
+  let primaryAttribute = credential?.primaryAttribute;
+  let secondaryAttribute = credential?.secondaryAttribute;
+
+  if (branding?.primaryAttribute) {
+    primaryAttribute = getOverlayAttribute(
+      branding.primaryAttribute,
+      overlay,
+      credential,
+      language
+    );
+  }
+  if (branding?.secondaryAttribute) {
+    secondaryAttribute = getOverlayAttribute(
+      branding.secondaryAttribute,
+      overlay,
+      credential,
+      language
+    );
+  }
+
   return (
     <View style={styles.cardContainer}>
       <CardSecondaryBody styles={styles} />
-      {/* TODO: Update this */}
-      <CardLogo overlay={overlay} language={language} styles={styles} />
+      <CardLogo credential={credential} styles={styles} />
       <CardPrimaryBody
-        overlay={overlay}
         credential={credential}
-        language={language}
+        primaryAttribute={primaryAttribute}
+        secondaryAttribute={secondaryAttribute}
         styles={styles}
       />
       <CardStatus styles={styles} />
