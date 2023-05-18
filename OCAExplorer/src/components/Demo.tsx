@@ -83,7 +83,7 @@ const demoStates = {
       title: <Typography variant="h3">Download Your Newly Created Branding</Typography>,
       content: (
 	<Typography variant="h5">
-	  Here you can customize the branding for your overlay
+	  Once you are all done you can download your newly created branding.json
 	</Typography>
       ),
   }]
@@ -100,18 +100,25 @@ export function Demo({runDemo, theme, resetFunc }: {runDemo: DemoState, theme: T
       resetFunc()
     }
   }
-  const steps: Array<any> =
-    runDemo == "RunningIntro"      ? demoStates.introSteps
-    : runDemo == "RunningBranding" ? demoStates.brandingSteps
-    : runDemo == "RunningAll"      ? [...demoStates.introSteps, ...demoStates.brandingSteps]
-    : []
+  const steps = () => {
+    switch (runDemo){
+      case "RunningIntro":
+        return demoStates.introSteps
+      case "RunningBranding":
+        return demoStates.brandingSteps
+      case "RunningAll":
+        return [...demoStates.introSteps, ...demoStates.brandingSteps]
+      default:
+        return []
+    }
+  }
   return <Joyride
 	   callback={handleJoyrideCallback}
 	   continuous
 	   hideCloseButton
 	   scrollToFirstStep
 	   showSkipButton
-	   steps={steps}
+	   steps={steps()}
 	   styles={{
              options: {
                arrowColor: "#fff",
