@@ -1,12 +1,9 @@
 import { Text, View, Image, ImageBackground } from "react-native";
 import startCase from "lodash.startcase";
-import { BrandingState, useBranding } from "../contexts/Branding";
+import { useBranding } from "../contexts/Branding";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 import { textColorForBackground } from "@aries-bifold/oca/build/utils/color";
-import {
-  CredentialExchangeRecord,
-  CredentialPreviewAttributeOptions,
-} from "@aries-framework/core";
+import { CredentialExchangeRecord } from "@aries-framework/core";
 import { useMemo, useState } from "react";
 import {
   CredentialFormatter,
@@ -244,7 +241,7 @@ function CardLogo({
             },
           ]}
         >
-          {(credential.issuer ?? credential.name ?? "C")
+          {(credential?.issuer ?? credential?.name ?? "C")
             ?.charAt(0)
             .toUpperCase()}
         </Text>
