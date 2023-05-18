@@ -9,14 +9,26 @@ import { OverlayBundle } from "@aries-bifold/oca/build/types";
 import { CssBaseline } from '@mui/material'
 import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 
+const setNewUserCookie = () => {
+    document.cookie = 'OCAExplorerSeenDemo=true; path=/;';
+}
+const seenDemo: string | undefined = document.cookie.split('; ').find((c) => c.split("=")[0] == 'OCAExplorerSeenDemo');
+
 function App() {
   const [overlay, setOverlay] = useState<OverlayBundle | undefined>(undefined);
-  const [runDemo, setRunDemo] = useState<DemoState>("NotRunning")
+
+  const cookieValue = seenDemo
+  console.log(cookieValue);
+
+  const [runDemo, setRunDemo] = seenDemo ? useState<DemoState>("NotRunning") : useState<DemoState>("RunningIntro")
 
   const handleOverlay = useCallback((overlay: OverlayBundle | undefined) => {
     // TODO: Should validate the overlay here before setting it.
     setOverlay(overlay);
-    setRunDemo("RunningBranding");
+    if ( !seenDemo ){
+      setRunDemo("RunningBranding");
+      setNewUserCookie()
+    }
   }, []);
 
   return (
