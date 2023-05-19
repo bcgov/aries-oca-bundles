@@ -223,11 +223,25 @@ function DetailList({
             >
               {label}
             </Text>
-            <Text
-              style={[styles.normal, styles.listText, { paddingVertical: 4 }]}
-            >
-              {attribute.value || "•".repeat(10)}
-            </Text>
+            {attribute.characterEncoding === "base64" &&
+            attribute.format?.includes("image") ? (
+              <Image
+                source={{
+                  uri: attribute.value,
+                  height: logoHeight,
+                  width: logoHeight,
+                }}
+                style={{
+                  marginTop: 4,
+                }}
+              />
+            ) : (
+              <Text
+                style={[styles.normal, styles.listText, { paddingVertical: 4 }]}
+              >
+                {attribute.value || "•".repeat(10)}
+              </Text>
+            )}
             <View style={styles.listBorder} />
           </View>
         );
