@@ -18,9 +18,12 @@ const BUNDLE_LIST_URL =
 const BUNDLE_LIST_PATH = "/ocabundleslist.json";
 
 function Form({
-  onOverlay,
+  onOverlayData,
 }: {
-  onOverlay: (bundle: OverlayBundle | undefined) => void;
+  onOverlayData: (overlayData: {
+    overlay: OverlayBundle | undefined;
+    data: Record<string, string>;
+  }) => void;
 }) {
   const [options, setOptions] = useState<any[] | undefined>([]);
   const [option, setOption] = useState<any | undefined>(undefined);
@@ -47,9 +50,12 @@ function Form({
       return;
     }
 
-    OverlayBundleFactory.fetchOverlayBundle(option.id, option.url)
-      .then((bundle) => {
-        onOverlay(bundle);
+    Promise.all([
+      OverlayBundleFactory.fetchOverlayBundle(option.id, option.url),
+      OverlayBundleFactory.fetchOverlayBundleData(option.url),
+    ])
+      .then(([overlay, data]) => {
+        onOverlayData({ overlay, data });
       })
       .catch((err) => {
         console.error(err);
@@ -68,14 +74,14 @@ function Form({
     reader.onload = (e) => {
       const text = e.target?.result;
       if (typeof text === "string") {
-        const bundle = JSON.parse(text);
+        const data = JSON.parse(text);
         setOption(undefined);
         setFile(file);
         const overlay = OverlayBundleFactory.createOverlayBundle(
           file.name,
-          Array.isArray(bundle) ? bundle[0] : bundle
+          Array.isArray(data) ? data[0] : data
         );
-        onOverlay(overlay);
+        onOverlayData({ overlay, data: {} });
       }
     };
     reader.onerror = (e) => {
@@ -86,7 +92,7 @@ function Form({
 
   const handleUnsetFileChange = useCallback(() => {
     setFile(undefined);
-    onOverlay(undefined);
+    onOverlayData({ overlay: undefined, data: {} });
   }, []);
 
   return (

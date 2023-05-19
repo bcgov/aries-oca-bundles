@@ -5,16 +5,39 @@ import OverlayForm from "./components/OverlayForm";
 import Header from "./components/Header";
 import theme from "./theme";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
-import { CssBaseline } from '@mui/material'
-import { StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
+import {
+  CredentialExchangeRecord,
+  CredentialPreviewAttribute,
+  CredentialState,
+} from "@aries-framework/core";
+import { CssBaseline } from "@mui/material";
+import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 
 function App() {
-  const [overlay, setOverlay] = useState<OverlayBundle | undefined>(undefined);
+  const [overlayData, setOverlayData] = useState<{
+    overlay: OverlayBundle | undefined;
+    record: CredentialExchangeRecord | undefined;
+  }>({ overlay: undefined, record: undefined });
 
-  const handleOverlay = useCallback((overlay: OverlayBundle | undefined) => {
-    // TODO: Should validate the overlay here before setting it.
-    setOverlay(overlay);
-  }, []);
+  const handleOverlayData = useCallback(
+    (overlayData: {
+      overlay: OverlayBundle | undefined;
+      data: Record<string, string>;
+    }) => {
+      const record = new CredentialExchangeRecord({
+        threadId: "123",
+        protocolVersion: "1.0",
+        state: CredentialState.OfferReceived,
+        credentialAttributes: Object.entries(overlayData.data).map(
+          ([name, value]) => new CredentialPreviewAttribute({ name, value })
+        ),
+      });
+
+      // TODO: Should validate the overlay here before setting it.
+      setOverlayData({ ...overlayData, record });
+    },
+    []
+  );
 
   return (
     <div>
@@ -23,9 +46,14 @@ function App() {
         <ThemeProvider theme={theme}>
           <Header />
           <div className="App">
-            <Container >
-              <Form onOverlay={handleOverlay} />
-              {overlay && <OverlayForm overlay={overlay} />}
+            <Container>
+              <Form onOverlayData={handleOverlayData} />
+              {overlayData?.overlay && (
+                <OverlayForm
+                  overlay={overlayData.overlay}
+                  record={overlayData.record}
+                />
+              )}
             </Container>
           </div>
         </ThemeProvider>

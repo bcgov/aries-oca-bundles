@@ -2,8 +2,14 @@ import { View, Image, ImageBackground, Text, FlatList } from "react-native";
 import { useBranding } from "../contexts/Branding";
 import { textColorForBackground } from "@aries-bifold/oca/build/utils/color";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
-import { IOverlayBundleAttribute } from "@aries-bifold/oca/build/interfaces/overlay";
 import startCase from "lodash.startcase";
+import { CredentialExchangeRecord } from "@aries-framework/core";
+import { useMemo, useState } from "react";
+import {
+  CredentialFormatter,
+  DisplayAttribute,
+  LocalizedCredential,
+} from "@aries-bifold/oca/build/formatters/Credential";
 
 const width = 360;
 const paddingHorizontal = 24;
@@ -74,12 +80,10 @@ function computedStyles() {
 }
 
 function DetailLogo({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle | undefined;
-  language?: string;
+  credential?: LocalizedCredential;
   styles?: any;
 }) {
   const branding = useBranding();
@@ -98,11 +102,7 @@ function DetailLogo({
         />
       ) : (
         <Text style={[styles.title, { fontSize: 0.5 * logoHeight }]}>
-          {(
-            overlay?.metadata?.issuer?.[language ?? "en"] ??
-            overlay?.metadata?.name?.[language || "en"] ??
-            "C"
-          )
+          {(credential?.issuer ?? credential?.name ?? "C")
             ?.charAt(0)
             .toUpperCase()}
         </Text>
@@ -138,12 +138,10 @@ function DetailSecondaryBody({
 }
 
 function DetailPrimaryBody({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle | undefined;
-  language?: string;
+  credential?: LocalizedCredential;
   styles?: any;
 }) {
   return (
@@ -162,7 +160,7 @@ function DetailPrimaryBody({
           ]}
           numberOfLines={1}
         >
-          {overlay?.metadata?.issuer?.[language ?? "en"]}
+          {credential?.issuer}
         </Text>
         <Text
           style={[
@@ -173,7 +171,7 @@ function DetailPrimaryBody({
             },
           ]}
         >
-          {overlay?.metadata?.name[language ?? "en"]}
+          {credential?.name}
         </Text>
       </View>
     </View>
@@ -181,53 +179,38 @@ function DetailPrimaryBody({
 }
 
 function Detail({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle | undefined;
-  language?: string;
+  credential?: LocalizedCredential;
   styles?: any;
 }) {
   return (
     <View>
       <View style={styles.container}>
         <DetailSecondaryBody styles={styles} />
-        <DetailLogo overlay={overlay} language={language} styles={styles} />
-        <DetailPrimaryBody
-          overlay={overlay}
-          language={language}
-          styles={styles}
-        />
+        <DetailLogo credential={credential} styles={styles} />
+        <DetailPrimaryBody credential={credential} styles={styles} />
       </View>
       <View>
-        <DetailList overlay={overlay} language={language} styles={styles} />
+        <DetailList credential={credential} styles={styles} />
       </View>
     </View>
   );
 }
 
 function DetailList({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle | undefined;
-  language?: string;
+  credential?: LocalizedCredential;
   styles?: any;
 }) {
   return (
     <FlatList
-      data={
-        overlay?.attributes.filter((attribute) =>
-          overlay.captureBase.flaggedAttributes.includes(attribute.name)
-        ) ?? []
-      }
-      renderItem={({ item: attribute }: { item: IOverlayBundleAttribute }) => {
-        const label =
-          overlay?.displayAttribute(attribute.name)?.label?.[
-            language ?? "en"
-          ] ?? startCase(attribute.name);
+      data={credential?.attributes ?? []}
+      renderItem={({ item: attribute }: { item: DisplayAttribute }) => {
+        const label = attribute.label ?? startCase(attribute.name);
         return (
           <View
             style={{
@@ -243,7 +226,7 @@ function DetailList({
             <Text
               style={[styles.normal, styles.listText, { paddingVertical: 4 }]}
             >
-              {"•".repeat(10)}
+              {attribute.value || "•".repeat(10)}
             </Text>
             <View style={styles.listBorder} />
           </View>
@@ -255,16 +238,29 @@ function DetailList({
 
 function CredentialDetail10({
   overlay,
+  record,
   language,
 }: {
   overlay?: OverlayBundle;
+  record?: CredentialExchangeRecord;
   language: string;
 }) {
   const styles = computedStyles();
 
+  const [formatter, setFormatter] = useState<CredentialFormatter | undefined>();
+
+  useMemo(() => {
+    if (!(overlay && record)) {
+      return;
+    }
+    setFormatter(new CredentialFormatter(overlay, record));
+  }, [overlay, record]);
+
+  const localizedCredential = formatter?.localizedCredential(language ?? "en");
+
   return (
     <View style={{ width }}>
-      <Detail overlay={overlay} language={language} styles={styles} />
+      <Detail credential={localizedCredential} styles={styles} />
     </View>
   );
 }
