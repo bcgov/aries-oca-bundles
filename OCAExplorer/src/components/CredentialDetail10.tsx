@@ -10,6 +10,8 @@ import {
   DisplayAttribute,
   LocalizedCredential,
 } from "@aries-bifold/oca/build/formatters/Credential";
+import AttributeValue from "./AttributeValue";
+import AttributeLabel from "./AttributeLabel";
 
 const width = 360;
 const paddingHorizontal = 24;
@@ -210,7 +212,6 @@ function DetailList({
     <FlatList
       data={credential?.attributes ?? []}
       renderItem={({ item: attribute }: { item: DisplayAttribute }) => {
-        const label = attribute.label ?? startCase(attribute.name);
         return (
           <View
             style={{
@@ -218,30 +219,15 @@ function DetailList({
               paddingTop: paddingVertical,
             }}
           >
-            <Text
-              style={[styles.normal, styles.listText, { fontWeight: "bold" }]}
-            >
-              {label}
-            </Text>
-            {attribute.characterEncoding === "base64" &&
-            attribute.format?.includes("image") ? (
-              <Image
-                source={{
-                  uri: attribute.value,
-                  height: logoHeight,
-                  width: logoHeight,
-                }}
-                style={{
-                  marginTop: 4,
-                }}
-              />
-            ) : (
-              <Text
-                style={[styles.normal, styles.listText, { paddingVertical: 4 }]}
-              >
-                {attribute.value || "•".repeat(10)}
-              </Text>
-            )}
+            <AttributeLabel
+              attribute={attribute}
+              styles={[styles.normal, styles.listText, { fontWeight: "bold" }]}
+            />
+            <AttributeValue
+              attribute={attribute}
+              styles={[styles.normal, styles.listText, { paddingVertical: 4 }]}
+              size={logoHeight}
+            />
             <View style={styles.listBorder} />
           </View>
         );

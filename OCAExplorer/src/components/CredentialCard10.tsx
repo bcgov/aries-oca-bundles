@@ -10,6 +10,8 @@ import {
   DisplayAttribute,
   LocalizedCredential,
 } from "@aries-bifold/oca/build/formatters/Credential";
+import AttributeLabel from "./AttributeLabel";
+import AttributeValue from "./AttributeValue";
 
 const width = 360;
 const borderRadius = 10;
@@ -131,39 +133,6 @@ function CredentialName({ name, styles }: { name?: string; styles?: any }) {
   );
 }
 
-function AttributeLabel({ label, styles }: { label: string; styles?: any }) {
-  return (
-    <Text
-      style={[
-        styles.labelSubtitle,
-        styles.textContainer,
-        {
-          lineHeight: 19,
-          opacity: 0.8,
-        },
-      ]}
-    >
-      {label}
-    </Text>
-  );
-}
-
-function AttributeValue({ value, styles }: { value?: string; styles?: any }) {
-  return (
-    <Text
-      style={[
-        styles.normal,
-        styles.textContainer,
-        {
-          lineHeight: 24,
-        },
-      ]}
-    >
-      {value}
-    </Text>
-  );
-}
-
 function Attribute({
   attribute,
   styles,
@@ -174,8 +143,15 @@ function Attribute({
   return (
     <View style={[styles.textContainer, styles.attributeContainer]}>
       <AttributeLabel
-        label={attribute.label ?? startCase(attribute.name)}
-        styles={styles}
+        attribute={attribute}
+        styles={[
+          styles.labelSubtitle,
+          styles.textContainer,
+          {
+            lineHeight: 19,
+            opacity: 0.8,
+          },
+        ]}
       ></AttributeLabel>
       {attribute.characterEncoding === "base64" &&
       attribute.format?.includes("image") ? (
@@ -191,8 +167,14 @@ function Attribute({
         />
       ) : (
         <AttributeValue
-          value={attribute.value || "•".repeat(10)}
-          styles={styles}
+          attribute={attribute}
+          styles={[
+            styles.normal,
+            styles.textContainer,
+            {
+              lineHeight: 24,
+            },
+          ]}
         />
       )}
     </View>
@@ -315,9 +297,8 @@ function Card({
 }) {
   const branding = useBranding();
 
-  let primaryAttribute = credential?.primaryAttribute;
-  let secondaryAttribute = credential?.secondaryAttribute;
-
+  let primaryAttribute;
+  let secondaryAttribute;
   if (branding?.primaryAttribute) {
     primaryAttribute = getOverlayAttribute(
       branding.primaryAttribute,
