@@ -124,9 +124,7 @@ function OverlayBrandingForm({
       <FormControl fullWidth>
         <Autocomplete
           id="primary-attribute"
-          options={Object.entries(overlay?.captureBase?.attributes || {}).map(
-            ([key]) => key
-          )}
+          options={overlay?.captureBase?.flaggedAttributes || []}
           value={branding?.primaryAttribute ?? ""}
           onChange={(e, value) => {
             dispatch &&
@@ -148,9 +146,7 @@ function OverlayBrandingForm({
       <FormControl fullWidth>
         <Autocomplete
           id="secondary-attribute"
-          options={Object.entries(overlay?.captureBase?.attributes || {}).map(
-            ([key]) => key
-          )}
+          options={overlay?.captureBase?.flaggedAttributes || []}
           value={branding?.secondaryAttribute ?? ""}
           onChange={(e, value) => {
             dispatch &&
