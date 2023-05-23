@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@aries-bifold/oca": "file:../aries-bifold/packages/oca",
+    "@aries-framework/core": "^0.3.3",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.14",
+    "csv-parse": "^5.3.10",
     "file-saver": "^2.0.5",
     "lodash.startcase": "^4.4.0",
     "mui-color-input": "^1.0.5",

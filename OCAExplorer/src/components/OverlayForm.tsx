@@ -18,8 +18,15 @@ import OverlayBrandingForm from "./OverlayBrandingForm";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
 import InfoIcon from "@mui/icons-material/Info";
+import { CredentialExchangeRecord } from "@aries-framework/core";
 
-function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
+function OverlayForm({
+  overlay,
+  record,
+}: {
+  overlay: OverlayBundle;
+  record?: CredentialExchangeRecord;
+}) {
   const [language, setLanguage] = useState<string>("");
 
   useEffect(() => {
@@ -111,7 +118,11 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
             alignItems="flex-start"
           >
             <div id="overlay-bundle-credential-card">
-              <CredentialCard overlay={overlay} language={language} />
+              <CredentialCard
+                overlay={overlay}
+                record={record}
+                language={language}
+              />
             </div>
           </Grid>
           <Grid
@@ -121,7 +132,11 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
             alignItems="flex-start"
           >
             <div id="overlay-bundle-credential-details">
-              <CredentialDetail overlay={overlay} language={language} />
+              <CredentialDetail
+                overlay={overlay}
+                record={record}
+                language={language}
+              />
             </div>
           </Grid>
         </Grid>

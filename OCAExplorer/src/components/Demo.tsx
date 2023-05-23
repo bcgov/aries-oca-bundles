@@ -45,6 +45,7 @@ const demoStates = {
     {
       target: '#overlay-bundle-language-select',
       title: <Typography variant="h3">Previewing Languages</Typography>,
+      disableBeacon: true,
       content: (
 	<Typography variant="h5">
 	  To preview alternative languages select one of the following radio buttons

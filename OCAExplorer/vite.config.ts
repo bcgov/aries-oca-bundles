@@ -14,6 +14,14 @@ export default defineConfig({
         "react-native-web",
         "dist"
       ),
+      "@digitalbazaar/security-context": path.join(
+        __dirname,
+        "node_modules",
+        "@digitalbazaar",
+        "security-context",
+        "dist",
+        "context.js"
+      ),
     },
   },
   // This is only required for serving packages from the aries-bifold submodule
