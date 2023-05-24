@@ -92,13 +92,14 @@ const demoStates = {
 
 export type DemoState = "NotRunning" | "RunningIntro" | "RunningBranding" | "RunningAll"
 
-export function Demo({runDemo, theme, resetFunc }: {runDemo: DemoState, theme: Theme, resetFunc: () => void }) {
+export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoState, theme: Theme, resetFunc: () => void, skipFunc: () => void  }) {
   const handleJoyrideCallback = (data: any) => {
     const { status, type } = data;
-    const finishedStatuses: string[] = [STATUS.FINISHED, STATUS.SKIPPED];
 
-    if (finishedStatuses.includes(status)) {
+    if (status == STATUS.FINISHED) {
       resetFunc()
+    } else if (status == STATUS.SKIPPED){
+      skipFunc()
     }
   }
   const steps = () => {

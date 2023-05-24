@@ -17,7 +17,7 @@ import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 const setNewUserCookie = () => {
     document.cookie = 'OCAExplorerSeenDemo=true; path=/;';
 }
-const seenDemo: string | undefined = document.cookie.split('; ').find((c) => c.split("=")[0] == 'OCAExplorerSeenDemo');
+const seenDemo: () => string | undefined = () => document.cookie.split('; ').find((c) => c.split("=")[0] == 'OCAExplorerSeenDemo');
 
 function App() {
   const [overlayData, setOverlayData] = useState<{
@@ -41,7 +41,7 @@ function App() {
         ),
       });
         setOverlayData({ ...overlayData, record });
-    if ( !seenDemo ){
+    if ( !seenDemo() ){
       setRunDemo("RunningBranding");
       setNewUserCookie()
     }
@@ -49,7 +49,7 @@ function App() {
       []
   );
 
-      const [runDemo, setRunDemo] = seenDemo ? useState<DemoState>("NotRunning") : useState<DemoState>("RunningIntro")
+      const [runDemo, setRunDemo] = seenDemo() ? useState<DemoState>("NotRunning") : useState<DemoState>("RunningIntro")
 
   return (
       <StyledEngineProvider injectFirst>
@@ -58,7 +58,13 @@ function App() {
         {/* If the overlay is displayed play through all steps if not only play the intro steps */}
         <Header callback={ () => (overlayData?.overlay ? setRunDemo("RunningAll") : setRunDemo("RunningIntro"))}/>
           <div className="App">
-            <Demo runDemo={runDemo} theme={theme} resetFunc={ () => setRunDemo("NotRunning") }/>
+              <Demo runDemo={runDemo}
+                    theme={theme}
+                    resetFunc={ () => setRunDemo("NotRunning") }
+                    skipFunc={ () => {
+                      setRunDemo("NotRunning")
+                      setNewUserCookie()
+                    }}/>
             <Container>
               <Form onOverlayData={handleOverlayData} />
               {overlayData?.overlay && (
