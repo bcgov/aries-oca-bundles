@@ -14,19 +14,25 @@ import {
 import { CssBaseline } from "@mui/material";
 import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 
-const setNewUserCookie = () => {
-    document.cookie = 'OCAExplorerSeenDemo=true; path=/;';
-}
-const seenDemo: () => string | undefined = () => document.cookie.split('; ').find((c) => c.split("=")[0] == 'OCAExplorerSeenDemo');
-
 function App() {
   const [overlayData, setOverlayData] = useState<{
     overlay: OverlayBundle | undefined;
     record: CredentialExchangeRecord | undefined;
   }>({ overlay: undefined, record: undefined });
 
-  const cookieValue = seenDemo
-  console.log(cookieValue);
+  // Track if we should skip the rest of the demo.
+  // Default value should be set based on the stored token in local storage
+  const [skipDemo, setSkipDemo] = useState<boolean>(localStorage.getItem('OCAExplorerSeenDemo') != null);
+
+  const forceSkipDemo = () => {
+    if (skipDemo == false) {
+        localStorage.setItem('OCAExplorerSeenDemo', 'true');
+    }
+    setSkipDemo(true)
+  }
+
+  const [runDemo, setRunDemo] = skipDemo ? useState<DemoState>("NotRunning") : useState<DemoState>("RunningIntro")
+
   const handleOverlayData = useCallback(
     (overlayData: {
       overlay: OverlayBundle | undefined;
@@ -40,43 +46,41 @@ function App() {
           ([name, value]) => new CredentialPreviewAttribute({ name, value })
         ),
       });
-        setOverlayData({ ...overlayData, record });
-    if ( !seenDemo() ){
-      setRunDemo("RunningBranding");
-      setNewUserCookie()
-    }
+      setOverlayData({ ...overlayData, record });
+      if (!skipDemo) {
+        setRunDemo("RunningBranding");
+        forceSkipDemo()
+      }
     } ,
-      []
+      [skipDemo]
   );
 
-      const [runDemo, setRunDemo] = seenDemo() ? useState<DemoState>("NotRunning") : useState<DemoState>("RunningIntro")
-
   return (
-      <StyledEngineProvider injectFirst>
-        <CssBaseline />
-        <ThemeProvider theme={theme}>
+    <StyledEngineProvider injectFirst>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
         {/* If the overlay is displayed play through all steps if not only play the intro steps */}
         <Header callback={ () => (overlayData?.overlay ? setRunDemo("RunningAll") : setRunDemo("RunningIntro"))}/>
-          <div className="App">
-              <Demo runDemo={runDemo}
-                    theme={theme}
-                    resetFunc={ () => setRunDemo("NotRunning") }
-                    skipFunc={ () => {
-                      setRunDemo("NotRunning")
-                      setNewUserCookie()
-                    }}/>
-            <Container>
-              <Form onOverlayData={handleOverlayData} />
-              {overlayData?.overlay && (
-                <OverlayForm
-                  overlay={overlayData.overlay}
-                  record={overlayData.record}
-                />
-              )}
-            </Container>
-          </div>
-        </ThemeProvider>
-      </StyledEngineProvider>
+        <div className="App">
+          <Demo runDemo={runDemo}
+                theme={theme}
+                resetFunc={ () => setRunDemo("NotRunning") }
+                skipFunc={ () => {
+                  setRunDemo("NotRunning")
+                  forceSkipDemo()
+                }}/>
+          <Container>
+            <Form onOverlayData={handleOverlayData} />
+            {overlayData?.overlay && (
+              <OverlayForm
+                overlay={overlayData.overlay}
+                record={overlayData.record}
+              />
+            )}
+          </Container>
+        </div>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 
