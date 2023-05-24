@@ -97,7 +97,7 @@ function Form({
 
   return (
     <Paper style={{ padding: "1em", marginBottom: "1em" }} elevation={1}>
-      <FormControl fullWidth margin="dense">
+      <FormControl fullWidth margin="dense" id="overlay-bundle-id">
         <InputLabel id="overlay-bundle-id-label">Bundle ID</InputLabel>
         <Select
           labelId="overlay-bundle-id-label"
@@ -145,6 +145,7 @@ function Form({
             component="label"
             size="large"
             startIcon={<UploadFile />}
+            id="upload-oca-bundle-button"
           >
             Upload OCA Bundle
             <input

@@ -1,8 +1,9 @@
 import { AppBar, Toolbar, Icon } from "@mui/material";
+import InfoIcon from '@mui/icons-material/Info';
 import imgUrl from '../assets/images/BCID_H_rgb_rev.svg';
 
-export default function Header() {
-  const displayDesktop = () => {
+export default function Header({callback}: {callback: () => any}) {
+  const displayDesktop = (callback: () => any) => {
 
     return (
       <Toolbar>
@@ -13,13 +14,16 @@ export default function Header() {
           flex: 1
         }}
         />
+        <button onClick={callback} >
+          <InfoIcon />
+        </button>
       </Toolbar>
     )
   };
 
     return (
-      <header>
-        <AppBar position="static" sx={{ alignItems: 'flex-start', height: "64px", flex:1 , justifyContent: 'left' }}>{displayDesktop()}</AppBar>
+      <header style={{paddingBottom: "10px"}}>
+        <AppBar position="static" sx={{ alignItems: 'flex-start', height: "64px", flex:1 , justifyContent: 'left' }}>{displayDesktop(callback)}</AppBar>
       </header>
     );
 }

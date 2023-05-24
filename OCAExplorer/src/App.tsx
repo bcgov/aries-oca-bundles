@@ -1,8 +1,9 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { useCallback, useState } from "react";
 import Form from "./components/Form";
 import OverlayForm from "./components/OverlayForm";
 import Header from "./components/Header";
+import { Demo, DemoState } from "./components/Demo";
 import theme from "./theme";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 import {
@@ -13,12 +14,19 @@ import {
 import { CssBaseline } from "@mui/material";
 import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 
+const setNewUserCookie = () => {
+    document.cookie = 'OCAExplorerSeenDemo=true; path=/;';
+}
+const seenDemo: string | undefined = document.cookie.split('; ').find((c) => c.split("=")[0] == 'OCAExplorerSeenDemo');
+
 function App() {
   const [overlayData, setOverlayData] = useState<{
     overlay: OverlayBundle | undefined;
     record: CredentialExchangeRecord | undefined;
   }>({ overlay: undefined, record: undefined });
 
+  const cookieValue = seenDemo
+  console.log(cookieValue);
   const handleOverlayData = useCallback(
     (overlayData: {
       overlay: OverlayBundle | undefined;
@@ -32,20 +40,25 @@ function App() {
           ([name, value]) => new CredentialPreviewAttribute({ name, value })
         ),
       });
-
-      // TODO: Should validate the overlay here before setting it.
-      setOverlayData({ ...overlayData, record });
-    },
-    []
+        setOverlayData({ ...overlayData, record });
+    if ( !seenDemo ){
+      setRunDemo("RunningBranding");
+      setNewUserCookie()
+    }
+    } ,
+      []
   );
 
+      const [runDemo, setRunDemo] = seenDemo ? useState<DemoState>("NotRunning") : useState<DemoState>("RunningIntro")
+
   return (
-    <div>
       <StyledEngineProvider injectFirst>
         <CssBaseline />
         <ThemeProvider theme={theme}>
-          <Header />
+        {/* If the overlay is displayed play through all steps if not only play the intro steps */}
+        <Header callback={ () => (overlayData?.overlay ? setRunDemo("RunningAll") : setRunDemo("RunningIntro"))}/>
           <div className="App">
+            <Demo runDemo={runDemo} theme={theme} resetFunc={ () => setRunDemo("NotRunning") }/>
             <Container>
               <Form onOverlayData={handleOverlayData} />
               {overlayData?.overlay && (
@@ -58,7 +71,6 @@ function App() {
           </div>
         </ThemeProvider>
       </StyledEngineProvider>
-    </div>
   );
 }
 
