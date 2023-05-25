@@ -21,17 +21,17 @@ function App() {
   }>({ overlay: undefined, record: undefined });
 
   // Track if we should skip the rest of the demo.
-  const [runDemo, setRunDemo] = useState<DemoState>(
+  const [demoState, setDemoState] = useState<DemoState>(
     localStorage.getItem('OCAExplorerSeenDemo') != null
-    ? DemoState.SkipDemo : DemoState.RunningIntro
+    ? DemoState.SeenDemo : DemoState.RunningIntro
   )
 
   useEffect( () => {
     // update localStorage to reflect the skipDemo state
-    if (runDemo == DemoState.SkipDemo) {
+    if (demoState == DemoState.SeenDemo) {
       localStorage.setItem('OCAExplorerSeenDemo', 'true');
     }
-  }, [ runDemo ]);
+  }, [ demoState ]);
 
   const handleOverlayData = useCallback(
     (overlayData: {
@@ -47,11 +47,11 @@ function App() {
         ),
       });
       setOverlayData({ ...overlayData, record });
-      if (runDemo != DemoState.SkipDemo) {
-        setRunDemo(DemoState.RunningBranding);
+      if (demoState != DemoState.SeenDemo) {
+        setDemoState(DemoState.RunningBranding);
       }
     } ,
-      [ runDemo ]
+      [ demoState ]
   );
 
   return (
@@ -59,21 +59,21 @@ function App() {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         {/* If the overlay is displayed play through all steps if not only play the intro steps */}
-        <Header callback={ () => setRunDemo(
+        <Header callback={ () => setDemoState(
           overlayData?.overlay
           ? DemoState.RunningAll
           : DemoState.RunningIntro
         )}/>
         <div className="App">
-          <Demo runDemo={runDemo}
+          <Demo runDemo={demoState}
                 theme={theme}
-                resetFunc={ () => setRunDemo(
+                resetFunc={ () => setDemoState(
                   overlayData?.overlay
-                  ? DemoState.SkipDemo
+                  ? DemoState.SeenDemo
                   : DemoState.NotRunning
                 )
                 }
-                skipFunc={ () => setRunDemo(DemoState.SkipDemo) }/>
+                skipFunc={ () => setDemoState(DemoState.SeenDemo) }/>
           <Container>
             <Form onOverlayData={handleOverlayData} />
             {overlayData?.overlay && (
