@@ -21,16 +21,16 @@ function App() {
   }>({ overlay: undefined, record: undefined });
 
   // Track if we should skip the rest of the demo.
+  const initStore = localStorage.getItem('OCAExplorerSeenDemo')
   const [demoState, setDemoState] = useState<DemoState>(
-    localStorage.getItem('OCAExplorerSeenDemo') != null
-    ? DemoState.SeenDemo : DemoState.RunningIntro
+    initStore != null && initStore != DemoState.PausedDemo.toString()
+    ? parseInt(initStore)
+    : DemoState.RunningIntro
   )
 
   useEffect( () => {
     // update localStorage to reflect the skipDemo state
-    if (demoState == DemoState.SeenDemo) {
-      localStorage.setItem('OCAExplorerSeenDemo', 'true');
-    }
+    localStorage.setItem('OCAExplorerSeenDemo', demoState.toString());
   }, [ demoState ]);
 
   const handleOverlayData = useCallback(
@@ -70,7 +70,7 @@ function App() {
                 resetFunc={ () => setDemoState(
                   overlayData?.overlay
                   ? DemoState.SeenDemo
-                  : DemoState.NotRunning
+                  : DemoState.PausedDemo
                 )
                 }
                 skipFunc={ () => setDemoState(DemoState.SeenDemo) }/>

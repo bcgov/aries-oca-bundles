@@ -91,10 +91,10 @@ const demoStates = {
 }
 
 export enum DemoState{
-    NotRunning,
     RunningIntro,
     RunningBranding,
     RunningAll,
+    PausedDemo,
     SeenDemo,
 }
 
@@ -137,6 +137,6 @@ export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoStat
                zIndex: 1000,
              }
 	   }}
-	   run={runDemo != DemoState.NotRunning}
+           run={(runDemo != DemoState.PausedDemo) && (runDemo != DemoState.SeenDemo)}
          />
 }
