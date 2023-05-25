@@ -95,6 +95,7 @@ export enum DemoState{
     RunningIntro,
     RunningBranding,
     RunningAll,
+    SkipDemo,
 }
 
 export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoState, theme: Theme, resetFunc: () => void, skipFunc: () => void  }) {

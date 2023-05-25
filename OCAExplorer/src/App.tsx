@@ -1,5 +1,5 @@
 import { Container, Typography } from "@mui/material";
-import { useCallback, useState, useMemo, useEffect} from "react";
+import { useCallback, useState, useEffect} from "react";
 import Form from "./components/Form";
 import OverlayForm from "./components/OverlayForm";
 import Header from "./components/Header";
@@ -21,16 +21,17 @@ function App() {
   }>({ overlay: undefined, record: undefined });
 
   // Track if we should skip the rest of the demo.
-  const [skipDemo, setSkipDemo] = useState<boolean>(localStorage.getItem('OCAExplorerSeenDemo') != null);
+  const [runDemo, setRunDemo] = useState<DemoState>(
+    localStorage.getItem('OCAExplorerSeenDemo') != null
+    ? DemoState.SkipDemo : DemoState.RunningIntro
+  )
 
   useEffect( () => {
     // update localStorage to reflect the skipDemo state
-    if (skipDemo == true) {
+    if (runDemo == DemoState.SkipDemo) {
       localStorage.setItem('OCAExplorerSeenDemo', 'true');
     }
-  }, [skipDemo])
-
-  const [runDemo, setRunDemo] = skipDemo ? useState<DemoState>(DemoState.NotRunning) : useState<DemoState>(DemoState.RunningIntro)
+  }, [ runDemo ]);
 
   const handleOverlayData = useCallback(
     (overlayData: {
@@ -46,12 +47,11 @@ function App() {
         ),
       });
       setOverlayData({ ...overlayData, record });
-      if (!skipDemo) {
+      if (runDemo != DemoState.SkipDemo) {
         setRunDemo(DemoState.RunningBranding);
-        setSkipDemo(true)
       }
     } ,
-      [skipDemo]
+      [ runDemo ]
   );
 
   return (
@@ -59,15 +59,21 @@ function App() {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         {/* If the overlay is displayed play through all steps if not only play the intro steps */}
-        <Header callback={ () => (overlayData?.overlay ? setRunDemo(DemoState.RunningAll) : setRunDemo(DemoState.RunningIntro))}/>
+        <Header callback={ () => setRunDemo(
+          overlayData?.overlay
+          ? DemoState.RunningAll
+          : DemoState.RunningIntro
+        )}/>
         <div className="App">
           <Demo runDemo={runDemo}
                 theme={theme}
-                resetFunc={ () => setRunDemo(DemoState.NotRunning) }
-                skipFunc={ () => {
-                  setSkipDemo(true)
-                  setRunDemo(DemoState.NotRunning)
-                }}/>
+                resetFunc={ () => setRunDemo(
+                  overlayData?.overlay
+                  ? DemoState.SkipDemo
+                  : DemoState.NotRunning
+                )
+                }
+                skipFunc={ () => setRunDemo(DemoState.SkipDemo) }/>
           <Container>
             <Form onOverlayData={handleOverlayData} />
             {overlayData?.overlay && (
