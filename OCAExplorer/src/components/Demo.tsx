@@ -90,7 +90,12 @@ const demoStates = {
   }]
 }
 
-export type DemoState = "NotRunning" | "RunningIntro" | "RunningBranding" | "RunningAll"
+export enum DemoState{
+    NotRunning,
+    RunningIntro,
+    RunningBranding,
+    RunningAll,
+}
 
 export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoState, theme: Theme, resetFunc: () => void, skipFunc: () => void  }) {
   const handleJoyrideCallback = (data: any) => {
@@ -102,13 +107,13 @@ export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoStat
       skipFunc()
     }
   }
-  const steps = () => {
+    const steps = () => {
     switch (runDemo){
-      case "RunningIntro":
+      case DemoState.RunningIntro:
         return demoStates.introSteps
-      case "RunningBranding":
+      case DemoState.RunningBranding:
         return demoStates.brandingSteps
-      case "RunningAll":
+      case DemoState.RunningAll:
         return [...demoStates.introSteps, ...demoStates.brandingSteps]
       default:
         return []
@@ -131,6 +136,6 @@ export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoStat
                zIndex: 1000,
              }
 	   }}
-	   run={runDemo != "NotRunning"}
+	   run={runDemo != DemoState.NotRunning}
          />
 }
