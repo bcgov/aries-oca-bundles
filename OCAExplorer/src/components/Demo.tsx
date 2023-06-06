@@ -1,5 +1,5 @@
 import { Typography, Link } from "@mui/material";
-import Joyride, {STATUS} from 'react-joyride';
+import Joyride, {STATUS, ACTIONS } from 'react-joyride';
 import { Theme } from '@mui/material/styles';
 
 const demoStates = {
@@ -100,11 +100,10 @@ export enum DemoState{
 
 export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoState, theme: Theme, resetFunc: () => void, skipFunc: () => void  }) {
   const handleJoyrideCallback = (data: any) => {
-    const { status, type } = data;
-
+    const { action, status, type } = data;
     if (status == STATUS.FINISHED) {
       resetFunc()
-    } else if (status == STATUS.SKIPPED){
+    } else if ((status == STATUS.SKIPPED) || (action == ACTIONS.CLOSE)){
       skipFunc()
     }
   }
@@ -123,6 +122,13 @@ export function Demo({runDemo, theme, resetFunc, skipFunc, }: {runDemo: DemoStat
   return <Joyride
 	   callback={handleJoyrideCallback}
 	   continuous
+           locale={{ back: 'Back',
+                     close: 'Close',
+                     last: 'End',
+                     next: 'Next',
+                     open: 'Open the dialog',
+                     skip: 'Skip'
+           }}
 	   hideCloseButton
 	   scrollToFirstStep
 	   showSkipButton
