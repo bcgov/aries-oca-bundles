@@ -64,7 +64,10 @@ export default function ImageField({
         />
         <Button variant="text" component="label" size="small" disableElevation>
           <FileUpload/>
-          <input hidden type="file" id="myfile" name="myfile" onChange={handleImageChange}/>
+          <input hidden type="file" id="myfile" name="myfile" onChange={(e) => {
+            setWasFile(true)
+            handleImageChange(e)
+          }}/>
         </Button>
       </Box>
       { !validFile && <Alert severity="error">ERROR: This file does not seem to be a valid image</Alert>}
