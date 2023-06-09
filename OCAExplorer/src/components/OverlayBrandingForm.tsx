@@ -63,11 +63,11 @@ function OverlayBrandingForm({
           id="background-image"
           label="Background Image"
           value={branding?.backgroundImage ?? ""}
-          textSetter={(f: string) => {
+          textSetter={(content: string) => {
             dispatch &&
             dispatch({
               type: ActionType.BACKGROUND_IMAGE,
-              payload: { backgroundImage: f },
+              payload: { backgroundImage: content },
             });
           }}
         />
@@ -82,7 +82,7 @@ function OverlayBrandingForm({
               payload: { backgroundImageSlice: content },
             });
           }}
-          />
+         />
         <MuiColorInput
           fullWidth
           id="primary-background-color"
