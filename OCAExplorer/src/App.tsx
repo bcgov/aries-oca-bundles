@@ -1,8 +1,9 @@
-import { Container } from "@mui/material";
-import { useCallback, useState } from "react";
+import { Container, Typography } from "@mui/material";
+import { useCallback, useState, useEffect} from "react";
 import Form from "./components/Form";
 import OverlayForm from "./components/OverlayForm";
 import Header from "./components/Header";
+import { Demo, DemoState } from "./components/Demo";
 import theme from "./theme";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 import {
@@ -19,6 +20,19 @@ function App() {
     record: CredentialExchangeRecord | undefined;
   }>({ overlay: undefined, record: undefined });
 
+  // Track if we should skip the rest of the demo.
+  const initStore = localStorage.getItem('OCAExplorerSeenDemo')
+  const [demoState, setDemoState] = useState<DemoState>(
+    initStore != null && initStore != DemoState.PausedDemo.toString()
+    ? parseInt(initStore)
+    : DemoState.RunningIntro
+  )
+
+  useEffect( () => {
+    // update localStorage to reflect the skipDemo state
+    localStorage.setItem('OCAExplorerSeenDemo', demoState.toString());
+  }, [ demoState ]);
+
   const handleOverlayData = useCallback(
     (overlayData: {
       overlay: OverlayBundle | undefined;
@@ -32,33 +46,46 @@ function App() {
           ([name, value]) => new CredentialPreviewAttribute({ name, value })
         ),
       });
-
-      // TODO: Should validate the overlay here before setting it.
       setOverlayData({ ...overlayData, record });
-    },
-    []
+      if (demoState != DemoState.SeenDemo) {
+        setDemoState(DemoState.RunningBranding);
+      }
+    } ,
+      [ demoState ]
   );
 
   return (
-    <div>
-      <StyledEngineProvider injectFirst>
-        <CssBaseline />
-        <ThemeProvider theme={theme}>
-          <Header />
-          <div className="App">
-            <Container>
-              <Form onOverlayData={handleOverlayData} />
-              {overlayData?.overlay && (
-                <OverlayForm
-                  overlay={overlayData.overlay}
-                  record={overlayData.record}
-                />
-              )}
-            </Container>
-          </div>
-        </ThemeProvider>
-      </StyledEngineProvider>
-    </div>
+    <StyledEngineProvider injectFirst>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        {/* If the overlay is displayed play through all steps if not only play the intro steps */}
+        <Header callback={ () => setDemoState(
+          overlayData?.overlay
+          ? DemoState.RunningAll
+          : DemoState.RunningIntro
+        )}/>
+        <div className="App">
+          <Demo runDemo={demoState}
+                theme={theme}
+                resetFunc={ () => setDemoState(
+                  overlayData?.overlay
+                  ? DemoState.SeenDemo
+                  : DemoState.PausedDemo
+                )
+                }
+                skipFunc={ () => setDemoState(DemoState.SeenDemo) }/>
+          <Container>
+            <Form onOverlayData={handleOverlayData} />
+            {overlayData?.overlay && (
+              <OverlayForm
+                overlay={overlayData.overlay}
+                record={overlayData.record}
+              />
+            )}
+          </Container>
+        </div>
+      </ThemeProvider>
+    </StyledEngineProvider>
   );
 }
 

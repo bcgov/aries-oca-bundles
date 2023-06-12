@@ -44,9 +44,9 @@ function OverlayForm({
     <BrandingProvider>
       <Grid>
         {overlay.languages.length > 1 && (
-          <Grid>
+          <Grid id="overlay-bundle-language-select">
             <FormControl fullWidth margin="dense">
-              <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
+              <FormLabel >Language</FormLabel>
               <RadioGroup
                 aria-labelledby="overlay-bundle-language-label"
                 name="language"
@@ -117,11 +117,13 @@ function OverlayForm({
             justifyContent="center"
             alignItems="flex-start"
           >
-            <CredentialCard
-              overlay={overlay}
-              record={record}
-              language={language}
-            />
+            <div id="overlay-bundle-credential-card">
+              <CredentialCard
+                overlay={overlay}
+                record={record}
+                language={language}
+              />
+            </div>
           </Grid>
           <Grid
             md
@@ -129,11 +131,13 @@ function OverlayForm({
             justifyContent="center"
             alignItems="flex-start"
           >
-            <CredentialDetail
-              overlay={overlay}
-              record={record}
-              language={language}
-            />
+            <div id="overlay-bundle-credential-details">
+              <CredentialDetail
+                overlay={overlay}
+                record={record}
+                language={language}
+              />
+            </div>
           </Grid>
         </Grid>
         <Grid>
