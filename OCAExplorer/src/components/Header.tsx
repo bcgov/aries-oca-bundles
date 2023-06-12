@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar } from "@mui/material";
-import InfoIcon from "@mui/icons-material/Info";
+import { Info } from "@mui/icons-material";
 import imgUrl from "../assets/images/BCID_H_rgb_rev.svg";
 
 export default function Header({ callback }: { callback: () => any }) {
@@ -18,7 +18,7 @@ export default function Header({ callback }: { callback: () => any }) {
           }}
         />
         <button onClick={callback}>
-          <InfoIcon />
+          <Info />
         </button>
       </Toolbar>
     );

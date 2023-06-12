@@ -18,7 +18,7 @@ import CredentialDetail from "./CredentialDetail";
 import OverlayBrandingForm from "./OverlayBrandingForm";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 
-import InfoIcon from "@mui/icons-material/Info";
+import { Info } from "@mui/icons-material";
 import { CredentialExchangeRecord } from "@aries-framework/core";
 
 function OverlayForm({
@@ -78,7 +78,7 @@ function OverlayForm({
                       overlay.metadata?.credentialHelpText?.[language] ?? ""
                     }
                   >
-                    <InfoIcon fontSize="small" style={{ marginBottom: 2 }} />
+                    <Info fontSize="small" style={{ marginBottom: 2 }} />
                   </Tooltip>
                 )}
               </Typography>
@@ -94,10 +94,7 @@ function OverlayForm({
                         overlay.metadata?.issuerDescription?.[language] ?? ""
                       }
                     >
-                      <InfoIcon
-                        fontSize="inherit"
-                        style={{ marginBottom: 2 }}
-                      />
+                      <Info fontSize="inherit" style={{ marginBottom: 2 }} />
                     </Tooltip>
                   )}
                 </Typography>

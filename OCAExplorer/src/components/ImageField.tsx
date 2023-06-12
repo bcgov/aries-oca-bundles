@@ -1,6 +1,6 @@
 import React from "react";
 import { FileUpload } from "@mui/icons-material";
-import { Box, TextField, Button, Snackbar, Alert } from "@mui/material";
+import { TextField, Snackbar, Alert, IconButton, Stack } from "@mui/material";
 import { useState, ReactNode } from "react";
 
 // The upper limit required to base64 encode a 1920x1080 PNG image based on testing.
@@ -65,29 +65,12 @@ export default function ImageField({
 
   // Used for generating a simple overridable error message
   const errorMessage = (msg: ReactNode) => (
-    <Alert
-      action={
-        <Button
-          onClick={() => {
-            setFile({
-              ...file,
-              status: FileStatus.ValidFile,
-            });
-            onContent(file.value);
-          }}
-        >
-          Proceed Anyways
-        </Button>
-      }
-      severity="error"
-    >
-      {msg}
-    </Alert>
+    <Alert severity="error">{msg}</Alert>
   );
 
   return (
     <div>
-      <Box sx={{ display: "flex" }}>
+      <Stack direction="row">
         <TextField
           fullWidth
           margin="dense"
@@ -101,7 +84,10 @@ export default function ImageField({
             onContent(event.target.value);
           }}
         />
-        <Button variant="text" component="label" size="small" disableElevation>
+        <IconButton
+          component="label"
+          style={{ marginLeft: 10, alignSelf: "center" }}
+        >
           <FileUpload />
           <input
             hidden
@@ -112,23 +98,21 @@ export default function ImageField({
               handleImageChange(e);
             }}
           />
-        </Button>
-      </Box>
-      <Snackbar autoHideDuration={6000} open={isError(file)}>
+        </IconButton>
+      </Stack>
+
+      <Snackbar autoHideDuration={3000} open={isError(file)}>
         {file.status == FileStatus.InvalidImage
           ? errorMessage(
-              <>
-                ERROR: This file does not seem to be a valid image. Are you sure
-                you want to use this file?
-              </>
+              <div>ERROR: This file does not seem to be a valid image</div>
             )
           : file.status == FileStatus.FileTooLarge
           ? errorMessage(
-              <>
+              <div>
                 ERROR: We recommend not using an image larger than{" "}
                 {MAX_IMAGE_SIZE} characters after encoding. Are you sure you
                 want to use this file?
-              </>
+              </div>
             )
           : undefined}
       </Snackbar>
