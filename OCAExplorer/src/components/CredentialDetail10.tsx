@@ -1,8 +1,8 @@
+import React, { CSSProperties } from "react";
 import { View, Image, ImageBackground, Text, FlatList } from "react-native";
 import { useBranding } from "../contexts/Branding";
 import { textColorForBackground } from "@aries-bifold/oca/build/utils/color";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
-import startCase from "lodash.startcase";
 import { CredentialExchangeRecord } from "@aries-framework/core";
 import { useMemo, useState } from "react";
 import {
@@ -18,7 +18,10 @@ const paddingHorizontal = 24;
 const paddingVertical = 16;
 const logoHeight = 80;
 
-function computedStyles() {
+function computedStyles(): Record<
+  string,
+  CSSProperties | Record<string, number>
+> {
   const branding = useBranding();
 
   return {
@@ -86,12 +89,12 @@ function DetailLogo({
   styles,
 }: {
   credential?: LocalizedCredential;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
   return (
-    <View style={styles.logoContainer}>
+    <View style={styles?.logoContainer}>
       {branding?.logo ? (
         <Image
           source={branding?.logo}
@@ -103,7 +106,7 @@ function DetailLogo({
           }}
         />
       ) : (
-        <Text style={[styles.title, { fontSize: 0.5 * logoHeight }]}>
+        <Text style={[styles?.title, { fontSize: 0.5 * logoHeight }]}>
           {(credential?.issuer ?? credential?.name ?? "C")
             ?.charAt(0)
             .toUpperCase()}
@@ -117,7 +120,7 @@ function DetailSecondaryBody({
   styles,
 }: {
   overlay?: OverlayBundle | undefined;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
@@ -130,10 +133,10 @@ function DetailSecondaryBody({
             resizeMode: "cover",
           }}
         >
-          <View style={styles.secondaryBodyContainer} />
+          <View style={styles?.secondaryBodyContainer} />
         </ImageBackground>
       ) : (
-        <View style={styles.secondaryBodyContainer} />
+        <View style={styles?.secondaryBodyContainer} />
       )}
     </View>
   );
@@ -144,15 +147,15 @@ function DetailPrimaryBody({
   styles,
 }: {
   credential?: LocalizedCredential;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
-    <View style={styles.primaryBodyContainer}>
+    <View style={styles?.primaryBodyContainer}>
       <View>
         <Text
           style={[
-            styles.label,
-            styles.textContainer,
+            styles?.label,
+            styles?.textContainer,
             {
               paddingLeft: logoHeight + paddingVertical,
               paddingBottom: paddingVertical,
@@ -166,8 +169,8 @@ function DetailPrimaryBody({
         </Text>
         <Text
           style={[
-            styles.normal,
-            styles.textContainer,
+            styles?.normal,
+            styles?.textContainer,
             {
               lineHeight: 24,
             },
@@ -185,11 +188,11 @@ function Detail({
   styles,
 }: {
   credential?: LocalizedCredential;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
     <View>
-      <View style={styles.container}>
+      <View style={styles?.container}>
         <DetailSecondaryBody styles={styles} />
         <DetailLogo credential={credential} styles={styles} />
         <DetailPrimaryBody credential={credential} styles={styles} />
@@ -206,7 +209,7 @@ function DetailList({
   styles,
 }: {
   credential?: LocalizedCredential;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
     <FlatList
@@ -221,14 +224,22 @@ function DetailList({
           >
             <AttributeLabel
               attribute={attribute}
-              styles={[styles.normal, styles.listText, { fontWeight: "bold" }]}
+              styles={[
+                styles?.normal,
+                styles?.listText,
+                { fontWeight: "bold" },
+              ]}
             />
             <AttributeValue
               attribute={attribute}
-              styles={[styles.normal, styles.listText, { paddingVertical: 4 }]}
+              styles={[
+                styles?.normal,
+                styles?.listText,
+                { paddingVertical: 4 },
+              ]}
               size={logoHeight}
             />
-            <View style={styles.listBorder} />
+            <View style={styles?.listBorder} />
           </View>
         );
       }}

@@ -1,3 +1,4 @@
+import React, { CSSProperties } from "react";
 import { Image, Text } from "react-native";
 import { DisplayAttribute } from "@aries-bifold/oca/build/formatters/Credential";
 
@@ -7,7 +8,7 @@ function AttributeValue({
   size,
 }: {
   attribute: DisplayAttribute;
-  styles?: any | any[];
+  styles?: Record<string, CSSProperties> | Record<string, CSSProperties>[];
   size?: number;
 }) {
   switch (attribute.characterEncoding) {
@@ -26,6 +27,7 @@ function AttributeValue({
           />
         );
       }
+      return null;
     case "utf-8":
       if (attribute.standard === "urn:iso:std:iso:1989") {
         const dateint = attribute.value;
@@ -37,6 +39,7 @@ function AttributeValue({
         const date = new Date(year, month - 1, day);
         return <Text style={styles}>{date.toDateString()}</Text>;
       }
+      return null;
     default:
       return <Text style={styles}>{attribute.value || "•".repeat(10)}</Text>;
   }

@@ -1,3 +1,4 @@
+import React from "react";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 import CredentialCard10 from "./CredentialCard10";
 import { CredentialExchangeRecord } from "@aries-framework/core";

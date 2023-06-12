@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Autocomplete,
   AutocompleteRenderInputParams,
@@ -54,10 +55,10 @@ function OverlayBrandingForm({
           value={branding?.logo ?? ""}
           onChange={(e) => {
             dispatch &&
-            dispatch({
-              type: ActionType.LOGO,
-              payload: { logo: e.target.value },
-            });
+              dispatch({
+                type: ActionType.LOGO,
+                payload: { logo: e.target.value },
+              });
           }}
           margin="dense"
           size="small"
@@ -69,10 +70,10 @@ function OverlayBrandingForm({
           value={branding?.backgroundImage ?? ""}
           onChange={(e) => {
             dispatch &&
-            dispatch({
-              type: ActionType.BACKGROUND_IMAGE,
-              payload: { backgroundImage: e.target.value },
-            });
+              dispatch({
+                type: ActionType.BACKGROUND_IMAGE,
+                payload: { backgroundImage: e.target.value },
+              });
           }}
           margin="dense"
           size="small"
@@ -84,10 +85,10 @@ function OverlayBrandingForm({
           value={branding?.backgroundImageSlice ?? ""}
           onChange={(e) => {
             dispatch &&
-            dispatch({
-              type: ActionType.BACKGROUND_IMAGE_SLICE,
-              payload: { backgroundImageSlice: e.target.value },
-            });
+              dispatch({
+                type: ActionType.BACKGROUND_IMAGE_SLICE,
+                payload: { backgroundImageSlice: e.target.value },
+              });
           }}
           margin="dense"
           size="small"
@@ -99,10 +100,10 @@ function OverlayBrandingForm({
           value={branding?.primaryBackgroundColor ?? ""}
           onChange={(value) => {
             dispatch &&
-            dispatch({
-              type: ActionType.PRIMARY_BACKGROUND_COLOR,
-              payload: { primaryBackgroundColor: value },
-            });
+              dispatch({
+                type: ActionType.PRIMARY_BACKGROUND_COLOR,
+                payload: { primaryBackgroundColor: value },
+              });
           }}
           margin="dense"
           size="small"
@@ -114,10 +115,10 @@ function OverlayBrandingForm({
           value={branding?.secondaryBackgroundColor ?? ""}
           onChange={(value) => {
             dispatch &&
-            dispatch({
-              type: ActionType.SECONDARY_BACKGROUND_COLOR,
-              payload: { secondaryBackgroundColor: value },
-            });
+              dispatch({
+                type: ActionType.SECONDARY_BACKGROUND_COLOR,
+                payload: { secondaryBackgroundColor: value },
+              });
           }}
           margin="dense"
           size="small"
@@ -131,10 +132,10 @@ function OverlayBrandingForm({
             value={branding?.primaryAttribute ?? ""}
             onChange={(_e, value) => {
               dispatch &&
-              dispatch({
-                type: ActionType.PRIMARY_ATTRIBUTE,
-                payload: { primaryAttribute: value },
-              });
+                dispatch({
+                  type: ActionType.PRIMARY_ATTRIBUTE,
+                  payload: { primaryAttribute: value },
+                });
             }}
             renderInput={(params: AutocompleteRenderInputParams) => (
               <TextField
@@ -155,10 +156,10 @@ function OverlayBrandingForm({
             value={branding?.secondaryAttribute ?? ""}
             onChange={(_e, value) => {
               dispatch &&
-              dispatch({
-                type: ActionType.SECONDARY_ATTRIBUTE,
-                payload: { secondaryAttribute: value },
-              });
+                dispatch({
+                  type: ActionType.SECONDARY_ATTRIBUTE,
+                  payload: { secondaryAttribute: value },
+                });
             }}
             renderInput={(params: AutocompleteRenderInputParams) => (
               <TextField
