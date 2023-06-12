@@ -17,6 +17,7 @@ import {
 import { saveAs } from "file-saver";
 import BrandingOverlayDataFactory from "../services/OverlayBrandingDataFactory";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
+import ImageField from "./ImageField";
 
 function OverlayBrandingForm({
   overlay,
@@ -48,50 +49,41 @@ function OverlayBrandingForm({
   return (
     <div id="overlay-bundle-branding-form">
       <div id="overlay-bundle-branding-form-fields">
-        <TextField
-          fullWidth
+        <ImageField
           id="logo"
           label="Logo"
           value={branding?.logo ?? ""}
-          onChange={(e) => {
+          textSetter={(content: string) =>
             dispatch &&
-              dispatch({
-                type: ActionType.LOGO,
-                payload: { logo: e.target.value },
-              });
-          }}
-          margin="dense"
-          size="small"
+            dispatch({
+              type: ActionType.LOGO,
+              payload: { logo: content },
+            })
+          }
         />
-        <TextField
-          fullWidth
+        <ImageField
           id="background-image"
           label="Background Image"
           value={branding?.backgroundImage ?? ""}
-          onChange={(e) => {
+          textSetter={(content: string) => {
             dispatch &&
               dispatch({
                 type: ActionType.BACKGROUND_IMAGE,
-                payload: { backgroundImage: e.target.value },
+                payload: { backgroundImage: content },
               });
           }}
-          margin="dense"
-          size="small"
         />
-        <TextField
-          fullWidth
+        <ImageField
           id="background-image-slice"
           label="Background Image Slice"
           value={branding?.backgroundImageSlice ?? ""}
-          onChange={(e) => {
+          textSetter={(content) => {
             dispatch &&
               dispatch({
                 type: ActionType.BACKGROUND_IMAGE_SLICE,
-                payload: { backgroundImageSlice: e.target.value },
+                payload: { backgroundImageSlice: content },
               });
           }}
-          margin="dense"
-          size="small"
         />
         <MuiColorInput
           fullWidth
