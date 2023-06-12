@@ -8,7 +8,7 @@ function AttributeLabel({
   styles,
 }: {
   attribute: DisplayAttribute;
-  styles?: Record<string, CSSProperties> | Record<string, CSSProperties>[];
+  styles?: CSSProperties | CSSProperties[];
 }) {
   return (
     <Text style={styles}>{attribute.label ?? startCase(attribute.name)}</Text>

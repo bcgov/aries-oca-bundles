@@ -157,8 +157,8 @@ function Attribute({
       <AttributeLabel
         attribute={attribute}
         styles={[
-          styles?.labelSubtitle,
-          styles?.textContainer,
+          styles?.labelSubtitle ?? {},
+          styles?.textContainer ?? {},
           {
             lineHeight: 19,
             opacity: 0.8,
@@ -181,11 +181,9 @@ function Attribute({
         <AttributeValue
           attribute={attribute}
           styles={[
-            styles?.normal,
-            styles?.textContainer,
-            {
-              lineHeight: 24,
-            },
+            styles?.normal ?? {},
+            styles?.textContainer ?? {},
+            { lineHeight: 24 } as CSSProperties,
           ]}
         />
       )}

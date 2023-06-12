@@ -8,7 +8,7 @@ function AttributeValue({
   size,
 }: {
   attribute: DisplayAttribute;
-  styles?: Record<string, CSSProperties> | Record<string, CSSProperties>[];
+  styles?: CSSProperties | CSSProperties[];
   size?: number;
 }) {
   switch (attribute.characterEncoding) {

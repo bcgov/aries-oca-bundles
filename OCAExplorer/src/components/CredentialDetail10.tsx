@@ -225,17 +225,17 @@ function DetailList({
             <AttributeLabel
               attribute={attribute}
               styles={[
-                styles?.normal,
-                styles?.listText,
+                styles?.normal ?? {},
+                styles?.listText ?? {},
                 { fontWeight: "bold" },
               ]}
             />
             <AttributeValue
               attribute={attribute}
               styles={[
-                styles?.normal,
-                styles?.listText,
-                { paddingVertical: 4 },
+                styles?.normal ?? {},
+                styles?.listText ?? {},
+                { paddingVertical: 4 } as CSSProperties,
               ]}
               size={logoHeight}
             />
