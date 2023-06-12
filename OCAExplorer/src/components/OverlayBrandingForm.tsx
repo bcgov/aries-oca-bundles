@@ -53,7 +53,7 @@ function OverlayBrandingForm({
           id="logo"
           label="Logo"
           value={branding?.logo ?? ""}
-          textSetter={(content: string) =>
+          onContent={(content: string) =>
             dispatch &&
             dispatch({
               type: ActionType.LOGO,
@@ -65,7 +65,7 @@ function OverlayBrandingForm({
           id="background-image"
           label="Background Image"
           value={branding?.backgroundImage ?? ""}
-          textSetter={(content: string) => {
+          onContent={(content: string) => {
             dispatch &&
               dispatch({
                 type: ActionType.BACKGROUND_IMAGE,
@@ -77,7 +77,7 @@ function OverlayBrandingForm({
           id="background-image-slice"
           label="Background Image Slice"
           value={branding?.backgroundImageSlice ?? ""}
-          textSetter={(content) => {
+          onContent={(content: string) => {
             dispatch &&
               dispatch({
                 type: ActionType.BACKGROUND_IMAGE_SLICE,

@@ -7,25 +7,26 @@ import { useState, ReactNode } from "react";
 // Users should be necouraged to avoid PNGs if possible due to the added file size
 const MAX_IMAGE_SIZE = 1000000;
 
+enum FileStatus {
+  NoFile,
+  ValidFile,
+  InvalidImage,
+  FileTooLarge,
+}
+
+type FileState = { status: FileStatus; value: string };
+
 export default function ImageField({
   id,
   label,
   value,
-  textSetter,
+  onContent,
 }: {
-  id?: any;
+  id?: string;
   label: string;
   value: string;
-  textSetter: (e: any) => void;
+  onContent: (e: any) => void;
 }) {
-  enum FileStatus {
-    NoFile,
-    ValidFile,
-    InvalidImage,
-    FileTooLarge,
-  }
-  type FileState = { status: FileStatus; value: string };
-
   const [file, setFile] = useState<FileState>({
     status: FileStatus.NoFile,
     value: value,
@@ -35,12 +36,10 @@ export default function ImageField({
 
   const handleImageChange = (event: any) => {
     const file = event.target.files[0];
-
     const reader = new FileReader();
 
     reader.onload = (e: any) => {
       const imageDataURL: string = e.target.result;
-
       // Image validation
       const image = new Image();
 
@@ -52,7 +51,7 @@ export default function ImageField({
       image.onload = () => {
         if (imageDataURL.length < MAX_IMAGE_SIZE) {
           setFile({ status: FileStatus.ValidFile, value: imageDataURL });
-          textSetter(imageDataURL);
+          onContent(imageDataURL);
         } else {
           setFile({ status: FileStatus.FileTooLarge, value: imageDataURL });
         }
@@ -74,11 +73,10 @@ export default function ImageField({
               ...file,
               status: FileStatus.ValidFile,
             });
-            textSetter(file.value);
+            onContent(file.value);
           }}
         >
-          {" "}
-          Proceed Anyways{" "}
+          Proceed Anyways
         </Button>
       }
       severity="error"
@@ -100,7 +98,7 @@ export default function ImageField({
           label={label + " (" + value.length + " characters long" + ")"}
           onChange={(event) => {
             setFile({ status: FileStatus.NoFile, value: event.target.value });
-            textSetter(event.target.value);
+            onContent(event.target.value);
           }}
         />
         <Button variant="text" component="label" size="small" disableElevation>
