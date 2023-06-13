@@ -1,5 +1,5 @@
+import React, { CSSProperties } from "react";
 import { Text, View, Image, ImageBackground } from "react-native";
-import startCase from "lodash.startcase";
 import { useBranding } from "../contexts/Branding";
 import { OverlayBundle } from "@aries-bifold/oca/build/types";
 import { textColorForBackground } from "@aries-bifold/oca/build/utils/color";
@@ -18,7 +18,7 @@ const borderRadius = 10;
 const padding = width * 0.05;
 const logoHeight = width * 0.12;
 
-function computedStyles() {
+function computedStyles(): Record<string, CSSProperties> {
   const branding = useBranding();
 
   return {
@@ -89,13 +89,19 @@ function computedStyles() {
   };
 }
 
-function IssuerName({ issuer, styles }: { issuer?: string; styles?: any }) {
+function IssuerName({
+  issuer,
+  styles,
+}: {
+  issuer?: string;
+  styles?: Record<string, CSSProperties>;
+}) {
   return (
     <View>
       <Text
         style={[
-          styles.label,
-          styles.textContainer,
+          styles?.label,
+          styles?.textContainer,
           {
             lineHeight: 19,
             opacity: 0.8,
@@ -111,13 +117,19 @@ function IssuerName({ issuer, styles }: { issuer?: string; styles?: any }) {
   );
 }
 
-function CredentialName({ name, styles }: { name?: string; styles?: any }) {
+function CredentialName({
+  name,
+  styles,
+}: {
+  name?: string;
+  styles?: Record<string, CSSProperties>;
+}) {
   return (
     <View>
       <Text
         style={[
-          styles.normal,
-          styles.textContainer,
+          styles?.normal,
+          styles?.textContainer,
           {
             fontWeight: "bold",
             lineHeight: 24,
@@ -138,15 +150,15 @@ function Attribute({
   styles,
 }: {
   attribute: DisplayAttribute;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
-    <View style={[styles.textContainer, styles.attributeContainer]}>
+    <View style={[styles?.textContainer, styles?.attributeContainer]}>
       <AttributeLabel
         attribute={attribute}
         styles={[
-          styles.labelSubtitle,
-          styles.textContainer,
+          styles?.labelSubtitle ?? {},
+          styles?.textContainer ?? {},
           {
             lineHeight: 19,
             opacity: 0.8,
@@ -169,11 +181,9 @@ function Attribute({
         <AttributeValue
           attribute={attribute}
           styles={[
-            styles.normal,
-            styles.textContainer,
-            {
-              lineHeight: 24,
-            },
+            styles?.normal ?? {},
+            styles?.textContainer ?? {},
+            { lineHeight: 24 } as CSSProperties,
           ]}
         />
       )}
@@ -185,12 +195,12 @@ function CardSecondaryBody({
   styles,
 }: {
   overlay?: OverlayBundle;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
   return (
-    <View style={[styles.secondaryBodyContainer]}>
+    <View style={[styles?.secondaryBodyContainer]}>
       {branding?.backgroundImageSlice ? (
         <ImageBackground
           source={branding?.backgroundImageSlice}
@@ -210,12 +220,12 @@ function CardLogo({
   styles,
 }: {
   credential?: LocalizedCredential;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
   return (
-    <View style={[styles.logoContainer]}>
+    <View style={[styles?.logoContainer]}>
       {branding?.logo ? (
         <Image
           source={branding?.logo}
@@ -229,7 +239,7 @@ function CardLogo({
       ) : (
         <Text
           style={[
-            styles.normal,
+            styles?.normal,
             {
               fontSize: 0.5 * logoHeight,
               fontWeight: "bold",
@@ -255,7 +265,7 @@ function CardPrimaryBody({
   credential?: LocalizedCredential;
   primaryAttribute?: DisplayAttribute;
   secondaryAttribute?: DisplayAttribute;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const displayAttributes = [];
   if (primaryAttribute) {
@@ -266,7 +276,7 @@ function CardPrimaryBody({
   }
 
   return (
-    <View style={styles.primaryBodyContainer}>
+    <View style={styles?.primaryBodyContainer}>
       <IssuerName issuer={credential?.issuer} styles={styles} />
       <CredentialName name={credential?.name} styles={styles} />
       {displayAttributes.map((attribute, index) => (
@@ -280,8 +290,8 @@ function CardPrimaryBody({
   );
 }
 
-function CardStatus({ styles }: { styles?: any }) {
-  return <View style={[styles.statusContainer]} />;
+function CardStatus({ styles }: { styles?: Record<string, CSSProperties> }) {
+  return <View style={[styles?.statusContainer]} />;
 }
 
 function Card({
@@ -293,7 +303,7 @@ function Card({
   overlay?: OverlayBundle;
   credential?: LocalizedCredential;
   language?: string;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
@@ -317,7 +327,7 @@ function Card({
   }
 
   return (
-    <View style={styles.cardContainer}>
+    <View style={styles?.cardContainer}>
       <CardSecondaryBody styles={styles} />
       <CardLogo credential={credential} styles={styles} />
       <CardPrimaryBody

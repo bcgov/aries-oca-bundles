@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Autocomplete,
   AutocompleteRenderInputParams,
@@ -51,38 +52,39 @@ function OverlayBrandingForm({
         <ImageField
           id="logo"
           label="Logo"
-          value={ branding?.logo ?? ""}
-          textSetter={(content: string) => (
+          value={branding?.logo ?? ""}
+          onContent={(content: string) =>
             dispatch &&
             dispatch({
               type: ActionType.LOGO,
               payload: { logo: content },
             })
-          )} />
+          }
+        />
         <ImageField
           id="background-image"
           label="Background Image"
           value={branding?.backgroundImage ?? ""}
-          textSetter={(content: string) => {
+          onContent={(content: string) => {
             dispatch &&
-            dispatch({
-              type: ActionType.BACKGROUND_IMAGE,
-              payload: { backgroundImage: content },
-            });
+              dispatch({
+                type: ActionType.BACKGROUND_IMAGE,
+                payload: { backgroundImage: content },
+              });
           }}
         />
         <ImageField
           id="background-image-slice"
           label="Background Image Slice"
           value={branding?.backgroundImageSlice ?? ""}
-          textSetter={(content) => {
+          onContent={(content: string) => {
             dispatch &&
-            dispatch({
-              type: ActionType.BACKGROUND_IMAGE_SLICE,
-              payload: { backgroundImageSlice: content },
-            });
+              dispatch({
+                type: ActionType.BACKGROUND_IMAGE_SLICE,
+                payload: { backgroundImageSlice: content },
+              });
           }}
-         />
+        />
         <MuiColorInput
           fullWidth
           id="primary-background-color"
@@ -90,10 +92,10 @@ function OverlayBrandingForm({
           value={branding?.primaryBackgroundColor ?? ""}
           onChange={(value) => {
             dispatch &&
-            dispatch({
-              type: ActionType.PRIMARY_BACKGROUND_COLOR,
-              payload: { primaryBackgroundColor: value },
-            });
+              dispatch({
+                type: ActionType.PRIMARY_BACKGROUND_COLOR,
+                payload: { primaryBackgroundColor: value },
+              });
           }}
           margin="dense"
           size="small"
@@ -105,10 +107,10 @@ function OverlayBrandingForm({
           value={branding?.secondaryBackgroundColor ?? ""}
           onChange={(value) => {
             dispatch &&
-            dispatch({
-              type: ActionType.SECONDARY_BACKGROUND_COLOR,
-              payload: { secondaryBackgroundColor: value },
-            });
+              dispatch({
+                type: ActionType.SECONDARY_BACKGROUND_COLOR,
+                payload: { secondaryBackgroundColor: value },
+              });
           }}
           margin="dense"
           size="small"
@@ -122,10 +124,10 @@ function OverlayBrandingForm({
             value={branding?.primaryAttribute ?? ""}
             onChange={(_e, value) => {
               dispatch &&
-              dispatch({
-                type: ActionType.PRIMARY_ATTRIBUTE,
-                payload: { primaryAttribute: value },
-              });
+                dispatch({
+                  type: ActionType.PRIMARY_ATTRIBUTE,
+                  payload: { primaryAttribute: value },
+                });
             }}
             renderInput={(params: AutocompleteRenderInputParams) => (
               <TextField
@@ -146,10 +148,10 @@ function OverlayBrandingForm({
             value={branding?.secondaryAttribute ?? ""}
             onChange={(_e, value) => {
               dispatch &&
-              dispatch({
-                type: ActionType.SECONDARY_ATTRIBUTE,
-                payload: { secondaryAttribute: value },
-              });
+                dispatch({
+                  type: ActionType.SECONDARY_ATTRIBUTE,
+                  payload: { secondaryAttribute: value },
+                });
             }}
             renderInput={(params: AutocompleteRenderInputParams) => (
               <TextField
