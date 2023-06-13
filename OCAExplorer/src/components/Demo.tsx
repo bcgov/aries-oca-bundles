@@ -12,12 +12,11 @@ const demoStates = {
       title: <Typography variant="h3">What Is OCA Explorer?</Typography>,
       content: (
         <Typography variant="h5">
-          The OCA Explorer is intended to assist in the creating of
-          creating&nbsp;
+          The OCA Explorer is intended to assist in creating{" "}
           <Link href="https://oca.colossi.network/">
-            Overlays Capture Architecture(OCA)
-          </Link>
-          &nbsp; bundles and previewing &nbsp;
+            Overlays Capture Architecture (OCA)
+          </Link>{" "}
+          bundles and previewing{" "}
           <Link href="https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#aries-specific-branding-overlay">
             Branding Overlays
           </Link>
