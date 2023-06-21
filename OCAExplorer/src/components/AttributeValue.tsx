@@ -1,6 +1,6 @@
 import React, { CSSProperties } from "react";
 import { Image, Text } from "react-native";
-import { DisplayAttribute } from "@aries-bifold/oca/build/formatters/Credential";
+import { DisplayAttribute } from "@hyperledger/aries-oca/build/formatters/Credential";
 
 function AttributeValue({
   attribute,

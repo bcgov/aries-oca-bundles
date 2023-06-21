@@ -4,18 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "install:dev": "yarn prepare:dev && yarn install",
-    "prepare:dev": "cd ${PWD}/../aries-bifold && git checkout feature/oca-package && cd ${PWD}/packages/oca && yarn install && yarn build",
     "dev": "vite",
     "build": "tsc && vite build --base=./",
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@aries-bifold/oca": "file:../aries-bifold/packages/oca",
     "@aries-framework/core": "^0.3.3",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
+    "@hyperledger/aries-oca": "^1.0.0-alpha.7",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.11.14",
     "csv-parse": "^5.3.10",
