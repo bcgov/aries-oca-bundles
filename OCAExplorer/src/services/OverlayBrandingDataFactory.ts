@@ -1,4 +1,4 @@
-import { IBrandingOverlayData } from "@aries-bifold/oca/build/interfaces/data";
+import { IBrandingOverlayData } from "@hyperledger/aries-oca/build/interfaces/data";
 import { BrandingState } from "../contexts/Branding";
 
 class BrandingOverlayDataFactory {

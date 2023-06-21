@@ -6,7 +6,7 @@ import OverlayForm from "./components/OverlayForm";
 import Header from "./components/Header";
 import { Demo, DemoState } from "./components/Demo";
 import theme from "./theme";
-import { OverlayBundle } from "@aries-bifold/oca/build/types";
+import { OverlayBundle } from "@hyperledger/aries-oca/build/types";
 import {
   CredentialExchangeRecord,
   CredentialPreviewAttribute,

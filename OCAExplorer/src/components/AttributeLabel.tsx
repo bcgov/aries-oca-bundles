@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import { DisplayAttribute } from "@aries-bifold/oca/build/formatters/Credential";
+import { DisplayAttribute } from "@hyperledger/aries-oca/build/formatters/Credential";
 import startCase from "lodash.startcase";
 import { Text } from "react-native";
 

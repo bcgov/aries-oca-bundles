@@ -7,11 +7,6 @@
   resolved "https://registry.yarnpkg.com/@alloc/quick-lru/-/quick-lru-5.2.0.tgz#7bf68b20c0a350f936915fcae06f58e32007ce30"
   integrity sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==
 
-"@aries-bifold/oca@file:../aries-bifold/packages/oca":
-  version "1.0.0-alpha.0"
-  dependencies:
-    "@aries-framework/core" "^0.3.3"
-
 "@aries-framework/core@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@aries-framework/core/-/core-0.3.3.tgz#7bb097366bef8f53225785881376d56311edaf83"
@@ -423,6 +418,13 @@
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
+
+"@hyperledger/aries-oca@^1.0.0-alpha.7":
+  version "1.0.0-alpha.7"
+  resolved "https://registry.yarnpkg.com/@hyperledger/aries-oca/-/aries-oca-1.0.0-alpha.7.tgz#4ad3eb6d13baf3bf652632fb6dfba32ab652bfbb"
+  integrity sha512-qNCmlpeVKJTxHxW7pPTg4pP+bba5jL9i42vOVQ/7n+gIesBBfsS3FZDO5UH0k8v+GkiSJGx2kSJcwMhD3AXhqQ==
+  dependencies:
+    "@aries-framework/core" "^0.3.3"
 
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
