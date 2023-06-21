@@ -38,6 +38,7 @@ jobs:
           node-version: 16
           cache: yarn
           cache-dependency-path: "./OCAExplorer"
+      - name: Install dependencies
         run: cd './OCAExplorer' && yarn install --immutable
       - name: Build
         run: cd './OCAExplorer' && yarn build
