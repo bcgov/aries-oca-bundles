@@ -110,8 +110,7 @@ export default function ImageField({
           ? errorMessage(
               <div>
                 ERROR: We recommend not using an image larger than{" "}
-                {MAX_IMAGE_SIZE} characters after encoding. Are you sure you
-                want to use this file?
+                {MAX_IMAGE_SIZE} characters after encoding.
               </div>
             )
           : undefined}
