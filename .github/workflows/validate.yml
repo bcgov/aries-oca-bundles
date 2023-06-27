@@ -7,23 +7,27 @@ on:
       - main
     types: opened
 
+name: "File existence check"
+
+on: [push, pull_request]
+
 jobs:
-  configure:
-    runs-on: ubuntu-latest 
-    outputs: 
-      config: ${{ steps.read-json.outputs.config }}
-      platform: ${{ steps.get-attribute.outputs.platform }}
+  file_existence:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout to repository
-        uses: actions/checkout@v3  
-      - name: Read JSON file # this puts the whole JSON file in the read-json step output
-        id: read-json
-        run: | # to read multi-line JSON file and not bother with escaping
-          echo "config<<EOF" >> $GITHUB_OUTPUT
-          cat ./config.json >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-      
-      - name: Add platform in output # for simpler use, you can add a single field in the output as well.
-        id: read-attribute
-        run: echo "platform=${{fromJson(steps.read-json.outputs.config).platform}}" >> "$GITHUB_OUTPUT"
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Check file existence
+      id: check_files
+      uses: andstor/file-existence-action@v2
+      with:
+        file: "OCAbundle.json"
+
+    - name: File exists
+      if: steps.check_files.outputs.files_exists == 'true'
+       # Only runs if all of the files exists
+       run: echo All files exists!
+    
+
 
