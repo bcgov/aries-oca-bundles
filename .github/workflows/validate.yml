@@ -1,0 +1,29 @@
+name: validate OCABundle.json on opened PRs
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    types: opened
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest 
+    outputs: 
+      config: ${{ steps.read-json.outputs.config }}
+      platform: ${{ steps.get-attribute.outputs.platform }}
+    steps:
+      - name: Checkout to repository
+        uses: actions/checkout@v3  
+      - name: Read JSON file # this puts the whole JSON file in the read-json step output
+        id: read-json
+        run: | # to read multi-line JSON file and not bother with escaping
+          echo "config<<EOF" >> $GITHUB_OUTPUT
+          cat ./config.json >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Add platform in output # for simpler use, you can add a single field in the output as well.
+        id: read-attribute
+        run: echo "platform=${{fromJson(steps.read-json.outputs.config).platform}}" >> "$GITHUB_OUTPUT"
+
