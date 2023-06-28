@@ -1,13 +1,13 @@
-# name: "Check for existence of a OCABundle.json file"
+name: "Check for existence of a OCABundle.json file"
 
-# on: [push, pull_request]
+on: [push, pull_request]
 
-# jobs:
-#   file_existence:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3
+jobs:
+  file_existence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
     #   - name: Check for file
     #     id: file_check
@@ -23,17 +23,17 @@
     #     # Only runs if all of the files exists
     #     run: echo All files exists!
 
-- name: "Check file existence"
-  id: check_files
-  uses: andstor/file-existence-action@v2
-  with:
-    files: "OCABundle.json"
+      - name: "Check file existence"
+        id: check_files
+        uses: andstor/file-existence-action@v2
+        with:
+          files: "OCABundle.json"
 
-- name: Commit files
-  if: steps.check_files.outputs.files_exists == 'true'
-  run: |
-    npm install -g ajv-cli
-    ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'
+      - name: Commit files
+        if: steps.check_files.outputs.files_exists == 'true'
+        run: |
+          npm install -g ajv-cli
+          ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'
     
     #   - name: Run dependent step
     #     if: steps.file_check.outputs.check_result == 'true'
