@@ -1,4 +1,4 @@
-name: "File existence check"
+name: "Check for existence of a OCABundle.json file"
 
 on: [push, pull_request]
 
@@ -15,10 +15,15 @@ jobs:
         with:
           files: "OCABundle.json"
 
-      - name: File exists
+      - name: Check if File exists
         if: steps.check_files.outputs.files_exists == 'true'
         # Only runs if all of the files exists
         run: echo All files exists!
     
+      - name: Run dependent step
+        if: steps.file_check.outputs.check_result == 'true'
+        run: |
+         npm install -g ajv-cli
+         ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'
 
 
