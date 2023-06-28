@@ -174,14 +174,14 @@
         "language": {
           "type": "string"
         },
-        "attr_standards": {
+        "attribute_standards": {
           "type": "object"
         }
       },
       "required": [
         "type",
         "capture_base",
-        "attr_standards"
+        "attribute_standards"
       ]
     },
     "Branding": {
