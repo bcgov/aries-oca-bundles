@@ -11,9 +11,9 @@ jobs:
 
       - name: Check file existence
         id: check_files
-        uses: thebinaryfelix/check-file-existence-action@v1
+        uses: andstor/file-existence-action@v2
         with:
-          files: "OCABundle.json"
+          files: "OCABundle.json/${{ env.URL }}"
 
       - name: Check if File exists
         if: steps.check_files.outputs.files_exists == 'true'
