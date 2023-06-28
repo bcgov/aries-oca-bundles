@@ -9,11 +9,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Check file existence
-        id: check_files
-        uses: andstor/file-existence-action@v2
-        with:
-          files: "OCABundle.json/${{ env.URL }}"
+      - name: Check for file
+        id: file_check
+        run: |
+         if git status -s | grep -x "** OCABundle.json"; then
+         echo "check_result=true" >> $GITHUB_OUTPUT
+         else
+         echo "check_result=false" >> $GITHUB_OUTPUT
+         fi
 
       - name: Check if File exists
         if: steps.check_files.outputs.files_exists == 'true'
