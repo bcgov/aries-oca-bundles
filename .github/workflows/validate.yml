@@ -1,6 +1,8 @@
 name: "Check for existence of a OCABundle.json file"
 
-on: [push, pull_request]
+on:
+  pull_request:
+    types: [labeled, reopened, synchronize, ready_for_review]
 
 jobs:
   file_existence:
