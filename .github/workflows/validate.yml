@@ -2,10 +2,10 @@ name: "Check for existence of a OCABundle.json file"
 
 on:
   pull_request:
-    types: opened
+    types: [labeled, opened, synchronize, ready_for_review]
 
 jobs:
-  file_existence:
+  oca_validation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,8 +22,3 @@ jobs:
         run: |
           npm install -g ajv-cli
           ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'
-    
-
-
-
-
