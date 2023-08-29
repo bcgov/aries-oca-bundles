@@ -1,8 +1,8 @@
 [
     {
-        "logo": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/bc-logo.jpg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OC/bc-logo.jpgema/bcgov-digital-trust/person/bc-logo.png",
         "background_image_slice": "",
-        "background_image": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/person-background-image.png",
         "primary_background_color": "#003366",
         "secondary_background_color": "",
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",

@@ -68,6 +68,7 @@
         "description": "A schema used for membership in LSBC",
         "digest": "E0ThJbuiiYxGiPXV1SFn1yVpc48WIL7opx74ODk7tdPM",
         "issuer": "Law Society of BC",
+        "watermark": "NON-PRODUCTION",
         "issuer_description": "Law Society of BC",
         "issuer_url": "https://www.lawsociety.bc.ca/",
         "language": "en",

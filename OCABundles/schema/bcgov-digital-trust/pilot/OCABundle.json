@@ -1,0 +1,86 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "iss_dateint": "DateTime",
+        "emailAddress": "Text",
+        "name": "Text",
+        "program": "Text"
+      },
+      "classification": "",
+      "digest": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+      "flagged_attributes": ["name", "emailAddress"],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "iss_dateint": "utf-8",
+          "emailAddress": "utf-8",
+          "name": "utf-8",
+          "program": "utf-8"
+        },
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "default_character_encoding": "utf-8",
+        "digest": "E-HUFu1rj2RESNP8LYpo-kr0IiGghzmn-yjZb8w2-gy0",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "iss_dateint": "Issue Date",
+          "emailAddress": "Email Address",
+          "name": "Name",
+          "program": "Program"
+        },
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "category_labels": {},
+        "digest": "EwUUoqNySYZDg6fBI40fqWB8LxC3Rk9E1L8L717ZX3vs",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "iss_dateint": "The issued date of the Pilot Invitation",
+          "emailAddress": "The email address of the holder",
+          "name": "The name of the credential holder",
+          "program": "The name of the program that issued the credential"
+        },
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "digest": "EPk2IQ_xZJfxclfq4b3uONJFsMHqCqeEj9TaVrocdT1s",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_formats": {
+          "iss_dateint": "YYYYMMDD"
+        },
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "digest": "EVKeZx9XY2URist1gx-7XsuwceDuaUv-EIqxfh3UWoTk",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "credential_help_text": "This is a pilot invitation used to gain access to the person credential flow",
+        "credential_support_url": "mailto:DItrust@gov.bc.ca",
+        "description": "A pilot invitation used to gain access to the person credential flow",
+        "digest": "EbdmDPPdtf2j8flF9d9t_VwdKE10guqvtVEXt6ZXlhCs",
+        "issuer": "Digital Identity and Trust Program",
+        "issuer_description": "Digital Identity and Trust Program",
+        "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
+        "language": "en",
+        "name": "Pilot Invitation",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-logo.png",
+        "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-background-image-slice.png",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-primary-background.png",
+        "primary_background_color": "#003366",
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]

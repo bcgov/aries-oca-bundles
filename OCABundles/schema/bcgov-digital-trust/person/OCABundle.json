@@ -64,7 +64,7 @@
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "category_labels": {},
         "digest": "EbSasjnl7WLhi1zmi4mBt6ITwAXdwZX9KW8WCYSLUIKM",
-        "language": "fr-CA",
+        "language": "fr",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -82,7 +82,7 @@
         },
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "digest": "EJgTy4qAd3NRc7jeFuCXt7tXtt8eTCo_yy_L8ankSjY4",
-        "language": "fr-CA",
+        "language": "fr",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -102,7 +102,7 @@
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "category_labels": {},
         "digest": "EeyKvEZtWa4QAkY1YBb4x3GNFmIS6po0MAYZaUAG_FFA",
-        "language": "en-CA",
+        "language": "en",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -120,7 +120,7 @@
         },
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "digest": "EcSZAIRQ0VzAFnKnv_3XW5uSdSnb60jx-SUDXQfpfm00",
-        "language": "en-CA",
+        "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -151,7 +151,7 @@
         "issuer": "Government of British Columbia",
         "issuer_description": "Government of British Columbia",
         "issuer_url": "https://www.gov.bc.ca/",
-        "language": "en-CA",
+        "language": "en",
         "name": "Person Credential",
         "type": "spec/overlays/meta/1.0"
       },
@@ -164,14 +164,14 @@
         "issuer": "Gouvernement de la Colombie-Britannique",
         "issuer_description": "Gouvernement de la Colombie-Britannique",
         "issuer_url": "https://www.gov.bc.ca/",
-        "language": "fr-CA",
+        "language": "fr",
         "name": "Informations d'identification de la personne",
         "type": "spec/overlays/meta/1.0"
       },
       {
-        "logo": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/bc-logo.jpg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OC/bc-logo.jpgema/bcgov-digital-trust/person/bc-logo.png",
         "background_image_slice": "",
-        "background_image": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/person-background-image.png",
         "primary_background_color": "#003366",
         "secondary_background_color": "",
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
