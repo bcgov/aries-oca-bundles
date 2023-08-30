@@ -63,7 +63,7 @@
       },
       {
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-        "credential_help_text": "Example credential help text.",
+        "credential_help_text": "",
         "credential_support_url": "https://www.lawsociety.bc.ca/",
         "description": "A schema used for membership in LSBC",
         "digest": "E0ThJbuiiYxGiPXV1SFn1yVpc48WIL7opx74ODk7tdPM",

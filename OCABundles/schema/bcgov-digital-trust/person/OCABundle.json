@@ -144,7 +144,7 @@
       },
       {
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "credential_help_text": "Example credential help text.",
+        "credential_help_text": "",
         "credential_support_url": "https://www.gov.bc.ca/",
         "description": "A Canadian schema used for the identity of a person",
         "digest": "EFqwZey67Xkfl4q_rcYroNzZa0f8SUdIdRLAKf4kFU_U",
@@ -157,7 +157,7 @@
       },
       {
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "credential_help_text": "Exemple de texte d'aide sur les informations d'identification.",
+        "credential_help_text": "",
         "credential_support_url": "https://www.gov.bc.ca/",
         "description": "Schéma canadien utilisé pour l'identité d'une personne",
         "digest": "E5FewgxojVholk4-HjrIbz9iyYqS-B3NOYUVmo5VkFYc",
@@ -169,7 +169,7 @@
         "type": "spec/overlays/meta/1.0"
       },
       {
-        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OC/bc-logo.jpgema/bcgov-digital-trust/person/bc-logo.png",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/bc-logo.png",
         "background_image_slice": "",
         "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/person-background-image.png",
         "primary_background_color": "#003366",

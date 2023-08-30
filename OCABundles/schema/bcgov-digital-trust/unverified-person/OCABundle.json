@@ -136,7 +136,7 @@
       },
       {
         "capture_base": "ENjFMNdBOGcFudULVPz9VIm_6dydXdXK4PXw5qqcHidY",
-        "credential_help_text": "Example credential help text.",
+        "credential_help_text": "",
         "credential_support_url": "https://www.gov.bc.ca/",
         "description": "A Canadian schema used for the identity of a person",
         "digest": "EJ70gOXsRvByR_5dKBaq3vNYP0VhjWYlsRJi68f0VY0A",
@@ -149,7 +149,7 @@
       },
       {
         "capture_base": "ENjFMNdBOGcFudULVPz9VIm_6dydXdXK4PXw5qqcHidY",
-        "credential_help_text": "Exemple de texte d'aide sur les informations d'identification.",
+        "credential_help_text": "",
         "credential_support_url": "https://www.gov.bc.ca/",
         "description": "Schéma canadien utilisé pour l'identité d'une personne",
         "digest": "EH33H0Dx65Y8jmMenv_imlgEoStPq3JdRsRlh1H9DHXw",
