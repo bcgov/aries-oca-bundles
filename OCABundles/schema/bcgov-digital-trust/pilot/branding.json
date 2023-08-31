@@ -1,11 +1,9 @@
-[
-  {
-    "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-logo.png",
-    "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-background-image-slice.png",
-    "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-primary-background.png",
-    "primary_background_color": "#003366",
-    "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-    "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
-    "type": "aries/overlays/branding/1.0"
-  }
-]
+{
+  "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+  "digest": "Ejy26tNCAM4mxeiE1zvAuouBdMb30Ryfub-tWz14bg1Q",
+  "type": "aries/overlays/branding/1.0",
+  "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-logo.png",
+  "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-background-image-slice.png",
+  "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-primary-background.png",
+  "primary_background_color": "#003366"
+}
