@@ -1,14 +1,27 @@
-import OverlayBundle from "../types/overlay/OverlayBundle";
-import { View, Image, ImageBackground, Text } from "react-native";
-import { textColorForBackground } from "../utils/color";
+import React, { CSSProperties } from "react";
+import { View, Image, ImageBackground, Text, FlatList } from "react-native";
 import { useBranding } from "../contexts/Branding";
+import { textColorForBackground } from "@hyperledger/aries-oca/build/utils/color";
+import { OverlayBundle } from "@hyperledger/aries-oca/build/types";
+import { CredentialExchangeRecord } from "@aries-framework/core";
+import { useMemo, useState } from "react";
+import {
+  CredentialFormatter,
+  DisplayAttribute,
+  LocalizedCredential,
+} from "@hyperledger/aries-oca/build/formatters/Credential";
+import AttributeValue from "./AttributeValue";
+import AttributeLabel from "./AttributeLabel";
 
 const width = 360;
 const paddingHorizontal = 24;
 const paddingVertical = 16;
 const logoHeight = 80;
 
-function computedStyles() {
+function computedStyles(): Record<
+  string,
+  CSSProperties | Record<string, number>
+> {
   const branding = useBranding();
 
   return {
@@ -40,7 +53,7 @@ function computedStyles() {
     },
     textContainer: {
       color: textColorForBackground(
-        branding?.primaryBackgroundColor || "#000000"
+        branding?.primaryBackgroundColor || "#313132"
       ),
       flexShrink: 1,
     },
@@ -60,22 +73,28 @@ function computedStyles() {
       fontSize: 18,
       fontWeight: "normal",
     },
+    listText: {
+      color: "#313132",
+    },
+    listBorder: {
+      borderColor: "#F2F2F2",
+      borderBottomWidth: 2,
+      paddingTop: 12,
+    },
   };
 }
 
 function DetailLogo({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle | undefined;
-  language?: string;
-  styles?: any;
+  credential?: LocalizedCredential;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
   return (
-    <View style={styles.logoContainer}>
+    <View style={styles?.logoContainer}>
       {branding?.logo ? (
         <Image
           source={branding?.logo}
@@ -87,12 +106,8 @@ function DetailLogo({
           }}
         />
       ) : (
-        <Text style={[styles.title, { fontSize: 0.5 * logoHeight }]}>
-          {(
-            overlay?.metadata?.issuer?.[language ?? "en"] ??
-            overlay?.metadata?.name?.[language || "en"] ??
-            "C"
-          )
+        <Text style={[styles?.title, { fontSize: 0.5 * logoHeight }]}>
+          {(credential?.issuer ?? credential?.name ?? "C")
             ?.charAt(0)
             .toUpperCase()}
         </Text>
@@ -105,7 +120,7 @@ function DetailSecondaryBody({
   styles,
 }: {
   overlay?: OverlayBundle | undefined;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
@@ -118,31 +133,29 @@ function DetailSecondaryBody({
             resizeMode: "cover",
           }}
         >
-          <View style={styles.secondaryBodyContainer} />
+          <View style={styles?.secondaryBodyContainer} />
         </ImageBackground>
       ) : (
-        <View style={styles.secondaryBodyContainer} />
+        <View style={styles?.secondaryBodyContainer} />
       )}
     </View>
   );
 }
 
 function DetailPrimaryBody({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle | undefined;
-  language?: string;
-  styles?: any;
+  credential?: LocalizedCredential;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
-    <View style={styles.primaryBodyContainer}>
+    <View style={styles?.primaryBodyContainer}>
       <View>
         <Text
           style={[
-            styles.label,
-            styles.textContainer,
+            styles?.label,
+            styles?.textContainer,
             {
               paddingLeft: logoHeight + paddingVertical,
               paddingBottom: paddingVertical,
@@ -152,18 +165,18 @@ function DetailPrimaryBody({
           ]}
           numberOfLines={1}
         >
-          {overlay?.metadata?.issuer?.[language ?? "en"]}
+          {credential?.issuer}
         </Text>
         <Text
           style={[
-            styles.normal,
-            styles.textContainer,
+            styles?.normal,
+            styles?.textContainer,
             {
               lineHeight: 24,
             },
           ]}
         >
-          {overlay?.metadata?.name[language ?? "en"]}
+          {credential?.name}
         </Text>
       </View>
     </View>
@@ -171,39 +184,94 @@ function DetailPrimaryBody({
 }
 
 function Detail({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle | undefined;
-  language?: string;
-  styles?: any;
+  credential?: LocalizedCredential;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
-    <View style={styles.container}>
-      <DetailSecondaryBody styles={styles} />
-      <DetailLogo overlay={overlay} language={language} styles={styles} />
-      <DetailPrimaryBody
-        overlay={overlay}
-        language={language}
-        styles={styles}
-      />
+    <View>
+      <View style={styles?.container}>
+        <DetailSecondaryBody styles={styles} />
+        <DetailLogo credential={credential} styles={styles} />
+        <DetailPrimaryBody credential={credential} styles={styles} />
+      </View>
+      <View>
+        <DetailList credential={credential} styles={styles} />
+      </View>
     </View>
+  );
+}
+
+function DetailList({
+  credential,
+  styles,
+}: {
+  credential?: LocalizedCredential;
+  styles?: Record<string, CSSProperties>;
+}) {
+  return (
+    <FlatList
+      data={credential?.attributes ?? []}
+      renderItem={({ item: attribute }: { item: DisplayAttribute }) => {
+        return (
+          <View
+            style={{
+              paddingHorizontal,
+              paddingTop: paddingVertical,
+            }}
+          >
+            <AttributeLabel
+              attribute={attribute}
+              styles={[
+                styles?.normal ?? {},
+                styles?.listText ?? {},
+                { fontWeight: "bold" },
+              ]}
+            />
+            <AttributeValue
+              attribute={attribute}
+              styles={[
+                styles?.normal ?? {},
+                styles?.listText ?? {},
+                { paddingVertical: 4 } as CSSProperties,
+              ]}
+              size={logoHeight}
+            />
+            <View style={styles?.listBorder} />
+          </View>
+        );
+      }}
+    />
   );
 }
 
 function CredentialDetail10({
   overlay,
+  record,
   language,
 }: {
   overlay?: OverlayBundle;
+  record?: CredentialExchangeRecord;
   language: string;
 }) {
   const styles = computedStyles();
 
+  const [formatter, setFormatter] = useState<CredentialFormatter | undefined>();
+
+  useMemo(() => {
+    if (!(overlay && record)) {
+      return;
+    }
+    setFormatter(new CredentialFormatter(overlay, record));
+  }, [overlay, record]);
+
+  const localizedCredential = formatter?.localizedCredential(language ?? "en");
+
   return (
-    <View style={[styles.container, { width }]}>
-      <Detail overlay={overlay} language={language} styles={styles} />
+    <View style={{ width }}>
+      <Detail credential={localizedCredential} styles={styles} />
     </View>
   );
 }

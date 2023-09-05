@@ -8,8 +8,8 @@ over the OCA Bundle they are submitting/updating, and that what they are
 submitting is, in fact, an OCA Bundle for a published AnonCreds Schema and/or
 Credential Definition.
 
-The OCA Bundles should follow the rules for [OCA for Aries]() OCA Bundles,
-including the [OCA for Aries Style Guide](). Each OCA Bundle must be accompanied
+The OCA Bundles should follow the rules for [OCA for Aries](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries) OCA Bundles,
+including the [OCA for Aries Style Guide](https://github.com/swcurran/aries-rfcs/tree/966b3e83870178d66a85db194a21739f0f807bef/features/0756-oca-for-aries-style-guide). Each OCA Bundle must be accompanied
 by some metadata about the credential, such as on what ledger the credential
 schema and definition (CredDef) reside, and may be accompanied by the full OCA
 Source data--Excel and JSON files.  We have some tools in the repo for
@@ -19,6 +19,46 @@ Currently, the repository assumes that the OCA Bundles are for [Hyperledger
 AnonCreds Verifiable Credentials](https://hyperledger.org/use/anoncreds). We
 expect that other formats, such as W3C Verifiable Credentials Data Model
 Standard JSON-LD credentials will eventually also be supported.
+
+## Previewing And Designing OCA Bundles
+
+When it comes to creating an OCA Bundle previewing the branding can be
+done with the [OCA
+Explorer](https://bcgov.github.io/aries-oca-bundles/)
+
+### What is OCA Explorer
+
+Overlays Capture Architecture (OCA) allows issuers to control the look
+of a credentials in a users wallet. In addition, OCA makes supporting
+multiple languages such as French and English easy.
+
+### Using OCA Explorer
+
+To design and preview an OCA Bundle, head over to the [OCA
+Explorer](https://bcgov.github.io/aries-oca-bundles/) and either
+select an existing bundle in the repository or upload one of your own.
+
+![Select OCA Bundle](./docs/assets/upload_OCA_bundle.PNG)
+
+Once you have selected or uploaded an OCA Bundle, a preview will
+display. If configured in the bundler there may be the option to
+choose from a variety of available languages using radio buttons based
+on the [multilingual
+overlay](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#oca-specification-overlays).
+
+The remaining fields displayed are derived from the [branding
+overlay](https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#aries-specific-branding-overlay),
+which can be customized according to your preferences. You can easily
+fill in these fields and download the branding overlay by clicking on
+the `DOWNLOAD BRANDING OVERLAY` button.
+
+Take a look at the screenshot below for an idea of what the branding
+customization interface looks like:
+
+![Customizing OCA Branding](./docs/assets/OCA_bundle_preview.PNG)
+
+Don't hesitate to experiment and create an OCA Bundle that best suits
+your needs!
 
 ## Locations of OCA Bundles
 

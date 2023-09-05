@@ -45,7 +45,7 @@
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
         "category_labels": {},
         "digest": "EmA40v_3bURuHxGl82yzmMTxMyym8-efTSp0TKBjF4Z0",
-        "language": "en-CA",
+        "language": "en",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -58,28 +58,27 @@
         },
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
         "digest": "EHjSTlcaB1DvDTi-0k35DtU-NUZsWNp47C5IimE3iMbs",
-        "language": "en-CA",
+        "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-        "credential_help_text": "Example credential help text.",
+        "credential_help_text": "",
         "credential_support_url": "https://www.lawsociety.bc.ca/",
         "description": "A schema used for membership in LSBC",
         "digest": "E0ThJbuiiYxGiPXV1SFn1yVpc48WIL7opx74ODk7tdPM",
         "issuer": "Law Society of BC",
         "issuer_description": "Law Society of BC",
         "issuer_url": "https://www.lawsociety.bc.ca/",
-        "language": "en-CA",
+        "language": "en",
         "name": "LSBC Member Credential",
         "type": "spec/overlays/meta/1.0"
       },
       {
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-        "digest": "",
-        "logo": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/lsbc-logo.png",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-logo.jpg",
         "background_image_slice": "",
-        "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/lsbc-background-image.jpg",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-background-image.jpg",
         "primary_background_color": "#00698c",
         "secondary_background_color": "#1a2930",
         "primary_attribute": "",

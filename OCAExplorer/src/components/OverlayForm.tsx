@@ -1,19 +1,33 @@
+import React from "react";
 import {
+  Card,
+  CardContent,
   FormControl,
   FormControlLabel,
   FormLabel,
   Radio,
   RadioGroup,
+  Tooltip,
+  Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { useCallback, useEffect, useState } from "react";
 import { BrandingProvider } from "../contexts/Branding";
-import OverlayBundle from "../types/overlay/OverlayBundle";
 import CredentialCard from "./CredentialCard";
 import CredentialDetail from "./CredentialDetail";
 import OverlayBrandingForm from "./OverlayBrandingForm";
+import { OverlayBundle } from "@hyperledger/aries-oca/build/types";
 
-function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
+import { Info } from "@mui/icons-material";
+import { CredentialExchangeRecord } from "@aries-framework/core";
+
+function OverlayForm({
+  overlay,
+  record,
+}: {
+  overlay: OverlayBundle;
+  record?: CredentialExchangeRecord;
+}) {
   const [language, setLanguage] = useState<string>("");
 
   useEffect(() => {
@@ -30,6 +44,64 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
   return (
     <BrandingProvider>
       <Grid>
+        {overlay.languages.length > 1 && (
+          <Grid id="overlay-bundle-language-select">
+            <FormControl fullWidth margin="dense">
+              <FormLabel>Language</FormLabel>
+              <RadioGroup
+                aria-labelledby="overlay-bundle-language-label"
+                name="language"
+                onChange={handleChange}
+                value={language}
+                row
+              >
+                {overlay.languages.map((language) => (
+                  <FormControlLabel
+                    key={language}
+                    value={language}
+                    control={<Radio />}
+                    label={language}
+                  />
+                ))}
+              </RadioGroup>
+            </FormControl>
+          </Grid>
+        )}
+        <Grid>
+          <Card>
+            <CardContent>
+              <Typography variant="overline">
+                {overlay.metadata.name[language]}&nbsp;
+                {overlay.metadata?.credentialHelpText && (
+                  <Tooltip
+                    title={
+                      overlay.metadata?.credentialHelpText?.[language] ?? ""
+                    }
+                  >
+                    <Info fontSize="small" style={{ marginBottom: 2 }} />
+                  </Tooltip>
+                )}
+              </Typography>
+              <Typography variant="body1" gutterBottom>
+                {overlay.metadata.description[language]}
+              </Typography>
+              {overlay.metadata?.issuer && (
+                <Typography variant="body2" color="text.secondary">
+                  {overlay.metadata?.issuer?.[language]}&nbsp;
+                  {overlay.metadata?.issuerDescription && (
+                    <Tooltip
+                      title={
+                        overlay.metadata?.issuerDescription?.[language] ?? ""
+                      }
+                    >
+                      <Info fontSize="inherit" style={{ marginBottom: 2 }} />
+                    </Tooltip>
+                  )}
+                </Typography>
+              )}
+            </CardContent>
+          </Card>
+        </Grid>
         <Grid
           container
           gap={4}
@@ -43,7 +115,13 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
             justifyContent="center"
             alignItems="flex-start"
           >
-            <CredentialCard overlay={overlay} language={language} />
+            <div id="overlay-bundle-credential-card">
+              <CredentialCard
+                overlay={overlay}
+                record={record}
+                language={language}
+              />
+            </div>
           </Grid>
           <Grid
             md
@@ -51,29 +129,14 @@ function OverlayForm({ overlay }: { overlay: OverlayBundle }) {
             justifyContent="center"
             alignItems="flex-start"
           >
-            <CredentialDetail overlay={overlay} language={language} />
+            <div id="overlay-bundle-credential-details">
+              <CredentialDetail
+                overlay={overlay}
+                record={record}
+                language={language}
+              />
+            </div>
           </Grid>
-        </Grid>
-        <Grid>
-          <FormControl fullWidth margin="dense">
-            <FormLabel id="overlay-bundle-language-label">Language</FormLabel>
-            <RadioGroup
-              aria-labelledby="overlay-bundle-language-label"
-              name="language"
-              onChange={handleChange}
-              value={language}
-              row
-            >
-              {overlay.languages.map((language) => (
-                <FormControlLabel
-                  key={language}
-                  value={language}
-                  control={<Radio />}
-                  label={language}
-                />
-              ))}
-            </RadioGroup>
-          </FormControl>
         </Grid>
         <Grid>
           <OverlayBrandingForm overlay={overlay} language={language} />

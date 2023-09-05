@@ -1,0 +1,24 @@
+name: "Check for existence of a OCABundle.json file"
+
+on:
+  pull_request:
+    types:  opened
+
+jobs:
+  oca_validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: "Check file existence"
+        id: check_files
+        uses: andstor/file-existence-action@v2
+        with:
+          files: "OCABundles/**/OCABundle.json"
+
+      - name: Commit files
+        if: steps.check_files.outputs.files_exists == 'true'
+        run: |
+          npm install -g ajv-cli
+          ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'

@@ -1,15 +1,20 @@
-import { Text, View, Image, ImageBackground, FlatList } from "react-native";
-import OverlayBundle from "../types/overlay/OverlayBundle";
-import { textColorForBackground } from "../utils/color";
-import startCase from "lodash.startcase";
+import React, { CSSProperties } from "react";
+import { Text, View, Image, ImageBackground } from "react-native";
 import { useBranding } from "../contexts/Branding";
+import { OverlayBundle } from "@hyperledger/aries-oca/build/types";
+import { textColorForBackground } from "@hyperledger/aries-oca/build/utils/color";
+import { CredentialExchangeRecord } from "@aries-framework/core";
+import { useMemo, useState } from "react";
+import { CredentialFormatter, DisplayAttribute, LocalizedCredential } from "@hyperledger/aries-oca/build/formatters/Credential";
+import AttributeLabel from "./AttributeLabel";
+import AttributeValue from "./AttributeValue";
 
 const width = 360;
 const borderRadius = 10;
 const padding = width * 0.05;
 const logoHeight = width * 0.12;
 
-function computedStyles() {
+function computedStyles(): Record<string, CSSProperties> {
   const branding = useBranding();
 
   return {
@@ -58,7 +63,7 @@ function computedStyles() {
     },
     textContainer: {
       color: textColorForBackground(
-        branding?.primaryBackgroundColor || "#000000"
+        branding?.primaryBackgroundColor || "#313132"
       ),
       flexShrink: 1,
     },
@@ -81,20 +86,18 @@ function computedStyles() {
 }
 
 function IssuerName({
-  overlay,
-  language,
+  issuer,
   styles,
 }: {
-  overlay?: OverlayBundle;
-  language?: string;
-  styles?: any;
+  issuer?: string;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
     <View>
       <Text
         style={[
-          styles.label,
-          styles.textContainer,
+          styles?.label,
+          styles?.textContainer,
           {
             lineHeight: 19,
             opacity: 0.8,
@@ -104,27 +107,25 @@ function IssuerName({
         ]}
         numberOfLines={1}
       >
-        {overlay?.metadata?.issuer?.[language ?? "en"]}
+        {issuer}
       </Text>
     </View>
   );
 }
 
 function CredentialName({
-  overlay,
-  language,
+  name,
   styles,
 }: {
-  overlay?: OverlayBundle;
-  language?: string;
-  styles?: any;
+  name?: string;
+  styles?: Record<string, CSSProperties>;
 }) {
   return (
     <View>
       <Text
         style={[
-          styles.normal,
-          styles.textContainer,
+          styles?.normal,
+          styles?.textContainer,
           {
             fontWeight: "bold",
             lineHeight: 24,
@@ -134,64 +135,54 @@ function CredentialName({
         ]}
         numberOfLines={1}
       >
-        {overlay?.metadata?.name[language ?? "en"]}
+        {name}
       </Text>
     </View>
   );
 }
 
-function AttributeLabel({ label, styles }: { label: string; styles?: any }) {
-  return (
-    <Text
-      style={[
-        styles.labelSubtitle,
-        styles.textContainer,
-        {
-          lineHeight: 19,
-          opacity: 0.8,
-        },
-      ]}
-    >
-      {label}
-    </Text>
-  );
-}
-
-function AttributeValue({ value, styles }: { value?: string; styles?: any }) {
-  return (
-    <Text
-      style={[
-        styles.normal,
-        styles.textContainer,
-        {
-          lineHeight: 24,
-        },
-      ]}
-    >
-      {value}
-    </Text>
-  );
-}
-
 function Attribute({
-  overlay,
-  language,
   attribute,
   styles,
 }: {
-  overlay?: OverlayBundle;
-  language?: string;
-  attribute: string;
-  styles?: any;
+  attribute: DisplayAttribute;
+  styles?: Record<string, CSSProperties>;
 }) {
-  const label =
-    overlay?.displayAttribute(attribute)?.label?.[language ?? "en"] ??
-    startCase(attribute);
-
   return (
-    <View style={[styles.textContainer, styles.attributeContainer]}>
-      <AttributeLabel label={label} styles={styles}></AttributeLabel>
-      <AttributeValue value={"•".repeat(10)} styles={styles} />
+    <View style={[styles?.textContainer, styles?.attributeContainer]}>
+      <AttributeLabel
+        attribute={attribute}
+        styles={[
+          styles?.labelSubtitle ?? {},
+          styles?.textContainer ?? {},
+          {
+            lineHeight: 19,
+            opacity: 0.8,
+          },
+        ]}
+      ></AttributeLabel>
+      {attribute.characterEncoding === "base64" &&
+      attribute.format?.includes("image") ? (
+        <Image
+          source={{
+            uri: attribute.value,
+            height: logoHeight,
+            width: logoHeight,
+          }}
+          style={{
+            marginTop: 4,
+          }}
+        />
+      ) : (
+        <AttributeValue
+          attribute={attribute}
+          styles={[
+            styles?.normal ?? {},
+            styles?.textContainer ?? {},
+            { lineHeight: 24 } as CSSProperties,
+          ]}
+        />
+      )}
     </View>
   );
 }
@@ -200,12 +191,12 @@ function CardSecondaryBody({
   styles,
 }: {
   overlay?: OverlayBundle;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
   return (
-    <View style={[styles.secondaryBodyContainer]}>
+    <View style={[styles?.secondaryBodyContainer]}>
       {branding?.backgroundImageSlice ? (
         <ImageBackground
           source={branding?.backgroundImageSlice}
@@ -221,18 +212,16 @@ function CardSecondaryBody({
 }
 
 function CardLogo({
-  overlay,
-  language,
+  credential,
   styles,
 }: {
-  overlay?: OverlayBundle;
-  language?: string;
-  styles?: any;
+  credential?: LocalizedCredential;
+  styles?: Record<string, CSSProperties>;
 }) {
   const branding = useBranding();
 
   return (
-    <View style={[styles.logoContainer]}>
+    <View style={[styles?.logoContainer]}>
       {branding?.logo ? (
         <Image
           source={branding?.logo}
@@ -246,7 +235,7 @@ function CardLogo({
       ) : (
         <Text
           style={[
-            styles.normal,
+            styles?.normal,
             {
               fontSize: 0.5 * logoHeight,
               fontWeight: "bold",
@@ -254,11 +243,7 @@ function CardLogo({
             },
           ]}
         >
-          {(
-            overlay?.metadata?.issuer?.[language ?? "en"] ??
-            overlay?.metadata?.name?.[language || "en"] ??
-            "C"
-          )
+          {(credential?.issuer ?? credential?.name ?? "C")
             ?.charAt(0)
             .toUpperCase()}
         </Text>
@@ -268,17 +253,17 @@ function CardLogo({
 }
 
 function CardPrimaryBody({
-  overlay,
-  language,
+  credential,
+  primaryAttribute,
+  secondaryAttribute,
   styles,
 }: {
-  overlay?: OverlayBundle;
-  language?: string;
-  styles?: any;
+  credential?: LocalizedCredential;
+  primaryAttribute?: DisplayAttribute;
+  secondaryAttribute?: DisplayAttribute;
+  styles?: Record<string, CSSProperties>;
 }) {
-  const branding = useBranding();
   const displayAttributes = [];
-  const { primaryAttribute, secondaryAttribute } = branding ?? {};
   if (primaryAttribute) {
     displayAttributes.push(primaryAttribute);
   }
@@ -287,14 +272,12 @@ function CardPrimaryBody({
   }
 
   return (
-    <View style={styles.primaryBodyContainer}>
-      <IssuerName overlay={overlay} language={language} styles={styles} />
-      <CredentialName overlay={overlay} language={language} styles={styles} />
+    <View style={styles?.primaryBodyContainer}>
+      <IssuerName issuer={credential?.issuer} styles={styles} />
+      <CredentialName name={credential?.name} styles={styles} />
       {displayAttributes.map((attribute, index) => (
         <Attribute
-          key={`${attribute}_${index}}`}
-          overlay={overlay}
-          language={language}
+          key={`${attribute.name}_${index}}`}
           attribute={attribute}
           styles={styles}
         />
@@ -303,49 +286,112 @@ function CardPrimaryBody({
   );
 }
 
-function CardStatus({
-  overlay,
-  styles,
-}: {
-  overlay?: OverlayBundle;
-  styles?: any;
-}) {
-  return <View style={[styles.statusContainer]} />;
+function CardStatus({ styles }: { styles?: Record<string, CSSProperties> }) {
+  return <View style={[styles?.statusContainer]} />;
 }
 
 function Card({
   overlay,
+  credential,
   language,
   styles,
 }: {
   overlay?: OverlayBundle;
+  credential?: LocalizedCredential;
   language?: string;
-  styles?: any;
+  styles?: Record<string, CSSProperties>;
 }) {
+  const branding = useBranding();
+
+  let primaryAttribute;
+  let secondaryAttribute;
+  if (branding?.primaryAttribute) {
+    primaryAttribute = getOverlayAttribute(
+      branding.primaryAttribute,
+      overlay,
+      credential,
+      language
+    );
+  }
+  if (branding?.secondaryAttribute) {
+    secondaryAttribute = getOverlayAttribute(
+      branding.secondaryAttribute,
+      overlay,
+      credential,
+      language
+    );
+  }
+
   return (
-    <View style={styles.cardContainer}>
+    <View style={styles?.cardContainer}>
       <CardSecondaryBody styles={styles} />
-      <CardLogo overlay={overlay} language={language} styles={styles} />
-      <CardPrimaryBody overlay={overlay} language={language} styles={styles} />
-      <CardStatus overlay={overlay} styles={styles} />
+      <CardLogo credential={credential} styles={styles} />
+      <CardPrimaryBody
+        credential={credential}
+        primaryAttribute={primaryAttribute}
+        secondaryAttribute={secondaryAttribute}
+        styles={styles}
+      />
+      <CardStatus styles={styles} />
     </View>
   );
 }
 
 function CredentialCard10({
   overlay,
+  record,
   language,
 }: {
   overlay?: OverlayBundle;
+  record?: CredentialExchangeRecord;
   language?: string;
 }) {
   const styles = computedStyles();
 
+  const [formatter, setFormatter] = useState<CredentialFormatter | undefined>();
+
+  useMemo(() => {
+    if (!(overlay && record)) {
+      return;
+    }
+    setFormatter(new CredentialFormatter(overlay, record));
+  }, [overlay, record]);
+
+  const localizedCredential = formatter?.localizedCredential(language ?? "en");
+
   return (
     <View style={[styles.container, { width }]}>
-      <Card overlay={overlay} language={language} styles={styles} />
+      <Card
+        overlay={overlay}
+        credential={localizedCredential}
+        language={language}
+        styles={styles}
+      />
     </View>
   );
+}
+
+function getOverlayAttribute(
+  name: string,
+  overlay: OverlayBundle | undefined,
+  credential: LocalizedCredential | undefined,
+  language: string | undefined
+): DisplayAttribute | undefined {
+  const attribute = credential?.getAttribute(name);
+  const overlayOptions = overlay?.getAttribute(name);
+
+  if (overlayOptions) {
+    const name = attribute?.name ?? "";
+    const mimeType = attribute?.mimeType ?? "";
+    const value = attribute?.value ?? "";
+    return new DisplayAttribute(
+      { name, mimeType, value },
+      overlayOptions,
+      language ?? "en"
+    );
+  }
+
+  return;
 }
 
 export default CredentialCard10;

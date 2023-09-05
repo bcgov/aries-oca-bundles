@@ -33,7 +33,7 @@
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "category_labels": {},
         "digest": "EwUUoqNySYZDg6fBI40fqWB8LxC3Rk9E1L8L717ZX3vs",
-        "language": "en-CA",
+        "language": "en",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -44,7 +44,7 @@
         },
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "digest": "EPk2IQ_xZJfxclfq4b3uONJFsMHqCqeEj9TaVrocdT1s",
-        "language": "en-CA",
+        "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -57,7 +57,7 @@
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "category_labels": {},
         "digest": "EReQYo9CylCu2Fgzr1jnarBYWef-8i76yegkBBUQz1Mo",
-        "language": "fr-CA",
+        "language": "fr",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -68,7 +68,7 @@
         },
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "digest": "ERjttCynO4IH3FpsmYeRasLHcib10WO03drhS-yaFs70",
-        "language": "fr-CA",
+        "language": "fr",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -96,7 +96,7 @@
         "issuer": "Best BC College",
         "issuer_description": "Best BC College",
         "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
-        "language": "fr-CA",
+        "language": "fr",
         "name": "Carte d'étudiant",
         "type": "spec/overlays/meta/1.0"
       },
@@ -109,14 +109,14 @@
         "issuer": "Best BC College",
         "issuer_description": "Best BC College",
         "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
-        "language": "en-CA",
+        "language": "en",
         "name": "Student Card",
         "type": "spec/overlays/meta/1.0"
       },
       {
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-logo.png",
-        "background_image_slice": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image-slice.png",
-        "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image.jpg",
+        "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-background-image-slice.jpg",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-background-image.jpg",
         "primary_background_color": "#32674e",
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
