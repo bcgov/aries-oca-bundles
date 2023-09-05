@@ -19,5 +19,5 @@
 "M6dhuFj5UwbhWkSLmvYSPc:2:student_card:1.2": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json" },
 "QEquAHkM35w4XVT3Ku5yat:2:student_card:1.2": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json" },
 "YXCtXE4YhVjULgj5hrk4ML:2:unverified_person:0.1.0": { "path": "OCABundles/schema/bcgov-digital-trust/unverified-person/OCABundle.json" },
-"Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0": { "path": "OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/OCABundle.json" },
+"Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0": { "path": "OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/OCABundle.json" }
 }

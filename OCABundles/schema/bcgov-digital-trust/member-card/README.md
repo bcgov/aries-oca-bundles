@@ -10,7 +10,7 @@ A verifiable credential schema for a lawyer's membership card that used in a dem
 | Identifier                                 | Location  | URL                                                   |
 | ------------------------------------------ | --------- | ----------------------------------------------------- |
 | 63ZiwyeZeazA6AhYRYm2zD:2:Member Card:1.5.1 | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/26676 |
-| Trx3R1frdEzbn34Sp1jyX:2:Member Card:1.5.1  | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/26514 |
+| Trx3R1frdEzbn34Sp1jyX:2:Member Card:1.5.1 | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/26514 |
 | XUxBrVSALWHLeycAUhrNr9:2:Member Card:1.5.1 | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/27369 |
 
 ## Authorization
