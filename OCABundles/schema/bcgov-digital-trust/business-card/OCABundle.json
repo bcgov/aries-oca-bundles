@@ -1,0 +1,110 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "business_name": "Text",
+        "business_type": "Text",
+        "company_status": "Text",
+        "cra_business_number": "Text",
+        "credential_id": "Text",
+        "family_name": "Text",
+        "given_names": "Text",
+        "identifier": "Text",
+        "registered_on_dateint": "DateTime",
+        "role": "Text"
+      },
+      "classification": "",
+      "digest": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
+      "flagged_attributes": [
+        "business_name",
+        "company_status",
+        "credential_id",
+        "identifier",
+        "registered_on_dateint",
+        "role",
+        "cra_business_number",
+        "family_name",
+        "business_type",
+        "given_names"
+      ],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "business_name": "utf-8",
+          "business_type": "utf-8",
+          "company_status": "utf-8",
+          "cra_business_number": "utf-8",
+          "credential_id": "utf-8",
+          "family_name": "utf-8",
+          "given_names": "utf-8",
+          "identifier": "utf-8",
+          "registered_on_dateint": "utf-8",
+          "role": "utf-8"
+        },
+        "capture_base": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
+        "default_character_encoding": "utf-8",
+        "digest": "EWtXoKHtMtp4I8gs06iRhDexRK769tZND_U4t0tQi4sY",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "business_name": "Business Name",
+          "business_type": "Business Type",
+          "company_status": "Company Status",
+          "cra_business_number": "CRA Business Number",
+          "credential_id": "Credential ID",
+          "family_name": "Family Name",
+          "given_names": "Given Names",
+          "identifier": "Identifier",
+          "registered_on_dateint": "Registered On",
+          "role": "Role"
+        },
+        "capture_base": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
+        "category_labels": {},
+        "digest": "EXdY8Bi0MKd7_PyaNJzFjFOaPgO58DjtqfTDJo2dF07o",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_formats": {
+          "registered_on_dateint": "YYYYMMDD"
+        },
+        "capture_base": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
+        "digest": "EEEzwIohxHiI8f1cT18EGOTvjDNjXcZwX7PM9ufkStSU",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "attribute_standards": {
+          "registered_on_dateint": "urn:iso:std:iso:1989"
+        },
+        "capture_base": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
+        "digest": "Ec7XFxBuFTumm3S1EgGUcdVJDycjJot6Iz0qDCRMm0D8",
+        "type": "spec/overlays/standard/1.0"
+      },
+      {
+        "capture_base": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
+        "description": "A verifiable credential schema for a business registered within the province of British Columbia",
+        "digest": "E0HQqYnokEwzVoa9pE0fmnWLhac8DaDNodfZsiaxKogk",
+        "language": "en",
+        "name": "Digital Business Card",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "logo": "",
+        "background_image_slice": "",
+        "background_image": "",
+        "primary_background_color": "",
+        "secondary_background_color": "",
+        "capture_base": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
+        "digest": "",
+        "expiry_date_attribute": "",
+        "primary_attribute": "",
+        "secondary_attribute": "",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]

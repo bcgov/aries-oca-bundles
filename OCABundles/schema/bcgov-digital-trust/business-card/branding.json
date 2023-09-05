@@ -1,0 +1,15 @@
+[
+    {
+        "logo": "",
+        "background_image_slice": "",
+        "background_image": "",
+        "primary_background_color": "",
+        "secondary_background_color": "",
+        "capture_base": "",
+        "digest": "",
+        "expiry_date_attribute": "",
+        "primary_attribute": "",
+        "secondary_attribute": "",
+        "type": "aries/overlays/branding/1.0"
+    }
+]
