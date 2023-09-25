@@ -34,13 +34,32 @@ fi
 echo -e "{" >${OCAIDSJSON}
 echo -e "[" >${OCALISTJSON}
 
+declare -a schema_files
+schema_files=(OCABundles/schema/*)
+last_schema_idx=$(( ${#schema_files[*]} - 1 ))
+curr_schema_idx=0
 for i in OCABundles/schema/*; do
+    last_schema=false
+    if [[ $curr_schema_idx -eq $last_schema_idx ]]; then
+        last_schema=true
+    fi
     if [ -d "${i}" ]; then
+        declare -a files
+        files=(${i}/*)
+        last_idx=$(( ${#files[*]} - 1 ))
+        curr_idx=0
         for j in ${i}/*; do
             BUNDLE_PATH=${j}/OCABundle.json
             ID=$(grep '^| ' ${j}/README.md | sed -e "/OCA Bundle/,100d" -e "/Identifier/d" -e "/----/d" -e 's/^| \([^|]*\) |.*/\1/' -e 's/\s*$//' -e 's/ /~/g')
+            last_id_idx=$(( ${#ID[*]} - 1 ))
+            curr_id_idx=0
             for id in ${ID}; do
-                echo "\"${id}\": { \"path\": \"${BUNDLE_PATH}\" }," | sed "s/~/ /g" >>${OCAIDSJSON}
+                delim=","
+                if [[ $last_schema = true && $curr_idx -eq $last_idx ]]; then
+                    delim=""
+                fi
+                echo "\"${id}\": { \"path\": \"${BUNDLE_PATH}\" }${delim}" | sed "s/~/ /g" >>${OCAIDSJSON}
+                curr_id_idx=$(( $curr_id_idx + 1))
             done
             ORG=$(grep "Publishing\|Issuing" ${j}/README.md | sed -e "s/.*: //")
             NAME=$(sed -e "2,1000d" -e "s/# //" ${j}/README.md)
@@ -49,9 +68,15 @@ for i in OCABundles/schema/*; do
             if [ "$(echo ${j} | grep "schema")" == "" ]; then
                 TYPE="credential"
             fi
-            echo "{ \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${BUNDLE_PATH}\" }," >>${OCALISTJSON}
+            delim=","
+            if [[ $last_schema = true && $curr_idx -eq $last_idx ]]; then
+                delim=""
+            fi
+            echo "{ \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${BUNDLE_PATH}\" }${delim}" >>${OCALISTJSON}
+            curr_idx=$(( $curr_idx + 1))
         done
     fi
+    curr_schema_idx=$(( $curr_schema_idx + 1))
 done
 
 echo -e "}" >>${OCAIDSJSON}
