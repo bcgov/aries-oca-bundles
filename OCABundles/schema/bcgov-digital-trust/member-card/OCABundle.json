@@ -9,14 +9,8 @@
         "Surname": "Text"
       },
       "classification": "",
-      "digest": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-      "flagged_attributes": [
-        "PPID",
-        "Member Status Code",
-        "Surname",
-        "Given Name",
-        "Member Status"
-      ],
+      "digest": "ECD4YSV-5PrZ8smp7gaYzGqc-AxCM3wdWRia1KXEff5k",
+      "flagged_attributes": [],
       "type": "spec/capture_base/1.0"
     },
     "overlays": [
@@ -28,9 +22,9 @@
           "PPID": "utf-8",
           "Surname": "utf-8"
         },
-        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "capture_base": "ECD4YSV-5PrZ8smp7gaYzGqc-AxCM3wdWRia1KXEff5k",
         "default_character_encoding": "utf-8",
-        "digest": "EWJRSUncNhs1SJykpPQWqSK_wvPX8zWzyHwEN70PzXws",
+        "digest": "E1xhp0X6GJTEoKQC9ab7gfrjUAFfrnzpx2_WuWGndz_Q",
         "type": "spec/overlays/character_encoding/1.0"
       },
       {
@@ -42,9 +36,9 @@
           "PPID": "PPID",
           "Surname": "Surname"
         },
-        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "capture_base": "ECD4YSV-5PrZ8smp7gaYzGqc-AxCM3wdWRia1KXEff5k",
         "category_labels": {},
-        "digest": "EmA40v_3bURuHxGl82yzmMTxMyym8-efTSp0TKBjF4Z0",
+        "digest": "EdHsaD-YPCxxEf9ehr86hW0RlMtXIWxusO3-7OXeqsIg",
         "language": "en",
         "type": "spec/overlays/label/1.0"
       },
@@ -56,17 +50,16 @@
           "PPID": "Member's PPID",
           "Surname": "Member's surname"
         },
-        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-        "digest": "EHjSTlcaB1DvDTi-0k35DtU-NUZsWNp47C5IimE3iMbs",
+        "capture_base": "ECD4YSV-5PrZ8smp7gaYzGqc-AxCM3wdWRia1KXEff5k",
+        "digest": "EppET8fUiQdI_myk2ytGMdTHcDNUOQ5fyYvIg_3nWkgY",
         "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
-        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-        "credential_help_text": "",
+        "capture_base": "ECD4YSV-5PrZ8smp7gaYzGqc-AxCM3wdWRia1KXEff5k",
         "credential_support_url": "https://www.lawsociety.bc.ca/",
         "description": "A schema used for membership in LSBC",
-        "digest": "E0ThJbuiiYxGiPXV1SFn1yVpc48WIL7opx74ODk7tdPM",
+        "digest": "Ex-8WhsZvyxPZ4mu37B5TsvZB1YclfhmjTvt_ekNfRfM",
         "issuer": "Law Society of BC",
         "issuer_description": "Law Society of BC",
         "issuer_url": "https://www.lawsociety.bc.ca/",
@@ -75,7 +68,7 @@
         "type": "spec/overlays/meta/1.0"
       },
       {
-        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "capture_base": "ECD4YSV-5PrZ8smp7gaYzGqc-AxCM3wdWRia1KXEff5k",
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-logo.jpg",
         "background_image_slice": "",
         "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-background-image.jpg",
