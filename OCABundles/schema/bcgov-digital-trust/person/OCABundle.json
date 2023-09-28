@@ -14,8 +14,18 @@
         "street_address": "Text"
       },
       "classification": "",
-      "digest": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
-      "flagged_attributes": [],
+      "digest": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+      "flagged_attributes": [
+        "given_names",
+        "family_name",
+        "birthdate_dateint",
+        "street_address",
+        "locality",
+        "region",
+        "postal_code",
+        "country",
+        "picture"
+      ],
       "type": "spec/capture_base/1.0"
     },
     "overlays": [
@@ -32,9 +42,9 @@
           "region": "utf-8",
           "street_address": "utf-8"
         },
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "default_character_encoding": "utf-8",
-        "digest": "EG2XTQ6buyMwTmVRnPQfZPKW0N4Q5jHkD-FAImXxAB44",
+        "digest": "ErNpwiEXVPNNmGF-pklsVp7QJzdMCXXpI3rE5iPOwQ3I",
         "type": "spec/overlays/character_encoding/1.0"
       },
       {
@@ -51,9 +61,9 @@
           "region": "Région",
           "street_address": "Adresse municipale"
         },
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "category_labels": {},
-        "digest": "ELUP5MllivSp2OkJDsBdkjAl7Tkqp2nQFPW-kWhgU6Yg",
+        "digest": "EWdLqEtL6xa8qZcgntk142CBBZAZ-ftyHa5pY0dpgrtc",
         "language": "fr",
         "type": "spec/overlays/label/1.0"
       },
@@ -70,8 +80,8 @@
           "region": "Pour les adresses canadiennes, la province ou le territoire de l'adresse de la personne. Pour les autres pays, l’indicatif régional de l'adresse de la personne",
           "street_address": "L'adresse complète de la personne, sans la localité, la région et le code postal"
         },
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
-        "digest": "ENOhsW77cYT56BZJ7e0dcutNJnlrYciKWOM91B85SP_A",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "digest": "Eqi9iRMvGLF4S9QFsLv93P93xB-2-0wD2y8FXRR1K218",
         "language": "fr",
         "type": "spec/overlays/information/1.0"
       },
@@ -89,9 +99,9 @@
           "region": "Region",
           "street_address": "Street Address"
         },
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "category_labels": {},
-        "digest": "EWvKpVhPmk1MeQGRVVQ-PaDY789NjDXdrYLwrZ6Pmros",
+        "digest": "ElrSjmT3yTXP7v2QkNkOhKyBM9l3hdFyuCQ-GPTBDcwg",
         "language": "en",
         "type": "spec/overlays/label/1.0"
       },
@@ -108,8 +118,8 @@
           "region": "For Canadian addresses, the province or territory of the person's address. For other countries, the regional code of the person's address.",
           "street_address": "The full address of the person, excluding locality, region, and postal code"
         },
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
-        "digest": "Eric0OSb7pwf73sSRJlbWRYJZyAvHSzFM8WwOLol2NHI",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "digest": "EKX0ziwWxTtFy7q8FTPaS-Oo8CERHo0aDg3LkErEIo1Q",
         "language": "en",
         "type": "spec/overlays/information/1.0"
       },
@@ -119,8 +129,8 @@
           "expiry_date_dateint": "YYYYMMDD",
           "picture": "image/jpeg"
         },
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
-        "digest": "EbNs7QV0ojXTE3iLfSt-aCG6nFp4-hbaWyMymwRFYlSs",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "digest": "ExpCS7XKzhmg37ZrbyjgA-a9NuhuiMxpLT5zQIPNaqyg",
         "type": "spec/overlays/format/1.0"
       },
       {
@@ -128,32 +138,32 @@
           "birthdate_dateint": "urn:iso:std:iso:1989",
           "expiry_date_dateint": "urn:iso:std:iso:1989"
         },
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
-        "digest": "E8Gr7QOoVJYL8tHX0UkXoThBaknBPpdXlrOqzs7zbIVc",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "digest": "ETGgHmsxF_wN5YNO6qAAtnUXBgBFek70GfBdkvW6fgOU",
         "type": "spec/overlays/standard/1.0"
       },
       {
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
-        "credential_support_url": "https://www.gov.bc.ca/",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "description": "Schéma canadien utilisé pour l'identité d'une personne",
-        "digest": "ER7OgEs6anbg76JD51-38m_UtRuKliSDRj21KZiZK1WE",
-        "issuer": "Gouvernement de la Colombie-Britannique",
-        "issuer_description": "Gouvernement de la Colombie-Britannique",
-        "issuer_url": "https://www.gov.bc.ca/",
+        "digest": "EuBEK7v-Jq5bqW72CmB8jOzxRllFiW3u5KbhT6nMVzfg",
+        "issuer": "Service BC",
+        "issuer_description": "Service BC",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "fr",
-        "name": "Informations d'identification de la personne",
+        "name": "Personne",
         "type": "spec/overlays/meta/1.0"
       },
       {
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
-        "credential_support_url": "https://www.gov.bc.ca/",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "description": "A Canadian schema used for the identity of a person",
-        "digest": "EGTPFzNTloJYp17WkYuyqMte39E2_IbUY8Eic02OAKDQ",
-        "issuer": "Government of British Columbia",
-        "issuer_description": "Government of British Columbia",
-        "issuer_url": "https://www.gov.bc.ca/",
+        "digest": "E5A0fhKvKCna6C6p47Q-y3pYmofWfLUp1ZAomTVVof-w",
+        "issuer": "Service BC",
+        "issuer_description": "Service BC",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "en",
-        "name": "Person Credential",
+        "name": "Person",
         "type": "spec/overlays/meta/1.0"
       },
       {
@@ -162,7 +172,7 @@
         "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/person-background-image.png",
         "primary_background_color": "#003366",
         "secondary_background_color": "",
-        "capture_base": "EI2lJ7wOY56aJda6s9v60d8ip6zD9AABQmKLsRvPf_NQ",
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
         "expiry_date_attribute": "expiry_date_dateint",
         "primary_attribute": "given_names",
