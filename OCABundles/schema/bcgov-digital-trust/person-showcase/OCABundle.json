@@ -50,44 +50,6 @@
       {
         "attribute_categories": [],
         "attribute_labels": {
-          "birthdate_dateint": "Date de naissance",
-          "country": "Pays",
-          "expiry_date_dateint": "Date d'expiration",
-          "family_name": "Nom de famille",
-          "given_names": "Prénoms",
-          "locality": "Localité",
-          "picture": "Photo (si délivrée)",
-          "postal_code": "Code postal",
-          "region": "Région",
-          "street_address": "Adresse municipale"
-        },
-        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "category_labels": {},
-        "digest": "EWdLqEtL6xa8qZcgntk142CBBZAZ-ftyHa5pY0dpgrtc",
-        "language": "fr",
-        "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "birthdate_dateint": "La date de naissance de la personne",
-          "country": "Le code du pays de l'adresse de la personne",
-          "expiry_date_dateint": "La date d'expiration de ce/cette [justificatif / pièce d'identité].",
-          "family_name": "Le nom de famille légal de la personne",
-          "given_names": "Le ou les prénoms légaux de la personne",
-          "locality": "Le nom de la ville ou de la localité de l'adresse de la personne",
-          "picture": "Une photo vérifiée de la personne (si délivrée)",
-          "postal_code": "Le code postal de l'adresse de la personne",
-          "region": "Pour les adresses canadiennes, la province ou le territoire de l'adresse de la personne. Pour les autres pays, l’indicatif régional de l'adresse de la personne",
-          "street_address": "L'adresse complète de la personne, sans la localité, la région et le code postal"
-        },
-        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "digest": "Eqi9iRMvGLF4S9QFsLv93P93xB-2-0wD2y8FXRR1K218",
-        "language": "fr",
-        "type": "spec/overlays/information/1.0"
-      },
-      {
-        "attribute_categories": [],
-        "attribute_labels": {
           "birthdate_dateint": "Date of Birth",
           "country": "Country",
           "expiry_date_dateint": "Expiry Date",
@@ -124,6 +86,44 @@
         "type": "spec/overlays/information/1.0"
       },
       {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "birthdate_dateint": "Date de naissance",
+          "country": "Pays",
+          "expiry_date_dateint": "Date d'expiration",
+          "family_name": "Nom de famille",
+          "given_names": "Prénoms",
+          "locality": "Localité",
+          "picture": "Photo (si délivrée)",
+          "postal_code": "Code postal",
+          "region": "Région",
+          "street_address": "Adresse municipale"
+        },
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "category_labels": {},
+        "digest": "EWdLqEtL6xa8qZcgntk142CBBZAZ-ftyHa5pY0dpgrtc",
+        "language": "fr",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "birthdate_dateint": "La date de naissance de la personne",
+          "country": "Le code du pays de l'adresse de la personne",
+          "expiry_date_dateint": "La date d'expiration de ce/cette [justificatif / pièce d'identité].",
+          "family_name": "Le nom de famille légal de la personne",
+          "given_names": "Le ou les prénoms légaux de la personne",
+          "locality": "Le nom de la ville ou de la localité de l'adresse de la personne",
+          "picture": "Une photo vérifiée de la personne (si délivrée)",
+          "postal_code": "Le code postal de l'adresse de la personne",
+          "region": "Pour les adresses canadiennes, la province ou le territoire de l'adresse de la personne. Pour les autres pays, l’indicatif régional de l'adresse de la personne",
+          "street_address": "L'adresse complète de la personne, sans la localité, la région et le code postal"
+        },
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "digest": "Eqi9iRMvGLF4S9QFsLv93P93xB-2-0wD2y8FXRR1K218",
+        "language": "fr",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
         "attribute_formats": {
           "birthdate_dateint": "YYYYMMDD",
           "expiry_date_dateint": "YYYYMMDD",
@@ -146,12 +146,12 @@
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "description": "Schéma canadien utilisé pour l'identité d'une personne",
-        "digest": "E4y3rREiBvr_5reFxcHIO_g2g7i8QMVoPrjNaoXhoPRI",
+        "digest": "E59FB-RsSAjoXQFYyis9juMgviEWUijPtpowz8QAFcR4",
         "issuer": "Service BC DEMO",
         "issuer_description": "Service BC",
         "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "fr",
-        "name": "Personne",
+        "name": "DÉMO - Personne",
         "type": "spec/overlays/meta/1.0",
         "watermark": "NON-PRODUCTION (FR)"
       },
@@ -159,12 +159,12 @@
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "description": "A Canadian schema used for the identity of a person",
-        "digest": "Eu8zjwpVHvqMl__k8-8uUOzC9cNIFlvvsYqaRy_D6kiM",
+        "digest": "Ev0iOFofft8snK-bo9g-Y4nSl4UjNDSyLIywdyWdIbys",
         "issuer": "Service BC DEMO",
         "issuer_description": "Service BC",
         "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "en",
-        "name": "Person",
+        "name": "DEMO - Person",
         "type": "spec/overlays/meta/1.0",
         "watermark": "NON-PRODUCTION"
       },
