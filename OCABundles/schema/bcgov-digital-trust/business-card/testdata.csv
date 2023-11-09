@@ -1,0 +1,2 @@
+business_name, business_type, company_status, cra_business_number, credential_id, family_name, given_names, identifier, registered_on_dateint, role
+"MY SOLE PROP", "BC Sole Proprietorship", "ACTIVE", "000000000000001", "00000001", LAST NAME, "FIRST NAME, MIDDLE NAME", "FM000001", 20241109, "PROPRIETOR"
