@@ -16,15 +16,7 @@
       "classification": "",
       "digest": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
       "flagged_attributes": [
-        "business_name",
-        "company_status",
-        "credential_id",
-        "identifier",
-        "registered_on_dateint",
-        "role",
-        "cra_business_number",
         "family_name",
-        "business_type",
         "given_names"
       ],
       "type": "spec/capture_base/1.0"
