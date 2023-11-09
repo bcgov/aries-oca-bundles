@@ -9,7 +9,7 @@ A verifiable credential schema for a business registered within the province of 
 
 | Identifier                                           | Location     | URL         |
 | ---------------------------------------------------- | ------------ | ----------- |
-| 4DsheHjrS8kbzw4Rd8Peym:2:Digital Business Card:1.0.0 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=digital_business_card&txn_type=101 |
+| K9igebFysBL6jcBwR8bKuN:2:Digital Business Card:1.0.0 | candy:test   | https://candyscan.idlab.org/tx/CANDY_TEST/domain/61 |
 
 ## Authorization
 
@@ -19,5 +19,3 @@ The following are the GitHub IDs of those authorized to make substantive updates
 | ----------------------- | ---------- | ------------------------ |
 | Stephen Curran          | swcurran   | swcurran@cloudcompass.ca |
 | Akiff Manji             | amanji     | amanji@petridish.dev     |
-|                         |            |                          |
-
