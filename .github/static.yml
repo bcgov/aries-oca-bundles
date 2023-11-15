@@ -32,23 +32,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Checkout submodule dependency
-        uses: actions/checkout@v3
-        with:
-          submodules: true
-          repository: petridishdev/aries-mobile-agent-react-native
-          path: "./aries-bifold"
-          ref: feature/oca-package_attributes
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: yarn
           cache-dependency-path: "./OCAExplorer"
-      - name: Install submodule
-        run: cd './aries-bifold/packages/oca' && yarn install --immutable
-      - name: Build submodule
-        run: cd './aries-bifold/packages/oca' && yarn build
       - name: Install dependencies
         run: cd './OCAExplorer' && yarn install --immutable
       - name: Build

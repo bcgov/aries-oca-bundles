@@ -8,7 +8,10 @@
       },
       "classification": "",
       "digest": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-      "flagged_attributes": ["student_last_name", "student_first_name"],
+      "flagged_attributes": [
+        "student_last_name",
+        "student_first_name"
+      ],
       "type": "spec/capture_base/1.0"
     },
     "overlays": [
@@ -32,8 +35,8 @@
         },
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "category_labels": {},
-        "digest": "EwUUoqNySYZDg6fBI40fqWB8LxC3Rk9E1L8L717ZX3vs",
-        "language": "en-CA",
+        "digest": "ENR3_iqVATq5dWx_I4YzKbf35mv-OipIdbnNt4nGmsJU",
+        "language": "en",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -43,8 +46,8 @@
           "student_last_name": "The last name of the Best BC College student."
         },
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "digest": "EPk2IQ_xZJfxclfq4b3uONJFsMHqCqeEj9TaVrocdT1s",
-        "language": "en-CA",
+        "digest": "Emn1K6J6RaTBWEjhjTDj3WYErRvleBKATs6adzcqPTc8",
+        "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -56,8 +59,8 @@
         },
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "category_labels": {},
-        "digest": "EReQYo9CylCu2Fgzr1jnarBYWef-8i76yegkBBUQz1Mo",
-        "language": "fr-CA",
+        "digest": "E-MLSlBNMpmYJSKmrFUBYDGCCZM0t0Y_j8hQjyONnHkM",
+        "language": "fr",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -67,8 +70,8 @@
           "student_last_name": "Le nom (de famille) du titulaire de la carte d'étudiant."
         },
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "digest": "ERjttCynO4IH3FpsmYeRasLHcib10WO03drhS-yaFs70",
-        "language": "fr-CA",
+        "digest": "EGn9GBdK0LDKLt7uizMpMKXAQU9KQ1XhApLBM3NT9GOY",
+        "language": "fr",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -89,40 +92,41 @@
       },
       {
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "credential_help_text": "Il s'agit d'un exemple de simple carte d'étudiant qui pourrait être émise par une université ou un collège canadien.",
-        "credential_support_url": "mailto:DItrust@gov.bc.ca",
-        "description": "Un exemple de carte étudiante qui pourrait être émise par une université ou un collège canadien",
-        "digest": "EKUrCoSycSKJwpNmn5qKRrWtoCvTbEZEaIf_zANcFuqE",
-        "issuer": "Best BC College",
-        "issuer_description": "Best BC College",
-        "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
-        "language": "fr-CA",
-        "name": "Carte d'étudiant",
-        "type": "spec/overlays/meta/1.0"
-      },
-      {
-        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "credential_help_text": "This is an example of a simple student card that might be issued by a Canadian University or College.",
         "credential_support_url": "mailto:DItrust@gov.bc.ca",
         "description": "An example Student Card that might be issued from a Canadian University or College",
-        "digest": "EbdmDPPdtf2j8flF9d9t_VwdKE10guqvtVEXt6ZXlhCs",
+        "digest": "EZ6QKl1zTJplRtOL7z7q_Tfg8kTMghmTFE3e5S3CDlFo",
         "issuer": "Best BC College",
         "issuer_description": "Best BC College",
         "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
-        "language": "en-CA",
-        "name": "Student Card",
+        "language": "en",
+        "name": "DEMO - Student Card",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
+      },
+      {
+        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+        "credential_help_text": "Il s'agit d'un exemple de simple carte d'étudiant qui pourrait être émise par une université ou un collège canadien.",
+        "credential_support_url": "mailto:DItrust@gov.bc.ca",
+        "description": "Un exemple de carte étudiante qui pourrait être émise par une université ou un collège canadien",
+        "digest": "EaqTc0Ll59tCS4mhfWn0AFt1VwcH74GI1YTsD1jVtNbU",
+        "issuer": "Best BC College",
+        "issuer_description": "Best BC College",
+        "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
+        "language": "fr",
+        "name": "DÉMO - Carte d'étudiant",
         "type": "spec/overlays/meta/1.0"
       },
       {
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-logo.png",
-        "background_image_slice": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image-slice.jpg",
-        "background_image": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/best-bc-background-image.jpg",
+        "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-background-image-slice.jpg",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-background-image.jpg",
         "primary_background_color": "#32674e",
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
         "expiry_date_attribute": "expiry_date",
-        "primary_attribute": "student_last_name",
-        "secondary_attribute": "student_first_name",
+        "primary_attribute": "",
+        "secondary_attribute": "",
         "type": "aries/overlays/branding/1.0"
       }
     ]

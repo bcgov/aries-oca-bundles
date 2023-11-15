@@ -50,44 +50,6 @@
       {
         "attribute_categories": [],
         "attribute_labels": {
-          "birthdate_dateint": "Date de naissance",
-          "country": "Pays",
-          "expiry_date_dateint": "Date d'expiration",
-          "family_name": "Nom de famille",
-          "given_names": "Prénoms",
-          "locality": "Localité",
-          "picture": "Photo (si délivrée)",
-          "postal_code": "Code postal",
-          "region": "Région",
-          "street_address": "Adresse municipale"
-        },
-        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "category_labels": {},
-        "digest": "EbSasjnl7WLhi1zmi4mBt6ITwAXdwZX9KW8WCYSLUIKM",
-        "language": "fr-CA",
-        "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "birthdate_dateint": "La date de naissance de la personne",
-          "country": "Le code du pays de l'adresse de la personne",
-          "expiry_date_dateint": "La date d'expiration de ce/cette [justificatif / pièce d'identité].",
-          "family_name": "Le nom de famille légal de la personne",
-          "given_names": "Le ou les prénoms légaux de la personne",
-          "locality": "Le nom de la ville ou de la localité de l'adresse de la personne",
-          "picture": "Une photo vérifiée de la personne (si délivrée)",
-          "postal_code": "Le code postal de l'adresse de la personne",
-          "region": "Pour les adresses canadiennes, la province ou le territoire de l'adresse de la personne. Pour les autres pays, l’indicatif régional de l'adresse de la personne",
-          "street_address": "L'adresse complète de la personne, sans la localité, la région et le code postal"
-        },
-        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "digest": "EJgTy4qAd3NRc7jeFuCXt7tXtt8eTCo_yy_L8ankSjY4",
-        "language": "fr-CA",
-        "type": "spec/overlays/information/1.0"
-      },
-      {
-        "attribute_categories": [],
-        "attribute_labels": {
           "birthdate_dateint": "Date of Birth",
           "country": "Country",
           "expiry_date_dateint": "Expiry Date",
@@ -101,8 +63,8 @@
         },
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
         "category_labels": {},
-        "digest": "EeyKvEZtWa4QAkY1YBb4x3GNFmIS6po0MAYZaUAG_FFA",
-        "language": "en-CA",
+        "digest": "ElrSjmT3yTXP7v2QkNkOhKyBM9l3hdFyuCQ-GPTBDcwg",
+        "language": "en",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -119,8 +81,46 @@
           "street_address": "The full address of the person, excluding locality, region, and postal code"
         },
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "digest": "EcSZAIRQ0VzAFnKnv_3XW5uSdSnb60jx-SUDXQfpfm00",
-        "language": "en-CA",
+        "digest": "EKX0ziwWxTtFy7q8FTPaS-Oo8CERHo0aDg3LkErEIo1Q",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "birthdate_dateint": "Date de naissance",
+          "country": "Pays",
+          "expiry_date_dateint": "Date d'expiration",
+          "family_name": "Nom de famille",
+          "given_names": "Prénoms",
+          "locality": "Localité",
+          "picture": "Photo (si délivrée)",
+          "postal_code": "Code postal",
+          "region": "Région",
+          "street_address": "Adresse municipale"
+        },
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "category_labels": {},
+        "digest": "EWdLqEtL6xa8qZcgntk142CBBZAZ-ftyHa5pY0dpgrtc",
+        "language": "fr",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "birthdate_dateint": "La date de naissance de la personne",
+          "country": "Le code du pays de l'adresse de la personne",
+          "expiry_date_dateint": "La date d'expiration de ce/cette [justificatif / pièce d'identité].",
+          "family_name": "Le nom de famille légal de la personne",
+          "given_names": "Le ou les prénoms légaux de la personne",
+          "locality": "Le nom de la ville ou de la localité de l'adresse de la personne",
+          "picture": "Une photo vérifiée de la personne (si délivrée)",
+          "postal_code": "Le code postal de l'adresse de la personne",
+          "region": "Pour les adresses canadiennes, la province ou le territoire de l'adresse de la personne. Pour les autres pays, l’indicatif régional de l'adresse de la personne",
+          "street_address": "L'adresse complète de la personne, sans la localité, la région et le code postal"
+        },
+        "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
+        "digest": "Eqi9iRMvGLF4S9QFsLv93P93xB-2-0wD2y8FXRR1K218",
+        "language": "fr",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -144,34 +144,34 @@
       },
       {
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "credential_help_text": "Example credential help text.",
-        "credential_support_url": "https://www.gov.bc.ca/",
-        "description": "A Canadian schema used for the identity of a person",
-        "digest": "EFqwZey67Xkfl4q_rcYroNzZa0f8SUdIdRLAKf4kFU_U",
-        "issuer": "Government of British Columbia",
-        "issuer_description": "Government of British Columbia",
-        "issuer_url": "https://www.gov.bc.ca/",
-        "language": "en-CA",
-        "name": "Person Credential",
-        "type": "spec/overlays/meta/1.0"
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
+        "description": "Schéma canadien utilisé pour l'identité d'une personne",
+        "digest": "E59FB-RsSAjoXQFYyis9juMgviEWUijPtpowz8QAFcR4",
+        "issuer": "Service BC DEMO",
+        "issuer_description": "Service BC",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
+        "language": "fr",
+        "name": "DÉMO - Personne",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION (FR)"
       },
       {
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",
-        "credential_help_text": "Exemple de texte d'aide sur les informations d'identification.",
-        "credential_support_url": "https://www.gov.bc.ca/",
-        "description": "Schéma canadien utilisé pour l'identité d'une personne",
-        "digest": "E5FewgxojVholk4-HjrIbz9iyYqS-B3NOYUVmo5VkFYc",
-        "issuer": "Gouvernement de la Colombie-Britannique",
-        "issuer_description": "Gouvernement de la Colombie-Britannique",
-        "issuer_url": "https://www.gov.bc.ca/",
-        "language": "fr-CA",
-        "name": "Informations d'identification de la personne",
-        "type": "spec/overlays/meta/1.0"
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
+        "description": "A Canadian schema used for the identity of a person",
+        "digest": "Ev0iOFofft8snK-bo9g-Y4nSl4UjNDSyLIywdyWdIbys",
+        "issuer": "Service BC DEMO",
+        "issuer_description": "Service BC",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
+        "language": "en",
+        "name": "DEMO - Person",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
       },
       {
-        "logo": "https://raw.githubusercontent.com/bcgov/bc-wallet-mobile/main/app/src/assets/branding/bc-logo.jpg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/bc-logo.jpg",
         "background_image_slice": "",
-        "background_image": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/person-background-image.png",
         "primary_background_color": "#003366",
         "secondary_background_color": "",
         "capture_base": "ES3khN7HC1zZyr-DeQ6UbUVyhY_npOrxX_8NO_K4IWH8",

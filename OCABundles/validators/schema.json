@@ -174,14 +174,14 @@
         "language": {
           "type": "string"
         },
-        "attr_standards": {
+        "attribute_standards": {
           "type": "object"
         }
       },
       "required": [
         "type",
         "capture_base",
-        "attr_standards"
+        "attribute_standards"
       ]
     },
     "Branding": {
@@ -217,15 +217,9 @@
       },
       "required": [
         "type",
-        "capture_base",
-        "logo",
-        "background_image",
-        "background_image_slice",
-        "primary_background_color",
-        "secondary_background_color",
-        "primary_attribute",
-        "secondary_attribute"
+        "capture_base"
       ]
     }
     }
   }
+  

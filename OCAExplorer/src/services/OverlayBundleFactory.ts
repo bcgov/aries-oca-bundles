@@ -1,5 +1,5 @@
-import { OverlayBundle } from "@aries-bifold/oca/build/types";
-import { IOverlayBundleData } from "@aries-bifold/oca/build/interfaces/data";
+import { OverlayBundle } from "@hyperledger/aries-oca/build/types";
+import { IOverlayBundleData } from "@hyperledger/aries-oca/build/interfaces/data";
 import { parse } from "csv-parse/browser/esm/sync";
 
 class OverlayBundleFactory {

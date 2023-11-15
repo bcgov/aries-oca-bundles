@@ -9,9 +9,9 @@ A verifiable credential schema for a Student Card used in a demo that is part of
 
 | Identifier                                | Location  | URL                                                   |
 | ----------------------------------------- | --------- | ----------------------------------------------------- |
-| 63ZiwyeZeazA6AhYRYm2zD:2:student_card:1.0 | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/26292 |
-| Trx3R1frdEzbn34Sp1jyX:2:student_card:1.0  | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/26202 |
-| XUxBrVSALWHLeycAUhrNr9:2:student_card:1.0 | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/26293 |
+| L6ASjmDDbDH7yPL1t2yFj9:2:student_card:1.2 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=L6ASjmDDbDH7yPL1t2yFj9%3A2%3Astudent_card%3A1.2&txn_type=101 |
+| M6dhuFj5UwbhWkSLmvYSPc:2:student_card:1.2 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=M6dhuFj5UwbhWkSLmvYSPc%3A2%3Astudent_card%3A1.2&txn_type=101 |
+| QEquAHkM35w4XVT3Ku5yat:2:student_card:1.2 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=QEquAHkM35w4XVT3Ku5yat%3A2%3Astudent_card%3A1.2&txn_type=101 |
 
 ## Authorization
 
