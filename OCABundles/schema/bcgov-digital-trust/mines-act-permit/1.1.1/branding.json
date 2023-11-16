@@ -1,0 +1,15 @@
+[
+    {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/mines-act-permit/1.1.1/bc-logo.jpg",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/mines-act-permit/1.1.1/mines-act-permit-background-image.png",
+        "primary_background_color": "#003366",
+        "secondary_background_color": "#00264D",
+        "capture_base": "",
+        "digest": "",
+        "expiry_date_attribute": "",
+        "primary_attribute": "permit_no",
+        "secondary_attribute": "permittee_name",
+        "type": "aries/overlays/branding/1.0"
+    }
+]
