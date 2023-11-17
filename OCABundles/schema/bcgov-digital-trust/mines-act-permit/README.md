@@ -9,7 +9,8 @@ A verifiable credential schema for issuance of a Mines Act Permit within the pro
 
 | Identifier                                           | Location     | URL         |
 | ---------------------------------------------------- | ------------ | ----------- |
-| S7S2wzcF2giKuwxdeLBk69:2:mines-act-permit:0.3 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=mines&txn_type=101 |
+| S7S2wzcF2giKuwxdeLBk69:2:bc-mines-act-permit:1.1.1 | bcovrin:test | http://test.bcovrin.vonx.io/ |
+| A2UZSmrL9N5FDZGPu68wy:2:bc-mines-act-permit:1.1.1 | CANdy-Prod | https://candyscan.idlab.org/tx/CANDY_PROD/domain/361 |
 
 ## Authorization
 
