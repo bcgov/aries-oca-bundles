@@ -91,7 +91,8 @@
       {
         "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
         "description": "A verifiable credential schema for a business registered within the province of British Columbia",
-        "digest": "EWrhkJUoIboyDmV9ShJ8KbBWtbxBkFQENqXJdahizrxc",
+        "digest": "Ehbw5I6V-dblNG-H8pSVN01CDZJYsQSUzqkBJ5k26NHo",
+        "issuer": "Government of British Columbia",
         "language": "en",
         "name": "Mines Act Permit",
         "type": "spec/overlays/meta/1.0"
