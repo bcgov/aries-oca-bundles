@@ -12,14 +12,14 @@
         "mine_operation_status": "Text",
         "mine_operation_status_reason": "Text",
         "mine_operation_status_sub_reason": "Text",
-        "permittee_name": "Text",
         "permit_no": "Text",
         "permit_status": "Text",
+        "permittee_name": "Text",
         "tsf_care_and_maintainence_count": "Numeric",
         "tsf_operation_count": "Numeric"
       },
       "classification": "",
-      "digest": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+      "digest": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
       "flagged_attributes": [],
       "type": "spec/capture_base/1.0"
     },
@@ -36,15 +36,15 @@
           "mine_operation_status": "utf-8",
           "mine_operation_status_reason": "utf-8",
           "mine_operation_status_sub_reason": "utf-8",
-          "permittee_name": "utf-8",
           "permit_no": "utf-8",
           "permit_status": "utf-8",
+          "permittee_name": "utf-8",
           "tsf_care_and_maintainence_count": "utf-8",
           "tsf_operation_count": "utf-8"
         },
-        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
         "default_character_encoding": "utf-8",
-        "digest": "EHJmbnVnul6A9PaGAvipqRPaRAe5tER2eAP3JViBeQMU",
+        "digest": "EdrBntGyn-fV42gPS7sZ_YG6OVQRXZFBuQ5J5L4ii2B4",
         "type": "spec/overlays/character_encoding/1.0"
       },
       {
@@ -60,15 +60,15 @@
           "mine_operation_status": "Mine Operation Status",
           "mine_operation_status_reason": "Mine Operation Status Reason",
           "mine_operation_status_sub_reason": "Mine Operation Status Sub Reason",
-          "permittee_name": "Permittee",
           "permit_no": "Permit Number",
           "permit_status": "Permit Status",
+          "permittee_name": "Permittee",
           "tsf_care_and_maintainence_count": "TSF Care and Maintenance Count",
           "tsf_operation_count": "TSF Operation Count"
         },
-        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
         "category_labels": {},
-        "digest": "EmKqNIImfoaPk3TppYsJ2ffttQ9vfXMxmM_KLZW_HpSM",
+        "digest": "ED0lAPtYKEpWi1MjCJqppwUaHMpWtCgUrFl4jBBfJpOc",
         "language": "en",
         "type": "spec/overlays/label/1.0"
       },
@@ -76,22 +76,22 @@
         "attribute_formats": {
           "issue_date": "YYYYMMDD"
         },
-        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
-        "digest": "EXbP-3JPiYjVOR2ipJOf_wLbvdpsPgUblfpqpmUWumAg",
+        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
+        "digest": "EKwv_i0oU6M34GOyox0OEND777yccu9GWgKt29YBuVNU",
         "type": "spec/overlays/format/1.0"
       },
       {
         "attribute_standards": {
           "issue_date": "urn:iso:std:iso:1989"
         },
-        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
-        "digest": "E0j1uHwtkH4Fjy_rNeNGUe7wu_XmUUvZGveL1DRRDrpI",
+        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
+        "digest": "E4gw1siyDGgMf1hyhpj2V6O5sJXq0jeyFkLeD2f691lM",
         "type": "spec/overlays/standard/1.0"
       },
       {
-        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
         "description": "A verifiable credential schema for a business registered within the province of British Columbia",
-        "digest": "Ehbw5I6V-dblNG-H8pSVN01CDZJYsQSUzqkBJ5k26NHo",
+        "digest": "ErSlDWfyZ_tm4jhcUJiiQ3uyoz2fWEB8Qs1NtvvG4CsA",
         "issuer": "Government of British Columbia",
         "language": "en",
         "name": "BC Mines Act Permit",
@@ -103,7 +103,7 @@
         "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/mines-act-permit-1_1_1/mines-act-permit-background-image.png",
         "primary_background_color": "#003366",
         "secondary_background_color": "#00264D",
-        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
         "digest": "",
         "expiry_date_attribute": "",
         "primary_attribute": "permit_no",
