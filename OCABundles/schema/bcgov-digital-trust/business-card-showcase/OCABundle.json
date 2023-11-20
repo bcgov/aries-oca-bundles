@@ -105,11 +105,12 @@
       {
         "capture_base": "E3Yddvz0s07aUA49NblnhTqozxtgAt3ul2JNncE2e4KI",
         "description": "A BC Registries credential showing the affiliation between an individual and a business.",
-        "digest": "EIFN3WWkwDsmR0sanmrFuCOfq-K_X0OB52XoRk6wzS14",
+        "digest": "EuqKXCbVYk3NQbmB1LiqL0SvO8IBtdq_1Jnmzo-AEBIk",
         "issuer": "Government of British Columbia",
         "language": "en",
         "name": "Digital Business Card",
-        "type": "spec/overlays/meta/1.0"
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
       },
       {
         "capture_base": "",
