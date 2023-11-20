@@ -92,9 +92,12 @@ CAPTUREBASEITEM=$(grep -m 1 '"capture_base": "' ${OCABUNDLE} )
 for file in ${JSONFiles}; do
     BCKFILE=$(basename ${file}).bck
     # Replace the existing "capture_base" JSON item with one from the Excel OCA output
-    sed "s#.*capture_base.:.*#${CAPTUREBASEITEM}#" ${file} >${BCKFILE}
+    # and remove the outer array, if present.
+    sed -e "s#.*capture_base.:.*#${CAPTUREBASEITEM}#" \
+      -e '1,1 s/\[//' \
+      -e '$,$ s/]//' ${file} >${BCKFILE}
     # Add the overlay to the generated OCA Bundle and out to a temp file
-    ${JQ} ".[].overlays += $(cat ${BCKFILE})" ${OCABUNDLE} > ${TMPOCABUNDLE}
+    ${JQ} --slurpfile filejson ${BCKFILE} ".[].overlays += \$filejson" ${OCABUNDLE} > ${TMPOCABUNDLE}
     rm ${BCKFILE}
     # Move the tmp file to be the new(est) OCA Bundle file
     mv ${TMPOCABUNDLE} ${OCABUNDLE}
