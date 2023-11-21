@@ -64,24 +64,22 @@ your needs!
 
 OCA Bundles in this repository are found in the [OCABundles](./OCABundles/)
 folder in this repository. The folder structure within `OCABundles` is as follows
-with OCABundle JSON files in the `<Credential>` and `<Schema>` folders.
+with OCABundle JSON files in the `<Bundle>` folders. The folders can be nested
+arbitrarily deeply, and the `<Bundle>` folder **MUST** have an `OCABundle.json`
+file that is the OCA Bundle itself, plus a `README.md` file that contains
+the structured information about the Bundle. More on that below.
 
 ```
 OCABundles
- ┣ credentials
- ┃ ┣ <Issuer>
- ┃ ┃ ┣ <Credential>
- ┃ ┃ ┗ <Credential>
- ┃ ┣ <Issuer>
- ┃ ┃ ┣ <Credential>
- ┃ ┃ ┗ <Credential>
  ┗ schema
- ┃ ┣ <Publisher>
- ┃ ┃ ┣ <Schema>
- ┃ ┃ ┗ <Schema>
- ┃ ┗ <Publisher>
- ┃ ┃ ┣ <Schema>
- ┃ ┃ ┗ <Schema>
+ ┃ ┣ <Issuer/Publisher>
+ ┃ ┃ ┣ <Bundle>
+ ┃ ┃ ┣ <Credential Type>
+ ┃ ┃ ┃ ┣ <Bundle>
+ ┃ ┃ ┃ ┗ <Bundle>
+ ┃ ┗ <Issuer/Publisher>
+ ┃ ┃ ┣ <Bundle>
+ ┃ ┃ ┗ <Bundle>
  ```
 
 ## Contributing an OCA Bundle
@@ -89,12 +87,13 @@ OCABundles
 To contribute an OCA Bundle, create a pull request that adds the necessary files
 for the Aries for OCA:
 
-* In the OCABundles `schema` or `credentials` folder, if needed, create a new
-`<Issuer>` or `<Publisher>`. Those folders are for organizing the credentials
+* In the OCABundles `schema` folder, if needed, create a new
+`<Issuer/Publisher>`. Those folders are for organizing the credentials
 and the folder naming is up to the submitter.
-* Within that folder, create another folder named for the schema or credential
-  definition being added.
-* Within that folder, add the following files, as appropriate:
+* Create additional folders below, named for the schema or credential
+  type being added. As needed, nest the folders as make sense. At leaf
+  must be the `<Bundle>` folder.
+* Within the `<Bundle>` folder, add the following files, as appropriate:
     * README.md: **MUST** be present and **MUST** contain the information outlined
       below in the [README File Content](#readme-file-content) section of this document.
     * OCABundle.json: **MUST** be present and **MUST** contain the OCA Bundle
@@ -114,9 +113,10 @@ process and merged (or not) into the repository.
 
 The README.md file for the OCA Bundle **MUST** be present and **MUST** include
 begin with the information shown and described below. The formatting requirements
-are in place because the file is processed by a script that generates a list
+are in place because the file is processed by a script that generates two lists
 of all of the identifiers (`schemaId`s and `credDefId`s) and the OCA Bundles
-to which they are associated with.
+to which they are associated with. The lists are in the files `ocbundles.json`
+and `ocabundleslist.json` in the root folder of the repository.
 
 ```text
 # <TITLE>
@@ -220,7 +220,7 @@ The wallet/agent may want to cache a loaded OCA Bundle.
 ### Processing Notes
 
 * A given Aries agent **MAY** want to pre-load OCA Bundles for Schemas or
-Credential Definitions all of the identifiers in the `ocabundles.json` file.
+Credential Definitions for all of the identifiers in the `ocabundles.json` file.
 From time-to-time, such agents may want to reload the Bundles in case they have
 been updated in the repository.
 
