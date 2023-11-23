@@ -16,7 +16,7 @@
         "permit_status": "Text",
         "permittee_name": "Text",
         "tsf_care_and_maintainence_count": "Numeric",
-        "tsf_operation_count": "Numeric"
+        "tsf_operating_count": "Numeric"
       },
       "classification": "",
       "digest": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
@@ -40,7 +40,7 @@
           "permit_status": "utf-8",
           "permittee_name": "utf-8",
           "tsf_care_and_maintainence_count": "utf-8",
-          "tsf_operation_count": "utf-8"
+          "tsf_operating_count": "utf-8"
         },
         "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
         "default_character_encoding": "utf-8",
@@ -63,8 +63,8 @@
           "permit_no": "Permit Number",
           "permit_status": "Permit Status",
           "permittee_name": "Permittee",
-          "tsf_care_and_maintainence_count": "TSF Care and Maintenance Count",
-          "tsf_operation_count": "TSF Operation Count"
+          "tsf_care_and_maintainence_count": "TSF Maintenance Count",
+          "tsf_operating_count": "TSF Operating Count"
         },
         "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
         "category_labels": {},
