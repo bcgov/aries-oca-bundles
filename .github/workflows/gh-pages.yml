@@ -1,0 +1,23 @@
+name: "Generate gen_ocabundlesjson.sh from main and publch to gh-pages branch"
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+jobs:
+  generateJson:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: run gen_ocabundlesjson.sh
+        run: ./scripts/gen_ocabundlesjson.sh
+      - name: push
+        uses: actions-x/commit@v6
+        with:
+          email: jasyrotuck@gmail.com
+          name: GitHub Actions Autocommitter
+          message: generate ocabundleslist.json
+          branch: gh-pages
+          files: ocabundleslist.json
