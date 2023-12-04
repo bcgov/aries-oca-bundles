@@ -14,9 +14,12 @@ Starting from the OCABundles folder in the current folder, and recurse through
 all the folders below. For each OCA Bundle found -- identified by the existance
 of a README.md file and an OCABundles.json file -- add the information about the
 Bundle to the "ocabundles.json" and "ocabundleslist.json" files. Those two files
-are generated in the current folder. The appropriate JSON header is put into the
-two files, the last entry of each file does not have a trailing ",", and an
-appropriate footer is put into the two files.
+are generated in the current folder. In doing so, an appropriate JSON header is
+put into the two files, the trailing comma is removed from the last entry of each
+file, and an appropriate footer is put into the two files.
+
+Each entry in the files contains a "universal" SHA256 hash of the OCA Bundle
+including, generated using the "shasum" utility with the options "-a256 -U".
 
 The script exits with an error if the OCABundles folder is not in the current
 folder.
@@ -40,9 +43,7 @@ processBundle() {
     SHASUM=$(shasum -a256 -U $BUNDLE_PATH | sed "s/ .*//")
     ID=$(grep '^| ' README.md | sed -e "/OCA Bundle/,100d" -e "/Identifier/d" -e "/----/d" -e 's/^| \([^|]*\) |.*/\1/' -e 's/\s*$//' -e 's/ /~/g')
     for id in ${ID}; do
-        echo "\"${id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\" }," | sed "s/~/ /g" >>${OCAIDSJSON}
-        # Use the line below if we want to add a SHA256 item to the JSON list, for checking if the bundle has changed
-        # echo "   \"${id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," | sed "s/~/ /g" >>${OCAIDSJSON}
+        echo "   \"${id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," | sed "s/~/ /g" >>${OCAIDSJSON}
     done
     ORG=$(grep "Publishing\|Issuing" README.md | sed -e "s/.*: //")
     NAME=$(sed -e "2,1000d" -e "s/# //" README.md)
@@ -51,9 +52,7 @@ processBundle() {
     if [ "$(echo ${PWD} | grep "schema")" == "" ]; then
         TYPE="credential"
     fi
-    echo "{ \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\" }," >>${OCALISTJSON}
-    # Use the line below if we want to add a SHA256 item to the JSON list, for checking if the bundle has changed
-    # echo "{ \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}
+    echo "{ \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}
 }
 
 # Recursively process the folders
