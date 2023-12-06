@@ -24,7 +24,7 @@ Standard JSON-LD credentials will eventually also be supported.
 
 When it comes to creating an OCA Bundle previewing the branding can be
 done with the [OCA
-Explorer](https://bcgov.github.io/aries-oca-bundles/)
+Explorer](https://bcgov.github.io/aries-oca-explorer/)
 
 ### What is OCA Explorer
 
@@ -35,7 +35,7 @@ multiple languages such as French and English easy.
 ### Using OCA Explorer
 
 To design and preview an OCA Bundle, head over to the [OCA
-Explorer](https://bcgov.github.io/aries-oca-bundles/) and either
+Explorer](https://bcgov.github.io/aries-oca-explorer/) and either
 select an existing bundle in the repository or upload one of your own.
 
 ![Select OCA Bundle](./docs/assets/upload_OCA_bundle.PNG)
@@ -183,7 +183,7 @@ people.
 - `<GITHUB ID>` is the GitHub ID of the named person.
 - `<EMAIL ADDRESS>` is the email address of the named person
 
-[OCA Explorer]: https://bcgov.github.io/aries-oca-bundles/
+[OCA Explorer]: https://bcgov.github.io/aries-oca-explorer/
 
 The `<CONTACT EMAIL ADDRESS>` and the Authorization table are to ensure that
 once the OCA Bundle is submitted, there are contacts available to answer
@@ -201,7 +201,7 @@ The following are the steps for processing the OCA Bundle by an Aries Holder or 
 An Aries holder (wallet) or verifier agent **MUST** be pre-configured with the
 URL (\<URL> in the following) for accessing raw files in the main branch of the
 `OCABundles` folder in this repository, e.g.
-`https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main`.
+`https://raw.githubusercontent.com/bcgov/aries-oca-explorer/main`.
 
 On receipt of an AnonCreds Credential Definition ID (credDefid), the Aries agent **SHOULD** do the following:
 
