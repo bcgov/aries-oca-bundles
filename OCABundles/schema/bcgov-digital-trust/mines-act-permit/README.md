@@ -1,15 +1,10 @@
 # BC Mines Act Permit
 
-A verifiable credential schema for issuance of a Mines Act Permit within the province of British Columbia
+A verifiable credential schema for issuance of a Mines Act Permit within the province of British Columbia.
+There are multiple versions of the credential that are used for testing, each in their own subfolder.
 
 - Publishing Organization: Energy and Mines Digital Trust, Government of British Columbia
 - Primary Contact Email Address: EMDT@gov.bc.ca 
-
-## Identifiers
-
-| Identifier                                           | Location     | URL         |
-| ---------------------------------------------------- | ------------ | ----------- |
-| S7S2wzcF2giKuwxdeLBk69:2:mines-act-permit:0.3 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=mines&txn_type=101 |
 
 ## Authorization
 
