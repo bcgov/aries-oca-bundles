@@ -1,0 +1,2 @@
+given_names, family_name, email, date_created_dateint, date_completed_dateint, expires_dateint, certification_number
+"John", "Doe", "john@example.com", 20231201, 20231201, 20281201, "ABC123"

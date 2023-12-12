@@ -1,0 +1,15 @@
+[
+  {
+    "logo": "https://cdn.files.rapidlms.com/view/9f/5b/70/65/b6/9d/f8/12/af/4e/1a/55/3d/9e/b2/fb/original/bc_wallet_vc_lcrb_logo_icon.svg",
+    "background_image_slice": "https://cdn.files.rapidlms.com/view/3e/4e/48/8a/40/12/e6/76/30/30/19/7d/85/17/fa/2e/original/bc_wallet_vc_lcrb_image_slice_special_event.jpg",
+    "background_image": "https://cdn.files.rapidlms.com/view/ff/d7/6c/58/4d/28/27/f4/a0/5a/55/37/9d/4a/0b/f4/original/bc_wallet_vc_lcrb_background_image_special_event.jpg",
+    "primary_background_color": "#003366",
+    "secondary_background_color": "#fcbc1e",
+    "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+    "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
+    "expiry_date_attribute": "expires_dateint",
+    "primary_attribute": "given_names",
+    "secondary_attribute": "family_name",
+    "type": "aries/overlays/branding/1.0"
+  }
+]
