@@ -38,38 +38,6 @@
       {
         "attribute_categories": [],
         "attribute_labels": {
-          "certification_number": "Certification Number",
-          "date_completed_dateint": "Date Completed",
-          "date_created_dateint": "Date Created",
-          "email": "Email",
-          "expires_dateint": "Expires",
-          "family_name": "Family Name",
-          "given_names": "Given Names"
-        },
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "category_labels": {},
-        "digest": "ECXkDT-owPZAFlxaC4Q1a3EgmSpZmbVYksaW-5tsQvCY",
-        "language": "en-CA",
-        "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "certification_number": "The certification number of the credential",
-          "date_completed_dateint": "Date the credential was completed",
-          "date_created_dateint": "Date the credential was created",
-          "email": "Email address",
-          "expires_dateint": "Date the credential expires",
-          "family_name": "The family name of the holder",
-          "given_names": "The first name(s) of the holder"
-        },
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "digest": "Es5gnowZmzPbfYT_vi-9BifZqzZWRZIxRI-THfVvG1G4",
-        "language": "en-CA",
-        "type": "spec/overlays/information/1.0"
-      },
-      {
-        "attribute_categories": [],
-        "attribute_labels": {
           "certification_number": "Numéro de Certification",
           "date_completed_dateint": "Date de completion",
           "date_created_dateint": "Date Crée",
@@ -80,8 +48,8 @@
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "category_labels": {},
-        "digest": "EgeEcd4GHfFPEvIxvmqMTB0oBu-FxGZ6N1fEP9jeJmCQ",
-        "language": "fr-CA",
+        "digest": "EozLWAzIowHAwBZ2463-wMOWjBi_mq-y61bA2js0EyN4",
+        "language": "fr",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -95,8 +63,40 @@
           "given_names": "Le ou les prénoms du titulaire"
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "digest": "EEGam7wVGFQ31MEVwXLVpijde9VUvYpf4UwHX7blYLZI",
-        "language": "fr-CA",
+        "digest": "EwRvnepOxYRkp92UISIkC7snI1D9viOLwmwwxUJcyTxQ",
+        "language": "fr",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "certification_number": "Certification Number",
+          "date_completed_dateint": "Date Completed",
+          "date_created_dateint": "Date Created",
+          "email": "Email",
+          "expires_dateint": "Expires",
+          "family_name": "Family Name",
+          "given_names": "Given Names"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "category_labels": {},
+        "digest": "Eh4_o_3BJvM14AwumBgQOlkK4gwAo0Ee7YlLsg31QE38",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "certification_number": "The certification number of the credential",
+          "date_completed_dateint": "Date the credential was completed",
+          "date_created_dateint": "Date the credential was created",
+          "email": "Email address",
+          "expires_dateint": "Date the credential expires",
+          "family_name": "The family name of the holder",
+          "given_names": "The first name(s) of the holder"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "digest": "E0RokwO8jGl1RRNRLUoV6pozwVGS0KCs9PvM6MWPXDOk",
+        "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -122,31 +122,31 @@
       {
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
-        "description": "Un titre de compétence vérfiable pour vendre du cannabis à des fins non médicales",
-        "digest": "Eujtmbtc-nYzJlLbmcB8NQZWjfzPPe2iSGZLkmnEOGaQ",
-        "issuer": "LCRB",
-        "issuer_description": "The Liquor and Cannabis Regulation Branch",
+        "description": "Une certification du Vendre Correctement est requise pour toute personne impliquée dans la vente de cannabis à des fins non médicales en Colombie-Britannique.",
+        "digest": "Exrysh8Fwk186_t4RAu2SbKXKMEWUIc9WZisjoHaQmXU",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
         "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
-        "language": "fr-CA",
-        "name": "Le Vendre Correctement",
+        "language": "fr",
+        "name": "Vendre Correctement",
         "type": "spec/overlays/meta/1.0",
         "watermark": "NON-PRODUCTION (FR)"
       },
       {
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
-        "description": "A verifiable credential for selling non-medical cannabis",
-        "digest": "EpkSrTwrmBgqFSrhRGIkxSVRzFhlUqQaORaHb2ZcUcv0",
-        "issuer": "LCRB",
-        "issuer_description": "The Liquor and Cannabis Regulation Branch",
+        "description": "A Selling It Right Certification is required for anyone involved in the sale of non-medical cannabis in British Columbia.",
+        "digest": "EDXLsX07_NQUnBXaIbyfF6Z4BnUxCZZEHL8WrOMzBprA",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
         "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
-        "language": "en-CA",
+        "language": "en",
         "name": "Selling It Right",
         "type": "spec/overlays/meta/1.0",
         "watermark": "NON-PRODUCTION"
       },
       {
-        "logo": "https://cdn.files.rapidlms.com/view/9f/5b/70/65/b6/9d/f8/12/af/4e/1a/55/3d/9e/b2/fb/original/bc_wallet_vc_lcrb_logo_icon.svg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/bc-logo.jpg",
         "background_image_slice": "https://cdn.files.rapidlms.com/view/8c/0b/43/78/6b/ac/52/21/b6/94/fe/da/ce/56/8d/a0/original/bc_wallet_vc_lcrb_image_slice_sell_right.jpg",
         "background_image": "https://cdn.files.rapidlms.com/view/21/98/50/2a/55/ed/9f/92/a2/55/0a/3a/ca/3e/33/52/original/bc_wallet_vc_lcrb_background_image_sell_right.jpg",
         "primary_background_color": "#003366",

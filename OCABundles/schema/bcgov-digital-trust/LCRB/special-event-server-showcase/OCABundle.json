@@ -48,8 +48,8 @@
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "category_labels": {},
-        "digest": "EgeEcd4GHfFPEvIxvmqMTB0oBu-FxGZ6N1fEP9jeJmCQ",
-        "language": "fr-CA",
+        "digest": "EozLWAzIowHAwBZ2463-wMOWjBi_mq-y61bA2js0EyN4",
+        "language": "fr",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -63,8 +63,8 @@
           "given_names": "Le ou les prénoms du titulaire"
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "digest": "EEGam7wVGFQ31MEVwXLVpijde9VUvYpf4UwHX7blYLZI",
-        "language": "fr-CA",
+        "digest": "EwRvnepOxYRkp92UISIkC7snI1D9viOLwmwwxUJcyTxQ",
+        "language": "fr",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -80,8 +80,8 @@
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "category_labels": {},
-        "digest": "ECXkDT-owPZAFlxaC4Q1a3EgmSpZmbVYksaW-5tsQvCY",
-        "language": "en-CA",
+        "digest": "Eh4_o_3BJvM14AwumBgQOlkK4gwAo0Ee7YlLsg31QE38",
+        "language": "en",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -95,8 +95,8 @@
           "given_names": "The first name(s) of the holder"
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "digest": "Es5gnowZmzPbfYT_vi-9BifZqzZWRZIxRI-THfVvG1G4",
-        "language": "en-CA",
+        "digest": "E0RokwO8jGl1RRNRLUoV6pozwVGS0KCs9PvM6MWPXDOk",
+        "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -122,31 +122,31 @@
       {
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/liquor-licence-permits/liquor-resources-information/special-event-serve",
-        "description": "A verifiable credential for special events",
-        "digest": "Ehg0VA2gfBD7nUCIwm8h_IEGDigygx3mABuQIaN9RgAE",
-        "issuer": "LCRB",
-        "issuer_description": "The Liquor and Cannabis Regulation Branch",
+        "description": "Une certification de Serveur d'Évenements Spéciaux est obligatoire pour toute personne servant de l'alcool lors d'événements spéciaux en Colombie-Britannique.",
+        "digest": "ENqfaUPOCDl8UwTNtMavs0pp-1RFvxdq5aqMbX7fkL14",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
         "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
-        "language": "en-CA",
-        "name": "Special Event Server",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION"
-      },
-      {
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/liquor-licence-permits/liquor-resources-information/special-event-serve",
-        "description": "Un titre de compétence vérifiable pour les événements spéciaux",
-        "digest": "Etbkc6iMiZtvREmoUCIfRK3Asz8CZbgYUBat_5muE1EI",
-        "issuer": "LCRB",
-        "issuer_description": "The Liquor and Cannabis Regulation Branch",
-        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
-        "language": "fr-CA",
+        "language": "fr",
         "name": "Serveur d'Évenements Spéciaux",
         "type": "spec/overlays/meta/1.0",
         "watermark": "NON-PRODUCTION (FR)"
       },
       {
-        "logo": "https://cdn.files.rapidlms.com/view/9f/5b/70/65/b6/9d/f8/12/af/4e/1a/55/3d/9e/b2/fb/original/bc_wallet_vc_lcrb_logo_icon.svg",
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/liquor-licence-permits/liquor-resources-information/special-event-serve",
+        "description": "A Special Event Server Certification is mandatory for anyone serving alcohol at special events in British Columbia.",
+        "digest": "EZJjkm16RUpUK30GvWBMfkSkqGBNu8FRg18QmrDAI8KE",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
+        "language": "en",
+        "name": "Special Event Server",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/bc-logo.jpg",
         "background_image_slice": "https://cdn.files.rapidlms.com/view/3e/4e/48/8a/40/12/e6/76/30/30/19/7d/85/17/fa/2e/original/bc_wallet_vc_lcrb_image_slice_special_event.jpg",
         "background_image": "https://cdn.files.rapidlms.com/view/ff/d7/6c/58/4d/28/27/f4/a0/5a/55/37/9d/4a/0b/f4/original/bc_wallet_vc_lcrb_background_image_special_event.jpg",
         "primary_background_color": "#003366",

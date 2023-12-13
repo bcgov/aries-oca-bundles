@@ -1,6 +1,6 @@
 [
   {
-    "logo": "https://cdn.files.rapidlms.com/view/9f/5b/70/65/b6/9d/f8/12/af/4e/1a/55/3d/9e/b2/fb/original/bc_wallet_vc_lcrb_logo_icon.svg",
+    "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/bc-logo.jpg",
     "background_image_slice": "https://cdn.files.rapidlms.com/view/9f/e1/99/e6/17/f1/52/c4/7c/6c/4a/c2/47/fa/89/39/original/bc_wallet_vc_lcrb_image_slice_serve_right.jpg",
     "background_image": "https://cdn.files.rapidlms.com/view/1c/1c/9a/fa/ac/f3/95/84/36/a6/ea/fd/9f/16/5e/dd/original/bc_wallet_vc_lcrb_background_image_serve_right.jpg",
     "primary_background_color": "#003366",
