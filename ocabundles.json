@@ -1,9 +1,9 @@
 {
    "AcZpBDz3oxmKrpcuPcdKai:2:Digital Business Card:1.0.0": { "path": "OCABundles/schema/bcgov-digital-trust/business-card/OCABundle.json", "sha256": "34804dbb328cd8741d048121963786f4be63c654abdf0757a10f477c8e8924d5" },
    "K9igebFysBL6jcBwR8bKuN:2:Digital Business Card:1.0.0": { "path": "OCABundles/schema/bcgov-digital-trust/business-card-showcase/OCABundle.json", "sha256": "aa4dc9de20639a77ab53c419e9e46f405008be170e68ddf4d22551cc0a6be230" },
-   "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Selling It Right": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/OCABundle.json", "sha256": "026467dd930542cab50e6ab26b49310a000f6b464bea4c26ae371585997b5d37" },
-   "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Serving It Right": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/OCABundle.json", "sha256": "54b6beff08a9484f7c15d06b64f3ee27f3a24e7361219f57f27de263451e79cf" },
-   "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Special Event Server": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/OCABundle.json", "sha256": "016a69ebe49271396b0e88331ce33a25dc52c110b03e4fc2d21076a90ab18362" },
+   "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Selling It Right": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/OCABundle.json", "sha256": "dc5a7e54b7c425d871286b5420780a9f95a39ff2902b4fd4ce356aac6d55b7d3" },
+   "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Serving It Right": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/OCABundle.json", "sha256": "1ca64464cb1ac2c8ce56167b9cd9dd6e6103b36ace00b3f78150d91f1cf9f527" },
+   "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Special Event Server": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/OCABundle.json", "sha256": "1852d293007172d7cfe9c07303a66277f08e6c8b18493ab6d8b63ed61fb2471d" },
    "4xE68b6S5VRFrKMMG1U95M:3:CL:59232:default": { "path": "OCABundles/schema/bcgov-digital-trust/member-card/OCABundle.json", "sha256": "22b79eb5039ed54ec643206d98fb22e871058872824d221f61185da52232643d" },
    "L6ASjmDDbDH7yPL1t2yFj9:2:member_card:1.53": { "path": "OCABundles/schema/bcgov-digital-trust/member-card-showcase/OCABundle.json", "sha256": "c52515dd4ebd34d217c01252b5ae778554338e6a09547ca8e06db4e16256bfdf" },
    "M6dhuFj5UwbhWkSLmvYSPc:2:member_card:1.53": { "path": "OCABundles/schema/bcgov-digital-trust/member-card-showcase/OCABundle.json", "sha256": "c52515dd4ebd34d217c01252b5ae778554338e6a09547ca8e06db4e16256bfdf" },

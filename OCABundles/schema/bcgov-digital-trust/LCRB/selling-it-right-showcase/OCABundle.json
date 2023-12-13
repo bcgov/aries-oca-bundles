@@ -122,23 +122,10 @@
       {
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
-        "description": "A Selling It Right Certification is required for anyone involved in the sale of non-medical cannabis in British Columbia.",
-        "digest": "ElOBYJolHpw2-4Aq6sagESltj5O9cVjYY_aBbMgypRjg",
-        "issuer": "LCRB",
-        "issuer_description": "The Liquor and Cannabis Regulation Branch",
-        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
-        "language": "en",
-        "name": "Selling It Right",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION"
-      },
-      {
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
         "description": "Une certification du Vendre Correctement est requise pour toute personne impliquée dans la vente de cannabis à des fins non médicales en Colombie-Britannique.",
-        "digest": "E8Nh8jw87lDNAbB6gWcT9ED5kHEBcjUgvPM-HPyfdN0E",
-        "issuer": "LCRB",
-        "issuer_description": "The Liquor and Cannabis Regulation Branch",
+        "digest": "EB4xqKtXSEAezo6qdcxd-3dS82OH2ij0QtHbUb2_0hM0",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
         "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
         "language": "fr",
         "name": "Le Vendre Correctement",
@@ -146,7 +133,20 @@
         "watermark": "NON-PRODUCTION (FR)"
       },
       {
-        "logo": "https://cdn.files.rapidlms.com/view/ad/0c/45/57/c3/42/9a/7a/ec/a6/43/48/77/62/1a/f8/original/bc_wallet_vc_lcrb_logo_icon.png",
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
+        "description": "A Selling It Right Certification is required for anyone involved in the sale of non-medical cannabis in British Columbia.",
+        "digest": "EDXLsX07_NQUnBXaIbyfF6Z4BnUxCZZEHL8WrOMzBprA",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
+        "language": "en",
+        "name": "Selling It Right",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/bc-logo.jpg",
         "background_image_slice": "https://cdn.files.rapidlms.com/view/8c/0b/43/78/6b/ac/52/21/b6/94/fe/da/ce/56/8d/a0/original/bc_wallet_vc_lcrb_image_slice_sell_right.jpg",
         "background_image": "https://cdn.files.rapidlms.com/view/21/98/50/2a/55/ed/9f/92/a2/55/0a/3a/ca/3e/33/52/original/bc_wallet_vc_lcrb_background_image_sell_right.jpg",
         "primary_background_color": "#003366",
