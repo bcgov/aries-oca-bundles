@@ -42,9 +42,6 @@ processBundle() {
     BUNDLE_PATH=OCABundle.json
     SHASUM=$(shasum -a256 -U $BUNDLE_PATH | sed "s/ .*//")
     ID=$(grep '^| ' README.md | sed -e "/OCA Bundle/,100d" -e "/Identifier/d" -e "/----/d" -e 's/^| \([^|]*\) |.*/\1/' -e 's/\s*$//' -e 's/ /~/g')
-    for id in ${ID}; do
-        echo "   \"${id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," | sed "s/~/ /g" >>${OCAIDSJSON}
-    done
     ORG=$(grep "Publishing\|Issuing" README.md | sed -e "s/.*: //")
     NAME=$(sed -e "2,1000d" -e "s/# //" README.md)
     DESC=$(sed -e "1,2d" -e "/## Identifiers/,1000d" -e "/^\s*$/d" -e "/^- /d" -e 's/[][]//g' -e 's/(.*)//g' -e 's/"/\\"/g' README.md)
@@ -52,7 +49,10 @@ processBundle() {
     if [ "$(echo ${PWD} | grep "schema")" == "" ]; then
         TYPE="credential"
     fi
-    echo "{ \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}
+    for id in ${ID}; do
+        echo "   \"${id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," | sed "s/~/ /g" >>${OCAIDSJSON}
+        echo "{ \"id\": \"${id}\", \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}
+    done
 }
 
 # Recursively process the folders
