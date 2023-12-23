@@ -39,6 +39,7 @@ use a converter to create the OCA Bundle JSON from the two sources.
 [sample OCA for Aries OCA Bundle]: https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries/OCA4AriesBundle.json
 [example here]: https://github.com/swcurran/aries-rfcs/blob/oca4aries/features/0755-oca-for-aries/OCA4Aries.xlsx
 [OCA Template]: https://github.com/THCLab/oca-parser-xls/blob/main/templates/template.xlsx
+[OCA Excel Parser Repository]: https://github.com/THCLab/oca-parser-xls
 [Human Colossus Foundation]: https://humancolossus.foundation/
 [Aries Specific Dates in the OCA Formats Overlay]: https://github.com/swcurran/aries-rfcs/tree/oca4aries/features/0755-oca-for-aries#aries-specific-dates-in-the-oca-format-overlay
 
@@ -144,7 +145,7 @@ Developers will likely have the `jq` (JSON Query) command line utility already i
 
 Installing the OCA Excel Parser is a little more involved, as you need Rust installed on your machine. Here are the steps:
 
-- Clone a local copy of the OCA Excel Parser repository.
+- Clone a local copy of the [OCA Excel Parser Repository].
 - If you don't have Rust installed on your machine, following the [Rust Installation Instructions], including installing all necessary dependencies.
 - Follow the instructions in the repository README.md to build the parser. Currently it is just to execute `cargo build`.
 - Copy the resulting executable to a directory on your PATH, e.g., `cp target/debug/parser ~/bin/`

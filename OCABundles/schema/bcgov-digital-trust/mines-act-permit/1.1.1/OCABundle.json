@@ -19,7 +19,7 @@
         "tsf_operating_count": "Numeric"
       },
       "classification": "",
-      "digest": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
+      "digest": "EwuEuugUC6bcj9UydGcPGyi1TCuDa3siLC1BVNNE-p1M",
       "flagged_attributes": [],
       "type": "spec/capture_base/1.0"
     },
@@ -42,9 +42,9 @@
           "tsf_care_and_maintainence_count": "utf-8",
           "tsf_operating_count": "utf-8"
         },
-        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
+        "capture_base": "EwuEuugUC6bcj9UydGcPGyi1TCuDa3siLC1BVNNE-p1M",
         "default_character_encoding": "utf-8",
-        "digest": "EdrBntGyn-fV42gPS7sZ_YG6OVQRXZFBuQ5J5L4ii2B4",
+        "digest": "E3j890bB7S35LAByaqOkuj7vWk2fwXyX-ZMXC2BfRZbM",
         "type": "spec/overlays/character_encoding/1.0"
       },
       {
@@ -66,9 +66,9 @@
           "tsf_care_and_maintainence_count": "TSF Maintenance Count",
           "tsf_operating_count": "TSF Operating Count"
         },
-        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
+        "capture_base": "EwuEuugUC6bcj9UydGcPGyi1TCuDa3siLC1BVNNE-p1M",
         "category_labels": {},
-        "digest": "ED0lAPtYKEpWi1MjCJqppwUaHMpWtCgUrFl4jBBfJpOc",
+        "digest": "EnOl6DuNkQfxL5l7a02HuD6ynbRfn0uvf5vKY85NLkSQ",
         "language": "en",
         "type": "spec/overlays/label/1.0"
       },
@@ -76,22 +76,22 @@
         "attribute_formats": {
           "issue_date": "YYYYMMDD"
         },
-        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
-        "digest": "EKwv_i0oU6M34GOyox0OEND777yccu9GWgKt29YBuVNU",
+        "capture_base": "EwuEuugUC6bcj9UydGcPGyi1TCuDa3siLC1BVNNE-p1M",
+        "digest": "E0L4V_7jGjziLBapM4a28enTz-Ih9HwowWcQ71m1AKhg",
         "type": "spec/overlays/format/1.0"
       },
       {
         "attribute_standards": {
           "issue_date": "urn:iso:std:iso:1989"
         },
-        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
-        "digest": "E4gw1siyDGgMf1hyhpj2V6O5sJXq0jeyFkLeD2f691lM",
+        "capture_base": "EwuEuugUC6bcj9UydGcPGyi1TCuDa3siLC1BVNNE-p1M",
+        "digest": "EU7E-eNNlKLsKVJot0MPPUB6BzY4Rmk6tlO6mzexwC0s",
         "type": "spec/overlays/standard/1.0"
       },
       {
-        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
+        "capture_base": "EwuEuugUC6bcj9UydGcPGyi1TCuDa3siLC1BVNNE-p1M",
         "description": "A verifiable credential schema for a business registered within the province of British Columbia",
-        "digest": "ErSlDWfyZ_tm4jhcUJiiQ3uyoz2fWEB8Qs1NtvvG4CsA",
+        "digest": "EnkKH1FTBAzGLXCZZYchN3FFkIt8-cqrHbC9UI2oX2Z0",
         "issuer": "Government of British Columbia",
         "language": "en",
         "name": "BC Mines Act Permit",
@@ -103,7 +103,7 @@
         "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/mines-act-permit-1_1_1/mines-act-permit-background-image.png",
         "primary_background_color": "#003366",
         "secondary_background_color": "#00264D",
-        "capture_base": "EeAmNyXcvxulR_3hIgloA3BgfTB5LFRogINWXnPWyN_s",
+        "capture_base": "EwuEuugUC6bcj9UydGcPGyi1TCuDa3siLC1BVNNE-p1M",
         "digest": "",
         "expiry_date_attribute": "",
         "primary_attribute": "permit_no",
