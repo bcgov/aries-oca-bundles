@@ -1,0 +1,225 @@
+{
+  "type": "array",
+  "items": {
+    "allOf": [
+      {
+        "$ref": "#/definitions/Bundle"
+      }
+    ]
+  },
+  "definitions": {
+    "Bundle": {
+      "type": "object",
+      "properties": {
+        "capture_base": {
+          "type": "object"
+        },
+        "overlays": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/CharacterEncoding"
+              },
+              {
+                "$ref": "#/definitions/Format"
+              },
+              {
+                "$ref": "#/definitions/Information"
+              },
+              {
+                "$ref": "#/definitions/Label"
+              },
+              {
+                "$ref": "#/definitions/Meta"
+              },
+              {
+                "$ref": "#/definitions/Standard"
+              },
+              {
+                "$ref": "#/definitions/Branding"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "CharacterEncoding": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "spec/overlays/character_encoding/1.0"
+        },
+        "capture_base": {
+          "type": "string"
+        },
+        "default_character_encoding": {
+          "type": "string"
+        },
+        "attr_character_string": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "type",
+        "capture_base"
+      ]
+    },
+    "Format": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "spec/overlays/format/1.0"
+        },
+        "capture_base": {
+          "type": "string"
+        },
+        "attribute_formats": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "type",
+        "capture_base",
+        "attribute_formats"
+      ]
+    },
+    "Information": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "spec/overlays/information/1.0"
+        },
+        "capture_base": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "attribute_information": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "type",
+        "capture_base",
+        "language",
+        "attribute_information"
+      ]
+    },
+    "Label": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "spec/overlays/label/1.0"
+        },
+        "capture_base": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "attribute_labels": {
+          "type": "object"
+        },
+        "attribute_categories": {
+          "type": "array"
+        },
+        "category_labels": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "type",
+        "capture_base",
+        "language",
+        "attribute_labels"
+      ]
+    },
+    "Meta": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "spec/overlays/meta/1.0"
+        },
+        "capture_base": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "capture_base",
+        "language",
+        "name"
+      ]
+    },
+    "Standard": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "spec/overlays/standard/1.0"
+        },
+        "capture_base": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "attribute_standards": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "type",
+        "capture_base",
+        "attribute_standards"
+      ]
+    },
+    "Branding": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "aries/overlays/branding/1.0"
+        },
+        "capture_base": {
+          "type": "string"
+        },
+        "background_image": {
+          "type": "string"
+        },
+        "background_image_slice": {
+          "type": "string"
+        },
+        "primary_background_color": {
+          "type": "string"
+        },
+        "secondary_background_color": {
+          "type": "string"
+        },
+        "primary_attribute": {
+          "type": "string"
+        },
+        "logo": {
+          "type": "string"
+        },
+        "secondary_attribute": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "capture_base"
+      ]
+    }
+    }
+  }
+  
