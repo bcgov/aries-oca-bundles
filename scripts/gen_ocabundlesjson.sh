@@ -1,24 +1,36 @@
 #!/bin/bash
 
+if [ "$1" == "mkdocs" ]; then
+  # Generating the mkdocs site
+  GENMKDOCS=true
+fi
+
 OCAIDSJSON=${PWD}/ocabundles.json
 OCALISTJSON=${PWD}/ocabundleslist.json
+MKDOCSYML=${PWD}/mkdocs.yml
 TMPFILE=${PWD}/tmpfile.json
 ROOTDIR=${PWD}
 
 # Usage info
 show_help() {
 cat << EOF
-Usage: gen_ocabundlesjson.sh
+Usage: gen_ocabundlesjson.sh [mkdocs]
 
 Starting from the OCABundles folder in the current folder, and recurse through
 all the folders below. For each OCA Bundle found -- identified by the existance
 of a README.md file and an OCABundles.json file -- add the information about the
-Bundle to the "ocabundles.json" and "ocabundleslist.json" files. Those two files
-are generated in the current folder. In doing so, an appropriate JSON header is
-put into the two files, the trailing comma is removed from the last entry of each
-file, and an appropriate footer is put into the two files.
+Bundle to the "ocabundles.json" and "ocabundleslist.json" files. If the parameter
+"mkdocs" is passed in, also generate a navigation path for the bundles in the
+repo "mkdocs.yml" file.
 
-Each entry in the files contains a "universal" SHA256 hash of the OCA Bundle
+The two JSON files are generated in the current folder. In doing so, an appropriate
+JSON header is put into the two files, the trailing comma is removed from the last
+entry of each file, and an appropriate footer is put into the two files.
+
+In the mkdocs.yml file, the current navigation is removed from the existing mkdocs.yml,
+and the latest version generated in its place.
+
+Each entry in the JSON files contains a "universal" SHA256 hash of the OCA Bundle
 including, generated using the "shasum" utility with the options "-a256 -U".
 
 The script exits with an error if the OCABundles folder is not in the current
@@ -36,9 +48,28 @@ if [ ! -d "OCABundles" ]; then
     exit 1
 fi
 
+# Raw URL encode the argument
+rawurlencode() {
+  local string="${1}"
+  local strlen=${#string}
+  local encoded=""
+  local pos c o
+
+  for (( pos=0 ; pos<strlen ; pos++ )); do
+     c=${string:$pos:1}
+     case "$c" in
+        [-_.~a-zA-Z0-9] ) o="${c}" ;;
+        * )               printf -v o '%%%02x' "'$c"
+     esac
+     encoded+="${o}"
+  done
+  echo "${encoded}"    # You can either set a return variable (FASTER) 
+  REPLY="${encoded}"   #+or echo the result (EASIER)... or both... :p
+}
+
+
 # In a folder with an OCABundle, process the file, and add the data for the bundle into the JSON files
 processBundle() {
-    RELPATH=$(echo ${PWD} | sed -e "s#${ROOTDIR}/##")
     BUNDLE_PATH=OCABundle.json
     SHASUM=$(shasum -a256 -U $BUNDLE_PATH | sed "s/ .*//")
     ID=$(grep '^| ' README.md | sed -e "/OCA Bundle/,100d" -e "/Identifier/d" -e "/----/d" -e 's/^| \([^|]*\) |.*/\1/' -e 's/\s*$//' -e 's/ /~/g')
@@ -55,11 +86,38 @@ processBundle() {
     done
 }
 
+insertBundleiframe () {
+    for id in ${ID}; do
+      # Do nothing, but $id will be set to the last one...use it
+      echo -n ""
+    done
+    # We're scanning the real OCABundles file, but want to update the copied files in the docs folder
+    FILE=${thisDir}/docs/$RELPATH/README.md
+    sed -e "/## Authorization/i## Credential Appearance\n\n\\<iframe src=\\"https://bcgov.github.io/aries-oca-explorer/identifier/$(rawurlencode ${id})\\" width=\\"100%\\" height=\\"800\\" frameborder=\\"0\\"\\>\\</iframe\\>\n" $FILE >$FILE.tmp
+    mv $FILE.tmp $FILE 
+}
+
+addNav() {
+    # Add entry to MKDocs Navigation
+    for ((num = 1; num <= ${INDENT}; num++)); do echo -n "  " >>$MKDOCSYML; done
+    if [[ -f OCABundle.json ]]; then
+      echo "- ${RELPATH}/README.md" >>$MKDOCSYML
+      insertBundleiframe
+    else
+      echo "- "$(head -1 README.md | sed "s/[#]* //"): >>$MKDOCSYML
+    fi
+}
+
 # Recursively process the folders
 processFolder() {
+    INDENT=$((INDENT+1))
+    RELPATH=$(echo ${PWD} | sed -e "s#${ROOTDIR}/##")
     # If the right files are in the folder, process it
     if [[ -f README.md && -f OCABundle.json ]]; then
       processBundle README.md OCABundle.json
+    fi
+    if [[ -n "${GENMKDOCS}" && -f README.md ]]; then
+      addNav # Relies on $ID existing from previous processing
     fi
     # Recurse into the directories of the folder
     for dir in *; do
@@ -69,17 +127,22 @@ processFolder() {
             cd ..
         fi
     done
+    INDENT=$((INDENT-1))
 }
 
 
 # Write the headers for the files
 echo -e "{" >${OCAIDSJSON}
 echo -e "[" >${OCALISTJSON}
+if [ "$1" == "mkdocs" ]; then
+    echo -e "- OCA Bundles:" >>${MKDOCSYML}
+fi
 
 # Start in the OCABundles folder
 cd OCABundles
 
 # Recursively process the folders
+INDENT=0
 processFolder
 cd ..
 
