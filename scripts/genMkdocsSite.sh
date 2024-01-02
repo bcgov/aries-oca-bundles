@@ -53,7 +53,7 @@ mv ${MKDOCS}.tmp ${MKDOCS}
 
 # Copy the MD files from the OCABundles folder into a docs/OCABundles folder
 rm -rf docs/OCABundles
-rsync -qavm --include='*.md' -f 'hide,! */' OCABundles docs/
+rsync -qavm --include='*.md' --include='OCABundle.json' -f 'hide,! */' OCABundles docs/
 
 # Execute the JSON file generator and copy the resulting files into the docs folder
 ./scripts/gen_ocabundlesjson.sh mkdocs
