@@ -93,7 +93,7 @@ insertBundleiframe () {
     done
     # We're scanning the real OCABundles file, but want to update the copied files in the docs folder
     FILE=${thisDir}/docs/$RELPATH/README.md
-    sed -e "/## Authorization/i## Credential Appearance\n\n\\<iframe src=\\"https://bcgov.github.io/aries-oca-explorer/identifier/$(rawurlencode ${id})\\" width=\\"100%\\" height=\\"800\\" frameborder=\\"0\\"\\>\\</iframe\\>\n" $FILE >$FILE.tmp
+    sed -e "/## Authorization/i## Credential Appearance\n\n\\<iframe src=\\"https://bcgov.github.io/aries-oca-explorer/identifier/$(rawurlencode ${id})?view=readonly\\" width=\\"100%\\" height=\\"800\\" frameborder=\\"0\\"\\>\\</iframe\\>\n" $FILE >$FILE.tmp
     mv $FILE.tmp $FILE 
 }
 
