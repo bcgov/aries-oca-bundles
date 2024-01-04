@@ -83,6 +83,7 @@ nav:
 - Adding Your OCA Bundle:
   - Contributing: contributing/CONTRIBUTING.md
   - Creating OCA Bundles: contributing/OCABundleCreation.md
+- Using OCA Bundles: using/usingOCABundles.md
 - OCA Explorer:
   - OCA Explorer: oca-explorer/README.md
 - OCA Bundles:

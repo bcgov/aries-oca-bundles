@@ -1,17 +1,18 @@
-## BC Government Aries OCA Bundle Registry Governance Document
+# BC Government Aries OCA Bundle Registry Governance Document
 
-### Purpose
+## Purpose
+
 This Governance Document outlines how the OCA Bundle Registry is managed and governed. It defines the Roles and Processes needed to publish OCA bundles that are used by Hyperledger Aries Agents. These OCA bundles contain instructions to correctly process and display digital credentials.
 
 The contents of the registry is maintained in the [registry repository] and
 managed through a pull request submission, review and approval process. The
 details of how pull requests are managed is outlined in this Governance section
 of the registry.
- 
+
 [BC Government Digital Trust Group]: https://digital.gov.bc.ca/digital-trust/
 [Registry Repository]: https://github.com/bcgov/aries-oca-bundles
 
-### Roles
+## Roles
 
 - The **[BC Government Digital Trust Group]** is the governing authority over this
 repository. This group consists of a team of individuals within the Digital Credentials Services of the BC Government Ministry of Citizen's Services. This list is managed in the [MAINTAINERS](./MAINTAINERS.md) file. 
@@ -27,10 +28,8 @@ in the repository to manage their work. The Editors are listed in the [MAINTAINE
   - For a new OCA Bundle (or [redirect]), the Editors must contact and verify
  the identity of the implementer, and that the submitter represents the
  Implementer.
-  - For an update to an OCA Bundle (or [redirect]), the submitter is listed as
+  - For an update to an OCA Bundle, the submitter is listed as
     `Authorized` in the OCA Bundle `README.md` file.
-
-[redirect]: ./README.md#redirect-file
 
 - **Contributors** are individuals that submit pull requests that propose
 changes to the registry or any part of the repository that is the source of the
@@ -47,8 +46,10 @@ There are two types of content in the source repository for the registry:
   - The content of the entries are managed by the implementers of specific
     OCA Bundles.
   - The format of the entries MUST adhere to the guidelines outlined in the
-[Adding a Registry Entry](./README.md#contributing-an-oca-bundle) documentation, as defined by
+[Adding an OCA Bundle] documentation, as defined by
 the [BC Government Digital Trust Group].
+
+[Adding an OCA Bundle]: /contributing/CONTRIBUTING
 
 - All other content in the registry and [registry repository]
   - Such content is governed by the [BC Government Digital Trust Group], and
@@ -57,7 +58,7 @@ the [BC Government Digital Trust Group].
     - Anything about the management of the registry may be changed through an
       update to this type of content.
 
-### Pull Request Handling
+## Pull Request Handling
 
 The [BC Government Digital Trust Group] MUST approve all changes to be merged
 into the registry (additions, updates and deletions) and to the rules for the
@@ -98,7 +99,7 @@ authorized by the Implementer.
 The [BC Government Digital Trust Group] has delegated to the Editors the
 authority to raise (for discussion or vote) to the [BC Government Digital Trust
 Group] any other pull requests. Prior to the raising of a pull request to the
-[BC Government Digital Trust Group] for processing, the Editors (and any other
-contributor) may work with the submitter of the pull request to clarify and/or
-improve the pull request such that it fits in the categories above for merging
-or cancellation.
+leadership of the [BC Government Digital Trust Group] for processing, the
+Editors (and any other contributor) may work with the submitter of the pull
+request to clarify and/or improve the pull request such that it fits in the
+categories above for merging or cancellation.
