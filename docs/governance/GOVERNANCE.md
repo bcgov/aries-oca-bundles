@@ -25,7 +25,7 @@ in the repository to manage their work. The Editors are listed in the [MAINTAINE
 
 - **Implementers** are individuals or organizations that may add OCA Bundles to the
   registry for the Schemas they publish or verifiable credentials they issue.
-  - For a new OCA Bundle (or [redirect]), the Editors must contact and verify
+  - For a new OCA Bundle, the Editors must contact and verify
  the identity of the implementer, and that the submitter represents the
  Implementer.
   - For an update to an OCA Bundle, the submitter is listed as
@@ -42,16 +42,16 @@ there in to move forward their use of AnonCreds.
 
 There are two types of content in the source repository for the registry:
 
-- The entries in the [OCABundles Registry](#registry).
+- The entries in the OCABundles [Registry Repository].
   - The content of the entries are managed by the implementers of specific
     OCA Bundles.
   - The format of the entries MUST adhere to the guidelines outlined in the
 [Adding an OCA Bundle] documentation, as defined by
 the [BC Government Digital Trust Group].
 
-[Adding an OCA Bundle]: /contributing/CONTRIBUTING
+[Adding an OCA Bundle]: ../contributing/CONTRIBUTING.md
 
-- All other content in the registry and [registry repository]
+- All other content in the registry and [Registry Repository]
   - Such content is governed by the [BC Government Digital Trust Group], and
     includes things like this Governance section of the registry, the format of
     the method entries, how the registry is published, and so on.

@@ -8,10 +8,10 @@ updating the different types of content, and who is the authority over the
 different kinds of content.
 
 [Aries OCA Bundles]: https://github.com/bcgov/aries-oca-bundles
-[Governance document]: /governance/GOVERNANCE
+[Governance document]: ../governance/GOVERNANCE.md
 
 To understand the mechanics of adding an OCA Bundle to the registry,
 please read the document about [Creating OCA Bundles].
 
- [Creating OCA Bundles]: /contributing/OCABundleCreation
+ [Creating OCA Bundles]: ./OCABundleCreation.md
 

@@ -12,7 +12,7 @@ guidance have an easy to implement [process](#using-these-oca-bundles-in-an-arie
 for finding, retrieving and using OCA Bundles for credentials that they need to display.
 
 [Aries OCA Bundles]: https://github.com/bcgov/aries-oca-bundles
-[governance]: /governance/GOVERNANCE
+[governance]: governance/GOVERNANCE.md
 [Hyperledger AnonCreds]: https://www.hyperledger.org/projects/anoncreds
 
 The OCA Bundles should follow the rules for [OCA for Aries RFC] OCA Bundles,
@@ -38,19 +38,19 @@ Bundle. Use the drop down to see/experiment with all the OCA Bundles in the
 registry, or upload your own OCA Bundle in the [OCA Explorer] to see how it will
 look.
 
-[OCA Explorer]: /oca-explorer
-[OCA Bundles]: /OCABundles/schema/bcgov-digital-trust/business-card/
+[OCA Explorer]: oca-explorer
+[OCA Bundles]: OCABundles/schema/bcgov-digital-trust/business-card/
 
 ## Contributing an OCA Bundle
 
 For information about contributing an OCA Bundle into the registry, please
 see the information in the [Contributing] section of this website.
 
-[Contributing]: /contributing/CONTRIBUTING
+[Contributing]: contributing/CONTRIBUTING.md
 
 ## Using these OCA Bundles in an Aries Agent
 
 For information about using the OCA Bundles in this registry in an Aries Agent, please
 see the information in the [Using OCA Bundles] section of this website.
 
-[Using OCA Bundles]: /using/usingOCABundles
+[Using OCA Bundles]: using/usingOCABundles.md

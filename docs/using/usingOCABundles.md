@@ -55,4 +55,4 @@ every time the registry is updated via a merged pull request to the
 [Aries OCA Bundles] GitHub repository, the source of this registry.
 
 [Aries OCA Bundles]: https://bcgov.github.io/aries-oca-bundles/
-[ocabundles.json]: /ocabundles.json
+[ocabundles.json]: ../ocabundles.json
