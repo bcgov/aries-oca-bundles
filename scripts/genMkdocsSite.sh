@@ -47,8 +47,8 @@ fi
 # echo Building pages for the Aries OCA Bundles website
 
 # Copy MD files that need to be in the root folder to the doc folder
-sed -e 's#docs/governance/GOVERNANCE.md#/governance/GOVERNANCE#' \
-    -e 's#docs/contributing/CONTRIBUTING.md#/contributing/CONTRIBUTING#' \
+sed -e 's#docs/governance/GOVERNANCE.md#../governance/GOVERNANCE.md#' \
+    -e 's#docs/contributing/CONTRIBUTING.md#../contributing/CONTRIBUTING.md#' \
     MAINTAINERS.md >docs/governance/MAINTAINERS.md
 cp LICENSE docs/governance/LICENSE.md
 

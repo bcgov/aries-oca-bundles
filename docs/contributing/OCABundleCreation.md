@@ -68,7 +68,7 @@ images used in the branding.json file.
 The pull request will be reviewed according to the lightweight [governance]
 process and merged (or not) into the repository.
 
-[governance]: /governance
+[governance]: ../governance/GOVERNANCE.md
 
 ### README File Content
 
@@ -82,8 +82,8 @@ and [ocabundleslist.json] in the root of the (GitHub Pages) registry website and
 referencing the registry in your code (such as in an Aries wallet or verifier agent),
 use the registry versions of the files, as the repository ones are deprecated.
 
-[ocbundles.json]: /ocabundles.json
-[ocabundleslist.json]: /ocabundleslist.json
+[ocbundles.json]: ../ocabundles.json
+[ocabundleslist.json]: ../ocabundleslist.json
 
 ```text
 # <TITLE>
