@@ -53,17 +53,17 @@ described in the subsequent sections.
 
 ## Creating the OCA Bundle README.md File
 
-    * README.md: **MUST** be present and **MUST** contain the information outlined
-      below in the [README File Content](#readme-file-content) section of this document.
-    * OCABundle.json: **MUST** be present and **MUST** contain the OCA Bundle
-      for the schema or credential definition.
-    * \<OCASourceExcel>.xlsx: (optional) An Excel OCA Source file for the OCA Bundle.
-    * branding.json: (optional) A JSON file containing the source content for
-      the OCA for Aries Branding overlay.
-    * testdata.csv: (optional) A CSV file containing one or more sample data
-      records.
-    * Other files: (optional) Other files related to the OCA Bundle, such as the
-    images used in the branding.json file.
+* **README.md**: **MUST** be present and **MUST** contain the information outlined
+  below in the [README File Content](#readme-file-content) section of this document.
+* **OCABundle.json**: **MUST** be present and **MUST** contain the OCA Bundle
+  for the schema or credential definition.
+* **<OCASourceExcel\>.xlsx**: (optional) An Excel OCA Source file for the OCA Bundle.
+* **branding.json**: (optional) A JSON file containing the source content for
+  the OCA for Aries Branding overlay.
+* **testdata.csv**: (optional) A CSV file containing one or more sample data
+  records.
+* **Other files**: (optional) Other files related to the OCA Bundle, such as the
+images used in the branding.json file.
 
 The pull request will be reviewed according to the lightweight [governance]
 process and merged (or not) into the repository.
