@@ -4,7 +4,7 @@ The maintainers of this repository are the **Editors** as delegated by the gover
 see the [Governance document] for details. There are no formal scopes or GitHub roles for the
 Implementers, Contributors or Readers described in the [Governance document].
 
-[Governance document]: ./GOVERNANCE.md
+[Governance document]: docs/governance/GOVERNANCE.md
 
 ## Maintainer Scopes, GitHub Roles and GitHub Teams
 
@@ -38,9 +38,11 @@ Editors are expected to perform the following duties for this repository. The du
 - Review, triage, comment on, and close submitted GitHub Issues.
 - When appropriate, lead/facilitate architectural discussions in the community.
 - When appropriate, lead/facilitate the creation of a registry road map.
-- Maintain the repository [CONTRIBUTING.md](./CONTRIBUTING.md) file and getting started documents to
+- Maintain the repository [CONTRIBUTING] file and getting started documents to
   give guidance and encouragement to those wanting to contribute to the registry, and those wanting to become maintainers.
 - Contribute to the registry via GitHub Pull Requests.
+
+[CONTRIBUTING]: docs/contributing/CONTRIBUTING.md
 
 ## Becoming an Editor
 

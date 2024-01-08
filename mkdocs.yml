@@ -1,4 +1,6 @@
 site_name: Aries OCA Bundles
+# Comment out the site_url for local testing, uncomment when pushing to the repo
+site_url: https://bcgov.github.io/aries-oca-bundles/
 repo_name: bcgov/aries-oca-bundles
 repo_url: https://github.com/bcgov/aries-oca-bundles
 theme:

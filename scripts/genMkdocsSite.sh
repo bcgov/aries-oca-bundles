@@ -1,5 +1,7 @@
 #!/bin/bash
 
+MKDOCS=mkdocs.yml
+
 if [ "$1" == "clean" ]; then
    # Clean out the updates made in the docs folder by this script
    rm docs/governance/MAINTAINERS.md
@@ -7,9 +9,11 @@ if [ "$1" == "clean" ]; then
    rm -rf docs/OCABundles
    rm docs/ocabundles.json
    rm docs/ocabundleslist.json
+   sed -e 's/# site_url:/site_url:/' \
+       ${MKDOCS} >${MKDOCS}.tmp
+   mv ${MKDOCS}.tmp ${MKDOCS}
    exit 0
 fi
-
 
 # This script is for generating the documentation structure from documents in the Aries OCA Bundles repository.
 # This script is intended to run from a GitHub Action as part of updating the gh-pages branch and publishing the website
@@ -43,12 +47,16 @@ fi
 # echo Building pages for the Aries OCA Bundles website
 
 # Copy MD files that need to be in the root folder to the doc folder
-cp MAINTAINERS.md docs/governance/
+sed -e 's#docs/governance/GOVERNANCE.md#/governance/GOVERNANCE#' \
+    -e 's#docs/contributing/CONTRIBUTING.md#/contributing/CONTRIBUTING#' \
+    MAINTAINERS.md >docs/governance/MAINTAINERS.md
 cp LICENSE docs/governance/LICENSE.md
 
-# Remove the OCA Bundles Navigation from the mkdocs.yml file
-MKDOCS=mkdocs.yml
-sed '/^- OCA Bundles:/,$d' ${MKDOCS} >${MKDOCS}.tmp
+# Remove the OCA Bundles Navigation from the mkdocs.yml file, and comment out the site url
+# The site_url MUST be uncomment again before commiting. Done as part of the "CLEAN" above.
+sed -e '/^- OCA Bundles:/,$d' \
+    -e 's/site_url:/# site_url:/' \
+    ${MKDOCS} >${MKDOCS}.tmp
 mv ${MKDOCS}.tmp ${MKDOCS}
 
 # Copy the MD files from the OCABundles folder into a docs/OCABundles folder

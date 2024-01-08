@@ -1,6 +1,6 @@
 # Aries OCA Bundles
 
-![img](https://img.shields.io/badge/Lifecycle-Stable-97ca00)(https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+[![Lifecycle](https://img.shields.io/badge/Lifecycle-Stable-97ca00)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
 This GitHub repository is for hosting published Overlays Capture Architecture
 (OCA) Bundles to be used by Hyperledger Aries agents (issuers, holders and

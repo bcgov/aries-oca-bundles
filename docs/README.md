@@ -12,7 +12,7 @@ guidance have an easy to implement [process](#using-these-oca-bundles-in-an-arie
 for finding, retrieving and using OCA Bundles for credentials that they need to display.
 
 [Aries OCA Bundles]: https://github.com/bcgov/aries-oca-bundles
-[governance]: /governance/GOVERNANCE.md
+[governance]: /governance/GOVERNANCE
 [Hyperledger AnonCreds]: https://www.hyperledger.org/projects/anoncreds
 
 The OCA Bundles should follow the rules for [OCA for Aries RFC] OCA Bundles,
