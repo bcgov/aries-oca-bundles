@@ -65,12 +65,12 @@
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
         "credential_support_url": "https://www.lawsociety.bc.ca/",
         "description": "A schema used for membership in LSBC",
-        "digest": "ElmoCN8NPpuy_KlrG2FyO38ioEweUsRBX1L_r2M_DOb0",
+        "digest": "EGdfp6Y6TTkvbXGr7OVMwvFPJAGjDjjN1hHDkbKW0WIY",
         "issuer": "Law Society of BC",
         "issuer_description": "Law Society of BC",
         "issuer_url": "https://www.lawsociety.bc.ca/",
         "language": "en",
-        "name": "Member Card",
+        "name": "Member Credential",
         "type": "spec/overlays/meta/1.0"
       },
       {
