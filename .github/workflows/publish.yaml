@@ -1,0 +1,29 @@
+name: Build TechDocs with DevHub TechDocs Publish Action
+
+on:
+    workflow_dispatch:
+    push:
+        branches: [ main ]
+        paths:
+            - "mkdocs.yml"
+            - "docs/*"
+    pull_request:
+        branches: [ main ]
+        paths:
+            - "mkdocs.yml"
+            - "docs/*"
+
+jobs:
+    test_techdocs_build_job:
+        runs-on: ubuntu-latest
+
+        name: A job to build and publish techdocs content
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
+            -   name: Build TechDocs
+                uses: bcgov/devhub-techdocs-publish@stable
+                id: build_and_publish
+                with:
+                    publish: 'false'
+

@@ -1,0 +1,10 @@
+version: 1
+data_management_roles:
+  product_owner: Stephen Curran
+product_information:
+  ministry: CITZ
+  product_acronym: OCA4Aries
+  product_description: A registry for ^^^^
+  product_name: Digital Trust OCA Bundles
+product_technology_information:
+  hosting_platforms: Private-Cloud-Openshift
