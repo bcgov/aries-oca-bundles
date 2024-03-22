@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: oca-for-aries-bundles-registry
+  title: OCA for Aries Bundles Registry
+  description: A registry for ^^^^
+  annotations:
+    github.com/project-slug: bcgov/aries-oca-bundles
+    backstage.io/techdocs-ref: dir:.
+    bcgovpubcode.gov.bc.ca/ministry: CITZ
+    bcgovpubcode.gov.bc.ca/product_name: Digital Trust OCA Bundles
+    bcgovpubcode.gov.bc.ca/product_acronym: OCA4Aries
+    bcgovpubcode.gov.bc.ca/product_owner: Stephen Curran
+    developer.gov.bc.ca/source_template: default/docs-template-v2
+spec:
+  type: documentation
+  lifecycle: experimental
+  owner: group:default/faib-data-management
