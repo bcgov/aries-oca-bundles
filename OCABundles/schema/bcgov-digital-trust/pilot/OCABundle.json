@@ -1,0 +1,96 @@
+[
+  {
+      "capture_base": {
+          "attributes": {
+              "emailAddress": "Text",
+              "iss_dateint": "DateTime",
+              "name": "Text",
+              "program": "Text"
+          },
+          "classification": "",
+          "digest": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+          "flagged_attributes": [
+              "emailAddress",
+              "name"
+          ],
+          "type": "spec/capture_base/1.0"
+      },
+      "overlays": [
+          {
+              "attribute_character_encoding": {
+                  "emailAddress": "utf-8",
+                  "iss_dateint": "utf-8",
+                  "name": "utf-8",
+                  "program": "utf-8"
+              },
+              "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+              "default_character_encoding": "utf-8",
+              "digest": "Ejy26tNCAM4mxeiE1zvAuouBdMb30Ryfub-tWz14bg1Q",
+              "type": "spec/overlays/character_encoding/1.0"
+          },
+          {
+              "attribute_formats": {
+                  "iss_dateint": "YYYYMMDD"
+              },
+              "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+              "digest": "EaMx-r3Iqk2cCo4Q1dOfbhsLFsjT53XkX-ULjRrfaNA8",
+              "type": "spec/overlays/format/1.0"
+          },
+          {
+              "attribute_standards": {
+                  "iss_dateint": "urn:iso:std:iso:1989"
+              },
+              "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+              "digest": "EpK0e5KHbKfFkmM4uDcWN8FywMPtOXnk3t3uWq1Go1ME",
+              "type": "spec/overlays/standard/1.0"
+          },
+          {
+              "attribute_categories": [],
+              "attribute_labels": {
+                  "emailAddress": "Email Address",
+                  "iss_dateint": "Issue Date",
+                  "name": "Name",
+                  "program": "Program"
+              },
+              "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+              "category_labels": {},
+              "digest": "EcZWaOg6WK_bFJxo6Pgs6tE_k2-S3RHohvZEc-hj4CBo",
+              "language": "en",
+              "type": "spec/overlays/label/1.0"
+          },
+          {
+              "attribute_information": {
+                  "emailAddress": "The email address of the subject",
+                  "iss_dateint": "The issue date of the pilot invitation",
+                  "name": "The full name of the subject",
+                  "program": "The program name that issued the credential"
+              },
+              "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+              "digest": "Ec7XcdR7i_QS1FeC4lPFXEqDLCMDElo3aDqEEqFTEMQE",
+              "language": "en",
+              "type": "spec/overlays/information/1.0"
+          },
+          {
+              "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+              "credential_support_url": "https://digital.gov.bc.ca/digital-trust/contact/",
+              "description": "A credential used to access the person credential flow",
+              "digest": "EV3CXOVgfOCJZNRJl7mPwkzgxarYG6HO4D4ROHBZHfag",
+              "issuer": "Digital Identity and Trust Program",
+              "issuer_description": "Digital Identity and Trust Program",
+              "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
+              "language": "en",
+              "name": "Pilot Invitation",
+              "type": "spec/overlays/meta/1.0"
+          },
+          {
+            "capture_base": "EKfAKFH6pEbb26-MqO3ifdp7JUkKbzPfM1ThPLnAhKMI",
+            "digest": "Ejy26tNCAM4mxeiE1zvAuouBdMb30Ryfub-tWz14bg1Q",
+            "type": "aries/overlays/branding/1.0",
+            "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-logo.png",
+            "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-background-image-slice.png",
+            "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/pilot/invitation-primary-background.png",
+            "primary_background_color": "#003366"
+          }          
+      ]
+  }
+]
