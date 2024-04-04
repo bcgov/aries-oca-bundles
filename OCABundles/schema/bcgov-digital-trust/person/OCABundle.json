@@ -137,17 +137,6 @@
       },
       {
         "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
-        "credential_help_text": "Learn more",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content/governments/government-id/person-credential",
-        "description": "A credential created from your BC Services Card",
-        "digest": "Eoii14gs4FozzniHgNbY8eFOy1X8gaL8Q-E2bZ7LxrZs",
-        "issuer": "Government of British Columbia",
-        "language": "en",
-        "name": "Person",
-        "type": "spec/overlays/meta/1.0"
-      },
-      {
-        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "description": "Une pièce d'identité créée à partir de votre BC Services Card",
         "digest": "EJK6juClpY-WAW3fEYea5OOVKxbPbpnIXDuBeULspils",
@@ -156,6 +145,17 @@
         "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "fr",
         "name": "Personne",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "credential_help_text": "Learn more",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/governments/government-id/person-credential",
+        "description": "A credential created from your BC Services Card",
+        "digest": "Eoii14gs4FozzniHgNbY8eFOy1X8gaL8Q-E2bZ7LxrZs",
+        "issuer": "Government of British Columbia",
+        "language": "en",
+        "name": "Person",
         "type": "spec/overlays/meta/1.0"
       },
       {
