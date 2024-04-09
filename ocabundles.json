@@ -1,9 +1,9 @@
 {
-   "AcZpBDz3oxmKrpcuPcdKai:2:Digital Business Card:1.0.0": { "path": "OCABundles/schema/bcgov-digital-trust/business-card/OCABundle.json", "sha256": "34804dbb328cd8741d048121963786f4be63c654abdf0757a10f477c8e8924d5" },
-   "K9igebFysBL6jcBwR8bKuN:2:Digital Business Card:1.0.0": { "path": "OCABundles/schema/bcgov-digital-trust/business-card-showcase/OCABundle.json", "sha256": "aa4dc9de20639a77ab53c419e9e46f405008be170e68ddf4d22551cc0a6be230" },
    "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Selling It Right": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/OCABundle.json", "sha256": "3bf9a4cef7422533ce2b3253d6f73f6a007bb014636ad29e858a7a211eff7080" },
    "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Serving It Right": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/OCABundle.json", "sha256": "79e343ab4362d93974cdf78b00a916a5b3659178dfd170fcff90f1b5f10ceb72" },
    "TeT8SJGHruVL9up3Erp4o:3:CL:224665:Special Event Server": { "path": "OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/OCABundle.json", "sha256": "1852d293007172d7cfe9c07303a66277f08e6c8b18493ab6d8b63ed61fb2471d" },
+   "AcZpBDz3oxmKrpcuPcdKai:2:Digital Business Card:1.0.0": { "path": "OCABundles/schema/bcgov-digital-trust/business-card/OCABundle.json", "sha256": "34804dbb328cd8741d048121963786f4be63c654abdf0757a10f477c8e8924d5" },
+   "K9igebFysBL6jcBwR8bKuN:2:Digital Business Card:1.0.0": { "path": "OCABundles/schema/bcgov-digital-trust/business-card-showcase/OCABundle.json", "sha256": "aa4dc9de20639a77ab53c419e9e46f405008be170e68ddf4d22551cc0a6be230" },
    "4xE68b6S5VRFrKMMG1U95M:3:CL:59232:default": { "path": "OCABundles/schema/bcgov-digital-trust/member-card/OCABundle.json", "sha256": "849fd68e30714d9ad41862e477d1a31468e88099b795e636843c0ece25c6a464" },
    "L6ASjmDDbDH7yPL1t2yFj9:2:member_card:1.53": { "path": "OCABundles/schema/bcgov-digital-trust/member-card-showcase/OCABundle.json", "sha256": "5f9eb8bb19f51e92ef0c450634979860babe85b3860e80b1be56b20bd2e2378c" },
    "M6dhuFj5UwbhWkSLmvYSPc:2:member_card:1.53": { "path": "OCABundles/schema/bcgov-digital-trust/member-card-showcase/OCABundle.json", "sha256": "5f9eb8bb19f51e92ef0c450634979860babe85b3860e80b1be56b20bd2e2378c" },
@@ -24,7 +24,7 @@
    "E2h4RUJxyh48PLJ1CtGJrq:2:BC VC Pilot Certificate:1.0.1": { "path": "OCABundles/schema/bcgov-digital-trust/pilot/OCABundle.json", "sha256": "044d0e8e66ca5464d9ff712a50bb06ea74d07056c5442c2311dd1fb1a23dc6b3" },
    "L6ASjmDDbDH7yPL1t2yFj9:2:student_card:1.2": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json", "sha256": "e65625acad0f1baab8e05b6cd1a5619b22e1f20cb47768616680a0fb2e8dc21d" },
    "M6dhuFj5UwbhWkSLmvYSPc:2:student_card:1.2": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json", "sha256": "e65625acad0f1baab8e05b6cd1a5619b22e1f20cb47768616680a0fb2e8dc21d" },
-   "QEquAHkM35w4XVT3Ku5yat:2:student_card:1.2": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json", "sha256": "e65625acad0f1baab8e05b6cd1a5619b22e1f20cb47768616680a0fb2e8dc21d" },
+   "QEquAHkM35w4XVT3Ku5yat:2:student_card:1.4": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json", "sha256": "e65625acad0f1baab8e05b6cd1a5619b22e1f20cb47768616680a0fb2e8dc21d" },
    "YXCtXE4YhVjULgj5hrk4ML:2:unverified_person:0.1.0": { "path": "OCABundles/schema/bcgov-digital-trust/unverified-person/OCABundle.json", "sha256": "48b20b00cb38bed85b9615674d9af32b0d5e16f75e365c144218dad6ec2b7aa0" },
    "Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0": { "path": "OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/OCABundle.json", "sha256": "29bf8f8729f235450980d0b273f9ca49b7ab73b7358467bf52b311bf40464bb0" }
 }
