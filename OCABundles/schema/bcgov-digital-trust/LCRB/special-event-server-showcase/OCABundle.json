@@ -147,8 +147,8 @@
       },
       {
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/bc-logo.jpg",
-        "background_image_slice": "https://cdn.files.rapidlms.com/view/3e/4e/48/8a/40/12/e6/76/30/30/19/7d/85/17/fa/2e/original/bc_wallet_vc_lcrb_image_slice_special_event.jpg",
-        "background_image": "https://cdn.files.rapidlms.com/view/ff/d7/6c/58/4d/28/27/f4/a0/5a/55/37/9d/4a/0b/f4/original/bc_wallet_vc_lcrb_background_image_special_event.jpg",
+        "background_image_slice": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_image_slice_special_event.jpg",
+        "background_image": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_background_image_special_event.jpg",
         "primary_background_color": "#003366",
         "secondary_background_color": "#fcbc1e",
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",

@@ -123,30 +123,28 @@
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/liquor-licence-permits/liquor-resources-information/serving-it-right",
         "description": "Une certification du Servir Correctement est obligatoire pour toute personne travaillant dans la vente et le service d’alcool en Colombie-Britannique.",
-        "digest": "EAsYhehtORXPeWWhDllZ0Q5-R11okDpnUqZJYhF0XIik",
+        "digest": "E_lUg55JJSYsaJa7KliJdciQ1OMixryyodRyiuuVMPuw",
         "issuer": "Government of British Columbia",
         "issuer_description": "Government of British Columbia",
         "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
         "language": "fr",
         "name": "Servir Correctement",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION (FR)"
+        "type": "spec/overlays/meta/1.0"
       },
       {
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/liquor-licence-permits/liquor-resources-information/serving-it-right",
         "description": "A Serving It Right Certification is mandatory for anyone working in liquor sales and service in British Columbia.",
-        "digest": "EAh7NUMmMbHDvZysOSrUR34JI2Ach9a-t3juXj24IcB8",
+        "digest": "Eg4H7k1QI6FbuW5t5z_D5iitJ1H5YBsfn_Eik4R3YqbY",
         "issuer": "Government of British Columbia",
         "issuer_description": "Government of British Columbia",
         "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
         "language": "en",
         "name": "Serving It Right",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION"
+        "type": "spec/overlays/meta/1.0"
       },
       {
-        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/bc-logo.jpg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right/bc-logo.jpg",
         "background_image_slice": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_image_slice_serve_right.jpg",
         "background_image": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_background_image_serve_right.jpg",
         "primary_background_color": "#003366",
