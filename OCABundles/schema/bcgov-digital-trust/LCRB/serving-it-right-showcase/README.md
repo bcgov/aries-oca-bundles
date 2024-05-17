@@ -20,4 +20,5 @@ The following are the GitHub IDs of those authorized to make substantive updates
 | OCA Bundle Contributors | GitHub ID  | Email Address            |
 | ----------------------- | ---------- | ------------------------ |
 | Andy Jay                | andy-credivera | andy@credivera.com       |
+| Stephen Rosinski        | SGRosinski | stephen@credivera.com    |
 |                         |            |                          |
