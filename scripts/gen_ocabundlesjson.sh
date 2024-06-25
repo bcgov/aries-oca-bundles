@@ -48,26 +48,6 @@ if [ ! -d "OCABundles" ]; then
     exit 1
 fi
 
-# Raw URL encode the argument
-rawurlencode() {
-  local string="${1}"
-  local strlen=${#string}
-  local encoded=""
-  local pos c o
-
-  for (( pos=0 ; pos<strlen ; pos++ )); do
-     c=${string:$pos:1}
-     case "$c" in
-        [-_.~a-zA-Z0-9] ) o="${c}" ;;
-        * )               printf -v o '%%%02x' "'$c"
-     esac
-     encoded+="${o}"
-  done
-  echo "${encoded}"    # You can either set a return variable (FASTER) 
-  REPLY="${encoded}"   #+or echo the result (EASIER)... or both... :p
-}
-
-
 # In a folder with an OCABundle, process the file, and add the data for the bundle into the JSON files
 processBundle() {
     BUNDLE_PATH=OCABundle.json
@@ -81,8 +61,9 @@ processBundle() {
         TYPE="credential"
     fi
     for id in ${ID}; do
-        echo "   \"${id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," | sed "s/~/ /g" >>${OCAIDSJSON}
-        echo "{ \"id\": \"${id}\", \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}
+        processed_id=$(echo -n ${id} | sed "s/~/ /g")
+        echo "   \"${processed_id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," >>${OCAIDSJSON}
+        echo "{ \"id\": \"${processed_id}\", \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}
     done
 }
 
@@ -91,9 +72,10 @@ insertBundleiframe () {
       # Do nothing, but $id will be set to the last one...use it
       echo -n ""
     done
+    encoded_id=$(echo -n ${id} | sed "s/~/ /g" | jq -sRr @uri)
     # We're scanning the real OCABundles file, but want to update the copied files in the docs folder
     FILE=${thisDir}/docs/$RELPATH/README.md
-    sed -e "/## Authorization/i## Credential Appearance\n\n\\<iframe src=\\"https://bcgov.github.io/aries-oca-explorer/identifier/$(rawurlencode ${id})?view=readonly\\" width=\\"100%\\" height=\\"800\\" frameborder=\\"0\\"\\>\\</iframe\\>\n" $FILE >$FILE.tmp
+    sed -e "/## Authorization/i## Credential Appearance\n\n\\<iframe src=\\"https://bcgov.github.io/aries-oca-explorer/identifier/${encoded_id}?view=readonly\\" width=\\"100%\\" height=\\"800\\" frameborder=\\"0\\"\\>\\</iframe\\>\n" $FILE >$FILE.tmp
     mv $FILE.tmp $FILE 
 }
 

@@ -6,7 +6,8 @@
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-16",
 	"features": {
 		"ghcr.io/devcontainers/features/rust:1": {},
-		"ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {}
+		"ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {},
+		"ghcr.io/devcontainers/features/python": {}
 	},
 	"shutdownAction": "none",
 	// Features to add to the dev container. More info: https://containers.dev/features.
