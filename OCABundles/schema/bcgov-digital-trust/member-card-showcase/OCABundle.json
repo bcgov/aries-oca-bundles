@@ -1,0 +1,90 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "Given Name": "Text",
+        "Member Status": "Text",
+        "Member Status Code": "Text",
+        "PPID": "Text",
+        "Surname": "Text"
+      },
+      "classification": "",
+      "digest": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+      "flagged_attributes": [
+        "PPID",
+        "Member Status Code",
+        "Surname",
+        "Given Name",
+        "Member Status"
+      ],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "Given Name": "utf-8",
+          "Member Status": "utf-8",
+          "Member Status Code": "utf-8",
+          "PPID": "utf-8",
+          "Surname": "utf-8"
+        },
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "default_character_encoding": "utf-8",
+        "digest": "EWJRSUncNhs1SJykpPQWqSK_wvPX8zWzyHwEN70PzXws",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "Given Name": "Given Name",
+          "Member Status": "Member Status",
+          "Member Status Code": "Member Status Code",
+          "PPID": "PPID",
+          "Surname": "Surname"
+        },
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "category_labels": {},
+        "digest": "E119Ee5NZpv_ed-fcUVjPpWQk1nTs3baACruNdySLxf8",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "Given Name": "Member's given name",
+          "Member Status": "Member's status",
+          "Member Status Code": "Member's status code",
+          "PPID": "Member's PPID",
+          "Surname": "Member's surname"
+        },
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "digest": "En2bV0aNBuErACgckVCYCQ6VlGr1yk-jsV5WNxwGs0AA",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "credential_support_url": "https://www.lawsociety.bc.ca/",
+        "description": "A schema used for membership in LSBC",
+        "digest": "EbO-v2m_qZ-nfOmTRKAWvFIJvMziKl051aAXVbI9Vlq8",
+        "issuer": "Law Society of BC",
+        "issuer_description": "Law Society of BC",
+        "issuer_url": "https://www.lawsociety.bc.ca/",
+        "language": "en",
+        "name": "DEMO - Member Credential",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
+      },
+      {
+        "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-logo.jpg",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-background-image.jpg",
+        "primary_background_color": "#00698c",
+        "secondary_background_color": "#1a2930",
+        "primary_attribute": "",
+        "secondary_attribute": "",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]
