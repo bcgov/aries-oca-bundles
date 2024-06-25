@@ -62,7 +62,7 @@ processBundle() {
     fi
     for id in ${ID}; do
         processed_id=$(echo -n ${id} | sed "s/~/ /g")
-        echo "   \"${processed_id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," >>${OCAIDSJSON}
+        echo "\"${processed_id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," >>${OCAIDSJSON}
         echo "{ \"id\": \"${processed_id}\", \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}
     done
 }
@@ -135,3 +135,8 @@ sed -e '$s/.$//' ${OCALISTJSON} >$TMPFILE; mv ${TMPFILE} ${OCALISTJSON}
 # Write the footers for the files
 echo -e "}" >>${OCAIDSJSON}
 echo -e "]" >>${OCALISTJSON}
+
+
+# Finally compact the files
+echo $(cat ${OCAIDSJSON} | jq -c .) > ${OCAIDSJSON}
+echo $(cat ${OCALISTJSON} | jq -c .) > ${OCALISTJSON}
