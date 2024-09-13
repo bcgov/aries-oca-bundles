@@ -97,9 +97,9 @@
       {
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/transcriber-contractor/BCID_V_rgb_pos.png",
         "background_image_slice": "",
-        "background_image": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/transcriber-contractor/secondary_background.png",
         "primary_background_color": "#0B31A5",
-        "secondary_background_color": "#46B353",
+        "secondary_background_color": "#002050",
         "capture_base": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
         "digest": "EkVkOqaGMDFtVyIaH8AcErBAnWlpcs7rflvRIMig1iZU",
         "expiry_date_attribute": "",
