@@ -34,6 +34,7 @@
    "L6ASjmDDbDH7yPL1t2yFj9:2:student_card:1.2": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json", "sha256": "e65625acad0f1baab8e05b6cd1a5619b22e1f20cb47768616680a0fb2e8dc21d" },
    "M6dhuFj5UwbhWkSLmvYSPc:2:student_card:1.6": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json", "sha256": "e65625acad0f1baab8e05b6cd1a5619b22e1f20cb47768616680a0fb2e8dc21d" },
    "QEquAHkM35w4XVT3Ku5yat:2:student_card:1.6": { "path": "OCABundles/schema/bcgov-digital-trust/student-card/OCABundle.json", "sha256": "e65625acad0f1baab8e05b6cd1a5619b22e1f20cb47768616680a0fb2e8dc21d" },
+   "EmX9iHJrL7R6MBLH38QYp:3:CL:1560:transcriber": { "path": "OCABundles/schema/bcgov-digital-trust/transcriber-contractor/OCABundle.json", "sha256": "44d89d6c7ced85ce3c8fc02323553a138445368911dcd6fb85e2aaeefea05068" },
    "9defyjkM6MX5zh2D5Mwo1U:2:contractor-credential:1.0": { "path": "OCABundles/schema/bcgov-digital-trust/transcriber-contractor/OCABundle.json", "sha256": "44d89d6c7ced85ce3c8fc02323553a138445368911dcd6fb85e2aaeefea05068" },
    "YXCtXE4YhVjULgj5hrk4ML:2:unverified_person:0.1.0": { "path": "OCABundles/schema/bcgov-digital-trust/unverified-person/OCABundle.json", "sha256": "48b20b00cb38bed85b9615674d9af32b0d5e16f75e365c144218dad6ec2b7aa0" },
    "Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0": { "path": "OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/OCABundle.json", "sha256": "29bf8f8729f235450980d0b273f9ca49b7ab73b7358467bf52b311bf40464bb0" }
