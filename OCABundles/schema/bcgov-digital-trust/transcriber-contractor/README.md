@@ -9,6 +9,7 @@ A transcriber contractor credential provides evidence of an active contract betw
 
 | Identifier                                         | Location   | URL                                                   |
 | -------------------------------------------------- | ---------- | ----------------------------------------------------- |
+| EmX9iHJrL7R6MBLH38QYp:3:CL:1560:transcriber | CANdy-Prod  | https://candyscan.idlab.org/tx/CANDY_PROD/domain/1561 |
 | 9defyjkM6MX5zh2D5Mwo1U:2:contractor-credential:1.0 | CANdy-Dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/34779 |
 
 ## Authorization
