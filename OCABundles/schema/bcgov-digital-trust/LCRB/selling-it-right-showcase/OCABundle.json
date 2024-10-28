@@ -38,39 +38,7 @@
       {
         "attribute_categories": [],
         "attribute_labels": {
-          "certification_number": "Certification Number",
-          "date_completed_dateint": "Date Completed",
-          "date_created_dateint": "Date Created",
-          "email": "Email",
-          "expires_dateint": "Expires",
-          "family_name": "Family Name",
-          "given_names": "Given Names"
-        },
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "category_labels": {},
-        "digest": "Eh4_o_3BJvM14AwumBgQOlkK4gwAo0Ee7YlLsg31QE38",
-        "language": "en",
-        "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "certification_number": "The certification number of the credential",
-          "date_completed_dateint": "Date the credential was completed",
-          "date_created_dateint": "Date the credential was created",
-          "email": "Email address",
-          "expires_dateint": "Date the credential expires",
-          "family_name": "The family name of the holder",
-          "given_names": "The first name(s) of the holder"
-        },
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "digest": "E0RokwO8jGl1RRNRLUoV6pozwVGS0KCs9PvM6MWPXDOk",
-        "language": "en",
-        "type": "spec/overlays/information/1.0"
-      },
-      {
-        "attribute_categories": [],
-        "attribute_labels": {
-          "certification_number": "Numéro de Certification",
+          "certification_number": "ID de Certification",
           "date_completed_dateint": "Date de completion",
           "date_created_dateint": "Date Crée",
           "email": "Courriel",
@@ -80,13 +48,13 @@
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "category_labels": {},
-        "digest": "EozLWAzIowHAwBZ2463-wMOWjBi_mq-y61bA2js0EyN4",
+        "digest": "E6tvRbbakID-19ho6XpI2Yu2gxt6KpSt2U9NAtwzSE-s",
         "language": "fr",
         "type": "spec/overlays/label/1.0"
       },
       {
         "attribute_information": {
-          "certification_number": "Le numéro de certification du titre de compétence",
+          "certification_number": "L'identifiant de certification du titre de compétence",
           "date_completed_dateint": "Date de completion du titre de compétence",
           "date_created_dateint": "Date de création du titre de compétence",
           "email": "Address de courriel",
@@ -95,8 +63,40 @@
           "given_names": "Le ou les prénoms du titulaire"
         },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "digest": "EwRvnepOxYRkp92UISIkC7snI1D9viOLwmwwxUJcyTxQ",
+        "digest": "EQreqvHPiA4jO_u2sqdd01rWgwZgUXRRlthi8hHrcnMU",
         "language": "fr",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "certification_number": "Certification ID",
+          "date_completed_dateint": "Date Completed",
+          "date_created_dateint": "Date Created",
+          "email": "Email",
+          "expires_dateint": "Expires",
+          "family_name": "Family Name",
+          "given_names": "Given Names"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "category_labels": {},
+        "digest": "Er7haimo9rkI2fUhQ3h9bJegFxvm2miE7kMjD815oNHg",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "certification_number": "The certification ID of the credential",
+          "date_completed_dateint": "Date the credential was completed",
+          "date_created_dateint": "Date the credential was created",
+          "email": "Email address",
+          "expires_dateint": "Date the credential expires",
+          "family_name": "The family name of the holder",
+          "given_names": "The first name(s) of the holder"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "digest": "Er02BFNdoQweQdc6n_MnIDSccLfjB6i9cyn6aYVO_4SQ",
+        "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
@@ -122,19 +122,6 @@
       {
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
-        "description": "Une certification du Vendre Correctement est requise pour toute personne impliquée dans la vente de cannabis à des fins non médicales en Colombie-Britannique.",
-        "digest": "Exrysh8Fwk186_t4RAu2SbKXKMEWUIc9WZisjoHaQmXU",
-        "issuer": "Government of British Columbia",
-        "issuer_description": "Government of British Columbia",
-        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
-        "language": "fr",
-        "name": "Vendre Correctement",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION (FR)"
-      },
-      {
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
         "description": "A Selling It Right Certification is required for anyone involved in the sale of non-medical cannabis in British Columbia.",
         "digest": "EDXLsX07_NQUnBXaIbyfF6Z4BnUxCZZEHL8WrOMzBprA",
         "issuer": "Government of British Columbia",
@@ -144,6 +131,19 @@
         "name": "Selling It Right",
         "type": "spec/overlays/meta/1.0",
         "watermark": "NON-PRODUCTION"
+      },
+      {
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
+        "description": "Une certification du Vendre Correctement est requise pour toute personne impliquée dans la vente de cannabis à des fins non médicales en Colombie-Britannique.",
+        "digest": "Exrysh8Fwk186_t4RAu2SbKXKMEWUIc9WZisjoHaQmXU",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
+        "language": "fr",
+        "name": "Vendre Correctement",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION (FR)"
       },
       {
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/bc-logo.jpg",
