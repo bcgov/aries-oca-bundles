@@ -1,0 +1,11 @@
+[
+    {
+        "type": "aries/overlays/branding/1.0",
+        "capture_base": "",
+        "digest": "",
+        "logo": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/schema/ltsa_demo/NewCred_Credential/LTSA-Vertical-Logo.jpg",
+        "background_image": "",
+        "primary_background_color": "#282B67",
+        "secondary_background_color": "#4CA747"
+    }
+]
