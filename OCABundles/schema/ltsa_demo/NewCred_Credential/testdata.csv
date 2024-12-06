@@ -1,2 +1,11 @@
-"lastNameOrCorpName1","parcelIdentifier","titleNumber","authorityName","givenName","streetAddress","city","postalCode","issueDate","expiryDate","photo"
-"Doe","123-456-789","T-987654","Land Authority","John","123 Maple Street","Maple Ridge","V4R 2T1","20240101","20300101","<base64 encoded image>"
+,,,,,
+,,,,,
+OL-MN: Meta [Attribute Name],OL-MV: Meta [Attribute Value],CB-AN: Attribute Name,OL-LA: Label,OL-EN: Entry,OL-IN: Information
+name,Informations d'identification de la personne,lastNameOrCorpName1,Nom de famille ou nom de la société,,Le nom de famille d'un individu ou le nom principal d'une société associé à un dossier.
+description,Schéma canadien utilisé pour l'identité d'une personne,parcelIdentifier,Identifiant de parcelle,,Un identifiant unique attribué à une parcelle de terrain ou à une propriété à des fins administratives ou légales.
+issuer,Gouvernement de la Colombie-Britannique,titleNumber,Numéro de titre,,"Un numéro unique attribué à un titre, tel qu'un titre foncier ou de propriété, à des fins légales et d'identification."
+issuer_description,Gouvernement de la Colombie-Britannique,authorityName,Nom de l'autorité,,"Le nom de l'autorité compétente ou émettrice responsable de la création, de la vérification ou de la gestion du dossier."
+issuer_url,https://www.gov.bc.ca/,givenName,Prénom,,"Le(s) prénom(s) d'un individu, souvent utilisés avec le nom de famille pour l'identification personnelle."
+credential_help_text,Exemple de texte d'aide sur les informations d'identification.,streetAddress,Adresse de rue,,"L'adresse physique de l'entité ou de la propriété, comprenant le numéro de maison, le nom de rue et éventuellement le numéro de l'unité ou de la suite."
+credential_support_url,https://www.gov.bc.ca/,city,Ville,,La ville où se situe l'entité ou la propriété.
+,,postalCode,Code postal,,Le code postal ou le code ZIP utilisé pour la livraison du courrier à l'adresse associée.
