@@ -36,10 +36,8 @@
             "givenName": "utf-8",
             "streetAddress": "utf-8",
             "city": "utf-8",
-            "postalCode": "utf-8",
-            "issueDate": "utf-8",
-            "expiryDate": "utf-8",
-            "photo": "base64"
+            "postalCode": "utf-8"
+      
           }
         },
         {
@@ -57,10 +55,8 @@
             "givenName": "First Name",
             "streetAddress": "Street Address",
             "city": "City",
-            "postalCode": "Postal Code",
-            "issueDate": "Issue Date",
-            "expiryDate": "Expiry Date",
-            "photo": "Photo"
+            "postalCode": "Postal Code"
+   
           }
         },
         {
