@@ -124,13 +124,15 @@
         "type": "spec/overlays/meta/1.0"
       },
       {
-        "type": "",
+        "type": "aries/overlays/branding/1.0",
         "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
-        "digest": "",
         "logo": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/schema/ltsa_demo/NewCred_Credential/LTSA-Vertical-Logo.jpg",
+        "background_image_slice": "",
         "background_image": "",
         "primary_background_color": "#282B67",
-        "secondary_background_color": "#4CA747"
+        "secondary_background_color": "#4CA747",
+        "primary_attribute": "",
+        "secondary_attribute": ""
       }
     ]
   }
