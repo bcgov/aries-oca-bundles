@@ -1,6 +1,6 @@
 [
     {
-        "type": "aries/overlays/branding/1.0",
+        "type": "",
         "capture_base": "",
         "digest": "",
         "logo": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/schema/ltsa_demo/NewCred_Credential/LTSA-Vertical-Logo.jpg",
