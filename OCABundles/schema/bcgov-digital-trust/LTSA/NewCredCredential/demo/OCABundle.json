@@ -1,0 +1,139 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "authorityName": "Text",
+        "city": "Text",
+        "givenName": "Text",
+        "lastNameOrCorpName1": "Text",
+        "parcelIdentifier": "Text",
+        "postalCode": "Text",
+        "streetAddress": "Text",
+        "titleNumber": "Text"
+      },
+      "classification": "",
+      "digest": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+      "flagged_attributes": [],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "authorityName": "utf-8",
+          "city": "utf-8",
+          "givenName": "utf-8",
+          "lastNameOrCorpName1": "utf-8",
+          "parcelIdentifier": "utf-8",
+          "postalCode": "utf-8",
+          "streetAddress": "utf-8",
+          "titleNumber": "utf-8"
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "default_character_encoding": "utf-8",
+        "digest": "EE6oyz_DDEWI0l4VWkd5zNauhqOwT8tM3ANh-l2zqNuY",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "authorityName": "Authority Name",
+          "city": "City",
+          "givenName": "Given Name",
+          "lastNameOrCorpName1": "Last Name or Corp Name",
+          "parcelIdentifier": "Parcel Identifier",
+          "postalCode": "Postal Code",
+          "streetAddress": "Street Address",
+          "titleNumber": "Title Number"
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "category_labels": {},
+        "digest": "EsRbkt8dt3g6cX_19P0jYVvClkt04vzppopJaRw6_g00",
+        "language": "en-CA",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "authorityName": "The name of the governing or issuing authority responsible for creating, verifying, or managing the record.",
+          "city": "The city in which the entity or property is located.",
+          "givenName": "The first name(s) of an individual, often used alongside the last name for personal identification.",
+          "lastNameOrCorpName1": "The last name of an individual or the primary name of a corporation associated with a record.",
+          "parcelIdentifier": "A unique identifier assigned to a specific parcel of land or property for administrative or legal purposes.",
+          "postalCode": "The postal or ZIP code used for mail delivery to the associated address.",
+          "streetAddress": "The physical address of the entity or property, including house number, street name, and possibly the unit or suite number.",
+          "titleNumber": "A unique number assigned to a title, such as land or property title, for legal and identification purposes."
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "digest": "EtZfSSSluKbbE-Eyd1klD2E-Y3X1KQRSHb6KEFqW_g-Y",
+        "language": "en-CA",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "authorityName": "Nom de l'autorité",
+          "city": "Ville",
+          "givenName": "Prénom",
+          "lastNameOrCorpName1": "Nom de famille ou nom de la société",
+          "parcelIdentifier": "Identifiant de parcelle",
+          "postalCode": "Code postal",
+          "streetAddress": "Adresse de rue",
+          "titleNumber": "Numéro de titre"
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "category_labels": {},
+        "digest": "EqjhdQuHccMRMmrz3ctXfqyMcsQeqHbq7UxlhUjUaRiI",
+        "language": "fr-CA",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "authorityName": "Le nom de l'autorité compétente ou émettrice responsable de la création, de la vérification ou de la gestion du dossier.",
+          "city": "La ville où se situe l'entité ou la propriété.",
+          "givenName": "Le(s) prénom(s) d'un individu, souvent utilisés avec le nom de famille pour l'identification personnelle.",
+          "lastNameOrCorpName1": "Le nom de famille d'un individu ou le nom principal d'une société associé à un dossier.",
+          "parcelIdentifier": "Un identifiant unique attribué à une parcelle de terrain ou à une propriété à des fins administratives ou légales.",
+          "postalCode": "Le code postal ou le code ZIP utilisé pour la livraison du courrier à l'adresse associée.",
+          "streetAddress": "L'adresse physique de l'entité ou de la propriété, comprenant le numéro de maison, le nom de rue et éventuellement le numéro de l'unité ou de la suite.",
+          "titleNumber": "Un numéro unique attribué à un titre, tel qu'un titre foncier ou de propriété, à des fins légales et d'identification."
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "digest": "EDAtE9zl8MYq_Y2UJ0OXXAahZAhpkKaaOJudOrr2Wgyk",
+        "language": "fr-CA",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "description": "Schéma pour démontrer la propriété d'un titre foncier ",
+        "digest": "EdWfBRt_ucs3FvGpzrm3vuF0Zr0YBXhqViinJbpq4JY0",
+        "issuer": "Land Title and Survey Authority of BC",
+        "issuer_description": "Land Title and Survey Authority of BC",
+        "issuer_url": "https://ltsa.ca/",
+        "language": "fr-CA",
+        "name": "NewCred Credential",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "description": "This schema is used for demonstrate land title ownership.",
+        "digest": "Enm5isT0s4jesjTHywDcM4xcuHZixevLztwNPyjmxogk",
+        "issuer": "Land Title and Survey Authority of BC",
+        "issuer_description": "Land Title and Survey Authority of BC",
+        "issuer_url": "https://ltsa.ca/",
+        "language": "en-CA",
+        "name": "NewCred Credential",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "type": "aries/overlays/branding/1.0",
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "logo": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/schema/ltsa_demo/NewCred_Credential/LTSA-Vertical-Logo.jpg",
+        "background_image_slice": "",
+        "background_image": "",
+        "primary_background_color": "#282B67",
+        "secondary_background_color": "#4CA747",
+        "primary_attribute": "",
+        "secondary_attribute": ""
+      }
+    ]
+  }
+]
