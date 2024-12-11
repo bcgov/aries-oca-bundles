@@ -126,13 +126,13 @@
       {
         "type": "aries/overlays/branding/1.0",
         "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
-        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/LTSA-Vertical-Logo.jpg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/LTSA-Vertical-Logo.png",
         "background_image_slice": "",
         "background_image": "",
+        "primary_attribute": "streetAddress",
+        "secondary_attribute": "parcelIdentifier",
         "primary_background_color": "#282B67",
-        "secondary_background_color": "#4CA747",
-        "primary_attribute": "",
-        "secondary_attribute": ""
+        "secondary_background_color": "#4CA747"
       }
     ]
   }
