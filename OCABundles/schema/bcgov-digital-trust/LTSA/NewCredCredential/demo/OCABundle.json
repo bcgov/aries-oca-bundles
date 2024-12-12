@@ -36,40 +36,6 @@
       {
         "attribute_categories": [],
         "attribute_labels": {
-          "authorityName": "Nom de l'autorité",
-          "city": "Ville",
-          "givenName": "Prénom",
-          "lastNameOrCorpName1": "Nom de famille ou nom de la société",
-          "parcelIdentifier": "Identifiant de parcelle",
-          "postalCode": "Code postal",
-          "streetAddress": "Adresse de rue",
-          "titleNumber": "Numéro de titre"
-        },
-        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
-        "category_labels": {},
-        "digest": "EqjhdQuHccMRMmrz3ctXfqyMcsQeqHbq7UxlhUjUaRiI",
-        "language": "fr-CA",
-        "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "authorityName": "Le nom de l'autorité compétente ou émettrice responsable de la création, de la vérification ou de la gestion du dossier.",
-          "city": "La ville où se situe l'entité ou la propriété.",
-          "givenName": "Le(s) prénom(s) d'un individu, souvent utilisés avec le nom de famille pour l'identification personnelle.",
-          "lastNameOrCorpName1": "Le nom de famille d'un individu ou le nom principal d'une société associé à un dossier.",
-          "parcelIdentifier": "Un identifiant unique attribué à une parcelle de terrain ou à une propriété à des fins administratives ou légales.",
-          "postalCode": "Le code postal ou le code ZIP utilisé pour la livraison du courrier à l'adresse associée.",
-          "streetAddress": "L'adresse physique de l'entité ou de la propriété, comprenant le numéro de maison, le nom de rue et éventuellement le numéro de l'unité ou de la suite.",
-          "titleNumber": "Un numéro unique attribué à un titre, tel qu'un titre foncier ou de propriété, à des fins légales et d'identification."
-        },
-        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
-        "digest": "EDAtE9zl8MYq_Y2UJ0OXXAahZAhpkKaaOJudOrr2Wgyk",
-        "language": "fr-CA",
-        "type": "spec/overlays/information/1.0"
-      },
-      {
-        "attribute_categories": [],
-        "attribute_labels": {
           "authorityName": "Authority Name",
           "city": "City",
           "givenName": "Given Name",
@@ -81,8 +47,8 @@
         },
         "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
         "category_labels": {},
-        "digest": "EsRbkt8dt3g6cX_19P0jYVvClkt04vzppopJaRw6_g00",
-        "language": "en-CA",
+        "digest": "EX9BvwB_JkChzan9jOPbtX1XaoQ7JcsuJNThDqt_0FKc",
+        "language": "en",
         "type": "spec/overlays/label/1.0"
       },
       {
@@ -97,30 +63,66 @@
           "titleNumber": "A unique number assigned to a title, such as land or property title, for legal and identification purposes."
         },
         "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
-        "digest": "EtZfSSSluKbbE-Eyd1klD2E-Y3X1KQRSHb6KEFqW_g-Y",
-        "language": "en-CA",
+        "digest": "E8JpRsBlRt3KoqxqxDld5YHiIVCKnu0B4SnZotSSXv_E",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "authorityName": "Nom de l'autorité",
+          "city": "Ville",
+          "givenName": "Prénom",
+          "lastNameOrCorpName1": "Nom de famille ou nom de la société",
+          "parcelIdentifier": "Identifiant de parcelle",
+          "postalCode": "Code postal",
+          "streetAddress": "Adresse de rue",
+          "titleNumber": "Numéro de titre"
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "category_labels": {},
+        "digest": "Eh-IOx2O_jbCu-3a-gXOkjbwk4Vk6gHjXiI2dPcYuoCw",
+        "language": "fr",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "authorityName": "Le nom de l'autorité compétente ou émettrice responsable de la création, de la vérification ou de la gestion du dossier.",
+          "city": "La ville où se situe l'entité ou la propriété.",
+          "givenName": "Le(s) prénom(s) d'un individu, souvent utilisés avec le nom de famille pour l'identification personnelle.",
+          "lastNameOrCorpName1": "Le nom de famille d'un individu ou le nom principal d'une société associé à un dossier.",
+          "parcelIdentifier": "Un identifiant unique attribué à une parcelle de terrain ou à une propriété à des fins administratives ou légales.",
+          "postalCode": "Le code postal ou le code ZIP utilisé pour la livraison du courrier à l'adresse associée.",
+          "streetAddress": "L'adresse physique de l'entité ou de la propriété, comprenant le numéro de maison, le nom de rue et éventuellement le numéro de l'unité ou de la suite.",
+          "titleNumber": "Un numéro unique attribué à un titre, tel qu'un titre foncier ou de propriété, à des fins légales et d'identification."
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "digest": "EX6gb68luTk3zoe9bAIj2iM3gbEUbO99LrueBvRpiDus",
+        "language": "fr",
         "type": "spec/overlays/information/1.0"
       },
       {
         "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
-        "description": "Schéma pour démontrer la propriété d'un titre foncier ",
-        "digest": "EdWfBRt_ucs3FvGpzrm3vuF0Zr0YBXhqViinJbpq4JY0",
+        "description": "This schema is used for demonstrate land title ownership.",
+        "digest": "EUkjJls6xQ2sYgKJ1G8AxG3Qq467Q-XSCB9R8oMtoFiI",
         "issuer": "Land Title and Survey Authority of BC",
         "issuer_description": "Land Title and Survey Authority of BC",
         "issuer_url": "https://ltsa.ca/",
-        "language": "fr-CA",
+        "language": "en",
         "name": "NewCred Credential",
+        "watermark": "DEMONSTRATION",
         "type": "spec/overlays/meta/1.0"
       },
       {
         "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
-        "description": "This schema is used for demonstrate land title ownership.",
-        "digest": "Enm5isT0s4jesjTHywDcM4xcuHZixevLztwNPyjmxogk",
+        "description": "Schéma pour démontrer la propriété d'un titre foncier ",
+        "digest": "EqE2uURULRtJ224z04HbWgf9vgDMw4pNVmYXK2RvuYBo",
         "issuer": "Land Title and Survey Authority of BC",
         "issuer_description": "Land Title and Survey Authority of BC",
         "issuer_url": "https://ltsa.ca/",
-        "language": "en-CA",
+        "language": "fr",
         "name": "NewCred Credential",
+        "watermark": "DEMONSTRATION",
         "type": "spec/overlays/meta/1.0"
       },
       {
