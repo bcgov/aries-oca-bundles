@@ -2,9 +2,9 @@
     {
         "type": "aries/overlays/branding/1.0",
         "capture_base": "",
-        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/LTSA-Vertical-Logo.png",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/LTSA-Vertical-Logo.jpg",
         "background_image_slice": "",
-        "background_image": "",
+        "background_image":  "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/oca-background.jpg",
         "primary_attribute": "streetAddress",
         "secondary_attribute": "parcelIdentifier",
         "primary_background_color": "#282B67",
