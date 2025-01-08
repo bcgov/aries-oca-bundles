@@ -9,7 +9,7 @@ A verifiable credential schema used for demonstration and internal use purposes 
 
 | Identifier                                                                         | Location  | URL                                                   |
 | ---------------------------------------------------------------------------------- | --------- | ----------------------------------------------------- |
-| TxID9uCfLbHYLHTZt9HiGL1oD9:3:CL:35147:Newcred_Credential | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/35671 |
+| 9uCfLbHYLHTZt9HiGL1oD9:3:CL:35147:Newcred_Credential | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/35671 |
 
 ## Authorization
 
