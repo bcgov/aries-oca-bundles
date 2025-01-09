@@ -10,15 +10,8 @@
         "Surname": "Text"
       },
       "classification": "",
-      "digest": "EmYf5YtV20J9zUdMuQ0uI0TA7ZsY5y92CLq_uTNONmQU",
-      "flagged_attributes": [
-        "PPID",
-        "Member Status Code",
-        "Surname",
-        "Given Name",
-        "Member Status",
-        "Credential Type"
-      ],
+      "digest": "EZco7-EPlewJIWaQPJCf4H8wf2d9JeZ7tQTC8cEKHD4M",
+      "flagged_attributes": [],
       "type": "spec/capture_base/1.0"
     },
     "overlays": [
@@ -31,9 +24,9 @@
           "PPID": "utf-8",
           "Surname": "utf-8"
         },
-        "capture_base": "EmYf5YtV20J9zUdMuQ0uI0TA7ZsY5y92CLq_uTNONmQU",
+        "capture_base": "EZco7-EPlewJIWaQPJCf4H8wf2d9JeZ7tQTC8cEKHD4M",
         "default_character_encoding": "utf-8",
-        "digest": "EmiY2bVALqeJkMwE6sD4ZVCro_18rq-syyeLIDHXhrEg",
+        "digest": "EpX8MiBhsVFavlHVnxQYxFu9vWNcGyYqRB4enWTZasL4",
         "type": "spec/overlays/character_encoding/1.0"
       },
       {
@@ -46,9 +39,9 @@
           "PPID": "PPID",
           "Surname": "Surname"
         },
-        "capture_base": "EmYf5YtV20J9zUdMuQ0uI0TA7ZsY5y92CLq_uTNONmQU",
+        "capture_base": "EZco7-EPlewJIWaQPJCf4H8wf2d9JeZ7tQTC8cEKHD4M",
         "category_labels": {},
-        "digest": "EE9dFkCysKf6ArGM6O44P4oAJn_pXI9fIoXfj3pSJyK8",
+        "digest": "EqvsblmOBp_9FeZ3qvcWLzdSZiRTC6zW_jqEc2JDlq3Y",
         "language": "en",
         "type": "spec/overlays/label/1.0"
       },
@@ -61,29 +54,28 @@
           "PPID": "The Public Person ID is the unique identifier for the legal professional registered with the Law Society. This is NOT the number on the Certificate issued to the legal professional.",
           "Surname": "The legal surname on file with the Law Society of the legal professional."
         },
-        "capture_base": "EmYf5YtV20J9zUdMuQ0uI0TA7ZsY5y92CLq_uTNONmQU",
-        "digest": "E5lTwSoUziiKrF8sEs01WpUltqaj05ry2saQKQSRuzXM",
+        "capture_base": "EZco7-EPlewJIWaQPJCf4H8wf2d9JeZ7tQTC8cEKHD4M",
+        "digest": "EsQotd1EvsvrdCNkiUNwqTl2sR2jhpcva6ZMP8orZEBg",
         "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
-        "capture_base": "EmYf5YtV20J9zUdMuQ0uI0TA7ZsY5y92CLq_uTNONmQU",
+        "capture_base": "EZco7-EPlewJIWaQPJCf4H8wf2d9JeZ7tQTC8cEKHD4M",
         "credential_support_url": "https://www.lawsociety.bc.ca/",
         "description": "A schema used for membership in LSBC",
-        "digest": "EZky8JV1s6mVWUdAHM53mrRVWuN_KP-ARIy_eoD4UN9Q",
+        "digest": "ETaLLsEd67yUWfGfbOAtwcx73YXRjZ3_dH5x_g5U6dl8",
         "issuer": "Law Society of BC",
         "issuer_description": "Law Society of BC",
         "issuer_url": "https://www.lawsociety.bc.ca/",
         "language": "en",
         "name": "Lawyer Credential",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "TEST"
+        "type": "spec/overlays/meta/1.0"
       },
       {
-        "capture_base": "EmYf5YtV20J9zUdMuQ0uI0TA7ZsY5y92CLq_uTNONmQU",
-        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LSBC/Membership/Test/lsbc-logo.jpg",
+        "capture_base": "EZco7-EPlewJIWaQPJCf4H8wf2d9JeZ7tQTC8cEKHD4M",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Prod/lsbc-logo.jpg",
         "background_image_slice": "",
-        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LSBC/Membership/Test/lsbc-background-image.jpg",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Prod/lsbc-background-image.jpg",
         "primary_background_color": "#00698c",
         "secondary_background_color": "#1a2930",
         "primary_attribute": "",

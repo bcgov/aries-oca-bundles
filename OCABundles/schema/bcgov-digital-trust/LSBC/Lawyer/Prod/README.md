@@ -1,6 +1,6 @@
 # Law Society of BC Lawyer Credential
 
-A verifiable credential schema for a lawyer's membership card (https://www.lawsociety.bc.ca).
+A verifiable credential schema for a lawyer's membership credential (https://www.lawsociety.bc.ca).
 
 - Publishing Organization: Law Society of BC
 - Primary Contact Email Address: developers@lsbc.org
