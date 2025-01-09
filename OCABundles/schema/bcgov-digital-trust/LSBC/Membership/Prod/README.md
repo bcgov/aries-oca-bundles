@@ -9,7 +9,7 @@ A verifiable credential schema for a lawyer's membership card (https://www.lawso
 
 | Identifier                                          | Location   | URL                                                   |
 | --------------------------------------------------- | ---------- | ----------------------------------------------------- |
-| MLvtJW6pFuYu4NnMB14d29:3:CL:248:lawyer              | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/249  |
+| QzLYGuAebsy3MXQ6b1sFiT:3:CL:2351:lawyer             | candy:prod | https://candyscan.idlab.org/tx/CANDY_PROD/domain/2352 |
 
 ## Authorization
 
