@@ -9,7 +9,7 @@ A schema for the "Serving It Right" credential issued by LCRB.
 
 | Identifier                                      | Location   | Watermark | URL                                                   |
 | ----------------------------------------------- | ---------- | --------- | ----------------------------------------------------- |
-| 4WW6792ksq62UroZyfd6nQ:3:CL:1098:ServingItRight | candy:prod |           | https://candyscan.idlab.org/tx/CANDY_PROD/domain/1099 |
+| 4WW6792ksq62UroZyfd6nQ:3:CL:1098:ServingItRight | candy:prod |           | https://candyscan.idlab.org/tx/CANDY_PROD/domain/1104 |
 
 ## Authorization
 

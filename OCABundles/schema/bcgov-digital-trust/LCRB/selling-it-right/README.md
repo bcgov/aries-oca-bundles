@@ -9,7 +9,7 @@ A schema for the "Selling It Right" credential issued by LCRB.
 
 | Identifier                                      | Location   | Watermark | RL                                                |
 | ----------------------------------------------- | ---------- | --------- | ------------------------------------------------- |
-| 4WW6792ksq62UroZyfd6nQ:3:CL:1098:SellingItRight | candy:prod |           | https://candyscan.idlab.org/tx/CANDY_PROD/domain/ |
+| 4WW6792ksq62UroZyfd6nQ:3:CL:1098:SellingItRight | candy:prod |           | https://candyscan.idlab.org/tx/CANDY_PROD/domain/1099 |
 
 ## Authorization
 
