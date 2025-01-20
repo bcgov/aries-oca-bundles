@@ -7,9 +7,9 @@ A schema for a "person" credential used in a demo that is part of the [BC Gov Di
 
 ## Identifiers
 
-| Identifier                          | Location  | URL                                                   |
-| ----------------------------------- | --------- | ----------------------------------------------------- |
-| RGjWbW1eycP7FrMf4QJvX8:3:CL:13:Person | candy:prod | https://candyscan.idlab.org/tx/CANDY_PROD/domain/14 |
+| Identifier                            | Location   | Watermark | URL                                                 |
+| ------------------------------------- | ---------- | --------- | --------------------------------------------------- |
+| RGjWbW1eycP7FrMf4QJvX8:3:CL:13:Person | candy:prod |           | https://candyscan.idlab.org/tx/CANDY_PROD/domain/14 |
 
 ## Authorization
 

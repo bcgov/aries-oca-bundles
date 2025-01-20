@@ -7,9 +7,9 @@ A verifiable credential schema for issuance of a Mines Act Permit within the pro
 
 ## Identifiers
 
-| Identifier                                           | Location     | URL         |
-| ---------------------------------------------------- | ------------ | ----------- |
-| S7S2wzcF2giKuwxdeLBk69:2:mines-act-permit:0.3 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=mines&txn_type=101 |
+| Identifier                                    | Location     | Watermark | URL                                                           |
+| --------------------------------------------- | ------------ | --------- | ------------------------------------------------------------- |
+| S7S2wzcF2giKuwxdeLBk69:2:mines-act-permit:0.3 | bcovrin:test |           | http://test.bcovrin.vonx.io:3707/tx/BCOVRIN_TEST/domain/80097 |
 
 ## Authorization
 
