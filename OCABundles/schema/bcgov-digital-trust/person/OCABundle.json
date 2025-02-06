@@ -1,0 +1,176 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "birthdate_dateint": "DateTime",
+        "country": "Text",
+        "expiry_date_dateint": "DateTime",
+        "family_name": "Text",
+        "given_names": "Text",
+        "locality": "Text",
+        "picture": "Binary",
+        "postal_code": "Text",
+        "region": "Text",
+        "street_address": "Text"
+      },
+      "classification": "",
+      "digest": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+      "flagged_attributes": [
+        "birthdate_dateint",
+        "picture"
+      ],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "birthdate_dateint": "utf-8",
+          "country": "utf-8",
+          "expiry_date_dateint": "utf-8",
+          "family_name": "utf-8",
+          "given_names": "utf-8",
+          "locality": "utf-8",
+          "picture": "base64",
+          "postal_code": "utf-8",
+          "region": "utf-8",
+          "street_address": "utf-8"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "default_character_encoding": "utf-8",
+        "digest": "EkE2ookx6eyWTegnbGinrGpP34Pd9cuV_LCXWdReeapQ",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "birthdate_dateint": "Date de naissance",
+          "country": "Pays",
+          "expiry_date_dateint": "Date d'expiration",
+          "family_name": "Nom de famille",
+          "given_names": "Prénoms",
+          "locality": "Ville",
+          "picture": "Photo",
+          "postal_code": "Code postal",
+          "region": "Province",
+          "street_address": "Adresse"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "category_labels": {},
+        "digest": "EIDYr61K8MmV5BHCTt4r__ph6llfTIxxKMEjQi_UoddY",
+        "language": "fr",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "birthdate_dateint": "Date de naissance de la personne",
+          "country": "Code à deux lettres du pays",
+          "expiry_date_dateint": "Date d'expiration",
+          "family_name": "Nom de famille légal ou mononyme(s)",
+          "given_names": "Prénom(s) et nom(s) secondaire(s) légal(aux)",
+          "locality": "Ville, municipalité ou localité",
+          "picture": "Photo sur la BC Services Card",
+          "postal_code": "Code postal",
+          "region": "Code à deux lettres de la province",
+          "street_address": "Numéro de bâtiment et nom de la rue"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "digest": "EcoYkcFjaWQvC3XzzCw7h-_0_VTigQjiTtzY1ttV1sSk",
+        "language": "fr",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "birthdate_dateint": "Date of birth",
+          "country": "Country",
+          "expiry_date_dateint": "Expiry date",
+          "family_name": "Surname",
+          "given_names": "Given names",
+          "locality": "City",
+          "picture": "Photo",
+          "postal_code": "Postal code",
+          "region": "Province",
+          "street_address": "Street address"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "category_labels": {},
+        "digest": "ExUq-TDb2JY0HoudVDMLn2W_dbWmZlt-pbT269FrG6f4",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "birthdate_dateint": "Date the person was born",
+          "country": "Two letter country code",
+          "expiry_date_dateint": "Expiry date",
+          "family_name": "Legal family name or mononym(s)",
+          "given_names": "Legal first and middle name(s)",
+          "locality": "City, town, municipality, or locality",
+          "picture": "Photo on BC Services Card",
+          "postal_code": "Postal code",
+          "region": "Two letter province code",
+          "street_address": "Building number and street name"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "digest": "EDQ4N0K0gqHu2ECv46aj4Wqrv-1cxseKVAibtd6qTUTk",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_formats": {
+          "birthdate_dateint": "YYYYMMDD",
+          "expiry_date_dateint": "YYYYMMDD",
+          "picture": "image/jpeg"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "digest": "EFiUTQXYCxg1fGGtUl5UkJOeEDwIlrfaUu7WgfUR_bPc",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "attribute_standards": {
+          "birthdate_dateint": "urn:iso:std:iso:1989",
+          "expiry_date_dateint": "urn:iso:std:iso:1989"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "digest": "E6Ycnt14vl6Fq6T-CxT-VZEyk_3mcmqcsneoUjH9cgGY",
+        "type": "spec/overlays/standard/1.0"
+      },
+      {
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
+        "description": "Une pièce d'identité créée à partir de votre BC Services Card",
+        "digest": "EJK6juClpY-WAW3fEYea5OOVKxbPbpnIXDuBeULspils",
+        "issuer": "Gouvernement de la Colombie-Britannique",
+        "issuer_description": "Service BC",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
+        "language": "fr",
+        "name": "Personne",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "credential_help_text": "Learn more",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/governments/government-id/person-credential",
+        "description": "A credential created from your BC Services Card",
+        "digest": "Eoii14gs4FozzniHgNbY8eFOy1X8gaL8Q-E2bZ7LxrZs",
+        "issuer": "Government of British Columbia",
+        "language": "en",
+        "name": "Person",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/bc-logo.jpg",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/person-background-image.png",
+        "primary_background_color": "#003366",
+        "secondary_background_color": "",
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
+        "expiry_date_attribute": "expiry_date_dateint",
+        "primary_attribute": "given_names",
+        "secondary_attribute": "family_name",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]
