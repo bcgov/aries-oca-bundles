@@ -6,8 +6,8 @@ This document explains how to turn your completed Overlays Capture Architecture 
 
 ### Who Should Use This Guide?
 
-- Non-Developers: You only need to gather the required files (Excel, branding, images, etc.) and create a GitHub Issue requesting an OCA Bundle be created. The repository maintainers will handle the technical steps.
-- The maintainers of the [Aries OCA Bundles] repository, and other developers comfortable with Git, Rust, jq, and bash can follow the instructions below to create their own PR.
+- Non-Developers: Should **NOT** use this guide. Rather, such users should use the document [here](./OCABundleCreation.md) to gather the required files (Excel, branding, images, etc.) and create a GitHub Issue requesting an OCA Bundle be created.
+- The maintainers of the [Aries OCA Bundles] repository, and other developers comfortable with Git, Rust, `jq`, and `bash` can follow the instructions below to create an OCA Bundle PR.
 
 Given that intended audience, the instructions in this document are relatively terse, assuming readers won't need each step detailed.
 
@@ -45,7 +45,7 @@ To start the process, we'll assume you have all the data collected using the [OC
 - A list of people (names, emails) that are authorized to update the OCA Bundle.
 - A list of the identifiers (usually `credDefId`s, but possibly `schemaId`s), their location (e.g. `CANdy Dev`, etc.).
 - As needed for each identifier, the watermark text (ideally, in the multiple languages defined in the Excel file) to display when viewing credentials associated with those identifiers.
-- The location (path to folder) of the OCA Bundle.
+- The desired location (path to folder) of the OCA Bundle.
 
 If you want, you **MAY** include a file `testdata.csv` that is a comma separated values file containing credential test data that may be used by tools like OCA Explorer. It's a big help to have such a file. The file:
 
