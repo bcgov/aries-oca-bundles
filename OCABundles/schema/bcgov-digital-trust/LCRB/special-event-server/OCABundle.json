@@ -1,0 +1,161 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "certification_number": "Text",
+        "date_completed_dateint": "DateTime",
+        "date_created_dateint": "DateTime",
+        "email": "Text",
+        "expires_dateint": "DateTime",
+        "family_name": "Text",
+        "given_names": "Text"
+      },
+      "classification": "",
+      "digest": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+      "flagged_attributes": [
+        "given_names",
+        "family_name",
+        "email"
+      ],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "certification_number": "utf-8",
+          "date_completed_dateint": "utf-8",
+          "date_created_dateint": "utf-8",
+          "email": "utf-8",
+          "expires_dateint": "utf-8",
+          "family_name": "utf-8",
+          "given_names": "utf-8"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "default_character_encoding": "utf-8",
+        "digest": "EosHJSf6-qm7oUxgFYZ97-YMf_Lx5_bzyTOpOda_McH8",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "certification_number": "ID de Certification",
+          "date_completed_dateint": "Date de completion",
+          "date_created_dateint": "Date Crée",
+          "email": "Courriel",
+          "expires_dateint": "Expire",
+          "family_name": "Nom de famille",
+          "given_names": "Prénoms"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "category_labels": {},
+        "digest": "E6tvRbbakID-19ho6XpI2Yu2gxt6KpSt2U9NAtwzSE-s",
+        "language": "fr",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "certification_number": "L'identifiant de certification du titre de compétence",
+          "date_completed_dateint": "Date de completion du titre de compétence",
+          "date_created_dateint": "Date de création du titre de compétence",
+          "email": "Address de courriel",
+          "expires_dateint": "Date d'expiration du titre de compétence",
+          "family_name": "Le nom de famille du titulaire",
+          "given_names": "Le ou les prénoms du titulaire"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "digest": "EQreqvHPiA4jO_u2sqdd01rWgwZgUXRRlthi8hHrcnMU",
+        "language": "fr",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "certification_number": "Certification ID",
+          "date_completed_dateint": "Date Completed",
+          "date_created_dateint": "Date Created",
+          "email": "Email",
+          "expires_dateint": "Expires",
+          "family_name": "Family Name",
+          "given_names": "Given Names"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "category_labels": {},
+        "digest": "Er7haimo9rkI2fUhQ3h9bJegFxvm2miE7kMjD815oNHg",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "certification_number": "The certification ID of the credential",
+          "date_completed_dateint": "Date the credential was completed",
+          "date_created_dateint": "Date the credential was created",
+          "email": "Email address",
+          "expires_dateint": "Date the credential expires",
+          "family_name": "The family name of the holder",
+          "given_names": "The first name(s) of the holder"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "digest": "Er02BFNdoQweQdc6n_MnIDSccLfjB6i9cyn6aYVO_4SQ",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_formats": {
+          "date_completed_dateint": "YYYYMMDD",
+          "date_created_dateint": "YYYYMMDD",
+          "expires_dateint": "YYYYMMDD"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "digest": "EiDWZr6M7_5T6rzMTB9attnFiEqbzvkvi68lDo7oktpk",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "attribute_standards": {
+          "date_completed_dateint": "urn:iso:std:iso:1989",
+          "date_created_dateint": "urn:iso:std:iso:1989",
+          "expires_dateint": "urn:iso:std:iso:1989"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "digest": "EB4EDRgBMqmpeglye1asVBEWIjLf6KXisVR-gpfuCKBo",
+        "type": "spec/overlays/standard/1.0"
+      },
+      {
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/liquor-licence-permits/liquor-resources-information/special-event-serve",
+        "description": "A Special Event Server Certification is mandatory for anyone serving alcohol at special events in British Columbia.",
+        "digest": "EikeniIRliYDGmQA2P5DJ9RfQLxX93Eif5fuAXKVlfvc",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
+        "language": "en",
+        "name": "Special Event Server",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/liquor-licence-permits/liquor-resources-information/special-event-serve",
+        "description": "Une certification de Serveur d'Évenements Spéciaux est obligatoire pour toute personne servant de l'alcool lors d'événements spéciaux en Colombie-Britannique.",
+        "digest": "Eq3laAWbFYDDi6pDD195AV8SHo_A3KslVhJrqJSrqkpQ",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
+        "language": "fr",
+        "name": "Serveur d'Évenements Spéciaux",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server/bc-logo.jpg",
+        "background_image_slice": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_image_slice_special_event.jpg",
+        "background_image": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_background_image_special_event.jpg",
+        "primary_background_color": "#003366",
+        "secondary_background_color": "#fcbc1e",
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
+        "expiry_date_attribute": "expires_dateint",
+        "primary_attribute": "given_names",
+        "secondary_attribute": "family_name",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]
