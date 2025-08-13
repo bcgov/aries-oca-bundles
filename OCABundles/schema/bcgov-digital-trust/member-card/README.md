@@ -7,9 +7,9 @@ A verifiable credential schema for a lawyer's membership card that used in a dem
 
 ## Identifiers
 
-| Identifier                                 | Location  | URL                                                   |
-| ------------------------------------------ | --------- | ----------------------------------------------------- |
-| 4xE68b6S5VRFrKMMG1U95M:3:CL:59232:default | sovrn:mainnet | https://indyscan.io/tx/SOVRIN_MAINNET/domain/59233 |
+| Identifier                                | Location      | Watermark | URL                                                |
+| ----------------------------------------- | ------------- | --------- | -------------------------------------------------- |
+| 4xE68b6S5VRFrKMMG1U95M:3:CL:59232:default | sovrn:mainnet |           | https://indyscan.io/tx/SOVRIN_MAINNET/domain/59233 |
 
 ## Authorization
 

@@ -7,9 +7,9 @@ A verifiable credential schema used for demonstration and internal use purposes 
 
 ## Identifiers
 
-| Identifier                                                                         | Location  | URL                                                   |
-| ---------------------------------------------------------------------------------- | --------- | ----------------------------------------------------- |
-| Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0 | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/25954 |
+| Identifier                                                                         | Location  | Watermark | URL                                                   |
+| ---------------------------------------------------------------------------------- | --------- | --------- | ----------------------------------------------------- |
+| Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0 | candy:dev |           | https://candyscan.idlab.org/tx/CANDY_DEV/domain/25954 |
 
 ## Authorization
 
