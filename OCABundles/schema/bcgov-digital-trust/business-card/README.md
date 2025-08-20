@@ -7,9 +7,9 @@ A verifiable credential schema for a business registered within the province of 
 
 ## Identifiers
 
-| Identifier                                           | Location     | URL                                                  |
-| ---------------------------------------------------- | ------------ | ---------------------------------------------------- |
-| AcZpBDz3oxmKrpcuPcdKai:2:Digital Business Card:1.0.0 | candy:prod   | https://candyscan.idlab.org/tx/CANDY_PROD/domain/350 |
+| Identifier                                           | Location   | Watermark | URL                                                  |
+| ---------------------------------------------------- | ---------- | --------- | ---------------------------------------------------- |
+| AcZpBDz3oxmKrpcuPcdKai:2:Digital Business Card:1.0.0 | candy:prod |           | https://candyscan.idlab.org/tx/CANDY_PROD/domain/350 |
 
 ## Authorization
 

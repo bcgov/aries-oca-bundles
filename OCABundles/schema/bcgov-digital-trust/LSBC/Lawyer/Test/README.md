@@ -7,10 +7,10 @@ A verifiable credential schema for a lawyer's membership credential (https://www
 
 ## Identifiers
 
-| Identifier                                          | Location   | URL                                                   |
-| --------------------------------------------------- | ---------- | ----------------------------------------------------- |
-| RCnz8GcyZ2iH7VFr5zGb9N:3:CL:35170:Lawyer Credential | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/35171 |
-| MLvtJW6pFuYu4NnMB14d29:3:CL:248:lawyer              | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/249  |
+| Identifier                                          | Location   | Watermark                     | URL                                                   |
+| --------------------------------------------------- | ---------- | ----------------------------- | ----------------------------------------------------- |
+| RCnz8GcyZ2iH7VFr5zGb9N:3:CL:35170:Lawyer Credential | candy:dev  | { "en": "TEST", "fr": "TEST"} | https://candyscan.idlab.org/tx/CANDY_DEV/domain/35171 |
+| MLvtJW6pFuYu4NnMB14d29:3:CL:248:lawyer              | candy:test | { "en": "TEST", "fr": "TEST"} | https://candyscan.idlab.org/tx/CANDY_TEST/domain/249  |
 
 ## Authorization
 

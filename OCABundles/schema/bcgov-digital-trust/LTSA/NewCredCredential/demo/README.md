@@ -7,9 +7,9 @@ A verifiable credential schema used for demonstration and internal use purposes 
 
 ## Identifiers  
 
-| Identifier                                                                         | Location  | URL                                                   |
-| ---------------------------------------------------------------------------------- | --------- | ----------------------------------------------------- |
-| 9uCfLbHYLHTZt9HiGL1oD9:3:CL:35147:Newcred_Credential | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/35671 |
+| Identifier                                           | Location  | Watermark                                       | URL                                                   |
+| ---------------------------------------------------- | --------- | ----------------------------------------------- | ----------------------------------------------------- |
+| 9uCfLbHYLHTZt9HiGL1oD9:3:CL:35147:Newcred_Credential | candy:dev | { "en": "DEMONSTRATION", "fr": "DEMONSTRATION"} | https://candyscan.idlab.org/tx/CANDY_DEV/domain/35671 |     
 
 ## Authorization
 

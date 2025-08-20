@@ -7,9 +7,9 @@ A verifiable credential schema for an "unverified" person, used in various BC Wa
 
 ## Identifiers
 
-| Identifier                                       | Location          | URL                                                    |
-| ------------------------------------------------ | ----------------- | ------------------------------------------------------ |
-| YXCtXE4YhVjULgj5hrk4ML:2:unverified_person:0.1.0 | sovrin:stagingnet | https://indyscan.io/tx/SOVRIN_STAGINGNET/domain/111555 |
+| Identifier                                       | Location          | Watermark | URL                                                    |
+| ------------------------------------------------ | ----------------- | --------- | ------------------------------------------------------ |
+| YXCtXE4YhVjULgj5hrk4ML:2:unverified_person:0.1.0 | sovrin:stagingnet |           | https://indyscan.io/tx/SOVRIN_STAGINGNET/domain/111555 |
 
 ## Authorization
 

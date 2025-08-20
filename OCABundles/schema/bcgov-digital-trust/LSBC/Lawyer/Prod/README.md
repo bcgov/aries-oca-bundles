@@ -7,9 +7,9 @@ A verifiable credential schema for a lawyer's membership credential (https://www
 
 ## Identifiers
 
-| Identifier                                          | Location   | URL                                                   |
-| --------------------------------------------------- | ---------- | ----------------------------------------------------- |
-| QzLYGuAebsy3MXQ6b1sFiT:3:CL:2351:lawyer             | candy:prod | https://candyscan.idlab.org/tx/CANDY_PROD/domain/2352 |
+| Identifier                              | Location   | Watermark | URL                                                   |
+| --------------------------------------- | ---------- | --------- | ----------------------------------------------------- |
+| QzLYGuAebsy3MXQ6b1sFiT:3:CL:2351:lawyer | candy:prod |           | https://candyscan.idlab.org/tx/CANDY_PROD/domain/2352 |
 
 ## Authorization
 
