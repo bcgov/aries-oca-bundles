@@ -1,328 +1,139 @@
 # OCA Bundle Creation
 
-Creating an OCA Bundle consists of multiple steps.
+An OCA (Overlays Capture Architecture) Bundle allows verifiable credential issuers to customize the display of their credential, managing translations, branding, attribute rendering, etc. The image belows shows an example of a verifiable credential displayed without an OCA Bundle, and the same credential with an OCA Bundle, first in English and then in French. OCA Bundles are used by mobile wallets, such as those built on the [OpenWallet Foundation]'s [Bifold Wallet].
 
-- Creating a folder in the [Aries OCA Bundles] repository (via a pull request).
-- Creating the `README.md` file for the OCA Bundle.
-- Creating the OCA Source data, usually in Excel and JSON.
-- Generating an OCA Bundle from the OCA Source Data using a script in this repository.
-  - The prerequisites for the script are a tad painful. We're hoping to reduce
-      the complexity of the script.
+![Bifold Wallet Credentials](../assets/bifold-oca-example.jpg)
+[OpenWallet Foundation]: https://openwallet.foundation/
+[Bifold Wallet]: https://github.com/openwallet-foundation/bifold-wallet
+
+Creating an OCA Bundle from scratch consists of a two parts.
+
+- Creating the information needed to create the OCA Bundle for submitting a GitHub Issue in the [Aries OCA Bundles] repository to have the OCA Bundle created. This is usually handled by an Issuer team member, often a designer, collaborating with translation experts. This part is covered in this document.
+- The (quite technical) process of submitting a GitHub Pull Request (PR) to publish the OCA Bundle and make it available to Wallets. Since the process is quite technical, feel free to stop at the "Create Issue" part, and we (the maintainers of the [Aries OCA Bundles] repo) will take it from there -- getting an approval from the Issuer team along the way. The instructions for the second part are in the [Create the OCA Bundle PR] document.
+
+[Create the OCA Bundle PR]: ./OCABundleCreatePR.md
+
+So, to get as far as creating a GitHub Issue, here's a summary of what you are going to do:
+
+- Create the OCA Bundle source data using Excel, the OCA Explorer site and a text editor, including identifying the logo, images and other branding data.
+- Gather the identifiers (schemaId or credDefId) for the credential to which the bundle applies.
+- Define where in the [Aries OCA Bundles] repository the OCA Bundle should be placed.
+- Create a GitHub Issue in the [Aries OCA Bundles] repository, attaching the files and information about the new OCA Bundle.
 
 [Aries OCA Bundles]: https://github.com/bcgov/aries-oca-bundles
 
-We'll cover the steps in the following sections.
+We'll cover each steps in the following sections.
 
-## Creating a Folder For Your OCA Bundle
+## Collect the OCA Bundle Source Data
 
-Once you have forked the [Aries OCA Bundles] repository, create
-the folder for your new OCA Bundle within the `OCABundles` folder. Your
-folder can be placed arbitrarily deep, with some rules for the first
-few levels.
+To get started, you (the Issuer) will need to collect some basic information about the credential for which you are building an OCA Bundle. If you are not familiar with how you can control the display of a credential using an OCA Bundle, please take a look at the result of applying OCA Bundles to existing credentials, by going to the [OCA Explorer] tab of this website. There, you can select and review the existing credentials, and see how others have used OCA for their credentials. You should also review the [OCA for Aries Style Guide]. It has the details about what you can control in displaying your credential, and Do's and Don'ts as you create your bundle.
 
-`schema` is the (current) name for where credential OCA Bundles are to be
-placed. That name may soon change (`credential` is a better name...), and in the
-future, a parallel folder might be added for presentation request OCA Bundles.
+[OCA Explorer]: https://bcgov.github.io/aries-oca-explorer/
 
-Below `schema` is a list of top level credential issuers (e.g., BC Gov), and
-within each, the sub-issuers (to any depth). As you add your OCA Bundle, feel
-free to add as many layers of (sub-)issuers as appropriate. For example, you might include:
+Once you have an idea of what you are going to be doing, you need to gather some data:
 
-- the issuing sub-organization
-- the type of credential
-- different versions (e.g., 1.0, 1.1, 2.0, etc.) of the type of credential
-- development, staging, and production versions of the credential
+- The list of attributes and their data types in the credential. That will usually come from the technical team creating the credential issuer software. The attribute names must match exactly what is in the schema for the credential type.
+- The images that you want to use in displaying your credential -- a logo, background image and a background image slice. Guidelines for, and how the images will be used, are below.
+- The colours (or colors) you want to use for the credential -- a primary and secondary, in RGB hex format.
 
-For each layer, you **MUST** add a `README.md` file in which the top level
-markdown header **MUST** be the name of the (sub-)issuer. The `README.md` file
-may optionally contain additional information about the (sub-)issuer. The
-requirement for the `README.md` and the markdown header is that when generating
-the GitHub Pages registry site, the required markdown header is extracted used
-for the site navigation.
+You will (later) use the [OCA Explorer] to experiment with your images and colours as you adjust them to be just right.
 
-This hierarchy can be seen in the [OCA Bundles] tab of this registry.
+!!! note
+    In most cases, you only create one OCA Bundle for a credential that your organization Issues, and use it for the Dev, Test and Production sites. Often, a watermark is added to differentiate a "Test" credential from a production one -- the addition of the watermark is covered in the later creating the PR part of the process. However, you want to have different OCA Bundles for Dev/Test and Production beyond the just the watermark difference. If you do, please create multiple OCA Bundles, identifying the target environment for each. It adds management overhead, but that's all. It's up to you.
 
-Finally, there are the various files needed within the folder holding the OCA
-Bundle. At minimum, those folders **MUST** have a `README.md` file populated in
-a required format, and an `OCABundle.json` file that is the OCA Bundle itself.
-There will usually be other files in the folder as well, including the Excel
-source content for the OCA Bundle, and the `branding.json` overlay that defines
-the colours, images, and other metadata that contributes to the branding of the
-credential when displayed by an Aries agent. The creation of those files is
-described in the subsequent sections.
+[OCA for Aries Style Guide]: https://hyperledger.github.io/aries-rfcs/latest/features/0756-oca-for-aries-style-guide/
 
-## Creating the OCA Bundle README.md File
+## Create the OCA Excel File
 
-* **README.md**: **MUST** be present and **MUST** contain the information outlined
-  below in the [README File Content](#readme-file-content) section of this document.
-* **OCABundle.json**: **MUST** be present and **MUST** contain the OCA Bundle
-  for the schema or credential definition.
-* **<OCASourceExcel\>.xlsx**: (optional) An Excel OCA Source file for the OCA Bundle.
-* **branding.json**: (optional) A JSON file containing the source content for
-  the OCA for Aries Branding overlay.
-* **testdata.csv**: (optional) A CSV file containing one or more sample data
-  records.
-* **Other files**: (optional) Other files related to the OCA Bundle, such as the
-images used in the branding.json file.
+Next up is to populate an Excel spreadsheet with the core and language-specific information about your credential type. Start by downloading [this OCA Excel File] that you will save locally and then populate with details about your credential. You can name the local file whatever you want. Open up the file in Excel and use the instructions in the file to populate the document for your credential. Here is a quick summary of the process, thoroughly documented in the Excel file (`Documentation` tab):
 
-The pull request will be reviewed according to the lightweight [governance]
-process and merged (or not) into the repository.
+[this OCA Excel File]: https://github.com/bcgov/aries-oca-bundles/raw/refs/heads/main/docs/OCA.xlsx
 
-[governance]: ../governance/GOVERNANCE.md
+- On the "Main" tab, enter a list of the attributes, their data types, and a flag indicating if an attribute is Personally Identifiable Information (PII).
+- On the language tabs ("en" and "fr"), add in language-specific data about the Credential (name, description, Issuer, etc.), and a label and description about each pre-populated credential attribute. Other languages can be added/removed.
 
-### README File Content
+That's it. Save the Excel file and you are good to go. Right now, we don't have a good way to test the Excel file before it goes into the [Aries OCA Bundles] repository.  We hope to add that soon.
 
-The README.md file for the OCA Bundle **MUST** be present and **MUST** include
-the information shown and described below. The hard and fast formatting requirements
-are in place because the file is processed by a script that generates two lists
-of all of the identifiers (`schemaId`s and `credDefId`s) and the OCA Bundles
-to which they are associated with. The lists are in the files [ocbundles.json]
-and [ocabundleslist.json] in the root of the (GitHub Pages) registry website and
-(for now) the root folder of the [Aries OCA Bundles] GitHub repository. If you are
-referencing the registry in your code (such as in an Aries wallet or verifier agent),
-use the registry versions of the files, as the repository ones are deprecated.
+If you want to update the Excel file after it has been put (merged) into the [Aries OCA Bundles] repository, make sure you download the latest version of the file from the repository before editing, so you don't lose any edits others may have made. Your local copy may not be the latest!
 
-[ocbundles.json]: ../ocabundles.json
-[ocabundleslist.json]: ../ocabundleslist.json
+## Generate The Branding JSON File
 
-```text
-# <TITLE>
+The second file you need to create is the `branding.json` file. The easiest way to create the file is to use the [OCA Explorer]. Unfortunately, doing that is a bit of a hack, but bear with us. We hope to have a smoother process soon.
 
-<DESCRIPTION>
+The first step is to get the colors, logo, and images right. To do that, we'll use another credential's OCA Bundle, ignoring the attribute names and focusing on the appearance.
 
-- Publishing Organization: <ORGANIZATION>
-- Primary Contact Email Address: <CONTACT EMAIL ADDRESS>
+To do that:
 
-## Identifiers
+- Loop:
+    - Create/retrieve/update the logo and other images to be used in the OCA Bundle.
+        - Make sure in creating/adjusting the images that you use the size guidelines in the [OCA for Aries Style Guide RFC](https://hyperledger.github.io/aries-rfcs/latest/features/0756-oca-for-aries-style-guide/#logo-image-specifications). We don't want massive image files -- they need to be as small (in bytes) as possible. In summary:
+            - Logo: 1:1 aspect ratio, 240x240px
+            - Background Image Slice: 1:10 aspect ratio, 120x1200px
+            - Background Image: 3:1 aspect ratio, 360x1080px
+    - Go to the [OCA Explorer] Tab, and load any existing OCA Bundle.
+        - Ignore the attribute names (since they don't match your credential...) -- focus on the colors and images.
+    - Use the form at the bottom of the page (image below) and:
+        - Load the your images.
+            - You can either use URLs for the images or upload them into the form.
+            - You might upload them while you are iterating, and then use URLs when you are finished.
+        - Use the color picker to select the primary/secondary background colors appropriate for your Issuer.
+        - Ignore (for now) the primary/secondary attributes.
+- Repeat until you have the logo, images and colors *Just Right*.
+- Download the Branding JSON file (`branding.json`) using the button at the bottom of the screen.
 
-| Identifier                                 | Location  | URL         |
-| ------------------------------------------ | --------- | ----------- |
-| <SCHEMA ID or CRED DEF ID>                 | <LEDGER>  | <URL>       |
+The OCA Explorer Branding form:
 
-## Authorization
+![OCA Explorer Branding Form](../assets/OCAExplorerBrandingForm.jpg)
 
-The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
+Here's what the file will look like. Two things to note:
 
-| OCA Bundle Contributors | GitHub ID   | Email Address            |
-| ----------------------- | ----------- | ------------------------ |
-| <NAME>                  | <GITHUB ID> | <EMAIL ADDRESS>          |
-
-```
-
-Everything not in `<>`s must be exactly as specified above (with one
-exception--see below). Everything in `<>`s **MUST** be populated as described
-below.
-
-The two markdown tables **MAY** have multiple lines. Multiple lines in the
-`Identifiers` table indicates that the same OCA Bundle is used for each of the
-objects identified in the first column. Multiple lines in the `Authorization`
-table is recommended so that multiple members of the submitters team may update
-the OCA Bundle.
-
-- `<TITLE>` **MUST** be the name of the credential type. No other line in the
-  file can have a single `#` prefix.
-- `<DESCRIPTION>` is extracted for display by tools for processing this
-repository (such as the [OCA Explorer]) and should describe the type of
-credential to which the OCA Bundle applies.
-- `<ORGANIZATION>` is extracted for display by tools for processing this
-repository (such as the [OCA Explorer]) and is the name of the organization
-that submitted the OCA Bundle.
-- `<CONTACT EMAIL ADDRESS>` is an email address for the primary contact
-for the OCA Bundle. The address may for a person, or better, a group
-contact withing the `<ORGANIZATION>`.
-- `<SCHEMA ID or CRED DEF ID>` are identifiers for objects to which the
-OCA Bundles applies. There can be multiple lines in the table, each with
-a different identifier.
-- `<LEDGER>` is optional. It identifies the ledger on which the object
-identified by the object resides. It should be in the form
-<network>[:<instance>] as defined in the [did-indy specification for
-`namespace`](https://hyperledger.github.io/indy-did-method/#indy-did-method-identifiers)
--- e.g., `candy:dev` or `sovrin`. The value is useful when the `<SCHEMA ID or
-CRED DEF ID>` is unqualified (such as with legacy Indy identifiers) such that
-the precise location of the object is not known.
-- `<URL>` is optional and is a plain (non-Markdown) link to a ledger browser
-  instance of the object, such as to a transaction on
-  [https://indyscan.io](https://indyscan.io),
-  [http://test.bcovrin.vonx.io:3707](http://test.bcovrin.vonx.io:3707) or
-  [https://candyscan.idlab.org/](https://candyscan.idlab.org/)
-- `<NAME>` is the name of a person authorized to update the OCA Bundle and
-related data. There may be multiple rows in the markdown table to name multiple
-people.
-- `<GITHUB ID>` is the GitHub ID of the named person.
-- `<EMAIL ADDRESS>` is the email address of the named person
-
-The `<CONTACT EMAIL ADDRESS>` and the Authorization table are to ensure that
-once the OCA Bundle is submitted, there are contacts available to answer
-questions about, and to submit updates to, the OCA Bundle.
-
-The contents of the `Authorization` section (following the `## Authorization` line) may be replaced
-with the following to avoid repeating the same contents in every OCA Bundle `README.md` file:
-
-`The Authorization table for this OCA Bundle is in [this file](<path-to-another-OCABundle-folder/README.md).`
-
-## Creating the OCA Source Data
-
-Now that you have a folder and a README.md, it's time to create the OCA
-Bundle Excel source file, and from that, generating the OCA Bundle itself. This
-section assumes you are somewhat familiar with the [OCA Specification] including
-the format of JSON OCA Bundles, and the various overlay types that have been
-defined. As well, we assume you are familiar with [Aries for OCA RFC 0755], and
-what OCA overlays are used for providing semantic, multi-language and branding
-information about [Hyperledger AnonCreds] credential types. If you haven't gone
-through that information, please start there.
-
-[OCA Specification]: https://oca.colossi.network/specification/
-[Hyperledger AnonCreds]: https://www.hyperledger.org/projects/anoncreds
-
-In the [OCA for Aries RFC] are the instructions for creating the OCA Source
-data. The following summarizes the steps of creating an OCA Source Excel file,
-and a `branding.json` file for the Aries-specific "Branding" Overlay.
-
-[OCA for Aries RFC]: https://github.com/hyperledger/aries-rfcs/blob/main/features/0755-oca-for-aries/README.md
-[OCA for Aries Style Guide RFC]: https://github.com/hyperledger/aries-rfcs/blob/main/features/0756-oca-for-aries-style-guide/README.md
-
-### OCA Excel File
-
-An Aries OCA Bundle can be managed as pure JSON as found in this [sample OCA for
-Aries OCA Bundle]. However, managing such content in JSON is not easy,
-particularly if the multi-language translations come from team members not
-comfortable with working in JSON. An easier way to manage the data is to use an
-OCA source Excel spreadsheet for most of the data, add some in a simple source
-`branding.json` file, and to use a generator (included in the [Aries OCA Bundles] GitHub
-repository) to create the OCA Bundle file from the two sources.
-
-[sample OCA for Aries OCA Bundle]: https://github.com/hyperledger/aries-rfcs/tree/main/features/0755-oca-for-aries/OCA4AriesBundle.json
-[example here]: https://github.com/hyperledger/aries-rfcs/blob/main/features/0755-oca-for-aries/OCA4Aries.xlsx
-[OCA Template]: https://github.com/THCLab/oca-parser-xls/blob//templates/template.xlsx
-[Human Colossus Foundation]: https://humancolossus.foundation/
-[Aries Specific Dates in the OCA Formats Overlay]: https://github.com/hyperledger/aries-rfcs/tree/main/features/0755-oca-for-aries#aries-specific-dates-in-the-oca-format-overlay
-
-The OCA Source Spreadsheet ([example here]), contains the following:
-
-- An introductory tab about the OCA content in the spreadsheet.
-- A tab with instructions on using the spreadsheet.
-- A "Main" tab with the "Capture Base" data, along with data for other, non-multilingual overlays.
-- A language or country-language code tab per country-language to be supported by the issuer
-  containing the source data for all multilingual overlays.
-
-The following is how to create an OCA Source spreadsheet.
-
-- Make a copy of the latest [OCA Template] from the [Human Colossus Foundation].
-- Fill in the "Main" tab with the attributes from the schema, completing the
-relevant columns for each attribute. Current columns to complete:
-- CB-CL: Classification
-- CB-AN: Attribute Name
-- CB-AT: Attribute Type
-- CB-FA: Flagged Attribute
-- OL-CH: Character Encoding
-- OL-FT: Format
-- OL-ST: Standard
-- OL-EC: Entry Codes
-- OL-UT: Unit
-- As needed, populate the columns for "dateint" and "Unix Time" attributes as indicated in the [Aries Specific Dates in the OCA Formats Overlay] section of RFC 0755.
-- Rename the sample language tab (`en`) to one of the language or language-country that as an issuer, you want to support.
-- Fill in the data in columns after C (which is automatically populated from
-the `Main` tab) for the first language as appropriate. In most cases only
-the "Label" and "Information" columns need be populated.
-- Populate column A and B as follows:
-- In column A (`OL-MN: Meta [Attribute Name]`), add the values:
-  - "name"
-  - "description"
-  - "issuer"
-  - "issuer_description"
-  - "issuer_url"
-  - "credential_help"
-  - "credential_support_url"
-- Complete column B (`OL-MV: Meta [Attribute Value]`) as appropriate for each column A name.
-- Duplicate and rename the initial language tab for each language or language-country that as an issuer, you want to support.
-- Update each additional language tab.
-
-Once you have the Excel file, save it to the OCA Bundle folder for your Credential.
-
-### The Branding JSON File
-
-In addition to the OCA Source Excel file, you should create a Branding Overlay
-JSON source file called `branding.json`. The format of the file is the following,
-and it is fully described in the [OCA for Aries Style Guide RFC].
+- If you uploaded the images in the OCA Explorer and left them as is, those fields will be VERY long. That's a valid approach to handling the images, or you can change them as noted below.
+- If you an attribute in the credential that holds the "Issued Date", and/or the "Expiry Date", type in the names of those attributes as value of the respective data elements (`"issued_date_attribute"`, `"expiry_date_attribute"`) below.
 
 ```json
-[
-    {
-        "logo": "",
-        "background_image_slice": "",
-        "background_image": "",
-        "primary_background_color": "#32674e",
-        "secondary_background_color": "#32674e",
-        "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
-        "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
-        "expiry_date_attribute": "",
-        "primary_attribute": "",
-        "secondary_attribute": "",
-        "type": "aries/overlays/branding/1.0"
-    }
-]
+{
+  "capture_base": "",
+  "type": "aries/overlays/branding/1.0",
+  "digest": "",
+  "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/bc-logo.jpg",
+  "background_image_slice": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_image_slice_sell_right.jpg",
+  "background_image": "https://www.responsibleservicebc.gov.bc.ca/files/static/bc_wallet_vc_lcrb_background_image_sell_right.jpg",
+  "primary_background_color": "#003366",
+  "secondary_background_color": "#fcbc1e",
+  "primary_attribute": "given_names",
+  "secondary_attribute": "family_name",
+  "issued_date_attribute": "",
+  "expiry_date_attribute": ""
+}
 ```
 
-To create the file for your OCA Bundle:
+To finalize the `branding.json` file:
 
-- Create a file called `branding.json` in the same folder as your OCA Source Excel file
-- Populate the data values in the overlay as appropriate for your Credential.
-- Do not change the values of the `type`, `capture_base` and `digest` items.
+- Load the downloaded file into a text editor, and:
+    - If needed, update the values for the images:
+        - If you intended to upload the images into the [Aries OCA Bundles] repository, set the image attribute values to just the file name without a path (e.g., "IssuerLogo.png").
+        - If you intend to use a remote URL for the images, enter the URL.
+    - Enter the primary and secondary credential attribute names specific to your credential.
+    - If applicable, enter the "issued_date_attribute" and/or "expiry_date_attribute" names.
+- Save the `branding.json` file.
 
-The image values may be URLs for the images. A common practice (but not
-required) is to put the images in the same folder as the OCA Source Excel and
-branding.json files, and to use the GitHub "raw" URL to reference the data, such
-as:
+## Submit Your OCA Bundle As An Issue
 
-`https://raw.githubusercontent.com/hyperledger/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-logo.png`
+We are now ready to create the first iteration of the OCA Bundle. Please create an Issue in the GitHub [Aries OCA Bundles] repository using the instructions below, and we (the Maintainers of the [Aries OCA Bundles] repo) will take it from there. We're happy to do that, and you will be able to approve the PR before it is merged into the repository. Once the PR is created and merged, we're happy for you to requests tweaks to the OCA Bundle via issues or PRs -- submitting updates to the Excel file, branding file or other information about the OCA Bundle.
 
-If the images are relatively small, you can inline the images using the format `data:image/png;base64,<base64 data>`.
+Here's how to create the Issue.
 
-Once you have the Excel and JSON source files, you are ready to go!
+- Click [here](https://github.com/bcgov/aries-oca-bundles/issues/new/choose) to create a new GitHub Issue in the right repo.
+- Call the issue "New OCA Bundle for Credential `<NAME>` from Issuer `<Issuer>`"
+- In the description, include:
+    - A brief background of the request -- the project, and desired timeline for the OCA Bundle to be available in the Wallet.
+    - Propose where the OCA Bundle should go in the existing data structure. Likely that will be determined by the Issuer organization name, and the credential type. For example, "Within the BC Gov folder, in an LSBC folder and called "Lawyer".
+    - A list of names and email addresses of those that will be authorized to make/approve updates to the Bundle. Include your name and email, please.
+    - Attach at least the OCA Excel file and branding.json files.
+    - Attach the images that you want put into the OCA Bundle folder. If the images are embedded in the `branding.json` file, or are URLs to remote image files, the images need not be attached.
+- If you know the following information, enter it in the description. Alternatively, you might ask a technical resource on your team that has this information to enter it into a comment on the Issue.
+    - The `credDefId`s (and/or `schemaID`s) associated with the OCA Bundle. For each:
+        - Include the location of the ID (e.g. "CANdy Dev", "CANdy Test", etc.).
+        - Include the text of a "watermark", if any, for each Identifier, and in each desired language (e.g., English, French, etc.). For example: "TEST".
 
-## Generating an OCA Bundle from Source
-
-A bash script `genBundle.sh` can be found in the `scripts` folder of the [Aries
-OCA Bundles] GitHub repository. To use it, you will need to install a few
-prerequisites--`jq` and the OCA Excel Parser.
-
-### Prerequisites
-
-Developers will likely have the `jq` (JSON Query) command line utility already installed. If not, follow the
-[JQ installation instructions]. Once installed, make sure `jq` is on your path.
-
-[JQ installation instructions]: https://stedolan.github.io/jq/download/
-[Rust Installation Instructions]: https://www.rust-lang.org/tools/install
-
-Installing the OCA Excel Parser is a little more involved, as you need Rust installed on your machine. Here are the steps:
-
-- Clone a local copy of the OCA Excel Parser repository.
-- If you don't have Rust installed on your machine, following the [Rust Installation Instructions], including installing all necessary dependencies.
-- Follow the instructions in the repository README.md to build the parser. Currently it is just to execute `cargo build`.
-- Copy the resulting executable to a directory on your PATH, e.g., `cp target/debug/parser ~/bin/`
-
-### Running the Generator Script
-
-Assuming you are in an OCABundles folder you can run the script with a relative path, such as:
-
-`../../../scripts/genBundle.sh`
-
-You might want to create a symbolic link to that script in a directory on your PATH to make it easier to use.
-
-> **To Do:** We could really use a Docker container image published that has the
-> generate script and prerequisites so that we can just run a container for
-> generation. Volunteers?
-
-The script checks to see that the pre-requisites (`jq` and `parser`) are
-available and executable, erroring off it not, and, if run without arguments, prints a usage message.
-Currently the `-x <excel file>` is required, and you can supply zero or more
-JSON files to be added to the OCA Bundle produced from processing the Excel
-file.
-
-The OCA source files do not have to be in the current folder and can
-be maintained wherever is best for your use case.
-
-It is **strongly** recommended that you use the Excel file for managing the OCA
-content, and use the generator to produce the actual OCA Bundle. Editing the OCA
-Bundle directly means that the hash values (e.g. `capture_base` and `digest`)
-values are out of sync with the content.
+That's it.  We'll take it from there, using the Issue comments (or, email or, gasp the phone) to get any more details/clarifications we might need. We'll be back to you within a business day of submitting the issue with a progress report and/or questions -- ideally to say "all done". Our team will use your materials to create a PR. We’ll tag you in the PR for review, and once approved, we’ll merge the changes. The OCA Bundle will then become available in your wallet. After that, Issues or PRs (or emails) can be used to adjust the OCA Bundle as necessary based on testing with a Wallet.
