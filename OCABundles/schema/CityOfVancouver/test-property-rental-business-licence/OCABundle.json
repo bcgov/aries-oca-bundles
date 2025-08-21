@@ -31,10 +31,20 @@
         "validity_year": "Text"
       },
       "classification": "",
-      "digest": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
+      "digest": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
       "flagged_attributes": [
         "licence_holder_given_name",
-        "licence_holder_family_name"
+        "licence_holder_family_name",
+        "Unit",
+        "unit_type",
+        "street_number",
+        "street_name",
+        "municipality",
+        "municipality_status",
+        "regional_district",
+        "province_territory",
+        "postal_code",
+        "Country"
       ],
       "type": "spec/capture_base/1.0"
     },
@@ -69,9 +79,9 @@
           "unit_type": "utf-8",
           "validity_year": "utf-8"
         },
-        "capture_base": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
+        "capture_base": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
         "default_character_encoding": "utf-8",
-        "digest": "ESY0_K3IVNNu33O-4_YWpTni_8z_xlehDC-w1bmQ94Ic",
+        "digest": "E0XMu3TXwdi3Db0vkpccjYi09tUoPkbMpaGEzxNAMj7s",
         "type": "spec/overlays/character_encoding/1.0"
       },
       {
@@ -105,9 +115,9 @@
           "unit_type": "Unit Type",
           "validity_year": "Licence Validity Year"
         },
-        "capture_base": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
+        "capture_base": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
         "category_labels": {},
-        "digest": "EzfG_Cv2ycjkuUlqCmckKZgp_YJmp7jF8uoN0kEqi2Uc",
+        "digest": "EmQEF7-ql_WkdBigQWE0fplbjzWuWc7m6qKZDt-r8kpQ",
         "language": "en",
         "type": "spec/overlays/label/1.0"
       },
@@ -141,8 +151,8 @@
           "unit_type": "The unit type of the business licence.",
           "validity_year": "The year the licence is active for the business licence."
         },
-        "capture_base": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
-        "digest": "EO970rGI6jyKx2pg9STTK1CiAXeELLkWQ2LKzZQYKkgY",
+        "capture_base": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
+        "digest": "EfHErlhqOhUFNA_AYT1uQxj-8gfUZ1FOOSfWCJ57F6VM",
         "language": "en",
         "type": "spec/overlays/information/1.0"
       },
@@ -151,8 +161,8 @@
           "licence_expiry_dateint": "YYYYMMDD",
           "licence_issued_dateint": "YYYYMMDD"
         },
-        "capture_base": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
-        "digest": "EGK0x9QLcQQFeKEhxhs3Idv74euN8TYiOW9h39_FvVvk",
+        "capture_base": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
+        "digest": "ErcqRIs8Nh4xda0jYWeD0F4b3xvw-epYQyys9mvOT3Bs",
         "type": "spec/overlays/format/1.0"
       },
       {
@@ -160,15 +170,15 @@
           "licence_expiry_dateint": "urn:iso:std:iso:1989",
           "licence_issued_dateint": "urn:iso:std:iso:1989"
         },
-        "capture_base": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
-        "digest": "EYVy1P_zqhIyzTg4KHsm8FKxMacPMjTGb4H4ajFwO9b0",
+        "capture_base": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
+        "digest": "EpDw-6X2p6qKTc0069tEIGGJE_YencFe7BbH1imFt7J8",
         "type": "spec/overlays/standard/1.0"
       },
       {
-        "capture_base": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
+        "capture_base": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
         "credential_support_url": "https://vancouver.ca/",
         "description": "A City of Vancouver digital credential that represents a valid municipal business licence for operating a rental property.",
-        "digest": "EH2OkgrgCGXgWw_GTOb-SX8TilNNOJMwa-xV81h6nB0Y",
+        "digest": "EgEOFFZtyJUrX135_1UwtLxJ6_c5J0HMfLOUqLvffHdk",
         "issuer": "City of Vancouver",
         "issuer_description": "City of Vancouver",
         "issuer_url": "https://vancouver.ca/",
@@ -183,11 +193,11 @@
         "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/cov-background-image.jpg",
         "primary_background_color": "#015982",
         "secondary_background_color": "#4b8516",
-        "capture_base": "E4T448VQHmJF2Kk9nwrNgTXzGrgOcx2mG0s58CITtEXM",
+        "capture_base": "EJviaZlfWlFc-VAi-cxXYKltRCLJx9zAgbgYgtkSvE9E",
         "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
         "expiry_date_attribute": "licence_expiry_dateint",
-        "primary_attribute": "licence_revision_number",
-        "secondary_attribute": "licence_holder_family_name",
+        "primary_attribute": "business_trade_name",
+        "secondary_attribute": "business_sub_type",
         "type": "aries/overlays/branding/1.0"
       }
     ]

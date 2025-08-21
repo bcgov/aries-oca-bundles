@@ -15,8 +15,8 @@ A schema for a "Property Rental Business License" issued by the City of Vancouve
 
 The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
 
-| OCA Bundle Contributors | GitHub ID   | Email Address              |
-| ----------------------- | ----------- | -------------------------- |
-| Rene Cravioto           |             | Rene.Cravioto@vancouver.ca |
-| Kyle Robinson           | krobinsonca | kyle.robinson@briartech.ca |
-| Stephen Curran          | swcurran    | swcurran@cloudcompass.ca   |
+| OCA Bundle Contributors | GitHub ID     | Email Address              |
+| ----------------------- | ------------- | -------------------------- |
+| Rene Cravioto           |               | Rene.Cravioto@vancouver.ca |
+| Kyle Robinson           | krobinsonca   | kyle.robinson@briartech.ca |
+| Mathieu Glaude          | mathieuglaude | mathieu@northernblock.io   |

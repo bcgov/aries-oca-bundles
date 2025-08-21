@@ -8,8 +8,8 @@
     "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
     "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
     "expiry_date_attribute": "licence_expiry_dateint",
-    "primary_attribute": "licence_revision_number",
-    "secondary_attribute": "licence_holder_family_name",
+    "primary_attribute": "business_trade_name",
+    "secondary_attribute": "business_sub_type",
     "type": "aries/overlays/branding/1.0"
   }
 ]
