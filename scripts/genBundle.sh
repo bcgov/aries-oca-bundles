@@ -82,7 +82,7 @@ if [ "${EXCEL}" == "" ]; then
 fi
 
 # Parse the file using the OCA Parser and then prettify the JSON with jq
-${PARSER} parse oca --path ${EXCEL} | jq . > ${OCABUNDLE}
+${PARSER} parse oca --path "${EXCEL}" | jq . > ${OCABUNDLE}
 
 # Grab out from the OCABundle the capture_base item from an overlay so it can be put into the JSON Files
 # The data value may change so grabbing this ensures the added overlays reference the right capture base

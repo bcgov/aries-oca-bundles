@@ -1,0 +1,15 @@
+[
+  {
+    "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/cov-logo.jpg",
+    "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/cov-background-slice.jpg",
+    "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/cov-background-image.jpg",
+    "primary_background_color": "#015982",
+    "secondary_background_color": "#4b8516",
+    "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
+    "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
+    "expiry_date_attribute": "licence_expiry_dateint",
+    "primary_attribute": "business_trade_name",
+    "secondary_attribute": "business_sub_type",
+    "type": "aries/overlays/branding/1.0"
+  }
+]
