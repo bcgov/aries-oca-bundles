@@ -7,9 +7,10 @@ A schema for a "Property Rental Business License" issued by the City of Vancouve
 
 ## Identifiers
 
-| Identifier                                                                   | Location  | URL                                                                |
-| ---------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------ |
-| HFZfqC6Jzbt57FxcXqn78a:3:CL:37509:municipal-property-rental-business-licence | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/37511 |
+| Identifier                                                         | Location  | URL                                                                |
+| ------------------------------------------------------------------ | --------- | ------------------------------------------------------------------ |
+| HFZfqC6Jzbt57FxcXqn78a:2:Rental Property Business Licence:1.0      | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/37570 |
+| HFZfqC6Jzbt57FxcXqn78a:3:CL:37570:Rental Property Business Licence | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/37571 |
 
 ## Authorization
 
