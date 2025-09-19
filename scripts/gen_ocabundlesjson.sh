@@ -52,15 +52,18 @@ fi
 processBundle() {
     BUNDLE_PATH=OCABundle.json
     SHASUM=$(shasum -a256 -U $BUNDLE_PATH | sed "s/ .*//")
-    ID=$(grep '^| ' README.md | sed -e "/OCA Bundle/,100d" -e "/Identifier/d" -e "/----/d" -e 's/^| \([^|]*\) |.*/\1/' -e 's/\s*$//' -e 's/ /~/g')
+    LINES=$(grep '^| ' README.md | sed -e "/OCA Bundle/,100d" -e "/Identifier/d" -e "/----/d" -e 's/ /~/g')
     ORG=$(grep "Publishing\|Issuing" README.md | sed -e "s/.*: //")
     NAME=$(sed -e "2,1000d" -e "s/# //" README.md)
     DESC=$(sed -e "1,2d" -e "/## Identifiers/,1000d" -e "/^\s*$/d" -e "/^- /d" -e 's/[][]//g' -e 's/(.*)//g' -e 's/"/\\"/g' README.md)
-    TYPE="schema"
-    if [ "$(echo ${PWD} | grep "schema")" == "" ]; then
-        TYPE="credential"
-    fi
-    for id in ${ID}; do
+    for line in ${LINES}; do
+        id=$(echo -n ${line} | sed  -e 's/~/ /g' -e 's/^| \([^|]*\) |.*/\1/' -e 's/\s*$//' -e 's/ /~/g')
+        URL=$(echo -n ${line} | sed  -e 's/~/ /g' -e 's/^.*http\(.*\) .*/http\1/' -e 's/ //g')
+        # Default to schema, but if the URL contents contains CLAIM_DEF or anonCredsCredDef, then it is a credDef
+        TYPE="schema"
+        if [ "$(curl -L -s --connect-timeout 5 "$URL" | grep -e CLAIM_DEF -e anonCredsCredDef | wc -l)" -gt 0 ]; then
+          TYPE="credDef"
+        fi
         processed_id=$(echo -n ${id} | sed "s/~/ /g")
         echo "   \"${processed_id}\": { \"path\": \"${RELPATH}/${BUNDLE_PATH}\", \"sha256\": \"${SHASUM}\" }," >>${OCAIDSJSON}
         echo "{ \"id\": \"${processed_id}\", \"org\": \"${ORG}\", \"name\": \"${NAME}\", \"desc\": \"${DESC}\", \"type\": \"${TYPE}\", \"ocabundle\": \"${RELPATH}/${BUNDLE_PATH}\", \"shasum\": \"${SHASUM}\" }," >>${OCALISTJSON}

@@ -169,7 +169,7 @@ the precise location of the object is not known.
 - `<URL>` is optional and is a plain (non-Markdown) link to a ledger browser
   instance of the object, such as to a transaction on
   [https://indyscan.io](https://indyscan.io),
-  [http://test.bcovrin.vonx.io:3707](http://test.bcovrin.vonx.io:3707) or
+  [https://indyscan.bcovrin.vonx.io/](https://indyscan.bcovrin.vonx.io/) or
   [https://candyscan.idlab.org/](https://candyscan.idlab.org/)
 - `<NAME>` is the name of a person authorized to update the OCA Bundle and
 related data. There may be multiple rows in the markdown table to name multiple

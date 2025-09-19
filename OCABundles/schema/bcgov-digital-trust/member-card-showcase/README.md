@@ -7,12 +7,12 @@ A verifiable credential schema for a lawyer's membership card that used in a dem
 
 ## Identifiers
 
-| Identifier                                 | Location  | URL                                                   |
-| ------------------------------------------ | --------- | ----------------------------------------------------- |
-| L6ASjmDDbDH7yPL1t2yFj9:2:member_card:1.53 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=L6ASjmDDbDH7yPL1t2yFj9%3A2%3Amember_card%3A1.53&txn_type=101 |
-| M6dhuFj5UwbhWkSLmvYSPc:2:member_card:1.54 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=M6dhuFj5UwbhWkSLmvYSPc%3A2%3Amember_card%3A1.54&txn_type=101 |
-| QEquAHkM35w4XVT3Ku5yat:2:member_card:1.54 | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=QEquAHkM35w4XVT3Ku5yat%3A2%3Amember_card%3A1.54&txn_type=101 |
-| AuJrigKQGRLJajKAebTgWu:3:CL:209526:default | sovrn:staging | https://indyscan.io/tx/SOVRIN_STAGINGNET/domain/209527 |
+| Identifier                                     | Location     | URL                                                                                                                 |
+| ---------------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------- |
+| L6ASjmDDbDH7yPL1t2yFj9:2:member_card:1.53      | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=L6ASjmDDbDH7yPL1t2yFj9%3A2%3Amember_card%3A1.53&txn_type=101 |
+| M6dhuFj5UwbhWkSLmvYSPc:2:member_card:1.54      | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=M6dhuFj5UwbhWkSLmvYSPc%3A2%3Amember_card%3A1.54&txn_type=101 |
+| QEquAHkM35w4XVT3Ku5yat:2:member_card:1.54      | bcovrin:test | http://test.bcovrin.vonx.io/browse/domain?page=1&query=QEquAHkM35w4XVT3Ku5yat%3A2%3Amember_card%3A1.54&txn_type=101 |
+| QEquAHkM35w4XVT3Ku5yat:3:CL:834674:member_card | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/834675                                                      |
 
 ## Authorization
 
