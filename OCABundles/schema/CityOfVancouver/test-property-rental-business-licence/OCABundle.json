@@ -18,6 +18,7 @@
         "licence_number": "Text",
         "licence_revision_number": "Text",
         "licence_summary": "Text",
+        "licence_valid_from_dateint": "DateTime",
         "local_area": "Text",
         "location_type": "Text",
         "municipality": "Text",
@@ -37,7 +38,7 @@
         "unit_type": "Text"
       },
       "classification": "",
-      "digest": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
+      "digest": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
       "flagged_attributes": [
         "licence_holder_given_name",
         "licence_holder_family_name"
@@ -63,6 +64,7 @@
           "licence_number": "utf-8",
           "licence_revision_number": "utf-8",
           "licence_summary": "utf-8",
+          "licence_valid_from_dateint": "utf-8",
           "local_area": "utf-8",
           "location_type": "utf-8",
           "municipality": "utf-8",
@@ -81,9 +83,9 @@
           "unit": "utf-8",
           "unit_type": "utf-8"
         },
-        "capture_base": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
+        "capture_base": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
         "default_character_encoding": "utf-8",
-        "digest": "E9iDJtZayAvKvAeHIMBJKSJzgwQvbhpQHU9rV3OzBclc",
+        "digest": "EggyBX7giHwyps3AX9ubYZnjfVspL0KqxFV4eFOPm5gE",
         "type": "spec/overlays/character_encoding/1.0"
       },
       {
@@ -105,6 +107,7 @@
           "licence_number": "Licence Number",
           "licence_revision_number": "Licence Revision Number",
           "licence_summary": "Licence Summary",
+          "licence_valid_from_dateint": "Licence Start Date",
           "local_area": "Neighbourhood / Local Area",
           "location_type": "Location Type",
           "municipality": "Municipality",
@@ -123,9 +126,9 @@
           "unit": "Unit Number",
           "unit_type": "Unit Type"
         },
-        "capture_base": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
+        "capture_base": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
         "category_labels": {},
-        "digest": "EpG1N7q3EvgUYehiym4GKrscs8iAAuNtUOgaL2GwLTzY",
+        "digest": "ESJNm1_sybFWaY263eHkyeOVp79aKd2v7LgVcBfF-_OY",
         "language": "en",
         "type": "spec/overlays/label/1.0"
       },
@@ -147,6 +150,7 @@
           "licence_number": "The issued licence number of the business licence.",
           "licence_revision_number": "The revision number of the issued business licence.",
           "licence_summary": "A concatenated summary of the business licence number and expiry date.",
+          "licence_valid_from_dateint": "The date on which the business is permitted to begin operating under the issued licence.",
           "local_area": "Local area definition. For Vancouver, one of the twenty-two neighbourhoods where the licensed location exists.",
           "location_type": "The type of business licensed location.",
           "municipality": "The municipality of the business licence.",
@@ -165,35 +169,37 @@
           "unit": "The unit number of the business licence.",
           "unit_type": "The unit type of the business licence."
         },
-        "capture_base": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
-        "digest": "EXQTwdvjtOJcqTuqH2TdYbPTFRlHLvZTOk73txGfWkzc",
+        "capture_base": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
+        "digest": "Eybxa0t_Z04GnHkWyYNqjBV5zuRkmLTrfgRtAnHsDP0g",
         "language": "en",
         "type": "spec/overlays/information/1.0"
       },
       {
         "attribute_formats": {
           "licence_expiry_dateint": "YYYYMMDD",
-          "licence_issued_dateint": "YYYYMMDD"
+          "licence_issued_dateint": "YYYYMMDD",
+          "licence_valid_from_dateint": "YYYYMMDD"
         },
-        "capture_base": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
-        "digest": "EdBO_wVSe4tgxKWONXVk2zdqiLy4rpPlielgakFt6SrQ",
+        "capture_base": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
+        "digest": "EEfZ7EXB9VIVO2rmHU2TEg-12SMiM2RH5o-ADePYDJvI",
         "type": "spec/overlays/format/1.0"
       },
       {
         "attribute_standards": {
           "licence_expiry_dateint": "urn:iso:std:iso:1989",
-          "licence_issued_dateint": "urn:iso:std:iso:1989"
+          "licence_issued_dateint": "urn:iso:std:iso:1989",
+          "licence_valid_from_dateint": "urn:iso:std:iso:1989"
         },
-        "capture_base": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
-        "digest": "Eajuh1BZQNzrX9LYxaRX7KeQDIK0WuKb56NG19dqzJ_A",
+        "capture_base": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
+        "digest": "EKDaCg0RiGNDfigqAvpeoYbug6doKrmS1M-a0eWVkh4M",
         "type": "spec/overlays/standard/1.0"
       },
       {
-        "capture_base": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
+        "capture_base": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
         "credential_support_url": "https://vancouver.ca/",
         "description": "A City of Vancouver digital credential that represents a valid municipal business licence for operating a rental property.",
-        "digest": "EzpvNq-Ux3tDT1ARKPV1r9hr3r_eu7mfZqj8LiRERhVQ",
-        "issuer": "City of Vancouver",
+        "digest": "EH-csJIS8NWowtDx-AH9R8wANPIIT9doKGdF1cikm9VE",
+        "issuer": "City of Vancouver (DEV)",
         "issuer_description": "City of Vancouver",
         "issuer_url": "https://vancouver.ca/",
         "language": "en",
@@ -207,7 +213,7 @@
         "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/cov-background-image.jpg",
         "primary_background_color": "#015982",
         "secondary_background_color": "#4b8516",
-        "capture_base": "EK5EOgMOVavUzTkUzF2gc8XzIPbhBz6qAE41bUhrJrls",
+        "capture_base": "EVgS6SlMfl8pc-flF55tVON6alOpUsFyVgVofIPbK2AE",
         "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",
         "expiry_date_attribute": "licence_expiry_dateint",
         "primary_attribute": "licence_summary",
