@@ -1,4 +1,4 @@
-# City of Vancouver TEST Property Rental Business License
+# City of Vancouver DEV Property Rental Business License
 
 A schema for a "Property Rental Business License" issued by the City of Vancouver.
 
@@ -7,10 +7,10 @@ A schema for a "Property Rental Business License" issued by the City of Vancouve
 
 ## Identifiers
 
-| Identifier                                                       | Location  | URL                                                               |
-| ---------------------------------------------------------------- | --------- | ----------------------------------------------------------------- |
-| ARK5s3QZtjL5X65mLoubdk:2:Rental Property Business Licence:1.0    | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/921 |
-| ARK5s3QZtjL5X65mLoubdk:3:CL:921:Rental Property Business Licence | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/922 |
+| Identifier                                                         | Location  | URL                                                                |
+| ------------------------------------------------------------------ | --------- | ------------------------------------------------------------------ |
+| YWnESLB4SH275SMNvaJJ1L:2:Rental Property Business Licence:1.0      | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/38195 |
+| YWnESLB4SH275SMNvaJJ1L:3:CL:38195:Rental Property Business Licence | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/38196 |
 
 ## Authorization
 
