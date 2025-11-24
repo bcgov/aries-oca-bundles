@@ -1,0 +1,151 @@
+[
+    {
+        "capture_base": {
+            "type": "spec/capture_base/1.0",
+            "classification": "",
+            "attributes": {
+                "Nom": "Text",
+                "Prénom": "Text",
+                "Date de naissance": "DateTime",
+                "Nom du parent 1": "Text",
+                "Nom du parent 2": "Text",
+                "Date d'émission": "DateTime",
+                "Date d'expiration": "DateTime",
+                "Niveau d'identification": "Text",
+                "Photo": "Binary"
+            },
+            "flagged_attributes": [
+                "Date de naissance",
+                "Nom du parent 1",
+                "Nom du parent 2",
+                "Niveau d'identification",
+                "Photo"
+            ]
+        },
+        "overlays": [
+            {
+                "capture_base": "",
+                "type": "spec/overlays/character_encoding/1.0",
+                "default_character_encoding": "utf-8",
+                "digest": "",
+                "attribute_character_encoding": {
+                    "Nom": "utf-8",
+                    "Prénom": "utf-8",
+                    "Date de naissance": "utf-8",
+                    "Nom du parent 1": "utf-8",
+                    "Nom du parent 2": "utf-8",
+                    "Date d'émission": "utf-8",
+                    "Date d'expiration": "utf-8",
+                    "Niveau d'identification": "utf-8",
+                    "Photo": "base64"
+                }
+            },
+            {
+                "type": "spec/overlays/label/1.0",
+                "language": "en-CA",
+                "digest": "",
+                "capture_base": "",
+                "category_labels": {},
+                "attribute_categories": [],
+                "attribute_labels": {
+                    "Nom": "Last Name",
+                    "Prénom": "First Name",
+                    "Date de naissance": "Birth Date",
+                    "Nom du parent 1": "First Parent Full Name",
+                    "Nom du parent 2": "Second Parent Full Name",
+                    "Date d'émission": "Date Of Issue",
+                    "Date d'expiration": "Expiration date",
+                    "Niveau d'identification": "Identification Level",
+                    "Photo": "Picture"
+                }
+            },
+            {
+                "type": "spec/overlays/information/1.0",
+                "capture_base": "",
+                "digest": "",
+                "language": "en-CA",
+                "attribute_information": {}
+            },
+            {
+                "type": "spec/overlays/label/1.0",
+                "language": "fr-CA",
+                "digest": "",
+                "capture_base": "",
+                "category_labels": {},
+                "attribute_categories": [],
+                "attribute_labels": {
+                    "Nom": "Nom",
+                    "Prénom": "Prénom",
+                    "Date de naissance": "Date De Naissance",
+                    "Nom du parent 1": "Nom Du Parent 1",
+                    "Nom du parent 2": "Nom Du Parent 2",
+                    "Date d'émission": "Date D'Émission",
+                    "Date d'expiration": "Date D'Expiration",
+                    "Niveau d'identification": "Niveau D'Identification",
+                    "Photo": "Photo"
+                }
+            },
+            {
+                "type": "spec/overlays/information/1.0",
+                "capture_base": "",
+                "digest": "",
+                "language": "fr-CA",
+                "attribute_information": {}
+            },
+            {
+                "type": "spec/overlays/format/1.0",
+                "capture_base": "",
+                "digest": "",
+                "attribute_formats": {
+                    "Date d'émission": "YYYYMMDD",
+                    "Date d'expiration": "YYYYMMDD"
+                }
+            },
+            {
+                "type": "spec/overlays/standard/1.0",
+                "capture_base": "",
+                "digest": "",
+                "attribute_standards": {
+                    "Date de naissance": "urn:iso:std:iso:1989",
+                    "Date d'émission": "urn:iso:std:iso:1989",
+                    "Date d'expiration": "urn:iso:std:iso:1989"
+                }
+            },
+            {
+                "type": "spec/overlays/meta/1.0",
+                "capture_base": "",
+                "name": "ANIG",
+                "credential_help_text": "This is an example of a simple ANIG card.",
+                "credential_support_url": "",
+                "description": "An example ANIG Card for demonstration purposes",
+                "digest": "",
+                "issuer": "Ministry of Cybersecurity and Digital",
+                "issuer_description": "Demo MCN",
+                "issuer_url": "",
+                "language": "en-CA"
+            },
+            {
+                "type": "spec/overlays/meta/1.0",
+                "capture_base": "",
+                "name": "ANIG",
+                "credential_help_text": "Il s'agit d'un exemple d'une simple carte ANIG.",
+                "credential_support_url": "",
+                "description": "Un exemple de carte ANIG à des fins de démonstration",
+                "digest": "",
+                "issuer": "Ministère de la cybersécurité et du numérique",
+                "issuer_description": "Démo MCN",
+                "issuer_url": "",
+                "language": "fr-CA"
+            },
+            {
+                "type": "aries/overlays/branding/1.0",
+                "capture_base": "",
+                "digest": "",
+                "logo": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/schema/qc_anig_demo/Attestation_num%C3%A9rique_didentit%C3%A9_gouvernemental/logo-quebec.png",
+                "background_image": "https://raw.githubusercontent.com/MCN-ING/aries-oca-bundles/main/OCABundles/schema/qc_anig_demo/Attestation_num%C3%A9rique_didentit%C3%A9_gouvernemental/carte-anig-demo.png",
+                "primary_background_color": "#F9F9F9",
+                "secondary_background_color": "#095797"
+            }
+        ]
+    }
+]
