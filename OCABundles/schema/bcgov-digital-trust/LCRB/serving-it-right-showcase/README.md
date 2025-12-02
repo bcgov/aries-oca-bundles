@@ -7,18 +7,18 @@ A schema for the "Serving It Right" credential issued by LCRB.
 
 ## Identifiers
 
-| Identifier                          | Location  | URL                                                   |
-| ----------------------------------- | --------- | ----------------------------------------------------- |
-| TeT8SJGHruVL9up3Erp4o:3:CL:224665:Serving It Right | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/224671 |
-| TeT8SJGHruVL9up3Erp4o:3:CL:400095:ServingItRight | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/400103 |
-| Ttmj1pEotg8FbKZZD81S7i:3:CL:184:ServingItRight | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/185 |
+| Identifier                                         | Location     | URL                                                               |
+| -------------------------------------------------- | ------------ | ----------------------------------------------------------------- |
+| TeT8SJGHruVL9up3Erp4o:3:CL:224665:Serving It Right | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/224671    |
+| TeT8SJGHruVL9up3Erp4o:3:CL:400095:ServingItRight   | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/400103    |
+| Ttmj1pEotg8FbKZZD81S7i:3:CL:184:ServingItRight     | candy:test   | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/185 |
 
 ## Authorization
 
 The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
 
-| OCA Bundle Contributors | GitHub ID  | Email Address            |
-| ----------------------- | ---------- | ------------------------ |
-| Andy Jay                | andy-credivera | andy@credivera.com       |
-| Stephen Rosinski        | SGRosinski | stephen@credivera.com    |
-|                         |            |                          |
+| OCA Bundle Contributors | GitHub ID      | Email Address              |
+| ----------------------- | -------------- | -------------------------- |
+| Andy Jay                | andy-credivera | andy@credivera.com         |
+| Stephen Rosinski        | SGRosinski     | stephen@credivera.com      |
+| Kyle Robinson           | krobinsonca    | kyle.robinson@briartech.ca |

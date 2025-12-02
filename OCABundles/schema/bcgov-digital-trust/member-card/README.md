@@ -7,17 +7,16 @@ A verifiable credential schema for a lawyer's membership card that used in a dem
 
 ## Identifiers
 
-| Identifier                                 | Location  | URL                                                   |
-| ------------------------------------------ | --------- | ----------------------------------------------------- |
-| 4xE68b6S5VRFrKMMG1U95M:3:CL:59232:default | sovrn:mainnet | https://indyscan.io/tx/SOVRIN_MAINNET/domain/59233 |
+| Identifier                                | Location       | URL                                                |
+| ----------------------------------------- | -------------- | -------------------------------------------------- |
+| 4xE68b6S5VRFrKMMG1U95M:3:CL:59232:default | sovrin:mainnet | https://indyscan.io/tx/SOVRIN_MAINNET/domain/59233 |
 
 ## Authorization
 
 The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
 
-| OCA Bundle Contributors | GitHub ID  | Email Address            |
-| ----------------------- | ---------- | ------------------------ |
-| Stephen Curran          | swcurran   | swcurran@cloudcompass.ca |
-| Akiff Manji             | amanji     | akiff.manji@gmail.com    |
-| Wade King               | wadeking98 | wkingnumber2@gmail.com   |
-|                         |            |                          |
+| OCA Bundle Contributors | GitHub ID   | Email Address              |
+| ----------------------- | ----------- | -------------------------- |
+| Stephen Curran          | swcurran    | swcurran@cloudcompass.ca   |
+| Kyle Robinson           | krobinsonca | kyle.robinson@briartech.ca |
+| Clecio Varjao           | cvarjao     | clecio.varjao@gov.bc.ca    |
