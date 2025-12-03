@@ -7,9 +7,9 @@ A verifiable credential schema used for demonstration and internal use purposes 
 
 ## Identifiers
 
-| Identifier                                                                         | Location  | URL                                                   |
-| ---------------------------------------------------------------------------------- | --------- | ----------------------------------------------------- |
-| Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0 | candy:dev | https://candyscan.idlab.org/tx/CANDY_DEV/domain/25954 |
+| Identifier                                                                         | Location  | URL                                                                |
+| ---------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------ |
+| Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0 | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/25954 |
 
 ## Authorization
 
@@ -18,4 +18,3 @@ The following are the GitHub IDs of those authorized to make substantive updates
 | OCA Bundle Contributors | GitHub ID  | Email Address                         |
 | ----------------------- | ---------- | ------------------------------------- |
 | JC Drouin               | jcdrouin21 | jean-christophe.drouin@mcn.gouv.qc.ca |
-|                         |            |                                       |

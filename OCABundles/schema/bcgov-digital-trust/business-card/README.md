@@ -7,15 +7,16 @@ A verifiable credential schema for a business registered within the province of 
 
 ## Identifiers
 
-| Identifier                                           | Location     | URL                                                  |
-| ---------------------------------------------------- | ------------ | ---------------------------------------------------- |
-| AcZpBDz3oxmKrpcuPcdKai:2:Digital Business Card:1.0.0 | candy:prod   | https://candyscan.idlab.org/tx/CANDY_PROD/domain/350 |
+| Identifier                                           | Location   | URL                                                               |
+| ---------------------------------------------------- | ---------- | ----------------------------------------------------------------- |
+| AcZpBDz3oxmKrpcuPcdKai:2:Digital Business Card:1.0.0 | candy:prod | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_PROD/domain/350 |
 
 ## Authorization
 
 The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
 
-| OCA Bundle Contributors | GitHub ID  | Email Address            |
-| ----------------------- | ---------- | ------------------------ |
-| Stephen Curran          | swcurran   | swcurran@cloudcompass.ca |
-| Akiff Manji             | amanji     | amanji@petridish.dev     |
+| OCA Bundle Contributors | GitHub ID   | Email Address              |
+| ----------------------- | ----------- | -------------------------- |
+| Stephen Curran          | swcurran    | swcurran@cloudcompass.ca   |
+| Kyle Robinson           | krobinsonca | kyle.robinson@briartech.ca |
+| Lucas O'Neil            | loneil      | Lucas.ONeil@gov.bc.ca      |
