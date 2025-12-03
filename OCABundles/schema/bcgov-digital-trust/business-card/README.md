@@ -19,3 +19,4 @@ The following are the GitHub IDs of those authorized to make substantive updates
 | ----------------------- | ----------- | -------------------------- |
 | Stephen Curran          | swcurran    | swcurran@cloudcompass.ca   |
 | Kyle Robinson           | krobinsonca | kyle.robinson@briartech.ca |
+| Lucas O'Neil            | loneil      | Lucas.ONeil@gov.bc.ca      |
