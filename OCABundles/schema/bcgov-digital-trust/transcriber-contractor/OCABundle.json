@@ -1,0 +1,112 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "company_name": "Text",
+        "contract_end_dateint": "DateTime",
+        "contract_number": "Text",
+        "contract_start_dateint": "DateTime",
+        "criminal_record_expiry_dateint": "DateTime",
+        "email": "Text",
+        "family_name": "Text",
+        "given_names": "Text",
+        "organization": "Text",
+        "user_id": "Text"
+      },
+      "classification": "",
+      "digest": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
+      "flagged_attributes": [],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "company_name": "utf-8",
+          "contract_end_dateint": "utf-8",
+          "contract_number": "utf-8",
+          "contract_start_dateint": "utf-8",
+          "criminal_record_expiry_dateint": "utf-8",
+          "email": "utf-8",
+          "family_name": "utf-8",
+          "given_names": "utf-8",
+          "organization": "utf-8",
+          "user_id": "utf-8"
+        },
+        "capture_base": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
+        "default_character_encoding": "utf-8",
+        "digest": "EkVkOqaGMDFtVyIaH8AcErBAnWlpcs7rflvRIMig1iZU",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "company_name": "Company name",
+          "contract_end_dateint": "Contract end date",
+          "contract_number": "Contract number",
+          "contract_start_dateint": "Contract start date",
+          "criminal_record_expiry_dateint": "Criminal record check expiry date",
+          "email": "Email",
+          "family_name": "Surname",
+          "given_names": "Given names",
+          "organization": "Ministry",
+          "user_id": "User ID"
+        },
+        "capture_base": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
+        "category_labels": {},
+        "digest": "EkRgMIp7EvxCzd0noBooyE0prKqR_WZ270p8_8WgSpII",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "company_name": "Name of the contracting company that holds the contract",
+          "contract_end_dateint": "The date when the contract ends",
+          "contract_number": "Contract number the contractor is associated to",
+          "contract_start_dateint": "The date when the contract starts",
+          "criminal_record_expiry_dateint": "The date when the criminal record check expires for the contractor",
+          "email": "Email address belonging to the contractor",
+          "family_name": "Legal family name or mononym(s) of the contractor",
+          "given_names": "Legal first and middle name(s) of the contractor",
+          "organization": "Abbreviation or name of the organization this contract is for",
+          "user_id": "A unique user ID for the contractor"
+        },
+        "capture_base": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
+        "digest": "EOQZCng8dqahyjV5veUn7VQe2h6mu8crUPd9z_0x6_cs",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_formats": {
+          "contract_end_dateint": "YYYYMMDD",
+          "contract_start_dateint": "YYYYMMDD",
+          "criminal_record_expiry_dateint": "YYYYMMDD"
+        },
+        "capture_base": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
+        "digest": "ESvt1JqkSvenUbyIquUDjEzj1aRn20XN-eflqdNzLKdw",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "capture_base": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
+        "description": "",
+        "digest": "EjSz-RGNr5XuS8AhKIU8aUQdzbRXXjirlcpsSf6yB1bE",
+        "issuer": "BC Court Services",
+        "language": "en",
+        "name": "Transcriber",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/transcriber-contractor/BCID_V_rgb_pos.png",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/transcriber-contractor/secondary_background.png",
+        "primary_background_color": "#0B31A5",
+        "secondary_background_color": "#002050",
+        "capture_base": "ERRO9XNtuGVOLFhCtBVvfmEr2ObzKfw2wfFIol7KXIDM",
+        "digest": "EkVkOqaGMDFtVyIaH8AcErBAnWlpcs7rflvRIMig1iZU",
+        "expiry_date_attribute": "",
+        "primary_attribute": "company_name",
+        "secondary_attribute": "contract_end_dateint",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]

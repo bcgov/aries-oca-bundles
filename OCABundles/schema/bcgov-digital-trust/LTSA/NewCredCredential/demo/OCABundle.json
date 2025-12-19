@@ -1,0 +1,141 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "authorityName": "Text",
+        "city": "Text",
+        "givenName": "Text",
+        "lastNameOrCorpName1": "Text",
+        "parcelIdentifier": "Text",
+        "postalCode": "Text",
+        "streetAddress": "Text",
+        "titleNumber": "Text"
+      },
+      "classification": "",
+      "digest": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+      "flagged_attributes": [],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "authorityName": "utf-8",
+          "city": "utf-8",
+          "givenName": "utf-8",
+          "lastNameOrCorpName1": "utf-8",
+          "parcelIdentifier": "utf-8",
+          "postalCode": "utf-8",
+          "streetAddress": "utf-8",
+          "titleNumber": "utf-8"
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "default_character_encoding": "utf-8",
+        "digest": "EE6oyz_DDEWI0l4VWkd5zNauhqOwT8tM3ANh-l2zqNuY",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "authorityName": "Autorité fiscale",
+          "city": "Ville",
+          "givenName": "Prénom sur le titre",
+          "lastNameOrCorpName1": "Nom de famille sur le titre",
+          "parcelIdentifier": "Identifiant de parcelle",
+          "postalCode": "Code postal",
+          "streetAddress": "Adresse",
+          "titleNumber": "Numéro de titre"
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "category_labels": {},
+        "digest": "EZleupWrHpvZBgrBE5T74950rD5HbSTOctDzBnqbgMxk",
+        "language": "fr",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "authorityName": "Le nom de l'autorité compétente ou émettrice responsable de la création, de la vérification ou de la gestion du dossier.",
+          "city": "La ville où se situe l'entité ou la propriété.",
+          "givenName": "Le(s) prénom(s) d'un individu, souvent utilisés avec le nom de famille pour l'identification personnelle.",
+          "lastNameOrCorpName1": "Le nom de famille d'un individu ou le nom principal d'une société associé à un dossier.",
+          "parcelIdentifier": "Un identifiant unique attribué à une parcelle de terrain ou à une propriété à des fins administratives ou légales.",
+          "postalCode": "Le code postal ou le code ZIP utilisé pour la livraison du courrier à l'adresse associée.",
+          "streetAddress": "L'adresse physique de l'entité ou de la propriété, comprenant le numéro de maison, le nom de rue et éventuellement le numéro de l'unité ou de la suite.",
+          "titleNumber": "Un numéro unique attribué à un titre, tel qu'un titre foncier ou de propriété, à des fins légales et d'identification."
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "digest": "EX6gb68luTk3zoe9bAIj2iM3gbEUbO99LrueBvRpiDus",
+        "language": "fr",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "authorityName": "Taxation Authority",
+          "city": "City",
+          "givenName": "Given Name on Title",
+          "lastNameOrCorpName1": "Last Name on Title",
+          "parcelIdentifier": "Parcel Identifier (PID)",
+          "postalCode": "Postal Code",
+          "streetAddress": "Street Address",
+          "titleNumber": "Title Number"
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "category_labels": {},
+        "digest": "ExbqRjPF5N8JZtFdYa3zP_l-Qlur59mJi5cdiMUwxmEE",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "authorityName": "The name of the governing or issuing authority responsible for creating, verifying, or managing the record.",
+          "city": "The city in which the entity or property is located.",
+          "givenName": "The first name(s) of an individual, often used alongside the last name for personal identification.",
+          "lastNameOrCorpName1": "The last name of an individual or the primary name of a corporation associated with a record.",
+          "parcelIdentifier": "A unique identifier assigned to a specific parcel of land or property for administrative or legal purposes.",
+          "postalCode": "The postal or ZIP code used for mail delivery to the associated address.",
+          "streetAddress": "The physical address of the entity or property, including house number, street name, and possibly the unit or suite number.",
+          "titleNumber": "A unique number assigned to a title, such as land or property title, for legal and identification purposes."
+        },
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "digest": "E8JpRsBlRt3KoqxqxDld5YHiIVCKnu0B4SnZotSSXv_E",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "description": "This schema is used to demonstrate proof of property ownership",
+        "digest": "EqepAXUZU4DWgLpcphIHgHNl2YZyidRh9zgcHccWsjeg",
+        "issuer": "Land Title and Survey Authority of BC",
+        "issuer_description": "Land Title and Survey Authority of BC",
+        "issuer_url": "https://ltsa.ca/",
+        "language": "en",
+        "name": "NewCred Credential",
+        "watermark": "DEMONSTRATION",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "description": "Schéma pour démontrer la propriété d'un titre foncier ",
+        "digest": "EqE2uURULRtJ224z04HbWgf9vgDMw4pNVmYXK2RvuYBo",
+        "issuer": "Land Title and Survey Authority of BC",
+        "issuer_description": "Land Title and Survey Authority of BC",
+        "issuer_url": "https://ltsa.ca/",
+        "language": "fr",
+        "name": "NewCred Credential",
+        "watermark": "DEMONSTRATION",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "type": "aries/overlays/branding/1.0",
+        "capture_base": "EQb4ailqoOb42BKEY0Fl-mhae8UUbsl00BlqhwREfda0",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/LTSA-Vertical-Logo.jpg",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/oca-background.jpg",
+        "primary_attribute": "streetAddress",
+        "secondary_attribute": "parcelIdentifier",
+        "primary_background_color": "#282B67",
+        "secondary_background_color": "#4CA747"
+      }
+    ]
+  }
+]
