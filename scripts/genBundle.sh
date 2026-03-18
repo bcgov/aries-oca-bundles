@@ -84,6 +84,18 @@ fi
 # Parse the file using the OCA Parser and then prettify the JSON with jq
 ${PARSER} parse oca --path "${EXCEL}" | jq . > ${OCABUNDLE}
 
+if [ "${PIPESTATUS[0]}" -ne 0 ] || jq -e 'has("errors")' "${OCABUNDLE}" > /dev/null 2>&1; then
+    echo "The Excel file did not parse correctly and needs to be fixed."
+    echo "Parser errors:"
+    echo ""
+    cat ${OCABUNDLE}
+    echo ""
+    echo "Look for extraneous text / blank strings on the indicated lines."
+    echo "If necessary, start again from the OCA Excel Template and reapply your changes."
+    rm ${OCABUNDLE}
+    exit 1
+fi
+
 # Grab out from the OCABundle the capture_base item from an overlay so it can be put into the JSON Files
 # The data value may change so grabbing this ensures the added overlays reference the right capture base
 CAPTUREBASEITEM=$(grep -m 1 '"capture_base": "' ${OCABUNDLE} )
