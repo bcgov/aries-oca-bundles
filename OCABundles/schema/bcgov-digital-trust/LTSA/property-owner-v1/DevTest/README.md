@@ -3,7 +3,7 @@
 A verifiable credential schema used for development and test purposes.
 
 - Publishing Organization: Land Title and Survey Authority of BC
-- Primary Contact Email Address: trawa@landsure.ca
+- Primary Contact Email Address: bcpropertyconnect@ltsa.ca
 
 ## Identifiers  
 
@@ -15,7 +15,8 @@ A verifiable credential schema used for development and test purposes.
 
 The following are the GitHub IDs of those authorized to make substantive updates to the OCA Bundle.
 
-| OCA Bundle Contributors | GitHub ID   | Email Address                   |
-| ----------------------- | ----------- | ------------------------------- |
-| Vishnu Rathinaswamy     |             | Vishnu.Rathinaswamy@landsure.ca |
-| Kyle Robinson           | krobinsonca | kyle.robinson@briartech.ca      |
+| OCA Bundle Contributors | GitHub ID          | Email Address                   |
+| ----------------------- | ------------------ | ------------------------------- |
+| Ali Ajdari              | aliajdari-landsure | ali.ajdari@landsure.ca          |
+| Vishnu Rathinaswamy     |                    | vishnu.rathinaswamy@landsure.ca |
+| Kyle Robinson           | krobinsonca        | kyle.robinson@briartech.ca      |
