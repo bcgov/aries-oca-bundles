@@ -7,9 +7,10 @@ A verifiable credential schema used for development and test purposes.
 
 ## Identifiers  
 
-| Identifier                                 | Location  | URL                                                                |
-| ------------------------------------------ | --------- | ------------------------------------------------------------------ |
-| 9uCfLbHYLHTZt9HiGL1oD9:3:CL:35147:TestLTSA | candy:dev | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/35671 |
+| Identifier                                    | Location   | URL                                                   |
+| --------------------------------------------- | ---------- | ----------------------------------------------------- |
+| KKSXjEHUPVNGYHuof1J3xy:2:property-owner:1.0.4 | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/39553 |
+| Tm3dXMR3UsSU4X9Ew913Um:2:property-owner:1.0.4 | mv  | https://candyscan.idlab.org/tx/CANDY_TEST/domain/1093 |
 
 ## Authorization
 
