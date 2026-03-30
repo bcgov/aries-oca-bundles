@@ -7,10 +7,10 @@ A verifiable credential issued by LTSA to Property Owners for development and te
 
 ## Identifiers  
 
-| Identifier                                    | Location   | URL                                                   |
-| --------------------------------------------- | ---------- | ----------------------------------------------------- |
-| KKSXjEHUPVNGYHuof1J3xy:2:property-owner:1.0.4 | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/39553 |
-| Tm3dXMR3UsSU4X9Ew913Um:2:property-owner:1.0.4 | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/1093 |
+| Identifier                                       | Location   | URL                                                   |
+| ------------------------------------------------ | ---------- | ----------------------------------------------------- |
+| KKSXjEHUPVNGYHuof1J3xy:3:CL:39553:property-owner | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/39554 |
+| Tm3dXMR3UsSU4X9Ew913Um:3:CL:1092:property-owner  | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/1093 |
 
 ## Authorization
 
