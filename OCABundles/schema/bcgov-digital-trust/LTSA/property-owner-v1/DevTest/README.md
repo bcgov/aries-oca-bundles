@@ -1,6 +1,6 @@
-# NewCred Credential
+# Property Owner Credential v1
 
-A verifiable credential schema used for development and test purposes.
+A verifiable credential issued by LTSA to Property Owners for development and testing purposes.
 
 - Publishing Organization: Land Title and Survey Authority of BC
 - Primary Contact Email Address: bcpropertyconnect@ltsa.ca
