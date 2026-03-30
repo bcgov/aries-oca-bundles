@@ -10,7 +10,7 @@ A verifiable credential schema used for development and test purposes.
 | Identifier                                    | Location   | URL                                                   |
 | --------------------------------------------- | ---------- | ----------------------------------------------------- |
 | KKSXjEHUPVNGYHuof1J3xy:2:property-owner:1.0.4 | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/39553 |
-| Tm3dXMR3UsSU4X9Ew913Um:2:property-owner:1.0.4 | mv  | https://candyscan.idlab.org/tx/CANDY_TEST/domain/1093 |
+| Tm3dXMR3UsSU4X9Ew913Um:2:property-owner:1.0.4 | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/1093 |
 
 ## Authorization
 
