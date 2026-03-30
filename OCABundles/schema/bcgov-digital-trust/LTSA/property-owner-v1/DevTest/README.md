@@ -1,4 +1,4 @@
-# Property Owner Credential v1
+# Property Owner Credential v1 - Dev/Test
 
 A verifiable credential issued by LTSA to Property Owners for development and testing purposes.
 
