@@ -1,16 +1,9 @@
-# Property Owner Credential v1 - Dev/Test
+# Property Owner Credential v1
 
-A verifiable credential issued by LTSA to Property Owners for development and testing purposes.
+A verifiable credential issued by LTSA to Property Owners.
 
 - Publishing Organization: Land Title and Survey Authority of BC
 - Primary Contact Email Address: bcpropertyconnect@ltsa.ca
-
-## Identifiers  
-
-| Identifier                                    | Location   | URL                                                   |
-| --------------------------------------------- | ---------- | ----------------------------------------------------- |
-| KKSXjEHUPVNGYHuof1J3xy:2:property-owner:1.0.4 | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/39553 |
-| Tm3dXMR3UsSU4X9Ew913Um:2:property-owner:1.0.4 | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/1093 |
 
 ## Authorization
 
