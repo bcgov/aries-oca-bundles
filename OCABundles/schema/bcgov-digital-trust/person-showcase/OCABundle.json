@@ -79,6 +79,18 @@
         "type": "spec/overlays/information/1.0"
       },
       {
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "credential_help_text": "Learn more",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/governments/government-id/person-credential",
+        "description": "A credential created from your BC Services Card",
+        "digest": "E7OykmOsJspSqv80dljGSzt9BAqJYiFOGWluvPd78ym4",
+        "issuer": "Government of British Columbia",
+        "language": "en",
+        "name": "Person",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
+      },
+      {
         "attribute_categories": [],
         "attribute_labels": {
           "birthdate_dateint": "Date de naissance",
@@ -97,24 +109,6 @@
         "digest": "EIDYr61K8MmV5BHCTt4r__ph6llfTIxxKMEjQi_UoddY",
         "language": "fr",
         "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "birthdate_dateint": "Date de naissance de la personne",
-          "country": "Code à deux lettres du pays",
-          "expiry_date_dateint": "Date d'expiration",
-          "family_name": "Nom de famille légal ou mononyme(s)",
-          "given_names": "Prénom(s) et nom(s) secondaire(s) légal(aux)",
-          "locality": "Ville, municipalité ou localité",
-          "picture": "Photo sur la BC Services Card",
-          "postal_code": "Code postal",
-          "region": "Code à deux lettres de la province",
-          "street_address": "Numéro de bâtiment et nom de la rue"
-        },
-        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
-        "digest": "EcoYkcFjaWQvC3XzzCw7h-_0_VTigQjiTtzY1ttV1sSk",
-        "language": "fr",
-        "type": "spec/overlays/information/1.0"
       },
       {
         "attribute_formats": {
@@ -136,6 +130,24 @@
         "type": "spec/overlays/standard/1.0"
       },
       {
+        "attribute_information": {
+          "birthdate_dateint": "Date de naissance de la personne",
+          "country": "Code à deux lettres du pays",
+          "expiry_date_dateint": "Date d'expiration",
+          "family_name": "Nom de famille légal ou mononyme(s)",
+          "given_names": "Prénom(s) et nom(s) secondaire(s) légal(aux)",
+          "locality": "Ville, municipalité ou localité",
+          "picture": "Photo sur la BC Services Card",
+          "postal_code": "Code postal",
+          "region": "Code à deux lettres de la province",
+          "street_address": "Numéro de bâtiment et nom de la rue"
+        },
+        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
+        "digest": "EcoYkcFjaWQvC3XzzCw7h-_0_VTigQjiTtzY1ttV1sSk",
+        "language": "fr",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
         "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
         "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "description": "Une pièce d'identité créée à partir de votre BC Services Card",
@@ -147,18 +159,6 @@
         "name": "Personne",
         "type": "spec/overlays/meta/1.0",
         "watermark": "NON-PRODUCTION (FR)"
-      },
-      {
-        "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
-        "credential_help_text": "Learn more",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content/governments/government-id/person-credential",
-        "description": "A credential created from your BC Services Card",
-        "digest": "E7OykmOsJspSqv80dljGSzt9BAqJYiFOGWluvPd78ym4",
-        "issuer": "Government of British Columbia",
-        "language": "en",
-        "name": "Person",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION"
       },
       {
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/bc-logo.jpg",

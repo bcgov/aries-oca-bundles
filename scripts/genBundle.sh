@@ -109,8 +109,24 @@ for file in ${JSONFiles}; do
       -e '1,1 s/\[//' \
       -e '$,$ s/]//' ${file} >${BCKFILE}
     # Add the overlay to the generated OCA Bundle and out to a temp file
-    ${JQ} --slurpfile filejson ${BCKFILE} ".[].overlays += \$filejson" ${OCABUNDLE} > ${TMPOCABUNDLE}
+    if ! ${JQ} --slurpfile filejson ${BCKFILE} ".[].overlays += \$filejson" ${OCABUNDLE} > ${TMPOCABUNDLE} 2>&1; then
+        echo "ERROR: Failed to merge overlay from ${file} -- the JSON overlay may be malformed after processing."
+        rm -f ${BCKFILE} ${TMPOCABUNDLE} ${OCABUNDLE}
+        exit 1
+    fi
     rm ${BCKFILE}
     # Move the tmp file to be the new(est) OCA Bundle file
     mv ${TMPOCABUNDLE} ${OCABUNDLE}
 done
+
+# Sort language-specific overlays by language then type for a stable, deterministic output,
+# while leaving non-language overlays (e.g. branding) in their original positions.
+${JQ} '.[].overlays |= (
+  . as $orig |
+  (to_entries | map(select(.value.language != null)) | map(.key)) as $lang_indices |
+  (map(select(.language != null)) | sort_by(.language)) as $sorted_lang |
+  reduce range($lang_indices | length) as $i (
+    $orig;
+    .[$lang_indices[$i]] = $sorted_lang[$i]
+  )
+)' ${OCABUNDLE} > ${TMPOCABUNDLE} && mv ${TMPOCABUNDLE} ${OCABUNDLE}
