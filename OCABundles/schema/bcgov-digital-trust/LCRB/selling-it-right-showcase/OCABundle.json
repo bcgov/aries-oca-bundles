@@ -38,38 +38,6 @@
       {
         "attribute_categories": [],
         "attribute_labels": {
-          "certification_number": "ID de Certification",
-          "date_completed_dateint": "Date de completion",
-          "date_created_dateint": "Date Crée",
-          "email": "Courriel",
-          "expires_dateint": "Expire",
-          "family_name": "Nom de famille",
-          "given_names": "Prénoms"
-        },
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "category_labels": {},
-        "digest": "E6tvRbbakID-19ho6XpI2Yu2gxt6KpSt2U9NAtwzSE-s",
-        "language": "fr",
-        "type": "spec/overlays/label/1.0"
-      },
-      {
-        "attribute_information": {
-          "certification_number": "L'identifiant de certification du titre de compétence",
-          "date_completed_dateint": "Date de completion du titre de compétence",
-          "date_created_dateint": "Date de création du titre de compétence",
-          "email": "Address de courriel",
-          "expires_dateint": "Date d'expiration du titre de compétence",
-          "family_name": "Le nom de famille du titulaire",
-          "given_names": "Le ou les prénoms du titulaire"
-        },
-        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "digest": "EQreqvHPiA4jO_u2sqdd01rWgwZgUXRRlthi8hHrcnMU",
-        "language": "fr",
-        "type": "spec/overlays/information/1.0"
-      },
-      {
-        "attribute_categories": [],
-        "attribute_labels": {
           "certification_number": "Certification ID",
           "date_completed_dateint": "Date Completed",
           "date_created_dateint": "Date Created",
@@ -100,6 +68,36 @@
         "type": "spec/overlays/information/1.0"
       },
       {
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
+        "description": "A Selling It Right Certification is required for anyone involved in the sale of non-medical cannabis in British Columbia.",
+        "digest": "EDXLsX07_NQUnBXaIbyfF6Z4BnUxCZZEHL8WrOMzBprA",
+        "issuer": "Government of British Columbia",
+        "issuer_description": "Government of British Columbia",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
+        "language": "en",
+        "name": "Selling It Right",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON-PRODUCTION"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "certification_number": "ID de Certification",
+          "date_completed_dateint": "Date de completion",
+          "date_created_dateint": "Date Crée",
+          "email": "Courriel",
+          "expires_dateint": "Expire",
+          "family_name": "Nom de famille",
+          "given_names": "Prénoms"
+        },
+        "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
+        "category_labels": {},
+        "digest": "E6tvRbbakID-19ho6XpI2Yu2gxt6KpSt2U9NAtwzSE-s",
+        "language": "fr",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
         "attribute_formats": {
           "date_completed_dateint": "YYYYMMDD",
           "date_created_dateint": "YYYYMMDD",
@@ -120,17 +118,19 @@
         "type": "spec/overlays/standard/1.0"
       },
       {
+        "attribute_information": {
+          "certification_number": "L'identifiant de certification du titre de compétence",
+          "date_completed_dateint": "Date de completion du titre de compétence",
+          "date_created_dateint": "Date de création du titre de compétence",
+          "email": "Address de courriel",
+          "expires_dateint": "Date d'expiration du titre de compétence",
+          "family_name": "Le nom de famille du titulaire",
+          "given_names": "Le ou les prénoms du titulaire"
+        },
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing/cannabis-licences/cannabis-resources-information/selling-it-right",
-        "description": "A Selling It Right Certification is required for anyone involved in the sale of non-medical cannabis in British Columbia.",
-        "digest": "EDXLsX07_NQUnBXaIbyfF6Z4BnUxCZZEHL8WrOMzBprA",
-        "issuer": "Government of British Columbia",
-        "issuer_description": "Government of British Columbia",
-        "issuer_url": "https://www2.gov.bc.ca/gov/content/employment-business/business/liquor-regulation-licensing",
-        "language": "en",
-        "name": "Selling It Right",
-        "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION"
+        "digest": "EQreqvHPiA4jO_u2sqdd01rWgwZgUXRRlthi8hHrcnMU",
+        "language": "fr",
+        "type": "spec/overlays/information/1.0"
       },
       {
         "capture_base": "EVNPeboG_IqGJObMjP4mOR3F6Ueq1We3YQ4UAkr1oMHc",
