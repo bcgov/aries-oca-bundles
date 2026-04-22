@@ -1,4 +1,4 @@
-# Creating in an OCA Bundle Pull Request
+# Creating an OCA Bundle Pull Request
 
 ## Introduction
 
@@ -6,33 +6,55 @@ This document explains how to turn your completed Overlays Capture Architecture 
 
 ### Who Should Use This Guide?
 
-- Non-Developers: Should **NOT** use this guide. Rather, such users should use the document [here](./OCABundleCreation.md) to gather the required files (Excel, branding, images, etc.) and create a GitHub Issue requesting an OCA Bundle be created.
-- The maintainers of the [Aries OCA Bundles] repository, and other developers comfortable with Git, Rust, `jq`, and `bash` can follow the instructions below to create an OCA Bundle PR.
-
-Given that intended audience, the instructions in this document are relatively terse, assuming readers won't need each step detailed.
-
-Below is an overview of the process:
-
-- Gather Input Data
-- Create or Update Folder Structure
-- Set Up the README.md
-- Add Watermarks (Optional)
-- Generate the OCA JSON
-- Open the Pull Request
+- **Non-Developers** should **NOT** use this guide. Use the [OCA Bundle Creation](./OCABundleCreation.md) document to gather files and create a GitHub Issue instead.
+- **Developers and maintainers** comfortable with Git and `bash` can follow this guide to create an OCA Bundle PR.
 
 For questions or assistance, raise an [issue on GitHub](https://github.com/bcgov/aries-oca-bundles/issues) and we'll try to help.
 
+### Quick-Reference Checklist
+
+Use this as a summary. Details for each step are in the sections below.
+
+1. [ ] Fork/clone the repo and create a dev branch
+2. [ ] Set up prerequisites (`parser` and `jq`) — **use the DevContainer** for the easiest path
+3. [ ] Gather input data (Excel, branding, images, identifiers)
+4. [ ] Create the OCA Bundle folder under `OCABundles/schema/`
+5. [ ] Populate the folder: `OCA.xlsx`, `branding.json`, images, optional `testdata.csv`
+6. [ ] Create the `README.md` for the bundle (strict format — see below)
+7. [ ] Adjust image paths in `branding.json`
+8. [ ] Add watermarks to Excel if needed
+9. [ ] Generate the bundle: `genBundle.sh -x OCA.xlsx branding.json`
+10. [ ] Update the index files: run `scripts/gen_ocabundlesjson.sh` from the repo root
+11. [ ] Commit, push, and open the PR
+
 ## Getting Started
 
-Do the steps you normally do when preparing to create a PR into a GitHub repo. Note that the [Aries OCA Bundles] repository has a DevContainer configuration that you may want to use.
+### Option A: DevContainer (Recommended)
+
+The repository includes a DevContainer that comes with all prerequisites pre-installed (`parser`, `jq`, Rust, etc.). This is the fastest way to get started:
+
+1. Fork the [Aries OCA Bundles] repository and clone it locally.
+2. Open the clone in VS Code and reopen in the DevContainer when prompted (or use the Command Palette: **Dev Containers: Reopen in Container**).
+3. Create a dev branch for your PR.
+
+That's it — skip to [Input Data](#input-data).
 
 [Aries OCA Bundles]: https://github.com/bcgov/aries-oca-bundles
 
-The steps might include:
+### Option B: Manual Setup
 
-- Forking the [Aries OCA Bundles] repository.
-- Create a local clone.
-- Create a dev branch on the local clone to prepare the PR.
+If you prefer not to use the DevContainer, you will need two tools on your PATH:
+
+1. **`jq`** — Install via [jq installation instructions]. Likely already on your machine.
+2. **`parser`** (OCA Excel Parser) — Requires Rust:
+    - Install Rust via the [Rust Installation Instructions] if needed.
+    - Clone and build the parser: `git clone https://github.com/bcgov/oca-parser-xls.git && cd oca-parser-xls && cargo build`
+    - Copy the binary to your PATH: `cp target/debug/parser ~/bin/`
+
+[JQ installation instructions]: https://stedolan.github.io/jq/download/
+[Rust Installation Instructions]: https://www.rust-lang.org/tools/install
+
+Then fork the [Aries OCA Bundles] repository, clone it, and create a dev branch.
 
 ## Input Data
 
@@ -54,46 +76,27 @@ If you want, you **MAY** include a file `testdata.csv` that is a comma separated
 
 ## Create The Folder For Your OCA Bundle
 
-Once you have forked the [Aries OCA Bundles] repository, create
-the folder for your new OCA Bundle within the `OCABundles` folder. Your
-folder can be placed arbitrarily deep, with some rules for the first
-few levels.
+Create a folder for your new OCA Bundle under `OCABundles/schema/`. The structure is:
 
-`schema` is the (current) name for where credential OCA Bundles are to be
-placed. That name may soon change (`credential` is a better name...), and in the
-future, a parallel folder might be added for presentation request OCA Bundles.
+```
+OCABundles/schema/<issuer>/<sub-issuer>/.../<credential-type>/
+```
 
-Below `schema` is a list of top level credential issuers (e.g., BC Gov), and
-within each, the sub-issuers (to any depth). As you add your OCA Bundle, feel
-free to add as many layers of (sub-)issuers as appropriate. For example, you might include:
+For example: `OCABundles/schema/bcgov-digital-trust/LTSA/property-owner-v1/DevTest/`
 
-- the issuing sub-organization,
-- the type of credential,
-- different versions (e.g., 1.0, 1.1, 2.0, etc.) of the type of credential,
-- development, staging, and production versions of the credential.
+You can nest as deep as needed (sub-organization, credential type, version, environment, etc.).
 
-We'll soon be eliminating the need for different dev, staging and production versions of an OCA Bundle -- unless you really want them to be different.
+**Rules:**
 
-For each layer, you **MUST** add a `README.md` file in which the top level
-markdown header (first line, `# `) **MUST** be the name of the (sub-)issuer. The `README.md` file
-may optionally contain additional information about the (sub-)issuer. The
-requirement for the `README.md` and the markdown header is that when generating
-the GitHub Pages registry site, the required markdown header is extracted used
-for the site navigation.
+- Every folder level **MUST** contain a `README.md` whose first line (`# `) is the name of the (sub-)issuer. This is used to generate site navigation.
+- There **MUST** be a separate folder for each different `watermark` setting.
 
-This hierarchy can be seen in the "OCA Bundles" tab of this registry.
+Populate each OCA Bundle folder with:
 
-At the appropriate level, create the folder for the OCA Bundle. At this time,
-there **MUST** be a folder for each different `watermark` setting. As such, you
-**MAY** have to create multiple OCA Folders, each with (initially) the same
-data. We expect to fix this very soon!
-
-Once you have created the OCA Bundle folders, populate each with the following data:
-
-- The Excel file. There **MUST** be exactly one Excel file per Bundle, and it **SHOULD** be named `OCA.xlsx`.
-- The `branding.json` file.
-- The images, if any associated with the `branding.json` file.
-- The sample credential data file, if any.
+- `OCA.xlsx` — exactly one Excel file per bundle.
+- `branding.json`
+- Image files referenced by `branding.json`, if any.
+- `testdata.csv` (optional but recommended) — credential sample data for tools like OCA Explorer.
 
 ## Create the README.md File for the OCA Bundle
 
@@ -211,54 +214,30 @@ While we plan to soon move the injection of the `watermark` value into the gener
 
 ## Generating the OCA Bundle JSON File from Source
 
-A bash script `genBundle.sh` can be found in the `scripts` folder of the [Aries
-OCA Bundles] GitHub repository that generates the OCA Bundle JSON file. To use
-it, you will need to install a few prerequisites--`jq` and the OCA Excel Parser
-(a Rust binary).
+From your OCA Bundle folder, run `genBundle.sh` with a relative path to the `scripts` folder:
 
-### Prerequisites
+```bash
+# Example from an OCA Bundle folder several levels deep:
+../../../../../../scripts/genBundle.sh -x OCA.xlsx branding.json
+```
 
-Developers will likely have the `jq` (JSON Query) command line utility already installed. If not, follow the
-[JQ installation instructions]. Once installed, make sure `jq` is on your path.
+The `-x <excel file>` argument is required. Additional arguments are JSON overlay files (e.g., `branding.json`) to merge into the bundle. If all goes well, an `OCABundle.json` file will be created in the current directory.
 
-[JQ installation instructions]: https://stedolan.github.io/jq/download/
-[Rust Installation Instructions]: https://www.rust-lang.org/tools/install
+Repeat for each OCA Bundle you are creating (e.g., per unique watermark value).
 
-Installing the OCA Excel Parser is a little (OK, a lot) more involved, as you need Rust (and more) installed on your machine. Here are the steps:
+## Update the Index Files
 
-- Clone a local copy of the OCA Excel Parser repository.
-- If you don't have Rust installed on your machine, following the [Rust Installation Instructions], including installing all necessary dependencies.
-- Follow the instructions in the repository README.md to build the parser. Currently it is just to execute `cargo build`.
-- Copy the resulting executable to a directory on your PATH, e.g., `cp target/debug/parser ~/bin/`
+After generating the `OCABundle.json` file(s), you **MUST** update the repository index files (`ocabundles.json` and `ocabundleslist.json`) so wallets and tools can discover the new bundle. From the **repository root**, run:
 
-### Running the Generator Script
+```bash
+scripts/gen_ocabundlesjson.sh
+```
 
-Assuming you are in an OCABundles folder you can run the script with a relative path, such as:
-
-`../../../scripts/genBundle.sh`
-
-We recommend you create a symbolic link to that script in a directory on your PATH to make it easier to use.
-
-The script checks to see that the pre-requisites (`jq` and `parser`) are
-available and executable, erroring off it not, and, if run without arguments, prints a usage message.
-Currently the `-x <excel file>` is required, and you can supply zero or more
-JSON files to be added to the OCA Bundle produced from processing the Excel
-file. The typical command line is:
-
-`genBundle.sh -x OCA.xlsx branding.json`
-
-If all goes well, an `OCABundle.json` file will be created.
-
-Repeat the generation process for each OCA Bundle you are creating (e.g., per unique watermark value).
+This script recursively scans the `OCABundles` folder and regenerates both index files.
 
 ## Creating the PR
 
-Once you have successfully generated the OCA Bundle JSON files, you are ready to submit the PR.
+1. Review the files — make sure only the intended OCA Bundle files and updated index files are included.
+2. Commit with a descriptive message, push your branch, and open a PR.
 
-- Review the files you will be adding to the repository -- make sure there is nothing beyond the OCA Folders and contents you intend to add.
-- Add the files to your local clone and commit them with an appropriate comment.
-- Push the development branch and create the PR.
-
-The PR **MUST** be reviewed by an OCA Maintainer, and **SHOULD** be approved by whomever requested the PR in the first place.
-
-Assuming all goes well, your PR will be approved and merged.  Updates to the OCA Bundle(s) would follow a similar path, save the creation of the OCA Folders.
+The PR **MUST** be reviewed by an OCA Maintainer and **SHOULD** be approved by the original requester. Once merged, the OCA Bundle becomes available to wallets. Future updates follow the same process.
