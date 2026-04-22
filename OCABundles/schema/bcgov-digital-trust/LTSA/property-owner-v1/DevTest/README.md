@@ -7,10 +7,11 @@ A verifiable credential issued by LTSA to Property Owners for development and te
 
 ## Identifiers  
 
-| Identifier                                       | Location   | URL                                                   |
-| ------------------------------------------------ | ---------- | ----------------------------------------------------- |
-| KKSXjEHUPVNGYHuof1J3xy:3:CL:39553:property-owner | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/39554 |
-| Tm3dXMR3UsSU4X9Ew913Um:3:CL:1092:property-owner  | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/1093 |
+| Identifier                                       | Location   | URL                                                  |
+| ------------------------------------------------ | ---------- | ---------------------------------------------------- |
+| KKSXjEHUPVNGYHuof1J3xy:3:CL:39553:property-owner | candy:dev  | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/39554 |
+| Tm3dXMR3UsSU4X9Ew913Um:3:CL:1092:property-owner  | candy:test | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/1093 |
+| 2GtQ574ofyB9tPFtjjcV6p:3:CL:1092:property-owner  | candy:test | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/1094 |
 
 ## Authorization
 
@@ -21,3 +22,4 @@ The following are the GitHub IDs of those authorized to make substantive updates
 | Ali Ajdari              | aliajdari-landsure | ali.ajdari@landsure.ca          |
 | Vishnu Rathinaswamy     |                    | vishnu.rathinaswamy@landsure.ca |
 | Kyle Robinson           | krobinsonca        | kyle.robinson@briartech.ca      |
+| Emiliano Sune           | esune              | emiliano.sune@quartech.com      |
