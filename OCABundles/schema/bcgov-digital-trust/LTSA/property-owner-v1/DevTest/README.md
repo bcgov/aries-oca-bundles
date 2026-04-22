@@ -12,6 +12,7 @@ A verifiable credential issued by LTSA to Property Owners for development and te
 | KKSXjEHUPVNGYHuof1J3xy:3:CL:39553:property-owner | candy:dev  | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/39554 |
 | Tm3dXMR3UsSU4X9Ew913Um:3:CL:1092:property-owner  | candy:test | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/1093 |
 | 2GtQ574ofyB9tPFtjjcV6p:3:CL:1092:property-owner  | candy:test | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/1094 |
+| JqrH76X8ETpUaNx6TTiP4i:3:CL:6668:property-owner  | candy:prod | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_PROD/domain/6669 |
 
 ## Authorization
 
