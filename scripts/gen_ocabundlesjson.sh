@@ -107,6 +107,10 @@ processFolder() {
     # Recurse into the directories of the folder
     for dir in *; do
         if [ -d $dir ]; then
+            # Skip the _archived folder
+            if [ "$dir" == "_archived" ]; then
+                continue
+            fi
             cd $dir
             processFolder
             cd ..
