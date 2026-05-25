@@ -98,7 +98,6 @@ nav:
           - OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/README.md
           - OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/README.md
           - OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/README.md
-        - OCABundles/schema/bcgov-digital-trust/member-card/README.md
         - OCABundles/schema/bcgov-digital-trust/member-card-showcase/README.md
         - BC Mines Act Permit:
           - OCABundles/schema/bcgov-digital-trust/mines-act-permit/0.3/README.md
