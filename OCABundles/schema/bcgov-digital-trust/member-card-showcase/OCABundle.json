@@ -76,9 +76,9 @@
       },
       {
         "capture_base": "EudfUE3gTdDatjnTOVQDFLC3hgEm3t5MWPY-BseiGdv8",
-        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-logo.jpg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Test/lsbc-logo.jpg",
         "background_image_slice": "",
-        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/member-card/lsbc-background-image.jpg",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Test/lsbc-background-image.jpg",
         "primary_background_color": "#00698c",
         "secondary_background_color": "#1a2930",
         "primary_attribute": "",
