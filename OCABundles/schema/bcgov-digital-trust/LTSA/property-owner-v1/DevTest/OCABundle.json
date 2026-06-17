@@ -1,0 +1,81 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "pid": "Text",
+        "property_address": "Text"
+      },
+      "classification": "",
+      "digest": "EQxcz9mTRMpbsaViF3tNFydbTJPQuHvRLKGQqQGrulXU",
+      "flagged_attributes": [],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "pid": "utf-8",
+          "property_address": "utf-8"
+        },
+        "capture_base": "EQxcz9mTRMpbsaViF3tNFydbTJPQuHvRLKGQqQGrulXU",
+        "default_character_encoding": "utf-8",
+        "digest": "EqRtqb3L6VAFUctrA0YZDrKpZFm8plCorB7zT6nXXksU",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_formats": {
+          "pid": "",
+          "property_address": ""
+        },
+        "capture_base": "EQxcz9mTRMpbsaViF3tNFydbTJPQuHvRLKGQqQGrulXU",
+        "digest": "EmQJ4kHwUUSAOg_JKeR-QAwV1iSmjqYP3PjXikhqydYw",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "pid": "Parcel Identifier (PID)",
+          "property_address": "Property Address"
+        },
+        "capture_base": "EQxcz9mTRMpbsaViF3tNFydbTJPQuHvRLKGQqQGrulXU",
+        "category_labels": {},
+        "digest": "E_0u54WltnFQ-Xf-pOTfyyEOzELwG3AMStHeFofjZVag",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "pid": "The nine digit parcel identifier",
+          "property_address": "The address of the property"
+        },
+        "capture_base": "EQxcz9mTRMpbsaViF3tNFydbTJPQuHvRLKGQqQGrulXU",
+        "digest": "E8NxqeNUGEaTmQ_KbA1QVDP_kjwkuT8EYObE_8wtdixc",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "capture_base": "EQxcz9mTRMpbsaViF3tNFydbTJPQuHvRLKGQqQGrulXU",
+        "credential_support_url": "https://ltsa.ca/",
+        "description": "This schema is used to provide proof of land title ownership.",
+        "digest": "EkEGWxRoCvERE9iEe9C-Nebwmqashw4mBsk4zAo1wk3M",
+        "issuer": "Land Title and Survey Authority of BC",
+        "issuer_description": "Land Title and Survey Authority of BC",
+        "issuer_url": "https://ltsa.ca/",
+        "language": "en",
+        "name": "Property Owner Credential",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON PRODUCTION"
+      },
+      {
+        "type": "aries/overlays/branding/1.0",
+        "capture_base": "EQxcz9mTRMpbsaViF3tNFydbTJPQuHvRLKGQqQGrulXU",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/property-owner-v1/DevTest/LTSA-Vertical-Logo.jpg",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/LTSA/property-owner-v1/DevTest/oca-background.jpg",
+        "primary_attribute": "property_address",
+        "secondary_attribute": "pid",
+        "primary_background_color": "#282B67",
+        "secondary_background_color": "#4CA747"
+      }
+    ]
+  }
+]

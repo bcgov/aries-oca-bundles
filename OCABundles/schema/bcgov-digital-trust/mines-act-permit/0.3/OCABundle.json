@@ -1,0 +1,115 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "bond_total": "Numeric",
+        "issue_date": "DateTime",
+        "latitude": "Numeric",
+        "longitude": "Numeric",
+        "mine_commodity_code": "Text",
+        "mine_disturbance_code": "Text",
+        "mine_no": "Text",
+        "mine_operation_status_code": "Text",
+        "mine_operation_status_reason_code": "Text",
+        "mine_operation_status_sub_reason_code": "Text",
+        "mine_party_appt": "Text",
+        "permit_no": "Text",
+        "permit_status_code": "Text",
+        "tsf_care_and_maintainence_count": "Numeric",
+        "tsf_operation_count": "Numeric"
+      },
+      "classification": "",
+      "digest": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+      "flagged_attributes": [],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "bond_total": "utf-8",
+          "issue_date": "utf-8",
+          "latitude": "utf-8",
+          "longitude": "utf-8",
+          "mine_commodity_code": "utf-8",
+          "mine_disturbance_code": "utf-8",
+          "mine_no": "utf-8",
+          "mine_operation_status_code": "utf-8",
+          "mine_operation_status_reason_code": "utf-8",
+          "mine_operation_status_sub_reason_code": "utf-8",
+          "mine_party_appt": "utf-8",
+          "permit_no": "utf-8",
+          "permit_status_code": "utf-8",
+          "tsf_care_and_maintainence_count": "utf-8",
+          "tsf_operation_count": "utf-8"
+        },
+        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "default_character_encoding": "utf-8",
+        "digest": "EHJmbnVnul6A9PaGAvipqRPaRAe5tER2eAP3JViBeQMU",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "bond_total": "Bond Total",
+          "issue_date": "Issue Date",
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "mine_commodity_code": "Mine Commodity Code",
+          "mine_disturbance_code": "Mine Disturbance Code",
+          "mine_no": "Mine Number",
+          "mine_operation_status_code": "Mine Operation Status Code",
+          "mine_operation_status_reason_code": "Mine Operation Status Reason Code",
+          "mine_operation_status_sub_reason_code": "Mine Operation Status Sub Reason Code",
+          "mine_party_appt": "Permittee",
+          "permit_no": "Permit Number",
+          "permit_status_code": "Permit Status Code",
+          "tsf_care_and_maintainence_count": "TSF Care and Maintenance Count",
+          "tsf_operation_count": "TSF Operation Count"
+        },
+        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "category_labels": {},
+        "digest": "EmKqNIImfoaPk3TppYsJ2ffttQ9vfXMxmM_KLZW_HpSM",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_formats": {
+          "issue_date": "YYYYMMDD"
+        },
+        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "digest": "EXbP-3JPiYjVOR2ipJOf_wLbvdpsPgUblfpqpmUWumAg",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "attribute_standards": {
+          "issue_date": "urn:iso:std:iso:1989"
+        },
+        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "digest": "E0j1uHwtkH4Fjy_rNeNGUe7wu_XmUUvZGveL1DRRDrpI",
+        "type": "spec/overlays/standard/1.0"
+      },
+      {
+        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "description": "A verifiable credential schema for a business registered within the province of British Columbia",
+        "digest": "Ehbw5I6V-dblNG-H8pSVN01CDZJYsQSUzqkBJ5k26NHo",
+        "issuer": "Government of British Columbia",
+        "language": "en",
+        "name": "Mines Act Permit",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/mines-act-permit/0.3/bc-logo.jpg",
+        "background_image_slice": "",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/mines-act-permit/0.3/mines-act-permit-background-image.png",
+        "primary_background_color": "#003366",
+        "secondary_background_color": "#00264D",
+        "capture_base": "EJX0os1HbJ01fZVq7DEMNcxp-5d9lGRH91Kgehb0KKbw",
+        "digest": "",
+        "expiry_date_attribute": "",
+        "primary_attribute": "permit_no",
+        "secondary_attribute": "mine_party_appt",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]
