@@ -1,0 +1,165 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "credential_expiry_dateint": "DateTime",
+        "department": "Text",
+        "email": "Text",
+        "employee_id": "Text",
+        "employee_since_dateint": "DateTime",
+        "employment_type": "Text",
+        "family_name": "Text",
+        "given_name": "Text",
+        "job_title": "Text"
+      },
+      "classification": "",
+      "digest": "EFdR6OjR9_KNOYfSQV65QJlWaadVf7NsxTie3u5_HXQQ",
+      "flagged_attributes": [
+        "given_name",
+        "family_name",
+        "email"
+      ],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "credential_expiry_dateint": "utf-8",
+          "department": "utf-8",
+          "email": "utf-8",
+          "employee_id": "utf-8",
+          "employee_since_dateint": "utf-8",
+          "employment_type": "utf-8",
+          "family_name": "utf-8",
+          "given_name": "utf-8",
+          "job_title": "utf-8"
+        },
+        "capture_base": "EFdR6OjR9_KNOYfSQV65QJlWaadVf7NsxTie3u5_HXQQ",
+        "default_character_encoding": "utf-8",
+        "digest": "Er94VGfOjkpypIvgDpqaqBOlbpYgco_IbJAj-vRiymWs",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_formats": {
+          "credential_expiry_dateint": "",
+          "department": "",
+          "email": "",
+          "employee_id": "",
+          "employee_since_dateint": "",
+          "employment_type": "",
+          "family_name": "",
+          "given_name": "",
+          "job_title": ""
+        },
+        "capture_base": "EFdR6OjR9_KNOYfSQV65QJlWaadVf7NsxTie3u5_HXQQ",
+        "digest": "En6csGtdpOMiNf1s-L3M-sSgF-F5PSPtmQ0it5nZDGMY",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "credential_expiry_dateint": "Expiry Date",
+          "department": "Department",
+          "email": "Work Email",
+          "employee_id": "Employee ID",
+          "employee_since_dateint": "Employee Since",
+          "employment_type": "Employment Type",
+          "family_name": "Family Name",
+          "given_name": "Given Name",
+          "job_title": "Job Title"
+        },
+        "capture_base": "EFdR6OjR9_KNOYfSQV65QJlWaadVf7NsxTie3u5_HXQQ",
+        "category_labels": {},
+        "digest": "E1hRKf32mO4bRotbblyondKsfbYamS43sR7MvnjCTYBM",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "credential_expiry_dateint": "The date on which this employee credential expires and must be reissued.",
+          "department": "The team or department the employee belongs to within Northern Block.",
+          "email": "The employee's official Northern Block work email address.",
+          "employee_id": "The unique identifier assigned to the employee by Northern Block.",
+          "employee_since_dateint": "The date on which the employee officially joined Northern Block.",
+          "employment_type": "Indicates whether the employee is Full-Time, Part-Time, or a Contractor.",
+          "family_name": "The employee's family (last) name as it appears in HR records.",
+          "given_name": "The employee's given (first) name as it appears in HR records.",
+          "job_title": "The official title of the employee's role within Northern Block."
+        },
+        "capture_base": "EFdR6OjR9_KNOYfSQV65QJlWaadVf7NsxTie3u5_HXQQ",
+        "digest": "ETX9ecCfB6aLoZtdUBsNb2P8sasdGkoIMp9ET7kBsiPY",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "type": "spec/overlays/attribute_order/1.0",
+        "order": [
+          "job_title",
+          "given_name",
+          "family_name",
+          "credential_expiry_dateint",
+          "department",
+          "email",
+          "employee_id",
+          "employee_since_dateint",
+          "employment_type"
+        ]
+      },
+      {
+        "type": "spec/overlays/visibility/1.0",
+        "summary": [
+          "job_title",
+          "given_name",
+          "family_name",
+          "credential_expiry_dateint"
+        ],
+        "details": [
+          "department",
+          "email",
+          "employee_id",
+          "employee_since_dateint",
+          "employment_type"
+        ]
+      },
+      {
+        "type": "spec/overlays/card/1.0",
+        "language": "en",
+        "title": "Northern Block Employee Credential",
+        "subtitle": "Verifiable Credential",
+        "layout": {
+          "front": {
+            "fields": [
+              "job_title",
+              "given_name"
+            ]
+          },
+          "back": {
+            "fields": [
+              "email",
+              "employee_id",
+              "employee_since_dateint"
+            ]
+          }
+        },
+        "style": {
+          "primary_color": "#003366",
+          "secondary_color": "#E6F0FA",
+          "accent_color": "#0066CC"
+        }
+      },
+      {
+        "capture_base": "EFdR6OjR9_KNOYfSQV65QJlWaadVf7NsxTie3u5_HXQQ",
+        "credential_support_url": "https://northernblock.io/support",
+        "description": "A verifiable credential issued by Northern Block to confirm active employment status and role.",
+        "digest": "EIjRMtZAwUAkJ-yOh0Aev0jmhgviaPl2-qRgHIXCPOrk",
+        "issuer": "Northern Block",
+        "issuer_description": "Northern Block is a digital identity and trust technology company.",
+        "issuer_url": "https://northernblock.io",
+        "language": "en",
+        "name": "Northern Block Employee Credential",
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "NON PRODUCTION"
+      }
+    ]
+  }
+]
