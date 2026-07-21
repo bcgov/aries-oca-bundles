@@ -1,0 +1,158 @@
+[
+  {
+    "capture_base": {
+      "attributes": {
+        "authorization_details": "Text",
+        "authorization_id": "Text",
+        "authorization_valid_from_dateint": "DateTime",
+        "authorization_valid_until_dateint": "DateTime",
+        "authorized_business_licence": "Text",
+        "authorized_business_name": "Text",
+        "authorized_location_full_address": "Text",
+        "authorized_location_short_address": "Text",
+        "authorized_parcel_identifier": "Text",
+        "authorized_person_family_name": "Text",
+        "authorized_person_given_names": "Text",
+        "authorized_services": "Text",
+        "authorized_services_json": "Text",
+        "authorized_services_summary": "Text",
+        "authorizer_business_licence": "Text",
+        "authorizer_business_name": "Text",
+        "authorizer_role_type": "Text",
+        "verification_method": "Text"
+      },
+      "classification": "",
+      "digest": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+      "flagged_attributes": [
+        "authorized_person_given_names",
+        "authorized_person_family_name"
+      ],
+      "type": "spec/capture_base/1.0"
+    },
+    "overlays": [
+      {
+        "attribute_character_encoding": {
+          "authorization_details": "utf-8",
+          "authorization_id": "utf-8",
+          "authorization_valid_from_dateint": "utf-8",
+          "authorization_valid_until_dateint": "utf-8",
+          "authorized_business_licence": "utf-8",
+          "authorized_business_name": "utf-8",
+          "authorized_location_full_address": "utf-8",
+          "authorized_location_short_address": "utf-8",
+          "authorized_parcel_identifier": "utf-8",
+          "authorized_person_family_name": "utf-8",
+          "authorized_person_given_names": "utf-8",
+          "authorized_services": "utf-8",
+          "authorized_services_json": "utf-8",
+          "authorized_services_summary": "utf-8",
+          "authorizer_business_licence": "utf-8",
+          "authorizer_business_name": "utf-8",
+          "authorizer_role_type": "utf-8",
+          "verification_method": "utf-8"
+        },
+        "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+        "default_character_encoding": "utf-8",
+        "digest": "EQbjF5hU8xXrsPzUEUC_Ay2uAkDE1oaUEBmAOyE2I6vM",
+        "type": "spec/overlays/character_encoding/1.0"
+      },
+      {
+        "attribute_categories": [],
+        "attribute_labels": {
+          "authorization_details": "Authorization statement",
+          "authorization_id": "Authorization number",
+          "authorization_valid_from_dateint": "Valid from",
+          "authorization_valid_until_dateint": "Valid until",
+          "authorized_business_licence": "Licence number",
+          "authorized_business_name": "Business name",
+          "authorized_location_full_address": "Full address",
+          "authorized_location_short_address": "Location",
+          "authorized_parcel_identifier": "Parcel ID",
+          "authorized_person_family_name": "Surname",
+          "authorized_person_given_names": "Given names",
+          "authorized_services": "Authorized for",
+          "authorized_services_json": "Authorized services (detail)",
+          "authorized_services_summary": "Authorized to apply for",
+          "authorizer_business_licence": "Grantor licence number",
+          "authorizer_business_name": "Grantor business name",
+          "authorizer_role_type": "Permission granted by",
+          "verification_method": "Verification method"
+        },
+        "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+        "category_labels": {},
+        "digest": "EVvY3LHAuwxd7dB41qMKI41i3mriy4_9KDNBUJR-oHwE",
+        "language": "en",
+        "type": "spec/overlays/label/1.0"
+      },
+      {
+        "attribute_information": {
+          "authorization_details": "A human-readable, natural-language statement of the authorization.",
+          "authorization_id": "A unique identifier correlating to the underlying proof data and authorization documentation in the system of record.",
+          "authorization_valid_from_dateint": "The date on which the credential was issued.",
+          "authorization_valid_until_dateint": "The date on which the credential will expire.",
+          "authorized_business_licence": "The number of the related business licence that is being authorized.",
+          "authorized_business_name": "The name of the business that is being authorized.",
+          "authorized_location_full_address": "The complete address of the location for which authorization is requested.",
+          "authorized_location_short_address": "The street portion of the authorized location (unit number + street number + street name).",
+          "authorized_parcel_identifier": "The nine-digit Parcel Identifier (PID) uniquely identifying the parcel in the BC land title register. Format: ###-###-###.",
+          "authorized_person_family_name": "The family name of the person granted authorization to consume municipal services.",
+          "authorized_person_given_names": "The given names of the person granted authorization to consume municipal services.",
+          "authorized_services": "A human-readable, comma-separated list of the municipal services authorized under this credential.",
+          "authorized_services_json": "The authoritative, machine-readable list of authorized services, each with its own identifier, short name, expiry date, and options.",
+          "authorized_services_summary": "A human-readable summary of the authorized service(s) and validity, shown on the wallet card.",
+          "authorizer_business_licence": "The number of the related business licence of the authorizer.",
+          "authorizer_business_name": "If applicable, the name of the business authorizing the consumption of services; otherwise \"N/A\".",
+          "authorizer_role_type": "The role or capacity in which the authorizer is granting authorization (e.g., property owner, business owner).",
+          "verification_method": "Indicates whether digital credentials were used as proof of verification (\"Manual\" or \"Digital\")."
+        },
+        "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+        "digest": "E0m4CRIXVGZ17rvydBSMkt164FvrlN2X_RQoKy2tv9Ek",
+        "language": "en",
+        "type": "spec/overlays/information/1.0"
+      },
+      {
+        "attribute_formats": {
+          "authorization_valid_from_dateint": "YYYYMMDD",
+          "authorization_valid_until_dateint": "YYYYMMDD"
+        },
+        "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+        "digest": "EnBkS3IpW-9xqmUzGLk1v2ncQLtI38DF1-F4Whniws_4",
+        "type": "spec/overlays/format/1.0"
+      },
+      {
+        "attribute_standards": {
+          "authorization_valid_from_dateint": "urn:iso:std:iso:1989",
+          "authorization_valid_until_dateint": "urn:iso:std:iso:1989"
+        },
+        "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+        "digest": "EBE4Xa0NtYouidEQQa8b-rO2jtYnh8HO_Dddw6CR7sLM",
+        "type": "spec/overlays/standard/1.0"
+      },
+      {
+        "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+        "credential_support_url": "https://vancouver.ca/",
+        "description": "A City of Vancouver digital credential authorizing a person to apply for or access municipal services on behalf of another party.",
+        "digest": "EJgXPvezlSXfONz_4EvT972KkE9LMDXLyd2TN7DiFpcw",
+        "issuer": "City of Vancouver (UAT)",
+        "issuer_description": "City of Vancouver",
+        "issuer_url": "https://vancouver.ca/",
+        "language": "en",
+        "name": "Digital Letter of Authorization",
+        "type": "spec/overlays/meta/1.0"
+      },
+      {
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/cov-logo.jpg",
+        "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/cov-background-slice.jpg",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/cov-background-image.jpg",
+        "primary_background_color": "#015982",
+        "secondary_background_color": "#4b8516",
+        "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+        "digest": "",
+        "expiry_date_attribute": "authorization_valid_until_dateint",
+        "primary_attribute": "authorized_services_summary",
+        "secondary_attribute": "authorized_location_short_address",
+        "type": "aries/overlays/branding/1.0"
+      }
+    ]
+  }
+]
