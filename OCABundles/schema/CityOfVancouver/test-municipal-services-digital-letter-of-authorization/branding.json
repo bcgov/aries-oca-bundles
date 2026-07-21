@@ -1,0 +1,15 @@
+[
+  {
+    "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/cov-logo.jpg",
+    "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/cov-background-slice.jpg",
+    "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/cov-background-image.jpg",
+    "primary_background_color": "#015982",
+    "secondary_background_color": "#4b8516",
+    "capture_base": "Eqnu0P-xve8XMvquP-bl0XMaoXtgijyBL2RW0dxiF_LQ",
+    "digest": "",
+    "expiry_date_attribute": "authorization_valid_until_dateint",
+    "primary_attribute": "authorized_services_summary",
+    "secondary_attribute": "authorized_location_short_address",
+    "type": "aries/overlays/branding/1.0"
+  }
+]
