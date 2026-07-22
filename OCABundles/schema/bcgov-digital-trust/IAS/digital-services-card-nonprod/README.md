@@ -9,9 +9,9 @@ Non-Production BC Digital Services Card OCA Bundle for the Government of British
 
 | Identifier                                    | Location   | URL                                                                |
 | --------------------------------------------- | ---------- | ------------------------------------------------------------------ |
-| KCxVC8GkKywjhWJnUfCmkW:3:CL:20:Person (QA)    | candy:test | https://candyscan.idlab.org/tx/CANDY_TEST/domain/21                |
+| KCxVC8GkKywjhWJnUfCmkW:3:CL:20:PersonQA       | candy:test | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/51                |
 | LbeM3m8SVix4uhdVPyVAQe:3:CL:20:PersonPREPROD  | candy:test | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_TEST/domain/113  |
-| 7xjfawcnyTUcduWVysLww5:3:CL:28075:Person (SIT) | candy:dev  | https://candyscan.idlab.org/tx/CANDY_DEV/domain/28091              |
+| 7xjfawcnyTUcduWVysLww5:3:CL:28075:PersonSIT   | candy:dev  | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/31530              |
 | XpgeQa93eZvGSZBZef3PHn:3:CL:28075:PersonDEV   | candy:dev  | https://candyscan.digitaltrust.gov.bc.ca/tx/CANDY_DEV/domain/31602 |
 
 ## Authorization
