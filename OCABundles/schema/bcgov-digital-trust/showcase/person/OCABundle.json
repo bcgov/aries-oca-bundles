@@ -81,14 +81,16 @@
       {
         "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
         "credential_help_text": "Learn more",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content/governments/government-id/person-credential",
-        "description": "A credential created from your BC Services Card",
-        "digest": "E7OykmOsJspSqv80dljGSzt9BAqJYiFOGWluvPd78ym4",
+        "credential_support_url": "https://id.gov.bc.ca/",
+        "description": "Your BC Digital Services Card",
+        "digest": "EL_X6UtIixHY7xtMgSTmCiJG9hyfA8yZidPojCvT00Ms",
         "issuer": "Government of British Columbia",
+        "issuer_description": "Service BC",
+        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "en",
-        "name": "Person",
+        "name": "Digital Services Card",
         "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION"
+        "watermark": "SHOWCASE"
       },
       {
         "attribute_categories": [],
@@ -149,16 +151,17 @@
       },
       {
         "capture_base": "EP4jXq7sdsWZUXFOdnmI2S9cKyw2SPKvuQdI_hL2lKGE",
-        "credential_support_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
-        "description": "Une pièce d'identité créée à partir de votre BC Services Card",
-        "digest": "EjcwKIHRayKTu-L0sV80OxbY2QXZPkofpYtrBRhz4TVc",
+        "credential_help_text": "Apprendre encore plus",
+        "credential_support_url": "https://id.gov.bc.ca/",
+        "description": "Votre carte de services numériques de la Colombie-Britannique",
+        "digest": "EJ1SPCTwKwScqSh50FOcWGZB9ut0uOSiwbYwgJFNvuko",
         "issuer": "Gouvernement de la Colombie-Britannique",
         "issuer_description": "Service BC",
         "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "fr",
-        "name": "Personne",
+        "name": "Carte de services numériques",
         "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION (FR)"
+        "watermark": "VITRINE"
       },
       {
         "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/person/bc-logo.jpg",
