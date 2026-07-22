@@ -90,38 +90,39 @@ nav:
 - OCA Explorer:
   - OCA Explorer: oca-explorer/README.md
 - OCA Bundles:
-    - Credential OCA Bundles:
-      - BC Gov:
-        - OCABundles/schema/bcgov-digital-trust/business-card/README.md
-        - OCABundles/schema/bcgov-digital-trust/business-card-nonprod/README.md
-        - LCRB:
-          - OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right/README.md
-          - OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/README.md
-          - OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right/README.md
-          - OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/README.md
-          - OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server/README.md
-          - OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/README.md
-        - Law Society of BC:
-          - OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Prod/README.md
-          - OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Test/README.md
-        - Land Title and Survey Authority of BC:
-          - OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/README.md
-          - OCABundles/schema/bcgov-digital-trust/LTSA/property-owner-v1/DevTest/README.md
-          - OCABundles/schema/bcgov-digital-trust/LTSA/property-owner-v1/Prod/README.md
-        - BC Mines Act Permit:
-          - OCABundles/schema/bcgov-digital-trust/mines-act-permit/0.3/README.md
-          - OCABundles/schema/bcgov-digital-trust/mines-act-permit/1.1.1/README.md
-        - OCABundles/schema/bcgov-digital-trust/person/README.md
-        - OCABundles/schema/bcgov-digital-trust/pilot/README.md
-        - OCABundles/schema/bcgov-digital-trust/showcase/member-card/README.md
-        - OCABundles/schema/bcgov-digital-trust/showcase/person/README.md
-        - OCABundles/schema/bcgov-digital-trust/showcase/student-card/README.md
-        - OCABundles/schema/bcgov-digital-trust/transcriber-contractor/README.md
-      - City of Vancouver:
-        - OCABundles/schema/CityOfVancouver/dev-municipal-services-digital-letter-of-authorization/README.md
-        - OCABundles/schema/CityOfVancouver/dev-property-rental-business-licence/README.md
-        - OCABundles/schema/CityOfVancouver/prod-property-rental-business-licence/README.md
-        - OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/README.md
-        - OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/README.md
-      - MCN, Government of Quebec:
-        - OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/README.md
+  - Credential OCA Bundles:
+    - BC Gov:
+      - OCABundles/schema/bcgov-digital-trust/business-card/README.md
+      - OCABundles/schema/bcgov-digital-trust/business-card-nonprod/README.md
+      - OCABundles/schema/bcgov-digital-trust/IAS/digital-services-card-nonprod/README.md
+      - LCRB:
+        - OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right/README.md
+        - OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/README.md
+        - OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right/README.md
+        - OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/README.md
+        - OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server/README.md
+        - OCABundles/schema/bcgov-digital-trust/LCRB/special-event-server-showcase/README.md
+      - Law Society of BC:
+        - OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Prod/README.md
+        - OCABundles/schema/bcgov-digital-trust/LSBC/Lawyer/Test/README.md
+      - Land Title and Survey Authority of BC:
+        - OCABundles/schema/bcgov-digital-trust/LTSA/NewCredCredential/demo/README.md
+        - OCABundles/schema/bcgov-digital-trust/LTSA/property-owner-v1/DevTest/README.md
+        - OCABundles/schema/bcgov-digital-trust/LTSA/property-owner-v1/Prod/README.md
+      - BC Mines Act Permit:
+        - OCABundles/schema/bcgov-digital-trust/mines-act-permit/0.3/README.md
+        - OCABundles/schema/bcgov-digital-trust/mines-act-permit/1.1.1/README.md
+      - OCABundles/schema/bcgov-digital-trust/person/README.md
+      - OCABundles/schema/bcgov-digital-trust/pilot/README.md
+      - OCABundles/schema/bcgov-digital-trust/showcase/member-card/README.md
+      - OCABundles/schema/bcgov-digital-trust/showcase/person/README.md
+      - OCABundles/schema/bcgov-digital-trust/showcase/student-card/README.md
+      - OCABundles/schema/bcgov-digital-trust/transcriber-contractor/README.md
+    - City of Vancouver:
+      - OCABundles/schema/CityOfVancouver/dev-municipal-services-digital-letter-of-authorization/README.md
+      - OCABundles/schema/CityOfVancouver/dev-property-rental-business-licence/README.md
+      - OCABundles/schema/CityOfVancouver/prod-property-rental-business-licence/README.md
+      - OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/README.md
+      - OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/README.md
+    - MCN, Government of Quebec:
+      - OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/README.md
