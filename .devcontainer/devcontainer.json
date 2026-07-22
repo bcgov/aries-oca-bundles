@@ -16,6 +16,9 @@
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "bash scripts/buildDevcontainer.sh",
+	"remoteEnv": {
+		"PATH": "${containerEnv:PATH}:${containerEnv:HOME}/bin:${containerEnv:HOME}/.local/bin:${workspaceFolder}/scripts"
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -24,6 +27,7 @@
 		}
 	},
 	// Make sure to export ~/bin after the container is ready: export PATH=$PATH:~/bin
+	// The scripts folder is already added to PATH via remoteEnv above.
 	// Configure tool-specific properties.
 	// "customizations": {},
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.

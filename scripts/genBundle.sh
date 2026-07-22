@@ -6,6 +6,25 @@ JSONFiles=""
 OCABUNDLE=OCABundle.json
 TMPOCABUNDLE=${OCABUNDLE}.tmp
 
+resolve_parser() {
+    if [[ -n "${PARSER_BIN}" && -x "${PARSER_BIN}" ]]; then
+        echo "${PARSER_BIN}"
+        return
+    fi
+
+    if command -v parser >/dev/null 2>&1; then
+        command -v parser
+        return
+    fi
+
+    for candidate in "$HOME/bin/parser" "$HOME/.local/bin/parser"; do
+        if [[ -x "${candidate}" ]]; then
+            echo "${candidate}"
+            return
+        fi
+    done
+}
+
 # Usage info
 show_help() {
 cat << EOF
@@ -26,8 +45,8 @@ EOF
 }
 
 # Check to see if the OCA Parser and JQ are available and executable
-PARSER=$(which parser)
-JQ=$(which jq)
+PARSER=$(resolve_parser)
+JQ=$(command -v jq || true)
 
 if [[ ! -x "${PARSER}" ]]; then
     echo ERROR: Unable to find the OCA Excel Parser in the designated location.
@@ -35,10 +54,11 @@ if [[ ! -x "${PARSER}" ]]; then
     exit 1
 fi
 
-PARSERVER=$(${PARSER} --version | grep "XLS(X) Parser")
+PARSERVER=$(${PARSER} --version 2>/dev/null | grep "XLS(X) Parser")
 
 if [ "${PARSERVER}" == "" ]; then
     echo ERROR: Wrong type of \"parser\" executable.
+    echo ERROR: Parser found at ${PARSER}
     show_help
     exit 1
 fi

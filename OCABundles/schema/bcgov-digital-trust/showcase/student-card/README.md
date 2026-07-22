@@ -12,6 +12,9 @@ A verifiable credential schema for a Student Card used in a demo that is part of
 | L6ASjmDDbDH7yPL1t2yFj9:2:student_card:1.2 | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/7407   |
 | M6dhuFj5UwbhWkSLmvYSPc:2:student_card:1.6 | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/834684 |
 | QEquAHkM35w4XVT3Ku5yat:2:student_card:1.6 | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/834668 |
+| L6ASjmDDbDH7yPL1t2yFj9:2:student_card:2.0 | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/3190251   |
+| M6dhuFj5UwbhWkSLmvYSPc:2:student_card:3.0 | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/3212899 |
+| QEquAHkM35w4XVT3Ku5yat:2:student_card:2.0 | bcovrin:test | https://indyscan.bcovrin.vonx.io/tx/BCOVRIN_TEST/domain/3211903 |
 
 ## Authorization
 
@@ -22,3 +25,4 @@ The following are the GitHub IDs of those authorized to make substantive updates
 | Stephen Curran          | swcurran    | swcurran@cloudcompass.ca   |
 | Kyle Robinson           | krobinsonca | kyle.robinson@briartech.ca |
 | Clecio Varjao           | cvarjao     | clecio.varjao@gov.bc.ca    |
+| Emiliano Sune           | esune       | emiliano.sune@quartech.com |

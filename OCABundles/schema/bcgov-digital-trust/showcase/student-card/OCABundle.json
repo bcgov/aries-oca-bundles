@@ -55,14 +55,14 @@
         "credential_help_text": "This is an example of a simple student card that might be issued by a Canadian University or College.",
         "credential_support_url": "mailto:DItrust@gov.bc.ca",
         "description": "An example Student Card that might be issued from a Canadian University or College",
-        "digest": "EZ6QKl1zTJplRtOL7z7q_Tfg8kTMghmTFE3e5S3CDlFo",
+        "digest": "E8LXWWbeT8NClsZGmanZb2C0WrMBOA4dkzggfIwQvBDE",
         "issuer": "Best BC College",
         "issuer_description": "Best BC College",
         "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
         "language": "en",
         "name": "DEMO - Student Card",
         "type": "spec/overlays/meta/1.0",
-        "watermark": "NON-PRODUCTION"
+        "watermark": "SHOWCASE"
       },
       {
         "attribute_categories": [],
@@ -109,18 +109,19 @@
         "credential_help_text": "Il s'agit d'un exemple de simple carte d'étudiant qui pourrait être émise par une université ou un collège canadien.",
         "credential_support_url": "mailto:DItrust@gov.bc.ca",
         "description": "Un exemple de carte étudiante qui pourrait être émise par une université ou un collège canadien",
-        "digest": "EaqTc0Ll59tCS4mhfWn0AFt1VwcH74GI1YTsD1jVtNbU",
+        "digest": "EjONpoKU6lQh8CxHelF0_AGni1yzAO2dGvOjgVEnraZc",
         "issuer": "Best BC College",
         "issuer_description": "Best BC College",
         "issuer_url": "https://digital.gov.bc.ca/digital-trust/contact/",
         "language": "fr",
         "name": "DÉMO - Carte d'étudiant",
-        "type": "spec/overlays/meta/1.0"
+        "type": "spec/overlays/meta/1.0",
+        "watermark": "VITRINE"
       },
       {
-        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-logo.png",
-        "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-background-image-slice.jpg",
-        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/student-card/best-bc-background-image.jpg",
+        "logo": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/showcase/student-card/best-bc-logo.png",
+        "background_image_slice": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/showcase/student-card/best-bc-background-image-slice.jpg",
+        "background_image": "https://raw.githubusercontent.com/bcgov/aries-oca-bundles/main/OCABundles/schema/bcgov-digital-trust/showcase/student-card/best-bc-background-image.jpg",
         "primary_background_color": "#32674e",
         "capture_base": "E75sopl65qnoZRwjQQ0FjWGemLlOXcXtanhScZ2CloJY",
         "digest": "EBQbQEV6qSEGDzGLj1CqT4e6yzESjPimF-Swmyltw5jU",

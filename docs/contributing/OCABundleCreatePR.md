@@ -214,10 +214,13 @@ While we plan to soon move the injection of the `watermark` value into the gener
 
 ## Generating the OCA Bundle JSON File from Source
 
-From your OCA Bundle folder, run `genBundle.sh` with a relative path to the `scripts` folder:
+From your OCA Bundle folder, run `genBundle.sh` to generate the OCA Bundle JSON file:
 
 ```bash
-# Example from an OCA Bundle folder several levels deep:
+# When using the DevContainer (recommended):
+genBundle.sh -x OCA.xlsx branding.json
+
+# When not using the DevContainer, use the full path:
 ../../../../../../scripts/genBundle.sh -x OCA.xlsx branding.json
 ```
 
@@ -230,6 +233,10 @@ Repeat for each OCA Bundle you are creating (e.g., per unique watermark value).
 After generating the `OCABundle.json` file(s), you **MUST** update the repository index files (`ocabundles.json` and `ocabundleslist.json`) so wallets and tools can discover the new bundle. From the **repository root**, run:
 
 ```bash
+# When using the DevContainer (recommended):
+gen_ocabundlesjson.sh
+
+# When not using the DevContainer:
 scripts/gen_ocabundlesjson.sh
 ```
 

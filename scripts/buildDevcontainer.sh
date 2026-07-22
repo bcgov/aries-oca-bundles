@@ -1,17 +1,34 @@
 #!/bin/bash
 
-sudo apt-get update
-sudo apt-get install -y clang lld
+set -euo pipefail
 
-git clone https://github.com/bcgov/oca-parser-xls.git
-cd ./oca-parser-xls && RUSTFLAGS="-C link-arg=-fuse-ld=lld" cargo build
-mkdir -p ~/bin
-cp ./target/debug/parser ~/bin
-cd .. && sudo rm -rf ./oca-parser-xls
-
-# Ensure ~/bin is on PATH for future terminal sessions
-if ! grep -q 'export PATH=.*\$HOME/bin' ~/.bashrc 2>/dev/null; then
-    echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
+SUDO=""
+if command -v sudo >/dev/null 2>&1; then
+    SUDO="sudo"
 fi
 
-exit 0
+# Install build prerequisites.
+${SUDO} apt-get update
+${SUDO} apt-get install -y clang lld
+
+# Build parser in a temp dir so the script is idempotent and leaves no repo noise.
+tmpdir="$(mktemp -d)"
+trap 'rm -rf "$tmpdir"' EXIT
+
+git clone --depth 1 https://github.com/bcgov/oca-parser-xls.git "$tmpdir/oca-parser-xls"
+cd "$tmpdir/oca-parser-xls"
+RUSTFLAGS="-C link-arg=-fuse-ld=lld" cargo build
+
+# Install to common user bin locations.
+mkdir -p "$HOME/bin" "$HOME/.local/bin"
+cp ./target/debug/parser "$HOME/bin/parser"
+cp ./target/debug/parser "$HOME/.local/bin/parser"
+chmod +x "$HOME/bin/parser" "$HOME/.local/bin/parser"
+
+# Ensure bin folders are on PATH for future interactive shells.
+if ! grep -q '\$HOME/bin' "$HOME/.bashrc" 2>/dev/null; then
+    echo 'export PATH="$PATH:$HOME/bin:$HOME/.local/bin"' >> "$HOME/.bashrc"
+fi
+
+echo "Installed parser to: $HOME/bin/parser and $HOME/.local/bin/parser"
+"$HOME/bin/parser" --version
