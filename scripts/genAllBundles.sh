@@ -1,38 +1,8 @@
 #!/bin/bash
 
 # Initialize some variables. Output is always OCABundle.json
-ROOTDIR=${PWD}
-PARSER=$(which parser)
-JQ=$(which jq)
-OCABundlesIndex=${PWD}/ocabundles.json
-STATUS=0
-
-if [[ ! -f ${OCABundlesIndex} ]]; then
-  echo No OCA Bundles Index found in the current folder -- are in the right place?
-  show_help
-  exit 1
-fi
-
-if [[ ! -x "${PARSER}" ]]; then
-    echo ERROR: Unable to find the OCA Excel Parser in the designated location.
-    show_help
-    exit 1
-fi
-
-PARSERVER=$(${PARSER} --version | grep "XLS(X) Parser")
-
-if [ "${PARSERVER}" == "" ]; then
-    echo ERROR: Wrong type of \"parser\" executable.
-    show_help
-    exit 1
-fi
-
-if [[ ! -x "${JQ}" ]]; then
-    echo ERROR: Unable to find the JQ \(JSON Query\) executable.
-    show_help
-    exit 1
-fi
-
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOTDIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 # Usage info
 show_help() {
@@ -47,22 +17,78 @@ for details on how to install them.
 EOF
 }
 
+resolve_parser() {
+    if [[ -n "${PARSER_BIN}" && -x "${PARSER_BIN}" ]]; then
+        echo "${PARSER_BIN}"
+        return
+    fi
+
+    if command -v parser >/dev/null 2>&1; then
+        command -v parser
+        return
+    fi
+
+    for candidate in "$HOME/bin/parser" "$HOME/.local/bin/parser"; do
+        if [[ -x "${candidate}" ]]; then
+            echo "${candidate}"
+            return
+        fi
+    done
+}
+
+PARSER=$(resolve_parser)
+JQ=$(command -v jq || true)
+OCABundlesIndex=${ROOTDIR}/ocabundles.json
+STATUS=0
+
+if [[ ! -f ${OCABundlesIndex} ]]; then
+    echo "No OCA Bundles Index found at ${OCABundlesIndex}."
+  show_help
+  exit 1
+fi
+
+if [[ ! -x "${PARSER}" ]]; then
+    echo ERROR: Unable to find the OCA Excel Parser in the designated location.
+    show_help
+    exit 1
+fi
+
+PARSERVER=$(${PARSER} --version 2>/dev/null | grep "XLS(X) Parser")
+
+if [ "${PARSERVER}" == "" ]; then
+    echo ERROR: Wrong type of \"parser\" executable.
+    echo ERROR: Parser found at ${PARSER}
+    show_help
+    exit 1
+fi
+
+if [[ ! -x "${JQ}" ]]; then
+    echo ERROR: Unable to find the JQ \(JSON Query\) executable.
+    show_help
+    exit 1
+fi
+
 genBundle() {
     EXCEL=$(ls *.xlsx 2> /dev/null)
     JSONFiles=$(ls *.json 2> /dev/null)
     OCABUNDLE=NewOCABundle.json
     TMPOCABUNDLE=${OCABUNDLE}.tmp
     FOLDER=$(echo ${PWD} | sed -e "s#${ROOTDIR}/##")
-    SHASUM=$(grep ${FOLDER} /${OCABundlesIndex} | head -q -n 1 | sed -e "s/.*sha256\": \"//" -e "s/\".*//")
+    SHASUM=$(grep "${FOLDER}" "${OCABundlesIndex}" | head -q -n 1 | sed -e "s/.*sha256\": \"//" -e "s/\".*//")
     # Search the OCA Bundles index for this folder; keep only 1 instance; remove up to the SHA256 value; remove the trailing text
 
-    # Find the one Excel file -- error if less or more
-    # Parse the file using the OCA Parser and then prettify the JSON with jq
-    if [ "$(echo ${EXCEL} | wc -w )" != "1" ]; then
-       echo Bundle ${FOLDER} has $(echo ${EXCEL} | wc -w ) Excel files. Must have exactly one.
-       STATUS=1
-       return
-    fi
+     # Find the one Excel file.
+     # Zero files are skipped with a warning; multiple files remain an error.
+     EXCEL_COUNT=$(echo ${EXCEL} | wc -w)
+     if [ "${EXCEL_COUNT}" = "0" ]; then
+         echo "WARNING: Bundle ${FOLDER} has no Excel file. Skipping."
+         return
+     fi
+     if [ "${EXCEL_COUNT}" != "1" ]; then
+         echo "ERROR: Bundle ${FOLDER} has ${EXCEL_COUNT} Excel files. Must have exactly one."
+         STATUS=1
+         return
+     fi
 
     ${PARSER} parse oca --path ${EXCEL} | jq . > ${OCABUNDLE}
 
@@ -116,7 +142,7 @@ processFolder() {
 }
 
 # Start in the OCABundles folder
-cd OCABundles
+cd "${ROOTDIR}/OCABundles"
 
 # Recursively process the folders
 processFolder

@@ -17,7 +17,7 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "bash scripts/buildDevcontainer.sh",
 	"remoteEnv": {
-		"PATH": "${containerEnv:PATH}:${workspaceFolder}/scripts"
+		"PATH": "${containerEnv:PATH}:${containerEnv:HOME}/bin:${containerEnv:HOME}/.local/bin:${workspaceFolder}/scripts"
 	},
 	"customizations": {
 		"vscode": {
