@@ -93,7 +93,7 @@ nav:
     - Credential OCA Bundles:
       - BC Gov:
         - OCABundles/schema/bcgov-digital-trust/business-card/README.md
-        - OCABundles/schema/bcgov-digital-trust/showcase/business-card/README.md
+        - OCABundles/schema/bcgov-digital-trust/business-card-nonprod/README.md
         - LCRB:
           - OCABundles/schema/bcgov-digital-trust/LCRB/selling-it-right-showcase/README.md
           - OCABundles/schema/bcgov-digital-trust/LCRB/serving-it-right-showcase/README.md
@@ -131,7 +131,7 @@ nav:
           - OCABundles/schema/bcgov-digital-trust/mines-act-permit/1.1.1/README.md
         - OCABundles/schema/bcgov-digital-trust/person/README.md
         - OCABundles/schema/bcgov-digital-trust/pilot/README.md
-          - OCABundles/schema/bcgov-digital-trust/showcase/business-card/README.md
+          - OCABundles/schema/bcgov-digital-trust/business-card-nonprod/README.md
           - OCABundles/schema/bcgov-digital-trust/showcase/member-card/README.md
           - OCABundles/schema/bcgov-digital-trust/showcase/person/README.md
           - OCABundles/schema/bcgov-digital-trust/showcase/student-card/README.md
