@@ -30,6 +30,9 @@
    "S7S2wzcF2giKuwxdeLBk69:2:bc-mines-act-permit:1.1.1": { "path": "OCABundles/schema/bcgov-digital-trust/mines-act-permit/1.1.1/OCABundle.json", "sha256": "3beb506b811ad2cbcd9852c8542f6c1379efc212bf9ddf80763d76c302f06ba6" },
    "A2UZSmrL9N5FDZGPu68wy:2:bc-mines-act-permit:1.1.1": { "path": "OCABundles/schema/bcgov-digital-trust/mines-act-permit/1.1.1/OCABundle.json", "sha256": "3beb506b811ad2cbcd9852c8542f6c1379efc212bf9ddf80763d76c302f06ba6" },
    "RGjWbW1eycP7FrMf4QJvX8:3:CL:13:Person": { "path": "OCABundles/schema/bcgov-digital-trust/person/OCABundle.json", "sha256": "2aff214400a5f7a0e9f19a7789ef05862e294ea3382c64b681e8ba842974673d" },
+   "Mp2pDQqS2eSjNVA7kXc8ut:2:BC VC Pilot Certificate:1.0.1": { "path": "OCABundles/schema/bcgov-digital-trust/pilot/OCABundle.json", "sha256": "f10a77e559a386359eadadf01c41a47bdb382bf25d599d5e7b5d14c635e3cdc1" },
+   "4zBepKVWZcGTzug4X49vAN:2:BC VC Pilot Certificate:1.0.1": { "path": "OCABundles/schema/bcgov-digital-trust/pilot/OCABundle.json", "sha256": "f10a77e559a386359eadadf01c41a47bdb382bf25d599d5e7b5d14c635e3cdc1" },
+   "E2h4RUJxyh48PLJ1CtGJrq:2:BC VC Pilot Certificate:1.0.1": { "path": "OCABundles/schema/bcgov-digital-trust/pilot/OCABundle.json", "sha256": "f10a77e559a386359eadadf01c41a47bdb382bf25d599d5e7b5d14c635e3cdc1" },
    "L6ASjmDDbDH7yPL1t2yFj9:2:member_card:1.53": { "path": "OCABundles/schema/bcgov-digital-trust/showcase/member-card/OCABundle.json", "sha256": "2b7e12e742763eb842a8c34d267517ced6821b6bca7600071bc21acdc66be6c3" },
    "M6dhuFj5UwbhWkSLmvYSPc:2:member_card:1.54": { "path": "OCABundles/schema/bcgov-digital-trust/showcase/member-card/OCABundle.json", "sha256": "2b7e12e742763eb842a8c34d267517ced6821b6bca7600071bc21acdc66be6c3" },
    "QEquAHkM35w4XVT3Ku5yat:2:member_card:1.54": { "path": "OCABundles/schema/bcgov-digital-trust/showcase/member-card/OCABundle.json", "sha256": "2b7e12e742763eb842a8c34d267517ced6821b6bca7600071bc21acdc66be6c3" },
@@ -61,5 +64,6 @@
    "ARK5s3QZtjL5X65mLoubdk:2:Municipal Services Digital Letter of Authorization:1.1": { "path": "OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/OCABundle.json", "sha256": "cfe7c376d939e858e0547d1a75eda6f2b2032bf268d34fa3a517f1418e0bd8a5" },
    "ARK5s3QZtjL5X65mLoubdk:3:CL:1205:Municipal Services Digital Letter of Authorization": { "path": "OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/OCABundle.json", "sha256": "cfe7c376d939e858e0547d1a75eda6f2b2032bf268d34fa3a517f1418e0bd8a5" },
    "ARK5s3QZtjL5X65mLoubdk:2:Rental Property Business Licence:1.0": { "path": "OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/OCABundle.json", "sha256": "82e8ce8200ff23e82413b1bcadee70f0e9cc0ca229a3ee38f40b740e38b2dd53" },
-   "ARK5s3QZtjL5X65mLoubdk:3:CL:921:Rental Property Business Licence": { "path": "OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/OCABundle.json", "sha256": "82e8ce8200ff23e82413b1bcadee70f0e9cc0ca229a3ee38f40b740e38b2dd53" }
+   "ARK5s3QZtjL5X65mLoubdk:3:CL:921:Rental Property Business Licence": { "path": "OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/OCABundle.json", "sha256": "82e8ce8200ff23e82413b1bcadee70f0e9cc0ca229a3ee38f40b740e38b2dd53" },
+   "Ep31SvFAetugFPe5CGzJxt:2:Attestation numérique d'identité gouvernemental (EXP):1.0": { "path": "OCABundles/schema/qc_anig_demo/Attestation_numérique_didentité_gouvernemental/OCABundle.json", "sha256": "29bf8f8729f235450980d0b273f9ca49b7ab73b7358467bf52b311bf40464bb0" }
 }
