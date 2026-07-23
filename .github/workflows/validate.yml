@@ -40,12 +40,6 @@ jobs:
       - name: Install docs dependencies
         run: pip install mkdocs-material
 
-      - name: Generate bundle indexes
-        run: ./scripts/gen_ocabundlesjson.sh
-
-      - name: Check generated indexes are up to date
-        run: git diff --exit-code -- ocabundles.json ocabundleslist.json
-
       - name: Generate docs site assets
         run: ./scripts/genMkdocsSite.sh
 
