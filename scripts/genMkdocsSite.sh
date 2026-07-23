@@ -9,7 +9,7 @@ if [ "$1" == "clean" ]; then
    rm -rf docs/OCABundles
    rm docs/ocabundles.json
    rm docs/ocabundleslist.json
-   sed -e 's/# site_url:/site_url:/' \
+       sed -E 's|^[[:space:]#]*site_url:|site_url:|' \
        ${MKDOCS} >${MKDOCS}.tmp
    mv ${MKDOCS}.tmp ${MKDOCS}
    exit 0
@@ -55,7 +55,7 @@ cp LICENSE docs/governance/LICENSE.md
 # Remove the OCA Bundles Navigation from the mkdocs.yml file, and comment out the site url
 # The site_url MUST be uncomment again before commiting. Done as part of the "CLEAN" above.
 sed -e '/^- OCA Bundles:/,$d' \
-    -e 's/site_url:/# site_url:/' \
+    -e 's|^[[:space:]#]*site_url:|# site_url:|' \
     ${MKDOCS} >${MKDOCS}.tmp
 mv ${MKDOCS}.tmp ${MKDOCS}
 
