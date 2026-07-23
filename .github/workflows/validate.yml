@@ -2,7 +2,7 @@ name: "Check for existence of a OCABundle.json file"
 
 on:
   pull_request:
-    types:  opened
+    types: [opened, synchronize, reopened]
 
 jobs:
   oca_validation:
@@ -22,3 +22,32 @@ jobs:
         run: |
           npm install -g ajv-cli
           ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'
+
+  docs_validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+
+      - name: Install docs dependencies
+        run: pip install mkdocs-material
+
+      - name: Generate bundle indexes
+        run: ./scripts/gen_ocabundlesjson.sh
+
+      - name: Check generated indexes are up to date
+        run: git diff --exit-code -- ocabundles.json ocabundleslist.json
+
+      - name: Generate docs site assets
+        run: ./scripts/genMkdocsSite.sh
+
+      - name: Check mkdocs.yml generation is up to date
+        run: git diff --exit-code -- mkdocs.yml
+
+      - name: Validate docs build (strict)
+        run: mkdocs build --strict

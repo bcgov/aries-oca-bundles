@@ -10,6 +10,7 @@ OCALISTJSON=${PWD}/ocabundleslist.json
 MKDOCSYML=${PWD}/mkdocs.yml
 TMPFILE=${PWD}/tmpfile.json
 ROOTDIR=${PWD}
+TMPMKDOCS=${PWD}/tmp-mkdocs.yml
 
 # Usage info
 show_help() {
@@ -84,7 +85,7 @@ insertBundleiframe () {
 
 addNav() {
     # Add entry to MKDocs Navigation
-    for ((num = 1; num <= ${INDENT}; num++)); do echo -n "  " >>$MKDOCSYML; done
+  for ((num = 1; num <= ${NAVINDENT}; num++)); do echo -n "  " >>$MKDOCSYML; done
     if [[ -f OCABundle.json ]]; then
       echo "- ${RELPATH}/README.md" >>$MKDOCSYML
       insertBundleiframe
@@ -95,7 +96,7 @@ addNav() {
 
 # Recursively process the folders
 processFolder() {
-    INDENT=$((INDENT+1))
+  local ADDED_NAV=0
     RELPATH=$(echo ${PWD} | sed -e "s#${ROOTDIR}/##")
     # If the right files are in the folder, process it
     if [[ -f README.md && -f OCABundle.json ]]; then
@@ -103,6 +104,8 @@ processFolder() {
     fi
     if [[ -n "${GENMKDOCS}" && -f README.md ]]; then
       addNav # Relies on $ID existing from previous processing
+      NAVINDENT=$((NAVINDENT+1))
+      ADDED_NAV=1
     fi
     # Recurse into the directories of the folder
     for dir in *; do
@@ -116,7 +119,9 @@ processFolder() {
             cd ..
         fi
     done
-    INDENT=$((INDENT-1))
+    if [[ "${ADDED_NAV}" == "1" ]]; then
+      NAVINDENT=$((NAVINDENT-1))
+    fi
 }
 
 
@@ -124,6 +129,11 @@ processFolder() {
 echo -e "{" >${OCAIDSJSON}
 echo -e "[" >${OCALISTJSON}
 if [ "$1" == "mkdocs" ]; then
+    # Keep mkdocs nav generation idempotent by removing any existing
+    # generated OCA Bundles section before appending a fresh one.
+    if grep -q "^- OCA Bundles:" "${MKDOCSYML}"; then
+      awk 'BEGIN{drop=0} /^- OCA Bundles:/{drop=1} !drop{print}' "${MKDOCSYML}" > "${TMPMKDOCS}" && mv "${TMPMKDOCS}" "${MKDOCSYML}"
+    fi
     echo -e "- OCA Bundles:" >>${MKDOCSYML}
 fi
 
@@ -131,7 +141,7 @@ fi
 cd OCABundles
 
 # Recursively process the folders
-INDENT=0
+NAVINDENT=1
 processFolder
 cd ..
 
