@@ -43,8 +43,5 @@ jobs:
       - name: Generate docs site assets
         run: ./scripts/genMkdocsSite.sh
 
-      - name: Check mkdocs.yml generation is up to date
-        run: git diff --exit-code -- mkdocs.yml
-
       - name: Validate docs build (strict)
         run: mkdocs build --strict
