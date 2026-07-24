@@ -13,5 +13,9 @@ different kinds of content.
 To understand the mechanics of adding an OCA Bundle to the registry,
 please read the document about [Creating OCA Bundles].
 
+If you are working in the DevContainer and want to run schema validation and docs checks,
+see [Using AJV and MkDocs in the DevContainer].
+
  [Creating OCA Bundles]: ./OCABundleCreation.md
+[Using AJV and MkDocs in the DevContainer]: ./OCABundleCreatePR.md#using-ajv-and-mkdocs-in-the-devcontainer
 
