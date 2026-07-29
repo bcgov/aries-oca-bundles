@@ -15,7 +15,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash scripts/buildDevcontainer.sh",
+	"postCreateCommand": "bash .devcontainer/buildDevcontainer.sh",
 	"remoteEnv": {
 		"PATH": "${containerEnv:PATH}:${containerEnv:HOME}/bin:${containerEnv:HOME}/.local/bin:${containerEnv:HOME}/.venv/bin:${workspaceFolder}/scripts"
 	},
