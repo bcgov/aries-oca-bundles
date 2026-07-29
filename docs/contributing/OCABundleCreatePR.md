@@ -16,7 +16,7 @@ For questions or assistance, raise an [issue on GitHub](https://github.com/bcgov
 Use this as a summary. Details for each step are in the sections below.
 
 1. [ ] Fork/clone the repo and create a dev branch
-2. [ ] Set up prerequisites (`parser` and `jq`) — **use the DevContainer** for the easiest path
+2. [ ] Set up prerequisites (`parser`, `jq`, `mkdocs`, and `ajv`) — **use the DevContainer** for the easiest path
 3. [ ] Gather input data (Excel, branding, images, identifiers)
 4. [ ] Create the OCA Bundle folder under `OCABundles/schema/`
 5. [ ] Populate the folder: `OCA.xlsx`, `branding.json`, images, optional `testdata.csv`
@@ -31,7 +31,7 @@ Use this as a summary. Details for each step are in the sections below.
 
 ### Option A: DevContainer (Recommended)
 
-The repository includes a DevContainer that comes with all prerequisites pre-installed (`parser`, `jq`, Rust, etc.). This is the fastest way to get started:
+The repository includes a DevContainer that comes with all prerequisites pre-installed (`parser`, `jq`, `mkdocs`, `ajv`, Rust, etc.). This is the fastest way to get started:
 
 1. Fork the [Aries OCA Bundles] repository and clone it locally.
 2. Open the clone in VS Code and reopen in the DevContainer when prompted (or use the Command Palette: **Dev Containers: Reopen in Container**).
@@ -41,15 +41,60 @@ That's it — skip to [Input Data](#input-data).
 
 [Aries OCA Bundles]: https://github.com/bcgov/aries-oca-bundles
 
+### Using AJV and MkDocs in the DevContainer
+
+Once VS Code has reopened this repository in the DevContainer, open a terminal in the repository root and run:
+
+```bash
+pwd
+```
+
+Expected output ends with `.../aries-oca-bundles`.
+
+Check installed versions:
+
+```bash
+ajv --version
+mkdocs --version
+```
+
+Validate all OCA bundle JSON files against the schema:
+
+```bash
+ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'
+```
+
+Generate docs content and navigation files used for builds:
+
+```bash
+./scripts/genMkdocsSite.sh
+```
+
+Run a strict local docs build (same style as CI validation):
+
+```bash
+mkdocs build --strict
+```
+
+Preview docs locally while editing:
+
+```bash
+mkdocs serve
+```
+
+Then open the local preview URL printed in the terminal (usually `http://127.0.0.1:8000`).
+
 ### Option B: Manual Setup
 
-If you prefer not to use the DevContainer, you will need two tools on your PATH:
+If you prefer not to use the DevContainer, you will need these tools on your PATH:
 
 1. **`jq`** — Install via [jq installation instructions]. Likely already on your machine.
 2. **`parser`** (OCA Excel Parser) — Requires Rust:
     - Install Rust via the [Rust Installation Instructions] if needed.
     - Clone and build the parser: `git clone https://github.com/bcgov/oca-parser-xls.git && cd oca-parser-xls && cargo build`
     - Copy the binary to your PATH: `cp target/debug/parser ~/bin/`
+3. **`mkdocs`** — Install with Material theme support: `python3 -m pip install --user mkdocs-material`
+4. **`ajv`** — Install AJV CLI globally: `npm install -g ajv-cli`
 
 [JQ installation instructions]: https://stedolan.github.io/jq/download/
 [Rust Installation Instructions]: https://www.rust-lang.org/tools/install

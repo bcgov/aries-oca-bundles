@@ -4,6 +4,10 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+env:
+  AJV_CLI_VERSION: 5.0.0
+  MKDOCS_MATERIAL_VERSION: 9.7.7
+
 permissions:
   contents: read
 
@@ -16,14 +20,17 @@ jobs:
 
       - name: "Check file existence"
         id: check_files
-        uses: andstor/file-existence-action@v3
-        with:
-          files: "OCABundles/**/OCABundle.json"
+        run: |
+          if find OCABundles -type f -name 'OCABundle.json' | grep -q .; then
+            echo "files_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "files_exists=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Commit files
         if: steps.check_files.outputs.files_exists == 'true'
         run: |
-          npm install -g ajv-cli
+          npm install -g "ajv-cli@${AJV_CLI_VERSION}"
           ajv validate -s OCABundles/validators/schema.json -d 'OCABundles/**/OCABundle.json'
 
   docs_validation:
@@ -38,7 +45,7 @@ jobs:
           python-version: 3.x
 
       - name: Install docs dependencies
-        run: pip install mkdocs-material
+        run: pip install "mkdocs-material==${MKDOCS_MATERIAL_VERSION}"
 
       - name: Generate docs site assets
         run: ./scripts/genMkdocsSite.sh

@@ -39,7 +39,7 @@ registry, or upload your own OCA Bundle in the [OCA Explorer] to see how it will
 look.
 
 [OCA Explorer]: oca-explorer
-[OCA Bundles]: OCABundles/schema/bcgov-digital-trust/business-card/
+[OCA Bundles]: OCABundles/schema/bcgov-digital-trust/bc-registries/business-card/
 
 ## Contributing an OCA Bundle
 
