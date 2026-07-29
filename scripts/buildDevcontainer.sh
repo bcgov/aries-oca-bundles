@@ -15,7 +15,8 @@ ${SUDO} apt-get update
 ${SUDO} apt-get install -y clang lld rsync
 
 # Install docs and schema validation tooling used in CI/workflows.
-python3 -m pip install --user --upgrade "mkdocs-material==${MKDOCS_MATERIAL_VERSION}"
+python3 -m venv "$HOME/.venv"
+"$HOME/.venv/bin/pip" install --upgrade "mkdocs-material==${MKDOCS_MATERIAL_VERSION}"
 npm install -g "ajv-cli@${AJV_CLI_VERSION}"
 
 # Build parser in a temp dir so the script is idempotent and leaves no repo noise.
@@ -32,9 +33,12 @@ cp ./target/debug/parser "$HOME/bin/parser"
 cp ./target/debug/parser "$HOME/.local/bin/parser"
 chmod +x "$HOME/bin/parser" "$HOME/.local/bin/parser"
 
+# Update PATH for the current session so verification below succeeds.
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.venv/bin"
+
 # Ensure bin folders are on PATH for future interactive shells.
 if ! grep -q '\$HOME/bin' "$HOME/.bashrc" 2>/dev/null; then
-    echo 'export PATH="$PATH:$HOME/bin:$HOME/.local/bin"' >> "$HOME/.bashrc"
+    echo 'export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.venv/bin"' >> "$HOME/.bashrc"
 fi
 
 echo "Installed parser to: $HOME/bin/parser and $HOME/.local/bin/parser"

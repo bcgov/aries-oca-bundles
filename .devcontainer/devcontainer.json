@@ -3,7 +3,7 @@
 {
 	"name": "Node.js & TypeScript",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-24",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
 	"features": {
 		"ghcr.io/devcontainers/features/rust:1": {},
 		"ghcr.io/eitsupi/devcontainer-features/jq-likes:1": {},
@@ -17,7 +17,7 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "bash scripts/buildDevcontainer.sh",
 	"remoteEnv": {
-		"PATH": "${containerEnv:PATH}:${containerEnv:HOME}/bin:${containerEnv:HOME}/.local/bin:${workspaceFolder}/scripts"
+		"PATH": "${containerEnv:PATH}:${containerEnv:HOME}/bin:${containerEnv:HOME}/.local/bin:${containerEnv:HOME}/.venv/bin:${workspaceFolder}/scripts"
 	},
 	"customizations": {
 		"vscode": {
