@@ -96,6 +96,7 @@ nav:
         - OCABundles/schema/bcgov-digital-trust/bc-registries/business-card/README.md
         - OCABundles/schema/bcgov-digital-trust/bc-registries/business-card-nonprod/README.md
       - Identity Assurance Services - Service BC:
+        - OCABundles/schema/bcgov-digital-trust/IAS/digital-services-card/README.md
         - OCABundles/schema/bcgov-digital-trust/IAS/digital-services-card-nonprod/README.md
       - JAG:
         - OCABundles/schema/bcgov-digital-trust/JAG/transcriber-contractor/README.md
@@ -116,13 +117,13 @@ nav:
         - BC Mines Act Permit:
           - OCABundles/schema/bcgov-digital-trust/MDS/mines-act-permit/0.3/README.md
           - OCABundles/schema/bcgov-digital-trust/MDS/mines-act-permit/1.1.1/README.md
-      - OCABundles/schema/bcgov-digital-trust/person/README.md
       - OCABundles/schema/bcgov-digital-trust/showcase/member-card/README.md
       - OCABundles/schema/bcgov-digital-trust/showcase/person/README.md
       - OCABundles/schema/bcgov-digital-trust/showcase/student-card/README.md
     - City of Vancouver:
       - OCABundles/schema/CityOfVancouver/dev-municipal-services-digital-letter-of-authorization/README.md
       - OCABundles/schema/CityOfVancouver/dev-property-rental-business-licence/README.md
+      - OCABundles/schema/CityOfVancouver/prod-municipal-services-digital-letter-of-authorization/README.md
       - OCABundles/schema/CityOfVancouver/prod-property-rental-business-licence/README.md
       - OCABundles/schema/CityOfVancouver/test-municipal-services-digital-letter-of-authorization/README.md
       - OCABundles/schema/CityOfVancouver/test-property-rental-business-licence/README.md
