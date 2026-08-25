@@ -83,10 +83,9 @@
         "credential_help_text": "Learn more",
         "credential_support_url": "https://id.gov.bc.ca/",
         "description": "Your BC Digital Services Card",
-        "digest": "E-jdFY4_lrIBEV7RUTPCoCPD-4DTWAtoWuk7JkC5qUxs",
+        "digest": "E7eoSX_qVWjLRqip52j25QBFYd2rH6363e7SdartSEcY",
         "issuer": "Government of British Columbia",
         "issuer_description": "Service BC",
-        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "en",
         "name": "Digital Services Card",
         "type": "spec/overlays/meta/1.0"
@@ -153,10 +152,9 @@
         "credential_help_text": "Apprendre encore plus",
         "credential_support_url": "https://id.gov.bc.ca/",
         "description": "Votre carte de services numériques de la Colombie-Britannique",
-        "digest": "Eb63kXclW40dDABWP8FOfUsogDWev4rKV77IwpkkimHo",
+        "digest": "Etpj1uUaD9UO8idTyGRE24qDK29HQVGxmG1AuXHiPbb8",
         "issuer": "Gouvernement de la Colombie-Britannique",
         "issuer_description": "Service BC",
-        "issuer_url": "https://www2.gov.bc.ca/gov/content?id=87EEAD6D19974459950AA7FF7F60AD54",
         "language": "fr",
         "name": "Carte de services numériques",
         "type": "spec/overlays/meta/1.0"
